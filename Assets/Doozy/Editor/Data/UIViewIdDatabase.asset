@@ -13,4 +13,12 @@ MonoBehaviour:
   m_Name: UIViewIdDatabase
   m_EditorClassIdentifier: 
   Database:
-    Items: []
+    Items:
+    - Category: HomeScreen
+      Name: LoginPage
+    - Category: HomeScreen
+      Name: LoginSuccessful
+    - Category: HomeScreen
+      Name: SplashScreen
+    - Category: None
+      Name: None

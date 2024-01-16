@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: UIButtonIdDatabase
   m_EditorClassIdentifier: 
   Database:
-    Items: []
+    Items:
+    - Category: HomeScreenLogin
+      Name: Login
+    - Category: None
+      Name: None

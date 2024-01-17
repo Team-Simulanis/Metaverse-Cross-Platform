@@ -16,5 +16,7 @@ MonoBehaviour:
     Items:
     - Category: HomeScreenLogin
       Name: Login
+    - Category: HomeScreenLogin
+      Name: Proceed
     - Category: None
       Name: None

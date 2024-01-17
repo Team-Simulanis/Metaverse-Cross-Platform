@@ -26,6 +26,7 @@ namespace Doozy.Runtime.UIManager
     {
         public enum HomeScreen
         {
+            ChooseAvatar,
             InfoPage,
             LoginPage,
             LoginSuccessful,

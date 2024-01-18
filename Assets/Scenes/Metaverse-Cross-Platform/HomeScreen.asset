@@ -196,7 +196,7 @@ MonoBehaviour:
   GraphName: HomeScreen-FlowGraph
   GraphDescription: 
   IsSubGraph: 0
-  GraphState: 0
+  GraphState: 1
   OnStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -223,7 +223,7 @@ MonoBehaviour:
   - {fileID: 9079546580991434002}
   - {fileID: 7002507589409762755}
   RootNode: {fileID: -62741912603413179}
-  ActiveNode: {fileID: 0}
+  ActiveNode: {fileID: 4950822202005244851}
 --- !u!114 &4950822202005244851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
   RunUpdate: 0
   RunFixedUpdate: 0
   RunLateUpdate: 0
-  NodeState: 0
+  NodeState: 2
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0

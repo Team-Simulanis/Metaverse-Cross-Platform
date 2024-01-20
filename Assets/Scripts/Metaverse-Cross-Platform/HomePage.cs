@@ -75,9 +75,14 @@ public class HomePage : MonoBehaviour
 
             else
             {
-                Message = "Not Correct";
-                LoginPage.PasswordErrorMessage.Show();
-                LoginPage.EmailErrorMessage.Show();
+                if (LoginPage.Email.text.ToString() != _LoginInfoholder.EmailPassword[i].Email)
+                {
+                    LoginPage.EmailErrorMessage.Show();
+                }
+                if (LoginPage.Password.text.ToString() != _LoginInfoholder.EmailPassword[i].Password)
+                {
+                    LoginPage.PasswordErrorMessage.Show();
+                }
                 LoginPage.LoginButton.interactable = false;
             }
             

@@ -12,4 +12,5 @@ public struct _EmailPassword
 public class LoginInfoHolder : ScriptableObject
 {
     public _EmailPassword[] EmailPassword;
+
 }

@@ -2067,7 +2067,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: https://models.readyplayer.me/65a91f20843807b2a77a2040.glb
+          m_StringArgument: https://models.readyplayer.me/65abaf719fdd801e40293e6c.glb
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &969264084
@@ -4744,7 +4744,7 @@ PrefabInstance:
     - target: {fileID: 5079932738637831229, guid: b5e780cfda18ab9469c25deff06532aa,
         type: 3}
       propertyPath: loadOnStart
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5079932738637831229, guid: b5e780cfda18ab9469c25deff06532aa,
         type: 3}

@@ -30,6 +30,7 @@ namespace Doozy.Runtime.UIManager
             InfoPage,
             LoginPage,
             LoginSuccessful,
+            previewCharacter,
             SplashScreen
         }    
     }

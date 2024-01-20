@@ -6,6 +6,8 @@ namespace ReadyPlayerMe.Samples.QuickStart
 {
     public class ThirdPersonLoader : MonoBehaviour
     {
+        public delegate void UrlChanger(string url);
+        public static  UrlChanger urlChanger;
         private readonly Vector3 avatarPositionOffset = new Vector3(0, -0.08f, 0);
         
         [SerializeField][Tooltip("RPM avatar URL or shortcode to load")] 
@@ -26,6 +28,7 @@ namespace ReadyPlayerMe.Samples.QuickStart
             avatarObjectLoader = new AvatarObjectLoader();
             avatarObjectLoader.OnCompleted += OnLoadCompleted;
             avatarObjectLoader.OnFailed += OnLoadFailed;
+            urlChanger += changeUrl;
             
             if (previewAvatar != null)
             {
@@ -79,6 +82,17 @@ namespace ReadyPlayerMe.Samples.QuickStart
             avatarUrl = url.Trim(' ');
             avatarObjectLoader.LoadAvatar(avatarUrl);
         }
+
+        public void changeUrl(string url)
+        {
+            avatarUrl = url;
+        }
+
+        public void _LoadAvatar()
+        {
+            LoadAvatar(avatarUrl);
+        }
+
 
     }
 }

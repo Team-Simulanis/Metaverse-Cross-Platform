@@ -9,14 +9,14 @@ using UnityEngine.UI;
 [System.Serializable]
 public struct _LoginPage
 {
-    public TMP_InputField Email;
-    public UIContainer EmailErrorMessage;
-    public TMP_InputField Password;
-    public UIContainer PasswordErrorMessage;
-    public Image HideUnhide;
-    public Sprite Hide;
-    public Sprite Unhide;
-    [HideInInspector] public bool Hidden;
+    public TMP_InputField Email; //Will contain The TMP for Homepage/Email field reference
+    public UIContainer EmailErrorMessage; 
+    public TMP_InputField Password; //Will contain The TMP for Password field reference
+    public UIContainer PasswordErrorMessage; //Will contain The for passwordErrorMesage field reference 
+    public Image HideUnhide; // Will contain the Image reference for the Icon that'll Hide and unhide the password 
+    public Sprite Hide; // Sprite when the Password is hidden
+    public Sprite Unhide; // Sprite when password is not Hidden
+    [HideInInspector] public bool Hidden; // Will check if the password is hidden or not hidden
     public UIButton LoginButton;
 }
 
@@ -40,7 +40,7 @@ public struct _InfoPage
 }
 public class HomePage : MonoBehaviour
 {
-    public LoginInfoHolder _LoginInfoholder;
+    public LoginInfoHolder _LoginInfoholder; 
     public _LoginPage LoginPage;
     public _InfoPage InfoPage;
     [SerializeField] string Message;
@@ -62,7 +62,7 @@ public class HomePage : MonoBehaviour
 
     }
 
-    public void _Validate()
+    public void _Validate() // will check if the password or email is Correct or Wrong
     {
         for (int i = 0; i < _LoginInfoholder.EmailPassword.Length; i++)
         {
@@ -89,7 +89,7 @@ public class HomePage : MonoBehaviour
         }
     }
 
-    public void HideUnhidePassword()
+    public void HideUnhidePassword() //Will hide and Unhide the password
     {
         if (LoginPage.Hidden)
         {
@@ -108,7 +108,7 @@ public class HomePage : MonoBehaviour
         }
     }
 
-    public void EnteredName()
+    public void EnteredName() 
     {
         if (!InfoPage.NameFilled)
         {

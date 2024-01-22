@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GroupName: Dashboard
   Layouts:
-  - UxmlReference: {fileID: 9197481963319205126, guid: 69d8390eebc63d24fb849d6b341c0fd2, type: 3}
+  - UxmlReference: {fileID: 9197481963319205126, guid: 69d8390eebc63d24fb849d6b341c0fd2,
+      type: 3}

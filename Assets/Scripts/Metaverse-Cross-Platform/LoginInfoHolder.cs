@@ -11,6 +11,7 @@ public struct _EmailPassword
 [CreateAssetMenu(fileName = "LoginInfoHolder")]
 public class LoginInfoHolder : ScriptableObject
 {
+    public GameObject Player;
     public _EmailPassword[] EmailPassword;
 
 }

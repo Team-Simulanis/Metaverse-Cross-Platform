@@ -22,11 +22,17 @@ namespace ReadyPlayerMe.Samples.QuickStart
         private GameObject previewAvatar;
 
         public event Action OnLoadComplete;
+        public GameObject LoadingPanel;
+        public static GameObject _Loadingpane;
+        public static ThirdPersonLoader instance;
         
         private void Start()
         {
+            instance = this;
+            //avatarObjectLoader.loadingpanel = LoadingPanel;
             avatarObjectLoader = new AvatarObjectLoader();
             avatarObjectLoader.OnCompleted += OnLoadCompleted;
+            avatarObjectLoader.OnProgressChanged += _OnLoading;
             avatarObjectLoader.OnFailed += OnLoadFailed;
             urlChanger += changeUrl;
             
@@ -40,13 +46,22 @@ namespace ReadyPlayerMe.Samples.QuickStart
             }
         }
 
+        private void OnLoading(object sender, ProgressChangeEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         private void OnLoadFailed(object sender, FailureEventArgs args)
         {
             OnLoadComplete?.Invoke();
         }
-
+        private void _OnLoading(object sender, ProgressChangeEventArgs args)
+        {
+            LoadingPanel.SetActive(true);
+        }
         private void OnLoadCompleted(object sender, CompletionEventArgs args)
         {
+            LoadingPanel.SetActive(true);
             if (previewAvatar != null)
             {
                 Destroy(previewAvatar);
@@ -54,6 +69,8 @@ namespace ReadyPlayerMe.Samples.QuickStart
             }
             SetupAvatar(args.Avatar);
             OnLoadComplete?.Invoke();
+            LoadingPanel.SetActive(false);
+            
         }
 
         private void SetupAvatar(GameObject  targetAvatar)
@@ -86,11 +103,13 @@ namespace ReadyPlayerMe.Samples.QuickStart
         public void changeUrl(string url)
         {
             avatarUrl = url;
+            
         }
 
         public void _LoadAvatar()
         {
             LoadAvatar(avatarUrl);
+            
         }
 
 

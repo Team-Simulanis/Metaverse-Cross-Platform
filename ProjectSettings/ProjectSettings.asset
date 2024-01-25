@@ -8,12 +8,12 @@ PlayerSettings:
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 3
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: Metaverse-Cross--Platform
+  companyName: Simulanis
+  productName: Metaverse-Cross-Platform
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -76,6 +76,7 @@ PlayerSettings:
   androidMinimumWindowWidth: 400
   androidMinimumWindowHeight: 300
   androidFullscreenMode: 1
+  androidAutoRotationBehavior: 2
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
   runInBackground: 0
@@ -787,10 +788,10 @@ PlayerSettings:
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
   webGLModulesDirectory: 
-  webGLTemplate: APPLICATION:Default
+  webGLTemplate: PROJECT:RPMTemplate
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
-  webGLCompressionFormat: 0
+  webGLCompressionFormat: 2
   webGLWasmArithmeticExceptions: 0
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
@@ -803,7 +804,23 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Standalone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_VALIDATOR;ODIN_VALIDATOR_3_1;FISHNET;FISHNET_V3
+    Android: READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS;ODIN_VALIDATOR;ODIN_VALIDATOR_3_1;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;FISHNET;FISHNET_V3
+    EmbeddedLinux: READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS
+    GameCoreScarlett: READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS
+    GameCoreXboxOne: READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS
+    LinuxHeadlessSimulation: READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS
+    Nintendo Switch: READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS
+    PS4: READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS
+    PS5: READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS
+    QNX: READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS
+    Stadia: READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS
+    Standalone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_VALIDATOR;ODIN_VALIDATOR_3_1;FISHNET;FISHNET_V3;READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS
+    VisionOS: READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS
+    WebGL: READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS;ODIN_VALIDATOR;ODIN_VALIDATOR_3_1;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;FISHNET;FISHNET_V3
+    Windows Store Apps: READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS
+    XboxOne: READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS
+    iPhone: READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS
+    tvOS: READY_PLAYER_ME;DOOZY_REACTOR;DOOZY_UIMANAGER;DOOZY_SIGNALS
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
@@ -909,7 +926,7 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 0
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0

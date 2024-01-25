@@ -8,11 +8,9 @@ public class AvatarSelected : MonoBehaviour
 {
 
     public Image avatar; //will contain the image where the selected avatar is shown
-    public UIButton[] buttonToSelectAvatar; // will hold the button to select the Avatar 
-    public string[] avatarURL;
     public static Image StaticAvatarImage;
 
-    private void start()
+    private void Start()
     {
         
     }
@@ -21,13 +19,4 @@ public class AvatarSelected : MonoBehaviour
         StaticAvatarImage = avatar;
     }
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }

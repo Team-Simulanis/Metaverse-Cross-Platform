@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEditor.SceneManagement;
 
-namespace Editor.Scripts
+namespace Editors.Scripts
      {
          public static class SceneLoad
          {

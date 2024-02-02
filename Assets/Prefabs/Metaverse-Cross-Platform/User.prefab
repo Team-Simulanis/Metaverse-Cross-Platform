@@ -2092,6 +2092,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d88111ae167be542980fcb96828e93d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UrlForCharacter: 
   AvatarImage: {fileID: 0}
   thisButtonImage: {fileID: 6851660817968214063}
+  UrlForCharacter: 

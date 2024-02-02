@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2081913823678343785, guid: f24fb2f91acecee4297d4e6a44175a16,
@@ -130,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 2081913823678343791, guid: f24fb2f91acecee4297d4e6a44175a16,
         type: 3}
       propertyPath: m_Name
-      value: Icon Button Action - Refresh
+      value: Refresh
       objectReference: {fileID: 0}
     - target: {fileID: 2081913825397633653, guid: f24fb2f91acecee4297d4e6a44175a16,
         type: 3}
@@ -244,6 +245,9 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 17bf104d8193de14a953689724b07b4e,
         type: 3}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f24fb2f91acecee4297d4e6a44175a16, type: 3}
 --- !u!114 &6445943481949267070 stripped
 MonoBehaviour:

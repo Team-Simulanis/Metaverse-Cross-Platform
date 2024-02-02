@@ -1,4 +1,5 @@
 using ReadyPlayerMe.Samples.LegacyAvatarCreator;
+using ReadyPlayerMe.Samples.QuickStart;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,7 @@ public class InstantiatedCharacterSaver : MonoBehaviour
     [SerializeField] AvatarCreatorData avatarCreatorData;
     [SerializeField] LoginInfoHolder  loginInfoHolder;
     [SerializeField] GameObject Player;
-    string playerID;
+    [SerializeField]string playerID;
     [SerializeField] bool saveplayer;
     [SerializeField] bool LoadPlayer;
     // Start is called before the first frame update
@@ -39,6 +40,7 @@ public class InstantiatedCharacterSaver : MonoBehaviour
         playerID = avatarCreatorData.AvatarProperties.Id;
         Player = GameObject.Find(playerID);
         loginInfoHolder.Player = Player;
+        ThirdPersonLoader.urlChanger(playerID);
     }
 
     public void loadPlayerInScene()

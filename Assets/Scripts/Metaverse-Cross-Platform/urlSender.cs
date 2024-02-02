@@ -6,16 +6,21 @@ using UnityEngine.UI;
 
 public class urlSender : MonoBehaviour
 {
-    public string UrlForCharacter;
     public Image AvatarImage;
     public Image thisButtonImage;
+    public string UrlForCharacter;
+
+    private void Awake()
+    {
+        
+    }
     private void Start()
     {
         AvatarImage = AvatarSelected.StaticAvatarImage;
     }
     private void OnEnable()
     {
-        
+       
     }
 
     public void ChangeImage()

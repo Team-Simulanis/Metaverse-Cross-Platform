@@ -25,6 +25,7 @@ namespace ReadyPlayerMe.Samples.QuickStart
         public GameObject LoadingPanel;
         public static GameObject _Loadingpane;
         public static ThirdPersonLoader instance;
+        public bool loadCharacter;
         
         private void Start()
         {
@@ -46,6 +47,16 @@ namespace ReadyPlayerMe.Samples.QuickStart
             }
         }
 
+        private void Update()
+        {
+            if (loadCharacter) 
+            {
+                _LoadAvatar();
+                loadCharacter = false;
+
+            }
+        }
+
         private void OnLoading(object sender, ProgressChangeEventArgs e)
         {
             throw new NotImplementedException();
@@ -57,11 +68,14 @@ namespace ReadyPlayerMe.Samples.QuickStart
         }
         private void _OnLoading(object sender, ProgressChangeEventArgs args)
         {
-            LoadingPanel.SetActive(true);
+            if (LoadingPanel)
+            {
+                LoadingPanel.SetActive(true);
+            }
         }
         private void OnLoadCompleted(object sender, CompletionEventArgs args)
         {
-            LoadingPanel.SetActive(true);
+            //LoadingPanel.SetActive(true);
             if (previewAvatar != null)
             {
                 Destroy(previewAvatar);
@@ -69,8 +83,11 @@ namespace ReadyPlayerMe.Samples.QuickStart
             }
             SetupAvatar(args.Avatar);
             OnLoadComplete?.Invoke();
-            LoadingPanel.SetActive(false);
-            
+            if (LoadingPanel)
+            {
+                LoadingPanel.SetActive(false);
+            }
+
         }
 
         private void SetupAvatar(GameObject  targetAvatar)
@@ -102,7 +119,7 @@ namespace ReadyPlayerMe.Samples.QuickStart
 
         public void changeUrl(string url)
         {
-            avatarUrl = url;
+            avatarUrl = "https://models.readyplayer.me/"+url+".glb";
             
         }
 

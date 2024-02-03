@@ -10,8 +10,7 @@ namespace MPUIKIT.Editor
         private static bool _setup;
         private static bool _alreadyShownOnStartup;
         private bool _initialized;
-        private string _version = "Version: 1.1.0";
-        private static MPUIKitSettings _settings;
+        private string _version = "Version: 1.2.0";
         private static bool _setupIsRequired;
         private static UnityEditor.Editor _settingsEditor;
 
@@ -20,29 +19,8 @@ namespace MPUIKIT.Editor
         public static void ShowWindow()
         {
             EditorWindow window = GetWindow<MPUIKitUtilityWindow>(true, "MPUIKit Utility Panel", true);
-            window.minSize = new Vector2(400, 540);
-            window.maxSize = new Vector2(400, 540);
-            LoadSettings();
-        }
-
-        private void OnEnable()
-        {
-            LoadSettings();
-        }
-
-        private static void LoadSettings()
-        {
-            if (_settings) return;
-            string path =
-                $"{MPEditorUtility.FindMPUIKitRootDirectory()}Editor{Path.DirectorySeparatorChar}MPUIKitSettings.asset";
-            _settings = AssetDatabase.LoadAssetAtPath<MPUIKitSettings>(path);
-            if (_settings == null)
-            {
-                _settings = CreateInstance<MPUIKitSettings>();
-                AssetDatabase.CreateAsset(_settings, path);
-                AssetDatabase.SaveAssets();
-                AssetDatabase.Refresh();
-            }
+            window.minSize = new Vector2(400, 400);
+            window.maxSize = new Vector2(400, 400);
         }
 
 
@@ -50,7 +28,6 @@ namespace MPUIKIT.Editor
         {
             TopBannerGUI();
             WelcomeGUI();
-            SettingsGUI();
             UtilButtonsGUI();
             BottomBarGUI();
         }
@@ -75,16 +52,6 @@ namespace MPUIKIT.Editor
             textureRect.height -= 7;
             GUI.DrawTexture(textureRect, MPEditorContents.Logo, ScaleMode.ScaleToFit);
             GUILayout.Space(headingRect.height + 20);
-        }
-
-        private void SettingsGUI()
-        {
-            if (!_settingsEditor)
-            {
-                UnityEditor.Editor.CreateCachedEditor(_settings, typeof(MPUIKitSettingsEditor), ref _settingsEditor);
-            }
-
-            _settingsEditor.OnInspectorGUI();
         }
 
         private static void WelcomeGUI()

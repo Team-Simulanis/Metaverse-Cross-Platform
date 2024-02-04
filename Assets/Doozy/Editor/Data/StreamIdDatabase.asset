@@ -13,4 +13,12 @@ MonoBehaviour:
   m_Name: StreamIdDatabase
   m_EditorClassIdentifier: 
   Database:
-    Items: []
+    Items:
+    - Category: Login
+      Name: LoggingIn
+    - Category: Login
+      Name: LoginFailed
+    - Category: Login
+      Name: Success
+    - Category: None
+      Name: None

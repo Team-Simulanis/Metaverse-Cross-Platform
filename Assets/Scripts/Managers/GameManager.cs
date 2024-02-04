@@ -1,18 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
+
+using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static GameManager Instance;
+    [EnumToggleButtons][HideLabel][BoxGroup("Application Mode",CenterLabel = true)]
+    public GameMode gameMode;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
+}
+
+public enum GameMode
+{
+    Development,
+    Production,
+    AuthFree
 }

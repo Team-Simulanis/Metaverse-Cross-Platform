@@ -19,6 +19,8 @@ MonoBehaviour:
     - Category: HomeScreen
       Name: InfoPage
     - Category: HomeScreen
+      Name: LoadingScreen
+    - Category: HomeScreen
       Name: LoggingIn
     - Category: HomeScreen
       Name: LoginFailed

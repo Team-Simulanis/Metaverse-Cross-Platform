@@ -1,5 +1,60 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7361138373022515896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c01f9a7d07f5c04a9f277379e94a10b, type: 3}
+  m_Name: UI
+  m_EditorClassIdentifier: 
+  FlowGraphId: 549ecf14-ede1-48e4-a1f4-8b67f5cd1081
+  NodeId: eb4c7970-b806-4d7e-b69f-281a7af89632
+  NodeType: 0
+  NodeName: Default Node
+  NodeDescription: Just a dummy node for ideal state
+  InputPorts:
+  - NodeId: eb4c7970-b806-4d7e-b69f-281a7af89632
+    PortId: b692440c-d324-49cc-820c-0eaafd1241f7
+    Direction: 0
+    Capacity: 1
+    Connections:
+    - 7235a841-a8d3-4067-8a9c-999a69c25933
+    - 12d3c949-2270-4557-951b-99b1244a3839
+    Value: '{"CanGoBack":false}'
+    ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.GoBackInputPortData,
+      DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  OutputPorts:
+  - NodeId: eb4c7970-b806-4d7e-b69f-281a7af89632
+    PortId: e420c98e-979d-4ab0-8a11-9ecf77d24b2e
+    Direction: 1
+    Capacity: 0
+    Connections: []
+    Value: '{"Trigger":2,"TimeDelay":3.0,"SignalPayload":{"StreamId":{"Category":"None","Name":"None","Custom":false},"SignalValueType":0,"IntegerValue":0,"BooleanValue":false,"FloatValue":0.0,"StringValue":"","ColorValue":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"Vector2Value":{"x":0.0,"y":0.0},"Vector3Value":{"x":0.0,"y":0.0,"z":0.0},"Vector4Value":{"x":0.0,"y":0.0,"z":0.0,"w":0.0}},"ButtonId":{"Category":"None","Name":"None","Custom":false},"ToggleId":{"Category":"None","Name":"None","Custom":false},"CommandToggle":2,"ViewId":{"Category":"None","Name":"None","Custom":false},"CommandShowHide":0}'
+    ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.UIOutputPortData,
+      DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  RunUpdate: 0
+  RunFixedUpdate: 0
+  RunLateUpdate: 0
+  NodeState: 0
+  CanBeDeleted: 1
+  Passthrough: 0
+  ClearGraphHistory: 0
+  Position: {x: 346, y: -22.000011}
+  OnEnterShowViews: []
+  OnEnterHideViews: []
+  OnExitShowViews: []
+  OnExitHideViews: []
+  OnEnterHideAllViews: 0
+  OnExitHideAllViews: 0
 --- !u!114 &-4856442411195266363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,8 +89,9 @@ MonoBehaviour:
     PortId: d7a42b61-0051-42cb-9798-91476413e151
     Direction: 1
     Capacity: 0
-    Connections: []
-    Value: '{"Trigger":2,"TimeDelay":3.0,"SignalPayload":{"StreamId":{"Category":"None","Name":"None","Custom":false},"SignalValueType":0,"IntegerValue":0,"BooleanValue":false,"FloatValue":0.0,"StringValue":"","ColorValue":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"Vector2Value":{"x":0.0,"y":0.0},"Vector3Value":{"x":0.0,"y":0.0,"z":0.0},"Vector4Value":{"x":0.0,"y":0.0,"z":0.0,"w":0.0}},"ButtonId":{"Category":"None","Name":"None","Custom":false},"ToggleId":{"Category":"None","Name":"None","Custom":false},"CommandToggle":2,"ViewId":{"Category":"None","Name":"None","Custom":false},"CommandShowHide":0}'
+    Connections:
+    - 427d69af-6a5f-4034-a2ba-36c8e6041226
+    Value: '{"Trigger":0,"TimeDelay":3.5,"SignalPayload":{"StreamId":{"Category":"None","Name":"None","Custom":false},"SignalValueType":0,"IntegerValue":0,"BooleanValue":false,"FloatValue":0.0,"StringValue":"","ColorValue":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"Vector2Value":{"x":0.0,"y":0.0},"Vector3Value":{"x":0.0,"y":0.0,"z":0.0},"Vector4Value":{"x":0.0,"y":0.0,"z":0.0,"w":0.0}},"ButtonId":{"Category":"None","Name":"None","Custom":false},"ToggleId":{"Category":"None","Name":"None","Custom":false},"CommandToggle":2,"ViewId":{"Category":"None","Name":"None","Custom":false},"CommandShowHide":0}'
     ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.UIOutputPortData,
       DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     CanBeDeleted: 0
@@ -47,11 +103,21 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 351.33334, y: 27.999983}
-  OnEnterShowViews: []
+  Position: {x: 351.3333, y: 215.70667}
+  OnEnterShowViews:
+  - Id:
+      Category: HomeScreen
+      Name: LoginFailed
+      Custom: 0
+    Mode: 0
   OnEnterHideViews: []
   OnExitShowViews: []
-  OnExitHideViews: []
+  OnExitHideViews:
+  - Id:
+      Category: HomeScreen
+      Name: LoginFailed
+      Custom: 0
+    Mode: 0
   OnEnterHideAllViews: 0
   OnExitHideAllViews: 0
 --- !u!114 &-3792554939867866821
@@ -88,8 +154,9 @@ MonoBehaviour:
     PortId: 79b8294a-a8a3-40e0-bb67-13a0754c6398
     Direction: 1
     Capacity: 0
-    Connections: []
-    Value: '{"Trigger":2,"TimeDelay":3.0,"SignalPayload":{"StreamId":{"Category":"None","Name":"None","Custom":false},"SignalValueType":0,"IntegerValue":0,"BooleanValue":false,"FloatValue":0.0,"StringValue":"","ColorValue":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"Vector2Value":{"x":0.0,"y":0.0},"Vector3Value":{"x":0.0,"y":0.0,"z":0.0},"Vector4Value":{"x":0.0,"y":0.0,"z":0.0,"w":0.0}},"ButtonId":{"Category":"None","Name":"None","Custom":false},"ToggleId":{"Category":"None","Name":"None","Custom":false},"CommandToggle":2,"ViewId":{"Category":"None","Name":"None","Custom":false},"CommandShowHide":0}'
+    Connections:
+    - d6d22bbd-9350-4c42-a178-65d05f541e4f
+    Value: '{"Trigger":0,"TimeDelay":3.5,"SignalPayload":{"StreamId":{"Category":"None","Name":"None","Custom":false},"SignalValueType":0,"IntegerValue":0,"BooleanValue":false,"FloatValue":0.0,"StringValue":"","ColorValue":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"Vector2Value":{"x":0.0,"y":0.0},"Vector3Value":{"x":0.0,"y":0.0,"z":0.0},"Vector4Value":{"x":0.0,"y":0.0,"z":0.0,"w":0.0}},"ButtonId":{"Category":"None","Name":"None","Custom":false},"ToggleId":{"Category":"None","Name":"None","Custom":false},"CommandToggle":2,"ViewId":{"Category":"None","Name":"None","Custom":false},"CommandShowHide":0}'
     ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.UIOutputPortData,
       DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     CanBeDeleted: 0
@@ -101,13 +168,71 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 346.06134, y: -80.66671}
-  OnEnterShowViews: []
+  Position: {x: 346, y: 107.03999}
+  OnEnterShowViews:
+  - Id:
+      Category: HomeScreen
+      Name: LoginSuccessful
+      Custom: 0
+    Mode: 0
   OnEnterHideViews: []
   OnExitShowViews: []
-  OnExitHideViews: []
+  OnExitHideViews:
+  - Id:
+      Category: HomeScreen
+      Name: LoginSuccessful
+      Custom: 0
+    Mode: 0
   OnEnterHideAllViews: 0
   OnExitHideAllViews: 0
+--- !u!114 &-3511811221589826256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26771609544c5348b153b61330ee08f, type: 3}
+  m_Name: Pivot
+  m_EditorClassIdentifier: 
+  FlowGraphId: 549ecf14-ede1-48e4-a1f4-8b67f5cd1081
+  NodeId: 3f6fc71e-5589-4452-bfdd-d5c36c8b0d2c
+  NodeType: 0
+  NodeName: Pivot
+  NodeDescription: 
+  InputPorts:
+  - NodeId: 3f6fc71e-5589-4452-bfdd-d5c36c8b0d2c
+    PortId: 427d69af-6a5f-4034-a2ba-36c8e6041226
+    Direction: 0
+    Capacity: 1
+    Connections:
+    - d7a42b61-0051-42cb-9798-91476413e151
+    Value: 
+    ValueTypeQualifiedName: 
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  OutputPorts:
+  - NodeId: 3f6fc71e-5589-4452-bfdd-d5c36c8b0d2c
+    PortId: 8834d16f-33aa-44d0-be02-22fcf9922487
+    Direction: 1
+    Capacity: 0
+    Connections:
+    - 3f36f32f-8e07-4562-b639-b4876e2d4533
+    Value: 
+    ValueTypeQualifiedName: 
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  RunUpdate: 0
+  RunFixedUpdate: 0
+  RunLateUpdate: 0
+  NodeState: 0
+  CanBeDeleted: 1
+  Passthrough: 1
+  ClearGraphHistory: 0
+  Position: {x: 599.3332, y: 212.66667}
+  PivotOrientation: 3
 --- !u!114 &-1543646429206934997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +269,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 1
   ClearGraphHistory: 0
-  Position: {x: 228.66667, y: 27.999973}
+  Position: {x: 228.66669, y: 215.70667}
   Trigger: 0
   SignalPayload:
     StreamId:
@@ -174,6 +299,55 @@ MonoBehaviour:
     Name: None
     Custom: 0
   CommandShowHide: 0
+--- !u!114 &-1201040240042121337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26771609544c5348b153b61330ee08f, type: 3}
+  m_Name: Pivot
+  m_EditorClassIdentifier: 
+  FlowGraphId: 549ecf14-ede1-48e4-a1f4-8b67f5cd1081
+  NodeId: bd5357f2-d3a7-41ac-a9c7-f018ee6b6f10
+  NodeType: 0
+  NodeName: Pivot
+  NodeDescription: 
+  InputPorts:
+  - NodeId: bd5357f2-d3a7-41ac-a9c7-f018ee6b6f10
+    PortId: 3f36f32f-8e07-4562-b639-b4876e2d4533
+    Direction: 0
+    Capacity: 1
+    Connections:
+    - 4312f5f9-d5bb-4ea1-ae91-04c17272920a
+    - 8834d16f-33aa-44d0-be02-22fcf9922487
+    Value: 
+    ValueTypeQualifiedName: 
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  OutputPorts:
+  - NodeId: bd5357f2-d3a7-41ac-a9c7-f018ee6b6f10
+    PortId: 787c4eec-9afd-443d-b758-6c5007727a78
+    Direction: 1
+    Capacity: 0
+    Connections:
+    - 835e9f24-1916-4689-9b72-50a458d10a05
+    Value: 
+    ValueTypeQualifiedName: 
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  RunUpdate: 0
+  RunFixedUpdate: 0
+  RunLateUpdate: 0
+  NodeState: 0
+  CanBeDeleted: 1
+  Passthrough: 1
+  ClearGraphHistory: 0
+  Position: {x: 657.1751, y: -143.33333}
+  PivotOrientation: 3
 --- !u!114 &-537658120793622270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,7 +384,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 1
   ClearGraphHistory: 0
-  Position: {x: 223.39467, y: -80.66671}
+  Position: {x: 223.33331, y: 107.03999}
   Trigger: 0
   SignalPayload:
     StreamId:
@@ -252,8 +426,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02761efe598a45c98fa1baf4d446c6a7, type: 3}
   m_Name: Popups
   m_EditorClassIdentifier: 
-  EditorPosition: {x: 139.33333, y: 142, z: 0}
-  EditorScale: {x: 1, y: 1, z: 1}
+  EditorPosition: {x: 108.666664, y: 45.333332, z: 0}
+  EditorScale: {x: 0.7561437, y: 0.7561437, z: 1}
   Id: 549ecf14-ede1-48e4-a1f4-8b67f5cd1081
   GraphName: Flow Graph
   GraphDescription: 
@@ -285,8 +459,74 @@ MonoBehaviour:
   - {fileID: 5807645036306003521}
   - {fileID: -1543646429206934997}
   - {fileID: 4197646575739575611}
+  - {fileID: -7361138373022515896}
+  - {fileID: -1201040240042121337}
+  - {fileID: 5683220119088062119}
+  - {fileID: 2103604883370728513}
+  - {fileID: -3511811221589826256}
   RootNode: {fileID: 7241783007764982076}
   ActiveNode: {fileID: 0}
+--- !u!114 &2103604883370728513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c43f2597bc48340b6a8f2909b66d09, type: 3}
+  m_Name: Signal
+  m_EditorClassIdentifier: 
+  FlowGraphId: 549ecf14-ede1-48e4-a1f4-8b67f5cd1081
+  NodeId: 0541094e-ffc7-4a18-9cf9-1967f655bb64
+  NodeType: 0
+  NodeName: Go To Info Screen
+  NodeDescription: 
+  InputPorts:
+  - NodeId: 0541094e-ffc7-4a18-9cf9-1967f655bb64
+    PortId: d6d22bbd-9350-4c42-a178-65d05f541e4f
+    Direction: 0
+    Capacity: 1
+    Connections:
+    - 79b8294a-a8a3-40e0-bb67-13a0754c6398
+    Value: 
+    ValueTypeQualifiedName: 
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  OutputPorts:
+  - NodeId: 0541094e-ffc7-4a18-9cf9-1967f655bb64
+    PortId: 4312f5f9-d5bb-4ea1-ae91-04c17272920a
+    Direction: 1
+    Capacity: 0
+    Connections:
+    - 3f36f32f-8e07-4562-b639-b4876e2d4533
+    Value: 
+    ValueTypeQualifiedName: 
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  RunUpdate: 0
+  RunFixedUpdate: 0
+  RunLateUpdate: 0
+  NodeState: 0
+  CanBeDeleted: 1
+  Passthrough: 1
+  ClearGraphHistory: 0
+  Position: {x: 474, y: 107.33333}
+  Payload:
+    StreamId:
+      Category: Screens
+      Name: InforScreen
+      Custom: 0
+    SignalValueType: 0
+    IntegerValue: 0
+    BooleanValue: 0
+    FloatValue: 0
+    StringValue: 
+    ColorValue: {r: 0, g: 0, b: 0, a: 0}
+    Vector2Value: {x: 0, y: 0}
+    Vector3Value: {x: 0, y: 0, z: 0}
+    Vector4Value: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &4197646575739575611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,7 +563,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 1
   ClearGraphHistory: 0
-  Position: {x: 228.66667, y: 133.33334}
+  Position: {x: 228.66669, y: 321.03998}
   Trigger: 0
   SignalPayload:
     StreamId:
@@ -353,6 +593,54 @@ MonoBehaviour:
     Name: None
     Custom: 0
   CommandShowHide: 0
+--- !u!114 &5683220119088062119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26771609544c5348b153b61330ee08f, type: 3}
+  m_Name: Pivot
+  m_EditorClassIdentifier: 
+  FlowGraphId: 549ecf14-ede1-48e4-a1f4-8b67f5cd1081
+  NodeId: 621ad260-d426-4667-ae06-e2888df73e7b
+  NodeType: 0
+  NodeName: Pivot
+  NodeDescription: 
+  InputPorts:
+  - NodeId: 621ad260-d426-4667-ae06-e2888df73e7b
+    PortId: 835e9f24-1916-4689-9b72-50a458d10a05
+    Direction: 0
+    Capacity: 1
+    Connections:
+    - 787c4eec-9afd-443d-b758-6c5007727a78
+    Value: 
+    ValueTypeQualifiedName: 
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  OutputPorts:
+  - NodeId: 621ad260-d426-4667-ae06-e2888df73e7b
+    PortId: 12d3c949-2270-4557-951b-99b1244a3839
+    Direction: 1
+    Capacity: 0
+    Connections:
+    - b692440c-d324-49cc-820c-0eaafd1241f7
+    Value: 
+    ValueTypeQualifiedName: 
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  RunUpdate: 0
+  RunFixedUpdate: 0
+  RunLateUpdate: 0
+  NodeState: 0
+  CanBeDeleted: 1
+  Passthrough: 1
+  ClearGraphHistory: 0
+  Position: {x: 284.27997, y: -143.33333}
+  PivotOrientation: 2
 --- !u!114 &5807645036306003521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,7 +688,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 351.33334, y: 133.33334}
+  Position: {x: 351.3333, y: 321.03998}
   OnEnterShowViews:
   - Id:
       Category: HomeScreen
@@ -440,7 +728,8 @@ MonoBehaviour:
     PortId: 7235a841-a8d3-4067-8a9c-999a69c25933
     Direction: 1
     Capacity: 0
-    Connections: []
+    Connections:
+    - b692440c-d324-49cc-820c-0eaafd1241f7
     Value: 
     ValueTypeQualifiedName: 
     CanBeDeleted: 0

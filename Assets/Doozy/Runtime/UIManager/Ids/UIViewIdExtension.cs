@@ -28,6 +28,7 @@ namespace Doozy.Runtime.UIManager
         {
             ChooseAvatar,
             InfoPage,
+            LoadingScreen,
             LoggingIn,
             LoginFailed,
             LoginPage,

@@ -22,3 +22,5 @@ MonoBehaviour:
       Name: Success
     - Category: None
       Name: None
+    - Category: Screens
+      Name: InforScreen

@@ -1,24 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class ScrollController : MonoBehaviour
 {
     [SerializeField] ScrollRect scrollRect;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] float scrollSpeed;
+    private void OnEnable()
     {
-        
+       scrollRect = GetComponent<ScrollRect>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void scrollLeft()
     {
-       
+       if (scrollRect != null) 
+        {
+            if (scrollRect.horizontalNormalizedPosition >= 0f)
+            {
+                scrollRect.horizontalNormalizedPosition -= scrollSpeed;
+            }
+        }
+    }
+    public void scrollRight()
+    {
+        if (scrollRect != null)
+        {
+            if (scrollRect.horizontalNormalizedPosition <= 1f)
+            {
+                scrollRect.horizontalNormalizedPosition += scrollSpeed;
+            }
+        }
     }
 }

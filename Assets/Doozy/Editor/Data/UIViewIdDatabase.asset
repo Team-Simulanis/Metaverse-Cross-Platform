@@ -15,9 +15,13 @@ MonoBehaviour:
   Database:
     Items:
     - Category: HomeScreen
+      Name: Acclimation
+    - Category: HomeScreen
       Name: ChooseAvatar
     - Category: HomeScreen
       Name: InfoPage
+    - Category: HomeScreen
+      Name: Loading
     - Category: HomeScreen
       Name: LoadingScreen
     - Category: HomeScreen

@@ -31,6 +31,7 @@ namespace Doozy.Runtime.UIManager
             Controls,
             InfoPage,
             Loading,
+            Loading2,
             LoadingScreen,
             LoggingIn,
             LoginFailed,

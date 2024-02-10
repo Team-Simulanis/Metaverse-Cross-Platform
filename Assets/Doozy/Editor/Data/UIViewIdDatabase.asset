@@ -25,6 +25,8 @@ MonoBehaviour:
     - Category: HomeScreen
       Name: Loading
     - Category: HomeScreen
+      Name: Loading2
+    - Category: HomeScreen
       Name: LoadingScreen
     - Category: HomeScreen
       Name: LoggingIn

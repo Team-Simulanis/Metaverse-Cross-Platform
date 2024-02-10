@@ -19,6 +19,8 @@ MonoBehaviour:
     - Category: HomeScreen
       Name: ChooseAvatar
     - Category: HomeScreen
+      Name: Controls
+    - Category: HomeScreen
       Name: InfoPage
     - Category: HomeScreen
       Name: Loading

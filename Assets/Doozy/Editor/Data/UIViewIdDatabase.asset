@@ -40,5 +40,7 @@ MonoBehaviour:
       Name: previewCharacter
     - Category: HomeScreen
       Name: SplashScreen
+    - Category: Ingame
+      Name: BottomBar
     - Category: None
       Name: None

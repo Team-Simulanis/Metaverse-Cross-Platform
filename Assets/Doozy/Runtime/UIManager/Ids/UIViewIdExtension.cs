@@ -17,6 +17,10 @@ namespace Doozy.Runtime.UIManager.Containers
         public static IEnumerable<UIView> GetViews(UIViewId.HomeScreen id) => GetViews(nameof(UIViewId.HomeScreen), id.ToString());
         public static void Show(UIViewId.HomeScreen id, bool instant = false) => Show(nameof(UIViewId.HomeScreen), id.ToString(), instant);
         public static void Hide(UIViewId.HomeScreen id, bool instant = false) => Hide(nameof(UIViewId.HomeScreen), id.ToString(), instant);
+
+        public static IEnumerable<UIView> GetViews(UIViewId.Ingame id) => GetViews(nameof(UIViewId.Ingame), id.ToString());
+        public static void Show(UIViewId.Ingame id, bool instant = false) => Show(nameof(UIViewId.Ingame), id.ToString(), instant);
+        public static void Hide(UIViewId.Ingame id, bool instant = false) => Hide(nameof(UIViewId.Ingame), id.ToString(), instant);
     }
 }
 
@@ -39,6 +43,11 @@ namespace Doozy.Runtime.UIManager
             LoginSuccessful,
             previewCharacter,
             SplashScreen
+        }
+
+        public enum Ingame
+        {
+            BottomBar
         }    
     }
 }

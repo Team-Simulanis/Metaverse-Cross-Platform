@@ -29,7 +29,7 @@ public class RPMPlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LoadAvatar();
+        //LoadAvatar();
     }
     public void LoadAvatar()
     {
@@ -40,6 +40,10 @@ public class RPMPlayerManager : MonoBehaviour
         LoadAvatar(avatarUrl);
     }
 
+    public void SetAvatarUrl(string value)
+    {
+        avatarUrl = value;
+    }
     // Update is called once per frame
     void Update()
     {

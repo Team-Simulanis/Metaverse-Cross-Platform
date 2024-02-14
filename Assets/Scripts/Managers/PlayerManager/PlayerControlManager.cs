@@ -1,27 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using FishNet.Example.Scened;
+using FishNet.Object;
 using UnityEngine;
 using Invector.vCharacterController;
 using Invector.vCamera;
-using UnityEditor.Rendering.LookDev;
 using Invector;
 
-public class PlayerControlManager : MonoBehaviour
+public class PlayerControlManager : NetworkBehaviour
 {
     public static PlayerControlManager _Instance;
-    public vThirdPersonController thirdPersonController;
-    public vThirdPersonCamera thirdPersonCamera;
+   
     public vThirdPersonCameraListData CL;
-    public GameObject _mainPlayer;
+   
+   
     bool firstView;
+
     void Awake()
     {
-        if(_Instance == null)
+        if (_Instance == null)
         {
             _Instance = this;
         }
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,27 +33,26 @@ public class PlayerControlManager : MonoBehaviour
     void Init()
     {
         // Multiplayer Code for isMine
-        if(!_mainPlayer)
+        if (IsOwner)
         {
-            thirdPersonController = FindObjectOfType<vThirdPersonController>(true);
-            thirdPersonCamera = FindObjectOfType<vThirdPersonCamera>(true);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Multiplayer Code for isMine
-        if(Input.GetKeyDown(KeyCode.F))
+        if (!IsOwner) return;
+        if (Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log("F Pressed");
             firstView = !firstView;
             ChangeToFirstView(firstView);
         }
     }
+
     void ChangeToFirstView(bool value)
     {
-        if(value)
+        if (value)
         {
             // Need to Rewrite this wrt all camera states
             CL.tpCameraStates[0].defaultDistance = 0;

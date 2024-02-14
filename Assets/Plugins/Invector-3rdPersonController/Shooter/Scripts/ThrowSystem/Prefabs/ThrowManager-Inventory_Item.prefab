@@ -259,6 +259,18 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6510377369149399697}
   m_SourcePrefab: {fileID: 100100000, guid: 322f523885a65e746816ed5774b95d38, type: 3}
+--- !u!114 &1665447958491952367 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6048313467837146228, guid: 322f523885a65e746816ed5774b95d38,
+    type: 3}
+  m_PrefabInstance: {fileID: 4968368782757793947}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4969541416156210485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4964052576021496293 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4761512169492862, guid: 322f523885a65e746816ed5774b95d38,
@@ -283,6 +295,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb61a71d8f68e2c4ea71e5f66c4c2db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 1665447958491952367}
+  _networkObjectCache: {fileID: 0}
   openCloseEvents: 0
   openCloseWindow: 1
   selectedToolbar: 4

@@ -323,6 +323,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3488aeb9d116a01419bf76222e7bf1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 0
+  _addedNetworkObject: {fileID: 0}
+  _networkObjectCache: {fileID: 0}
   openCloseEvents: 0
   openCloseWindow: 1
   selectedToolbar: 4
@@ -503,6 +506,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b354cf786a2c7d9468c7223b5a4674cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 1
+  _addedNetworkObject: {fileID: 0}
+  _networkObjectCache: {fileID: 0}
   openCloseEvents: 0
   openCloseWindow: 0
   selectedToolbar: 0
@@ -1249,6 +1255,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94288e1b7f8e3a4888a6629c3c1223f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 3
+  _addedNetworkObject: {fileID: 0}
+  _networkObjectCache: {fileID: 0}
   openCloseEvents: 0
   openCloseWindow: 0
   selectedToolbar: 0
@@ -1413,6 +1422,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907d2082a34283146a0864cc35094936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 2
+  _addedNetworkObject: {fileID: 0}
+  _networkObjectCache: {fileID: 0}
   openCloseEvents: 0
   openCloseWindow: 0
   selectedToolbar: 0

@@ -6,26 +6,33 @@ namespace Invector
 {
     using UnityEngine.Events;
     using vCharacterController;
+
     [vClassHeader("Simple GameController Example", openClose = false)]
     public class vGameController : vMonoBehaviour
     {
         [System.Serializable]
-        public class OnRealoadGame : UnityEngine.Events.UnityEvent { }
-        [vHelpBox("Assign your Character Prefab to be instantiate at the SpawnPoint, leave it unassigned to Restart the Scene instead")]
+        public class OnRealoadGame : UnityEngine.Events.UnityEvent
+        {
+        }
+
+        [vHelpBox(
+            "Assign your Character Prefab to be instantiate at the SpawnPoint, leave it unassigned to Restart the Scene instead")]
         public GameObject playerPrefab;
+
         [vHelpBox("Assign a empty transform to spawn the Player to a specific location")]
         public Transform spawnPoint;
+
         [vHelpBox("Time to wait until the scene restart or the player will be spawned again")]
         public float respawnTimer = 4f;
+
         [vHelpBox("Check this if you want to destroy the dead body after the respawn")]
         public bool destroyBodyAfterDead;
+
         [vHelpBox("Display a message using the FadeText UI")]
         public bool displayInfoInFadeText = true;
 
-        [HideInInspector]
-        public OnRealoadGame OnReloadGame = new OnRealoadGame();
-        [HideInInspector]
-        public GameObject currentPlayer;
+        [HideInInspector] public OnRealoadGame OnReloadGame = new OnRealoadGame();
+        [HideInInspector] public GameObject currentPlayer;
         private vThirdPersonController currentController;
         public static vGameController instance;
         private GameObject oldPlayer;
@@ -40,7 +47,7 @@ namespace Invector
                 instance = this;
                 if (dontDestroyOnLoad)
                 {
-                    DontDestroyOnLoad(this.gameObject);
+                    //DontDestroyOnLoad(this.gameObject);
                 }
 
                 this.gameObject.name = gameObject.name + " Instance";
@@ -51,7 +58,7 @@ namespace Invector
                 return;
             }
 
-            SceneManager.sceneLoaded += OnLevelFinishedLoading;
+         //   SceneManager.sceneLoaded += OnLevelFinishedLoading;
             if (displayInfoInFadeText && vHUDController.instance)
             {
                 vHUDController.instance.ShowText("Init Scene");
@@ -114,7 +121,8 @@ namespace Invector
                 {
                     if (displayInfoInFadeText && vHUDController.instance)
                     {
-                        vHUDController.instance.ShowText("Player destroyed: " + oldPlayer.name.Replace("(Clone)", "").Replace("Instance", ""));
+                        vHUDController.instance.ShowText("Player destroyed: " +
+                                                         oldPlayer.name.Replace("(Clone)", "").Replace("Instance", ""));
                     }
 
                     Destroy(oldPlayer);
@@ -123,7 +131,8 @@ namespace Invector
                 {
                     if (displayInfoInFadeText && vHUDController.instance)
                     {
-                        vHUDController.instance.ShowText("Remove Player Components: " + oldPlayer.name.Replace("(Clone)", "").Replace("Instance", ""));
+                        vHUDController.instance.ShowText("Remove Player Components: " +
+                                                         oldPlayer.name.Replace("(Clone)", "").Replace("Instance", ""));
                     }
 
                     DestroyPlayerComponents(oldPlayer);
@@ -162,6 +171,7 @@ namespace Invector
 
                 return;
             }
+
             if (displayInfoInFadeText && vHUDController.instance)
             {
                 vHUDController.instance.ShowText("Reload Scene");
@@ -181,7 +191,8 @@ namespace Invector
                 player.onDead.AddListener(OnCharacterDead);
                 if (displayInfoInFadeText && vHUDController.instance)
                 {
-                    vHUDController.instance.ShowText("Found player: " + currentPlayer.name.Replace("(Clone)", "").Replace("Instance", ""));
+                    vHUDController.instance.ShowText("Found player: " +
+                                                     currentPlayer.name.Replace("(Clone)", "").Replace("Instance", ""));
                 }
             }
             else if (currentPlayer == null && playerPrefab != null && spawnPoint != null)
@@ -202,6 +213,7 @@ namespace Invector
             {
                 Destroy(comps[i]);
             }
+
             var coll = target.GetComponent<Collider>();
             if (coll != null)
             {
@@ -251,7 +263,8 @@ namespace Invector
                 {
                     if (displayInfoInFadeText && vHUDController.instance)
                     {
-                        vHUDController.instance.ShowText("Player destroyed: " + oldPlayer.name.Replace("(Clone)", "").Replace("Instance", ""));
+                        vHUDController.instance.ShowText("Player destroyed: " +
+                                                         oldPlayer.name.Replace("(Clone)", "").Replace("Instance", ""));
                     }
 
                     Destroy(oldPlayer);
@@ -261,7 +274,8 @@ namespace Invector
                 {
                     if (displayInfoInFadeText && vHUDController.instance)
                     {
-                        vHUDController.instance.ShowText("Remove Player Components: " + oldPlayer.name.Replace("(Clone)", "").Replace("Instance", ""));
+                        vHUDController.instance.ShowText("Remove Player Components: " +
+                                                         oldPlayer.name.Replace("(Clone)", "").Replace("Instance", ""));
                     }
 
                     DestroyPlayerComponents(oldPlayer);
@@ -292,7 +306,8 @@ namespace Invector
                 {
                     if (displayInfoInFadeText && vHUDController.instance)
                     {
-                        vHUDController.instance.ShowText("Player destroyed: " + oldPlayer.name.Replace("(Clone)", "").Replace("Instance", ""));
+                        vHUDController.instance.ShowText("Player destroyed: " +
+                                                         oldPlayer.name.Replace("(Clone)", "").Replace("Instance", ""));
                     }
 
                     Destroy(oldPlayer);
@@ -302,7 +317,8 @@ namespace Invector
                 {
                     if (displayInfoInFadeText && vHUDController.instance)
                     {
-                        vHUDController.instance.ShowText("Remove Player Components: " + oldPlayer.name.Replace("(Clone)", "").Replace("Instance", ""));
+                        vHUDController.instance.ShowText("Remove Player Components: " +
+                                                         oldPlayer.name.Replace("(Clone)", "").Replace("Instance", ""));
                     }
 
                     DestroyPlayerComponents(oldPlayer);
@@ -330,14 +346,13 @@ namespace Invector
                 DestroyPlayerComponents(oldPlayer);
             }
 
-            var scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
+            //  var scene = SceneManager.GetActiveScene();
+            //  SceneManager.LoadScene(scene.name);
 
             if (oldPlayer && destroyBodyAfterDead)
             {
                 Destroy(oldPlayer);
             }
         }
-
     }
 }

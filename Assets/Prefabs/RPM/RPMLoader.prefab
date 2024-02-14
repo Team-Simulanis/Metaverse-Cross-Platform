@@ -63,6 +63,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3640636359281212652}
   - component: {fileID: 5051690780087879075}
+  - component: {fileID: -4913386681645104778}
   m_Layer: 0
   m_Name: RPMLoader
   m_TagString: Untagged
@@ -99,6 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b247c80e7d9275542ac548e32518319a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 0
+  _addedNetworkObject: {fileID: -4913386681645104778}
+  _networkObjectCache: {fileID: -4913386681645104778}
   femaleAnimator: {fileID: 8812554175691441471}
   maleAnimator: {fileID: 1309762998295724501}
   isMale: 0
@@ -107,6 +111,40 @@ MonoBehaviour:
     type: 3}
   changeAvatar: 0
   InitAgain: 0
+  isNetworkObject: 0
+--- !u!114 &-4913386681645104778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4740621845950481141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <IsNested>k__BackingField: 0
+  <ComponentIndex>k__BackingField: 0
+  <PredictedSpawn>k__BackingField: {fileID: 0}
+  _networkBehaviours:
+  - {fileID: 5051690780087879075}
+  <ParentNetworkObject>k__BackingField: {fileID: 0}
+  <ChildNetworkObjects>k__BackingField: []
+  SerializedTransformProperties:
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0, w: 0}
+    LocalScale: {x: 0, y: 0, z: 0}
+  _isNetworked: 1
+  _isGlobal: 0
+  _initializeOrder: 0
+  _defaultDespawnType: 0
+  NetworkObserver: {fileID: 0}
+  <PrefabId>k__BackingField: 11
+  <SpawnableCollectionId>k__BackingField: 0
+  _scenePathHash: 0
+  <SceneId>k__BackingField: 0
+  <AssetPathHash>k__BackingField: 13823274330581073557
 --- !u!1 &6764249283800810281
 GameObject:
   m_ObjectHideFlags: 0

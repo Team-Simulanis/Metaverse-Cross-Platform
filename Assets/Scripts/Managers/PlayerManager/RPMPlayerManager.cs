@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using ReadyPlayerMe.Core;
 using System;
+using FishNet.Object;
 using Invector.vCharacterController;
 using ReadyPlayerMe.AvatarCreator;
 
-public class RPMPlayerManager : MonoBehaviour
+public class RPMPlayerManager : NetworkBehaviour
 {
     private string maleType = "Masculine";
     public Animator femaleAnimator;
@@ -29,9 +30,21 @@ public class RPMPlayerManager : MonoBehaviour
     [Tooltip("This will be true for Network Object")]
     public bool isNetworkObject;
     // Start is called before the first frame update
-    void Start()
+    public override void OnStartClient()
     {
-        //LoadAvatar();
+        base.OnStartClient();
+        
+        if (IsOwner)
+        {
+            isNetworkObject = false;
+        }
+        else
+        {
+            isNetworkObject = true;
+           // LoadAvatar();
+        }
+        
+        LoadAvatar();
     }
     public void LoadAvatar()
     {

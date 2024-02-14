@@ -26,6 +26,8 @@ public class RPMPlayerManager : MonoBehaviour
     private readonly Vector3 avatarPositionOffset = new Vector3(0, 0, 0);
     public bool changeAvatar;
     public bool InitAgain;
+    [Tooltip("This will be true for Network Object")]
+    public bool isNetworkObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -103,8 +105,12 @@ public class RPMPlayerManager : MonoBehaviour
         avatar.transform.localPosition = avatarPositionOffset;
         avatar.transform.localRotation = Quaternion.Euler(0, 0, 0);
         DestroyImmediate(avatar.GetComponent<Animator>());
-        avatarController.GetComponent<vThirdPersonController>().enabled = true;
-        avatarController.GetComponent<vThirdPersonInput>().enabled = true;
+        if(!isNetworkObject)
+        {    
+            avatarController.GetComponent<vThirdPersonController>().enabled = true;
+            avatarController.GetComponent<vThirdPersonInput>().enabled = true;
+            avatarController.transform.GetChild(1).gameObject.SetActive(true);
+        }
         avatarController.SetActive(true);
         //Debug.Log(avatar.GetComponent<AvatarData>().avatarMetadata.OutfitGender);
         Invoke("ChangeAvatarRef", 0.1f);
@@ -124,24 +130,6 @@ public class RPMPlayerManager : MonoBehaviour
         }
         
     }
-    // private void SetupAvatar(GameObject  targetAvatar)
-    // {
-    //     Animator animator;
-    //     if (avatar != null)
-    //     {
-    //         Destroy(avatar);
-    //         Destroy(avatarController);
-    //     }
-    //     avatar = targetAvatar;
-    //     avatarController = Instantiate(invectorControl);
-    //     avatar.transform.parent = avatarController.transform.GetChild(0);
-    //     avatar.transform.localPosition = avatarPositionOffset;
-    //     avatar.transform.localRotation = Quaternion.Euler(0, 0, 0);
-    //     animator = avatarController.GetComponent<Animator>();
-    //     animator.avatar = avatar.GetComponent<Animator>().avatar;
-    //     DestroyImmediate(avatar.GetComponent<Animator>());
-    //     avatarController.SetActive(true);
-    // }
     public void LoadAvatar(string url)
     {
         //remove any leading or trailing spaces
@@ -153,4 +141,13 @@ public class RPMPlayerManager : MonoBehaviour
         avatarUrl = "https://models.readyplayer.me/"+url+".glb";
         
     }
+    /// <summary>
+    /// Use this function to change url
+    /// </summary>
+    /// <param name="url">Pass .GLB url here</param>
+    public void changeAvatarUrl(string url)
+    {
+        avatarUrl = url;
+    }
+    
 }

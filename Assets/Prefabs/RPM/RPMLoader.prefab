@@ -103,7 +103,8 @@ MonoBehaviour:
   maleAnimator: {fileID: 1309762998295724501}
   isMale: 0
   avatarUrl: https://models.readyplayer.me/65a924d0858eacb175e55a26.glb
-  invectorControl: {fileID: 0}
+  invectorControl: {fileID: 5949926736754868729, guid: 6a6bf5b85422e5b4eacd5351ec9b971b,
+    type: 3}
   changeAvatar: 0
   InitAgain: 0
 --- !u!1 &6764249283800810281

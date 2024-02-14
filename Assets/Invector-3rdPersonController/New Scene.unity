@@ -298,11 +298,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: RPMLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 4740621845950481141, guid: d74f1261e62e6944dabfeda69e46d70a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5051690780087879075, guid: d74f1261e62e6944dabfeda69e46d70a,
         type: 3}
       propertyPath: invectorControl
       value: 
       objectReference: {fileID: 77883585}
+    - target: {fileID: 5051690780087879075, guid: d74f1261e62e6944dabfeda69e46d70a,
+        type: 3}
+      propertyPath: isNetworkObject
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

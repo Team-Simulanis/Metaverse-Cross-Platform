@@ -4,6 +4,9 @@ using UnityEngine;
 using ReadyPlayerMe.Core;
 using System;
 using FishNet.Object;
+using FishNet.Object.Synchronizing;
+using FishNet;
+using FishNet.Transporting;
 using Invector.vCharacterController;
 using ReadyPlayerMe.AvatarCreator;
 
@@ -29,6 +32,18 @@ public class RPMPlayerManager : NetworkBehaviour
     public bool InitAgain;
     [Tooltip("This will be true for Network Object")]
     public bool isNetworkObject;
+    [SyncVar(Channel = Channel.Unreliable, ReadPermissions = ReadPermission.Observers, OnChange = nameof(ChangePlayerAvatar))]
+    public string Name =  null;
+    public bool ChangeURLL;
+
+    private void ChangePlayerAvatar(string prevUrl, string newUrl, bool asServer)
+    {
+        if(!asServer)
+        {
+            Debug.Log(prevUrl+" "+ newUrl);
+            LoadAvatar(newUrl);
+        }
+    }
     // Start is called before the first frame update
     public override void OnStartClient()
     {
@@ -43,6 +58,7 @@ public class RPMPlayerManager : NetworkBehaviour
             isNetworkObject = true;
            // LoadAvatar();
         }
+
         
         LoadAvatar();
     }
@@ -71,6 +87,11 @@ public class RPMPlayerManager : NetworkBehaviour
         {
             InitController();
             InitAgain = false;
+        }
+        if(ChangeURLL)
+        {
+            Name = avatarUrl;
+            ChangeURLL = false;
         }
     }
     void InitController()
@@ -114,7 +135,8 @@ public class RPMPlayerManager : NetworkBehaviour
         }
         else
         {
-            avatarController = Instantiate(invectorControl);
+            avatarController = invectorControl;
+            avatarController.SetActive(true);
             animator = avatarController.GetComponent<Animator>();
         }
         avatar = targetAvatar;
@@ -126,7 +148,7 @@ public class RPMPlayerManager : NetworkBehaviour
         {    
             avatarController.GetComponent<vThirdPersonController>().enabled = true;
             avatarController.GetComponent<vThirdPersonInput>().enabled = true;
-            avatarController.transform.GetChild(1).gameObject.SetActive(true);
+            avatarController.transform.GetChild(3).gameObject.SetActive(true);
         }
         avatarController.SetActive(true);
         //Debug.Log(avatar.GetComponent<AvatarData>().avatarMetadata.OutfitGender);

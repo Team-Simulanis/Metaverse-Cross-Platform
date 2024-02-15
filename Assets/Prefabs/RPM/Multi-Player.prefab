@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 5861866130285479996}
   - component: {fileID: -2797041750357411260}
   - component: {fileID: 5845518234059542661}
+  - component: {fileID: 8953657227765113925}
   m_Layer: 0
   m_Name: Multi-Player
   m_TagString: Untagged
@@ -246,6 +247,8 @@ MonoBehaviour:
   changeAvatar: 0
   InitAgain: 0
   isNetworkObject: 0
+  Name: 
+  ChangeURLL: 0
 --- !u!114 &6605979969194944695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +268,7 @@ MonoBehaviour:
   - {fileID: 2583610014509509411}
   - {fileID: 5861866130285479996}
   - {fileID: -2797041750357411260}
+  - {fileID: 8953657227765113925}
   <ParentNetworkObject>k__BackingField: {fileID: 0}
   <ChildNetworkObjects>k__BackingField: []
   SerializedTransformProperties:
@@ -847,6 +851,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 3
+--- !u!114 &8953657227765113925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018108584105516696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a494e9aa2153dc4a9282c1781c50775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 3
+  _addedNetworkObject: {fileID: 6605979969194944695}
+  _networkObjectCache: {fileID: 6605979969194944695}
+  CL: {fileID: 11400000, guid: dbf2c7a931be7ae4d960bc178dc4dda6, type: 2}
+  playerCamera: {fileID: 2805811438860258379}
 --- !u!1 &6333141075408240098
 GameObject:
   m_ObjectHideFlags: 0

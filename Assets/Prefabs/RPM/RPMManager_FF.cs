@@ -182,6 +182,7 @@ public class RPMManager_FF : NetworkBehaviour
         avatarUrl = url.Trim(' ');
         avatarObjectLoader.LoadAvatar(avatarUrl);
     }
+   
     public void changeUrl(string url)
     {
         avatarUrl = "https://models.readyplayer.me/"+url+".glb";

@@ -1,25 +1,33 @@
 using UnityEngine;
 
-public class DataManager : MonoBehaviour
+namespace FF
 {
-    public static DataManager Instance;
-
-
-    public DefaultData defaultData = new();
-
-
-    public UserData userData = new();
-
-    private void Awake()
+    public class DataManager : MonoBehaviour
     {
-        if (Instance == null)
+        public static DataManager Instance;
+
+
+        public DefaultData defaultData = new();
+
+
+        public UserData userData = new();
+
+        private void Awake()
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
-        else
+
+        public void UpdateAvatarInfo(AvatarDetails avatarDetails)
         {
-            Destroy(gameObject);
+            userData.avatarDetails = avatarDetails;
         }
     }
 }

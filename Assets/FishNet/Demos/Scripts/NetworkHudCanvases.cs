@@ -85,7 +85,7 @@ namespace FishNet.Example
 
         void OnGUI()
         {
-#if ENABLE_INPUT_SYSTEM
+#if !ENABLE_INPUT_SYSTEM
             string GetNextStateText(LocalConnectionState state)
             {
                 if (state == LocalConnectionState.Stopped)
@@ -129,7 +129,7 @@ namespace FishNet.Example
 
         private void Start()
         {
-#if !ENABLE_INPUT_SYSTEM
+#if ENABLE_INPUT_SYSTEM
         SetEventSystem();
         BaseInputModule inputModule = FindObjectOfType<BaseInputModule>();
         if (inputModule == null)
@@ -152,7 +152,16 @@ namespace FishNet.Example
                 _networkManager.ServerManager.OnServerConnectionState += ServerManager_OnServerConnectionState;
                 _networkManager.ClientManager.OnClientConnectionState += ClientManager_OnClientConnectionState;
             }
-
+           
+            if (_networkManager.ServerManager.Started)
+            {
+               Debug.Log("Server Started");
+               return;
+            }
+            else
+            {
+                Debug.Log("Server Not Started");
+            }
             if (_autoStartType == AutoStartType.Host || _autoStartType == AutoStartType.Server)
                 OnClick_Server();
             if (!Application.isBatchMode && (_autoStartType == AutoStartType.Host || _autoStartType == AutoStartType.Client))
@@ -178,11 +187,17 @@ namespace FishNet.Example
         {
             Color c;
             if (state == LocalConnectionState.Started)
+            {
                 c = _startedColor;
+            }
             else if (state == LocalConnectionState.Stopped)
+            {
                 c = _stoppedColor;
+            }
             else
+            {
                 c = _changingColor;
+            }
 
             img.color = c;
         }
@@ -192,6 +207,7 @@ namespace FishNet.Example
         {
             _clientState = obj.ConnectionState;
             UpdateColor(obj.ConnectionState, ref _clientIndicator);
+       
         }
 
 
@@ -199,6 +215,11 @@ namespace FishNet.Example
         {
             _serverState = obj.ConnectionState;
             UpdateColor(obj.ConnectionState, ref _serverIndicator);
+            Debug.Log(obj.ConnectionState);
+            if (obj.ConnectionState == LocalConnectionState.Started)
+            {
+                OnClick_Client();
+            }
         }
 
 
@@ -206,11 +227,12 @@ namespace FishNet.Example
         {
             if (_networkManager == null)
                 return;
-
+            
             if (_serverState != LocalConnectionState.Stopped)
                 _networkManager.ServerManager.StopConnection(true);
             else
                 _networkManager.ServerManager.StartConnection();
+            
 
             DeselectButtons();
         }

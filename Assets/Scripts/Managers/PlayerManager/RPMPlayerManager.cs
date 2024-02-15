@@ -1,6 +1,7 @@
 using UnityEngine;
 using ReadyPlayerMe.Core;
 using System;
+using FF;
 using FishNet.Connection;
 using FishNet.Object;
 using Invector.vCharacterController;
@@ -42,6 +43,7 @@ public class RPMPlayerManager : NetworkBehaviour
 
         if (IsOwner)
         {
+            avatarUrl = DataManager.Instance.userData.avatarDetails.avatarModelDownloadLink;
             isNetworkObject = false;
         }
         else
@@ -52,6 +54,7 @@ public class RPMPlayerManager : NetworkBehaviour
 
         LoadAvatar();
     }
+
 
     public void LoadAvatar()
     {
@@ -64,6 +67,10 @@ public class RPMPlayerManager : NetworkBehaviour
 
     public void SetAvatarUrl(string value)
     {
+        DataManager.Instance.UpdateAvatarInfo(new AvatarDetails()
+        {
+            avatarModelDownloadLink = value
+        });
         avatarUrl = value;
     }
 

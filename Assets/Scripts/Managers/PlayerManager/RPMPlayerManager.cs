@@ -43,16 +43,22 @@ public class RPMPlayerManager : NetworkBehaviour
 
         if (IsOwner)
         {
-            avatarUrl = DataManager.Instance.userData.avatarDetails.avatarModelDownloadLink;
+            if (DataManager.Instance != null)
+                avatarUrl = DataManager.Instance.userData.avatarDetails.avatarModelDownloadLink;
             isNetworkObject = false;
         }
         else
         {
             isNetworkObject = true;
         }
+        if(isBufferAvailable)
+        {
+            Debug.Log("Already Buffered Avatar Available");
+            return;
+        }
 
-
-        LoadAvatar();
+        newUrl = avatarUrl;
+        ChangeAvatarUrl();
     }
 
 
@@ -67,10 +73,6 @@ public class RPMPlayerManager : NetworkBehaviour
 
     public void SetAvatarUrl(string value)
     {
-        DataManager.Instance.UpdateAvatarInfo(new AvatarDetails()
-        {
-            avatarModelDownloadLink = value
-        });
         avatarUrl = value;
     }
 
@@ -191,20 +193,24 @@ public class RPMPlayerManager : NetworkBehaviour
     public void ChangeAvatarUrl()
     {
         avatarUrl = newUrl;
-        ChangePlayerAvatarServer(gameObject,newUrl);
+        ChangePlayerAvatarServer(gameObject, newUrl);
     }
 
     [ServerRpc]
-    private void ChangePlayerAvatarServer(GameObject manager,string url)
+    private void ChangePlayerAvatarServer(GameObject manager, string url)
     {
-        ChangePlayerAvatar(manager,url);
+        Debug.Log("Server Received");
+        ChangePlayerAvatar(manager, url);
     }
 
+    public bool isBufferAvailable;
     [ObserversRpc(BufferLast = true, ExcludeOwner = false, RunLocally = true)]
-    private void ChangePlayerAvatar(GameObject manager,string url)
+    private void ChangePlayerAvatar(GameObject manager, string url)
     {
-       Debug.Log(url);
-       
-        LoadAvatar(url);
+        Debug.Log("Server Changed");
+        isBufferAvailable = true;
+        Debug.Log(url);
+        avatarUrl = url;
+        LoadAvatar();
     }
 }

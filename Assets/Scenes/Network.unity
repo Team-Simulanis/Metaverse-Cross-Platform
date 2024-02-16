@@ -569,7 +569,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4393252310969058995, guid: 0570b6f7f713dc44a90463654bbcd8d0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1570574633}
   m_SourcePrefab: {fileID: 100100000, guid: 0570b6f7f713dc44a90463654bbcd8d0, type: 3}
 --- !u!1 &876334035
 GameObject:
@@ -700,12 +704,12 @@ PrefabInstance:
     - target: {fileID: -4913386681645104778, guid: d74f1261e62e6944dabfeda69e46d70a,
         type: 3}
       propertyPath: _scenePathHash
-      value: 1601272769
+      value: 1028868396
       objectReference: {fileID: 0}
     - target: {fileID: -4913386681645104778, guid: d74f1261e62e6944dabfeda69e46d70a,
         type: 3}
       propertyPath: <SceneId>k__BackingField
-      value: 6877414177252080639
+      value: 4418956114714033511
       objectReference: {fileID: 0}
     - target: {fileID: -4913386681645104778, guid: d74f1261e62e6944dabfeda69e46d70a,
         type: 3}
@@ -1116,6 +1120,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1570574628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4393252310969058995, guid: 0570b6f7f713dc44a90463654bbcd8d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 641334533}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1570574633
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570574628}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!114 &1870374579
 MonoBehaviour:
   m_ObjectHideFlags: 0

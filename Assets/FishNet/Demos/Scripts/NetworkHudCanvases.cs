@@ -219,6 +219,12 @@ namespace FishNet.Example
             if (obj.ConnectionState == LocalConnectionState.Started)
             {
                 OnClick_Client();
+                return;
+            }
+            if (obj.ConnectionState == LocalConnectionState.Stopped)
+            {
+                OnClick_Client();
+                return;
             }
         }
 

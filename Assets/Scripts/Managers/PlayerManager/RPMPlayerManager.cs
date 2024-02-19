@@ -1,5 +1,5 @@
 using UnityEngine;
-using ReadyPlayerMe.Core;
+//using ReadyPlayerMe.Core;
 using System;
 using FF;
 using FishNet.Connection;
@@ -18,7 +18,7 @@ public class RPMPlayerManager : NetworkBehaviour
 
     public static UrlChanger urlChanger;
     public event Action OnLoadComplete;
-    private AvatarObjectLoader avatarObjectLoader;
+  //  private AvatarObjectLoader avatarObjectLoader;
     private GameObject avatar;
     private Animator animator = null;
     private GameObject avatarController;
@@ -64,10 +64,10 @@ public class RPMPlayerManager : NetworkBehaviour
 
     public void LoadAvatar()
     {
-        avatarObjectLoader = new AvatarObjectLoader();
-        avatarObjectLoader.OnCompleted += OnLoadCompleted;
-        avatarObjectLoader.OnProgressChanged += OnLoading;
-        avatarObjectLoader.OnFailed += OnLoadFailed;
+        // avatarObjectLoader = new AvatarObjectLoader();
+        // avatarObjectLoader.OnCompleted += OnLoadCompleted;
+        // avatarObjectLoader.OnProgressChanged += OnLoading;
+        // avatarObjectLoader.OnFailed += OnLoadFailed;
         LoadAvatar(avatarUrl);
     }
 
@@ -102,30 +102,30 @@ public class RPMPlayerManager : NetworkBehaviour
     {
         // avatarController
     }
-
-    private void OnLoading(object sender, ProgressChangeEventArgs e)
-    {
-        Debug.Log("Loading Avatar..." + e.Progress + "%");
-    }
-
-    private void OnLoadFailed(object sender, FailureEventArgs args)
-    {
-        Debug.Log("Failed to load avatar");
-    }
-
-    private void OnLoadCompleted(object sender, CompletionEventArgs args)
-    {
-        SetupAvatar(args.Avatar);
-        Debug.Log("Avatar Loaded :" + args.Metadata.OutfitGender);
-        if (args.Metadata.OutfitGender == OutfitGender.Masculine)
-        {
-            isMale = true;
-        }
-        else
-        {
-            isMale = false;
-        }
-    }
+    //
+    // private void OnLoading(object sender, ProgressChangeEventArgs e)
+    // {
+    //     Debug.Log("Loading Avatar..." + e.Progress + "%");
+    // }
+    //
+    // private void OnLoadFailed(object sender, FailureEventArgs args)
+    // {
+    //     Debug.Log("Failed to load avatar");
+    // }
+    //
+    // private void OnLoadCompleted(object sender, CompletionEventArgs args)
+    // {
+    //     SetupAvatar(args.Avatar);
+    //     Debug.Log("Avatar Loaded :" + args.Metadata.OutfitGender);
+    //     if (args.Metadata.OutfitGender == OutfitGender.Masculine)
+    //     {
+    //         isMale = true;
+    //     }
+    //     else
+    //     {
+    //         isMale = false;
+    //     }
+    // }
 
     private void SetupAvatar(GameObject targetAvatar)
     {
@@ -175,7 +175,7 @@ public class RPMPlayerManager : NetworkBehaviour
     public void LoadAvatar(string url)
     {
         avatarUrl = url.Trim(' ');
-        avatarObjectLoader.LoadAvatar(avatarUrl);
+     //   avatarObjectLoader.LoadAvatar(avatarUrl);
     }
 
     public void changeUrl(string url)

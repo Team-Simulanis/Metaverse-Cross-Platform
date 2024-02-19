@@ -1,5 +1,5 @@
-using ReadyPlayerMe.Samples.LegacyAvatarCreator;
-using ReadyPlayerMe.Samples.QuickStart;
+// using ReadyPlayerMe.Samples.LegacyAvatarCreator;
+// using ReadyPlayerMe.Samples.QuickStart;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +7,7 @@ using UnityEngine;
 public class InstantiatedCharacterSaver : MonoBehaviour
 {
 
-    [SerializeField] AvatarCreatorData avatarCreatorData;
+   // [SerializeField] AvatarCreatorData avatarCreatorData;
     [SerializeField] LoginInfoHolder  loginInfoHolder;
     [SerializeField] GameObject Player;
     [SerializeField]string playerID;
@@ -37,10 +37,10 @@ public class InstantiatedCharacterSaver : MonoBehaviour
     [DrawButton]
     public void SavePlayer()
     {
-        playerID = avatarCreatorData.AvatarProperties.Id;
+      //  playerID = avatarCreatorData.AvatarProperties.Id;
         Player = GameObject.Find(playerID);
         loginInfoHolder.Player = Player;
-        ThirdPersonLoader.urlChanger(playerID);
+     //   ThirdPersonLoader.urlChanger(playerID);
     }
 
     public void loadPlayerInScene()

@@ -1,4 +1,4 @@
-using ReadyPlayerMe.Samples.QuickStart;
+//using ReadyPlayerMe.Samples.QuickStart;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,7 +27,7 @@ public class urlSender : MonoBehaviour
     {
         AvatarImage.sprite = thisButtonImage.sprite;
         AvatarImage.color = thisButtonImage.color;
-        ThirdPersonLoader.urlChanger(UrlForCharacter);
+      //  ThirdPersonLoader.urlChanger(UrlForCharacter);
 
     }
 }

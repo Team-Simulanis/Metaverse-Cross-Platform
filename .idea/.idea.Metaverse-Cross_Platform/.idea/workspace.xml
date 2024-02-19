@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9b222733-920a-44c5-b046-f098a751148c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Metaverse-Cross_Platform/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Metaverse-Cross_Platform/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metaverse-Cross_Platform/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vsconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AvatarButtonDownloader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AvatarButtonDownloader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RPM/RPMManager_FF.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RPM/RPMManager_FF.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/63e9b2126f759e4d1dfabc6d.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/63e9b2126f759e4d1dfabc6d/2fac66e374c947c41bc74325c6e3d934.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/63e9b2126f759e4d1dfabc6d/2fac66e374c947c41bc74325c6e3d934/63e9b2126f759e4d1dfabc6d.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/63e9b2126f759e4d1dfabc6d/2fac66e374c947c41bc74325c6e3d934/63e9b2126f759e4d1dfabc6d.glb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/63e9b2126f759e4d1dfabc6d/63e9b2126f759e4d1dfabc6d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/63e9b2126f759e4d1dfabc6d/63e9b2126f759e4d1dfabc6d.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/64bfc617fffca9bd5d533218.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/64bfc617fffca9bd5d533218/2fac66e374c947c41bc74325c6e3d934.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/64bfc617fffca9bd5d533218/2fac66e374c947c41bc74325c6e3d934/64bfc617fffca9bd5d533218.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/64bfc617fffca9bd5d533218/2fac66e374c947c41bc74325c6e3d934/64bfc617fffca9bd5d533218.glb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/64bfc617fffca9bd5d533218/64bfc617fffca9bd5d533218.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/64bfc617fffca9bd5d533218/64bfc617fffca9bd5d533218.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65a90df042434d6d465ca8aa.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65a90df042434d6d465ca8aa/2fac66e374c947c41bc74325c6e3d934.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65a90df042434d6d465ca8aa/2fac66e374c947c41bc74325c6e3d934/65a90df042434d6d465ca8aa.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65a90df042434d6d465ca8aa/2fac66e374c947c41bc74325c6e3d934/65a90df042434d6d465ca8aa.glb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65a90df042434d6d465ca8aa/65a90df042434d6d465ca8aa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65a90df042434d6d465ca8aa/65a90df042434d6d465ca8aa.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65a924d0858eacb175e55a26.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65a924d0858eacb175e55a26/2fac66e374c947c41bc74325c6e3d934.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65a924d0858eacb175e55a26/2fac66e374c947c41bc74325c6e3d934/65a924d0858eacb175e55a26.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65a924d0858eacb175e55a26/2fac66e374c947c41bc74325c6e3d934/65a924d0858eacb175e55a26.glb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65a924d0858eacb175e55a26/65a924d0858eacb175e55a26.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65a924d0858eacb175e55a26/65a924d0858eacb175e55a26.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65abaf719fdd801e40293e6c.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65abaf719fdd801e40293e6c/2fac66e374c947c41bc74325c6e3d934.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65abaf719fdd801e40293e6c/2fac66e374c947c41bc74325c6e3d934/65abaf719fdd801e40293e6c.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65abaf719fdd801e40293e6c/2fac66e374c947c41bc74325c6e3d934/65abaf719fdd801e40293e6c.glb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65abaf719fdd801e40293e6c/65abaf719fdd801e40293e6c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65abaf719fdd801e40293e6c/65abaf719fdd801e40293e6c.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65c0a71d0c297299233d0e7a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65c0a71d0c297299233d0e7a/65c0a71d0c297299233d0e7a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65c0a71d0c297299233d0e7a/65c0a71d0c297299233d0e7a.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65c0a71d0c297299233d0e7a/e7b442390ee9d8733cd7070af1a160c9.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65c0a71d0c297299233d0e7a/e7b442390ee9d8733cd7070af1a160c9/65c0a71d0c297299233d0e7a.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Avatars/65c0a71d0c297299233d0e7a/e7b442390ee9d8733cd7070af1a160c9/65c0a71d0c297299233d0e7a.glb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Resources/Settings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Resources/Settings/CoreSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Resources/Settings/CoreSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Animation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Animation/AnimationController.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Animation/AnimationController.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Animation/Idle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Animation/Idle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Animation/IdleAnimation.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Animation/IdleAnimation.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Configs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Configs/InCreatorAvatarConfig.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Configs/InCreatorAvatarConfig.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Configs/InGameAvatarConfig.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Configs/InGameAvatarConfig.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Editor/AvatarCreatorStateMachineEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Editor/AvatarCreatorStateMachineEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Editor/ReadyPlayerMe.Samples.LegacyAvatarCreator.Editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Editor/ReadyPlayerMe.Samples.LegacyAvatarCreator.Editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Fonts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Fonts/Poppins-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Fonts/Poppins-Regular.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Fonts/Poppins-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Fonts/Poppins-SemiBold.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/AccountCreationPopup.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/AccountCreationPopup.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Buttons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Buttons/AssetButton.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Buttons/AssetButton.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Buttons/CategoryButton.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Buttons/CategoryButton.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Buttons/ClearAssetSelectionButton.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Buttons/ClearAssetSelectionButton.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Buttons/ColorAssetButton.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Buttons/ColorAssetButton.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Buttons/FullBodyButton.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Buttons/FullBodyButton.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/DefaultAvatarButton.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/DefaultAvatarButton.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Header.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Header.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/LoadingManager.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/LoadingManager.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Panels.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Panels/CategoriesButtonPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Panels/CategoriesButtonPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Panels/CategoryPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Panels/CategoryPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Panels/ColorCategoryPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Panels/ColorCategoryPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Panels/FaceCategoriesButtonPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Panels/FaceCategoriesButtonPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Panels/FaceCategroyPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Panels/FaceCategroyPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/ProfileAvatarButton.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/ProfileAvatarButton.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections/AvatarCreatorSelection.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections/AvatarCreatorSelection.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections/AvatarSelection.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections/AvatarSelection.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections/BodyTypeSelection.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections/BodyTypeSelection.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections/CameraPhotoSelection.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections/CameraPhotoSelection.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections/DefaultAvatarSelection.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections/DefaultAvatarSelection.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections/GenderSelection.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections/GenderSelection.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections/LoginWithEmailSelection.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections/LoginWithEmailSelection.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections/SelfieSelection.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Prefabs/Selections/SelfieSelection.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/ReadyPlayerMe.Samples.LegacyAvatarCreator.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/ReadyPlayerMe.Samples.LegacyAvatarCreator.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Resources/AvatarCreatorData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Resources/AvatarCreatorData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scenes/LegacyAvatarCreator.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scenes/LegacyAvatarCreator.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/Data/AvatarCreatorData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/Data/AvatarCreatorData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/GameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/GameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/ProfileManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/ProfileManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/AssetButtonCreator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/AssetButtonCreator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/AvatarCreatorStateMachine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/AvatarCreatorStateMachine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/Buttons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/Buttons/AssetButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/Buttons/AssetButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/Buttons/AvatarButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/Buttons/AvatarButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/Buttons/CategoryButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/Buttons/CategoryButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/CategoryUICreator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/CategoryUICreator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/DebugPanel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/DebugPanel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/LoadingManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/LoadingManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/PanelSwitcher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/PanelSwitcher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/ProfileUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/ProfileUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens/AvatarCreatorSelection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens/AvatarCreatorSelection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens/AvatarSelection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens/AvatarSelection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens/BodyTypeSelection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens/BodyTypeSelection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens/CameraPhotoSelection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens/CameraPhotoSelection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens/DefaultAvatarSelection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens/DefaultAvatarSelection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens/GenderSelection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens/GenderSelection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens/LoginWithEmailSelection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens/LoginWithEmailSelection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens/SeflieSelection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/SelectionScreens/SeflieSelection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/StateMachine.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/StateMachine/State.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/StateMachine/State.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/StateMachine/StateMachine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/UI/StateMachine/StateMachine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/Utils.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/Utils/CameraZoom.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/Utils/CameraZoom.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/Utils/LoadingAnimation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/Scripts/Utils/LoadingAnimation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/ButtonRounded40px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/ButtonRounded40px.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/CameraIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/CameraIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/BeardStyle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/BeardStyle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Bottom.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/EyeColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/EyeColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Eyebrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Eyebrows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Face.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Face.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/FaceMask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/FaceMask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Facewear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Facewear.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Footwear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Footwear.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Glasses.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Glasses.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/HairStyle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/HairStyle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/HeadShape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/HeadShape.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Headwear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Headwear.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/LipShape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/LipShape.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/NodeShape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/NodeShape.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Outfit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Outfit.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/Categories/Top.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/ClearSelection.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/ClearSelection.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/RPM_Icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/RPM_Icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/SelectedAsset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/SelectedAsset.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/SelfieIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/SelfieIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/bg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/body_type_fullbody.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/body_type_fullbody.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/body_type_vr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/body_type_vr.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/circle-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/circle-512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/colors.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/colors.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/icons8-left-100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/icons8-left-100.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/icons8-right-100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/icons8-right-100.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/loading.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/loading.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/plus-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/LegacyAvatarCreator/icons/plus-icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Animation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Animation/AnimationController.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Animation/AnimationController.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Animation/Pointing Forward.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Animation/Pointing Forward.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Images.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Images/Eyebrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Images/Eyebrows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Images/HairStyle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Images/HairStyle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Images/Headwear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Images/Headwear.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Images/Outfit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Images/Outfit.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/ReadyPlayerMe.Samples.SimpleAvatarCreator.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/ReadyPlayerMe.Samples.SimpleAvatarCreator.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Scenes/SimpleAvatarCreator.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Scenes/SimpleAvatarCreator.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Scripts/SimpleAvatarCreator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarCreatorSamples/SimpleAvatarCreator/Scripts/SimpleAvatarCreator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLoading.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLoading/AvatarLoadingExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLoading/AvatarLoadingExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLoading/AvatarLoadingExample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLoading/AvatarLoadingExample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLod.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLod/Avatar Configuration LOD0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLod/Avatar Configuration LOD0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLod/Avatar Configuration LOD1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLod/Avatar Configuration LOD1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLod/Avatar Configuration LOD2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLod/Avatar Configuration LOD2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLod/AvatarLodExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLod/AvatarLodExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLod/AvatarLodExample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLod/AvatarLodExample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLod/AvatarLodExampleUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/AvatarLod/AvatarLodExampleUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/MultipleAvatarLoading.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/MultipleAvatarLoading/MultipleAvatarLoadingExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/MultipleAvatarLoading/MultipleAvatarLoadingExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/MultipleAvatarLoading/MultipleAvatarLoadingExample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/MultipleAvatarLoading/MultipleAvatarLoadingExample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/MultipleQualityAvatarLoading.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/MultipleQualityAvatarLoading/MultipleQualityAvatarLoadingExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/MultipleQualityAvatarLoading/MultipleQualityAvatarLoadingExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/MultipleQualityAvatarLoading/MultipleQualityAvatarLoadingExample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/MultipleQualityAvatarLoading/MultipleQualityAvatarLoadingExample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/MultipleQualityAvatarLoading/QualityContainer.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/MultipleQualityAvatarLoading/QualityContainer.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/ReadyPlayerMe.Samples.AvatarLoading.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarLoadingSamples/ReadyPlayerMe.Samples.AvatarLoading.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarRenderSamples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarRenderSamples/MultipleRenders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarRenderSamples/MultipleRenders/MultipleAvatarRenderExample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarRenderSamples/MultipleRenders/MultipleAvatarRenderExample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarRenderSamples/MultipleRenders/RenderPanel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarRenderSamples/MultipleRenders/RenderPanel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarRenderSamples/MultipleRenders/RenderPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarRenderSamples/MultipleRenders/RenderPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarRenderSamples/ReadyPlayerMe.Samples.AvatarRenders.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/AvatarRenderSamples/ReadyPlayerMe.Samples.AvatarRenders.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/ArmatureAvatar.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/ArmatureAvatar.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/Idle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/Idle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/InAir.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/InAir.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/Jog.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/Jog.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/Jump.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/Jump.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/RpmPlayer.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/RpmPlayer.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/Run.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/Run.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/Run_N_Land.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/Run_N_Land.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/Walk_N_Land.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/Walk_N_Land.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Animations/license.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Images.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Images/ButtonRounded40px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Images/ButtonRounded40px.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Images/close.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Images/header bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Images/header bg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Images/image 139.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Images/image 139.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Images/open_in_new.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Images/open_in_new.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Materials/Blocks.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Materials/Blocks.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Materials/GridFloor.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Materials/GridFloor.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Materials/Ground.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Materials/Ground.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Prefabs/RPM Camera Rig.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Prefabs/RPM Camera Rig.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Prefabs/RPM Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Prefabs/RPM Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/PreviewAvatar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/PreviewAvatar/PreviewAvatar.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/PreviewAvatar/PreviewAvatar.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/PreviewAvatar/PreviewMesh.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/PreviewAvatar/PreviewMesh.glb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/QuickStart.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/QuickStart.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/ReadyPlayerMe.Samples.QuickStart.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/ReadyPlayerMe.Samples.QuickStart.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/CameraFollow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/CameraFollow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/CameraOrbit.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/CameraOrbit.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/GroundCheck.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/GroundCheck.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/LoadingAnimation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/LoadingAnimation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/LookAtCamera.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/LookAtCamera.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/MouseCursorLock.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/MouseCursorLock.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/PersonalAvatarLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/PersonalAvatarLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/PlayerInput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/PlayerInput.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/ThirdPersonController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/ThirdPersonController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/ThirdPersonLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/ThirdPersonLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/ThirdPersonMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/ThirdPersonMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/UrLsender.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Scripts/UrLsender.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Textures/Grid_01_BaseMap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Textures/Grid_01_BaseMap.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Textures/Grid_01_Emissive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Textures/Grid_01_Emissive.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Textures/Grid_01_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/Textures/Grid_01_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Editor/ReadyPlayerMe.Samples.WebGLSample.Editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Editor/ReadyPlayerMe.Samples.WebGLSample.Editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Editor/WebGLBuildPreprocessor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Editor/WebGLBuildPreprocessor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Editor/WebGLPackageImporter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Editor/WebGLPackageImporter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Prefabs/DebugPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Prefabs/DebugPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/ReadyPlayerMe.Samples.WebGLSample.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/ReadyPlayerMe.Samples.WebGLSample.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Scenes/WebGLExample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Scenes/WebGLExample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Scenes/WebGLExampleSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Scenes/WebGLExampleSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Scripts/DebugLogger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Scripts/DebugLogger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Scripts/DemoCanvas.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Scripts/DemoCanvas.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Scripts/WebFrameHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Scripts/WebFrameHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Scripts/WebGLAvatarLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Scripts/WebGLAvatarLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Scripts/WebInterface.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/WebGLSample/Scripts/WebInterface.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me WebView.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me WebView/2.1.3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me WebView/2.1.3/WebView.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me WebView/2.1.3/WebView/WebView.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ready Player Me/Samples/Ready Player Me WebView/2.1.3/WebView/WebView.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager/RPMPlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager/RPMPlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Metaverse-Cross-Platform/InstantiatedCharacterSaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Metaverse-Cross-Platform/InstantiatedCharacterSaver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Metaverse-Cross-Platform/urlSender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Metaverse-Cross-Platform/urlSender.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2cZOvmDc4xbtfLZG2rZ36SlC77J" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "build/server",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\Admin\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.16f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath U:\Metaverse-Cross_Platform -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="U:\Metaverse-Cross_Platform" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.16f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath U:\Metaverse-Cross_Platform -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="U:\Metaverse-Cross_Platform" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b222733-920a-44c5-b046-f098a751148c" name="Changes" comment="" />
+      <created>1708315867120</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708315867120</updated>
+      <workItem from="1708315868553" duration="214000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

@@ -6,6 +6,7 @@ using FishNet.Connection;
 using FishNet.Object;
 using Invector.vCharacterController;
 using Sirenix.OdinInspector;
+using Unity.VisualScripting;
 
 
 public class RPMPlayerManager : NetworkBehaviour
@@ -17,8 +18,10 @@ public class RPMPlayerManager : NetworkBehaviour
     public delegate void UrlChanger(string url);
 
     public static UrlChanger urlChanger;
+
     public event Action OnLoadComplete;
-  //  private AvatarObjectLoader avatarObjectLoader;
+
+    //  private AvatarObjectLoader avatarObjectLoader;
     private GameObject avatar;
     private Animator animator = null;
     private GameObject avatarController;
@@ -51,7 +54,8 @@ public class RPMPlayerManager : NetworkBehaviour
         {
             isNetworkObject = true;
         }
-        if(isBufferAvailable)
+
+        if (isBufferAvailable)
         {
             Debug.Log("Already Buffered Avatar Available");
             return;
@@ -61,13 +65,14 @@ public class RPMPlayerManager : NetworkBehaviour
         ChangeAvatarUrl();
     }
 
-
     public void LoadAvatar()
     {
-        // avatarObjectLoader = new AvatarObjectLoader();
-        // avatarObjectLoader.OnCompleted += OnLoadCompleted;
-        // avatarObjectLoader.OnProgressChanged += OnLoading;
-        // avatarObjectLoader.OnFailed += OnLoadFailed;
+        #if !UNITY_SERVER
+        avatarObjectLoader = new AvatarObjectLoader();
+         avatarObjectLoader.OnCompleted += OnLoadCompleted;
+         avatarObjectLoader.OnProgressChanged += OnLoading;
+         avatarObjectLoader.OnFailed += OnLoadFailed;
+        #endif
         LoadAvatar(avatarUrl);
     }
 
@@ -175,7 +180,7 @@ public class RPMPlayerManager : NetworkBehaviour
     public void LoadAvatar(string url)
     {
         avatarUrl = url.Trim(' ');
-     //   avatarObjectLoader.LoadAvatar(avatarUrl);
+        //   avatarObjectLoader.LoadAvatar(avatarUrl);
     }
 
     public void changeUrl(string url)
@@ -204,6 +209,7 @@ public class RPMPlayerManager : NetworkBehaviour
     }
 
     public bool isBufferAvailable;
+
     [ObserversRpc(BufferLast = true, ExcludeOwner = false, RunLocally = true)]
     private void ChangePlayerAvatar(GameObject manager, string url)
     {

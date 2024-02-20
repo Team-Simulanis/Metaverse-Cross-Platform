@@ -42,5 +42,7 @@ MonoBehaviour:
       Name: SplashScreen
     - Category: Ingame
       Name: BottomBar
+    - Category: Ingame
+      Name: ReactionPanel
     - Category: None
       Name: None

@@ -7,16 +7,16 @@ namespace Common.Editor.Scripts
 {
     public static class SceneLoad
     {
-        [MenuItem("Scenes/Loading")]
-        private static void OpenLobbyScene()
-        {
-            OpenScene("Loading");
-        }
-
         [MenuItem("Scenes/Main")]
         private static void Login()
         {
             OpenScene("Main");
+        }
+        
+        [MenuItem("Scenes/Network")]
+        private static void Network()
+        {
+            OpenScene("Network");
         }
 
         private static void OpenScene(string sceneName)
@@ -32,7 +32,7 @@ namespace Common.Editor.Scripts
             }
         }
 
-        public static float CurrentAlpha;
+        private static float CurrentAlpha;
 
         [MenuItem("FourtyFourty/ShowReference _F10")]
         public static void ShowHideReference()

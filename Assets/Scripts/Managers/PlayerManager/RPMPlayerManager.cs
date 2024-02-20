@@ -1,5 +1,7 @@
 using UnityEngine;
+#if !UNITY_Server
 using ReadyPlayerMe.Core;
+#endif
 using System;
 using FF;
 using FishNet.Connection;
@@ -13,7 +15,7 @@ public class RPMPlayerManager : NetworkBehaviour
     private string maleType = "Masculine";
     public Animator femaleAnimator;
     public Animator maleAnimator;
-
+    public GameObject defaultAvatar;
     public delegate void UrlChanger(string url);
 
     public static UrlChanger urlChanger;
@@ -35,6 +37,10 @@ public class RPMPlayerManager : NetworkBehaviour
     [Tooltip("This will be true for Network Object")]
     public bool isNetworkObject;
 
+    private void Start()
+    {
+        SetupAvatar(defaultAvatar);
+    }
 
     // Start is called before the first frame update
     public override void OnStartClient()
@@ -127,8 +133,10 @@ public class RPMPlayerManager : NetworkBehaviour
         }
     }
 
+
     private void SetupAvatar(GameObject targetAvatar)
     {
+        Debug.Log("Setting up "+ targetAvatar.name + " as Avatar");
         if (avatar != null)
         {
             avatarController.GetComponent<vThirdPersonController>().enabled = false;

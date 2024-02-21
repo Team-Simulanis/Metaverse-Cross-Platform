@@ -1,3 +1,6 @@
+using Doozy.Runtime.Reactor;
+using Doozy.Runtime.UIManager.Containers;
+using Doozy.Runtime.UIManager.Listeners;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,23 +9,30 @@ using UnityEngine;
 public class FeedbackPanel : MonoBehaviour
 {
     [SerializeField] TMP_InputField Feedback;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    enum reactionEnum { None , good , neutral , bad }
+    reactionEnum reaction;
+    [SerializeField] UIView feedbackPanelView;
+    public void SubmitFeedback()//this method will be called to submit the feedback
+    { 
+        if (reaction == reactionEnum.None) 
+        {
+            Debug.Log("please select a reation");
+        }
+        else
+        {
+            feedbackPanelView.Hide();
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    public void BadFeedbackButton() //will be called when bad feedback button is pressed
     {
-        
+        reaction = reactionEnum.bad;
     }
-
-    //this method will be called to submit the feedback
-    public void submitFeedback()  
+    public void NeutralFeedbackButton()//will be called when neutral feedback button is pressed
     {
-      
+        reaction = reactionEnum.neutral;
     }
-
-
+    public void GoodFeedbackButton()//will be called when good feedback button is pressed
+    {
+        reaction = reactionEnum.good; 
+    }
 }

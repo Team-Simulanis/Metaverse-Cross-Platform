@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Metaverse-Cross-Platform/AvatarCreatorScene.unity
     guid: 2bb904016c04f9c4abe2673031986e2a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Network.unity
     guid: a691022e9d4acf84988fa533998ad3de
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/New Scene.unity
     guid: 4389c4cd038e6834ba3aaa2764e4b44d
   m_configObjects: {}

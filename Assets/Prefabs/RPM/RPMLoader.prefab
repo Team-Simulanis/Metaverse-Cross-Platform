@@ -95,7 +95,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4740621845950481141}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b247c80e7d9275542ac548e32518319a, type: 3}
   m_Name: 
@@ -105,6 +105,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: -4913386681645104778}
   femaleAnimator: {fileID: 8812554175691441471}
   maleAnimator: {fileID: 1309762998295724501}
+  defaultAvatar: {fileID: 0}
   isMale: 0
   avatarUrl: https://models.readyplayer.me/65a924d0858eacb175e55a26.glb
   invectorControl: {fileID: 5949926736754868729, guid: 6a6bf5b85422e5b4eacd5351ec9b971b,
@@ -112,6 +113,8 @@ MonoBehaviour:
   changeAvatar: 0
   InitAgain: 0
   isNetworkObject: 0
+  newUrl: 
+  isBufferAvailable: 0
 --- !u!114 &-4913386681645104778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,7 +122,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4740621845950481141}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
   m_Name: 
@@ -133,16 +136,16 @@ MonoBehaviour:
   <ChildNetworkObjects>k__BackingField: []
   SerializedTransformProperties:
     Position: {x: 0, y: 0, z: 0}
-    Rotation: {x: 0, y: 0, z: 0, w: 0}
-    LocalScale: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0, w: 1}
+    LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
   _isGlobal: 0
   _initializeOrder: 0
   _defaultDespawnType: 0
   NetworkObserver: {fileID: 0}
-  <PrefabId>k__BackingField: 11
+  <PrefabId>k__BackingField: 14
   <SpawnableCollectionId>k__BackingField: 0
-  _scenePathHash: 0
+  _scenePathHash: 1028868396
   <SceneId>k__BackingField: 0
   <AssetPathHash>k__BackingField: 13823274330581073557
 --- !u!1 &6764249283800810281

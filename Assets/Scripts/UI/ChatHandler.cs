@@ -35,7 +35,7 @@ public class ChatHandler : MonoBehaviour
         }
     }
 
-    private void SendMessage()
+    public void SendMessage()
     {
         Message msg = new Message()
         {

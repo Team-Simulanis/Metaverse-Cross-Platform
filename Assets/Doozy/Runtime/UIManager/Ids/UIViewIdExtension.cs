@@ -48,7 +48,10 @@ namespace Doozy.Runtime.UIManager
         public enum Ingame
         {
             BottomBar,
-            ReactionPanel
+            ChatPanel,
+            ReactionPanel,
+            session,
+            sessionsPanel
         }    
     }
 }

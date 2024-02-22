@@ -115,10 +115,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02761efe598a45c98fa1baf4d446c6a7, type: 3}
   m_Name: ExampleFlowGraph
   m_EditorClassIdentifier: 
+  EditorPosition: {x: 0, y: 0, z: 0}
+  EditorScale: {x: 1, y: 1, z: 1}
   Id: 297b530e-b5fd-43a6-abb2-f788baa062bf
   GraphName: Flow Graph
   GraphDescription: 
   IsSubGraph: 0
+  GraphState: 0
+  OnStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStop:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPause:
+    m_PersistentCalls:
+      m_Calls: []
+  OnResume:
+    m_PersistentCalls:
+      m_Calls: []
+  OnBackFlow:
+    m_PersistentCalls:
+      m_Calls: []
   Nodes:
   - {fileID: -4313505141838691552}
   - {fileID: -9014536174948407618}

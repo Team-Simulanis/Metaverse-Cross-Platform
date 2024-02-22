@@ -241,14 +241,15 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 6605979969194944695}
   femaleAnimator: {fileID: 2918150742972944864}
   maleAnimator: {fileID: 2807829468635797655}
+  defaultAvatar: {fileID: 0}
   isMale: 0
   avatarUrl: https://models.readyplayer.me/65a924d0858eacb175e55a26.glb
   invectorControl: {fileID: 6018108584105516696}
   changeAvatar: 0
   InitAgain: 0
   isNetworkObject: 0
-  Name: 
-  ChangeURLL: 0
+  newUrl: 
+  isBufferAvailable: 0
 --- !u!114 &6605979969194944695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +281,7 @@ MonoBehaviour:
   _initializeOrder: 0
   _defaultDespawnType: 0
   NetworkObserver: {fileID: 0}
-  <PrefabId>k__BackingField: 10
+  <PrefabId>k__BackingField: 11
   <SpawnableCollectionId>k__BackingField: 0
   _scenePathHash: 0
   <SceneId>k__BackingField: 0

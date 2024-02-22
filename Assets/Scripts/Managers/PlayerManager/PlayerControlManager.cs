@@ -82,6 +82,8 @@ public class PlayerControlManager : NetworkBehaviour
     {
         Cursor.visible = value;
         playerCamera.isFreezed = value;
+        //GetComponent<Rigidbody>().useGravity = !value;
+        GetComponent<vThirdPersonInput>().lockMoveInput = value;
         if(value)
         {
             Cursor.lockState = CursorLockMode.None;

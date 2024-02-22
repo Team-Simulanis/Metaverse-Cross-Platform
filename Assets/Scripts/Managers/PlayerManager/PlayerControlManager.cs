@@ -45,7 +45,7 @@ public class PlayerControlManager : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!IsOwner) return;
+        //if (!IsOwner) return;
         if (Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log("F Pressed");

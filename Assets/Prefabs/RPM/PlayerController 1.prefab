@@ -1055,6 +1055,7 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 340468053953193137}
   _networkObjectCache: {fileID: 340468053953193137}
   CL: {fileID: 11400000, guid: dbf2c7a931be7ae4d960bc178dc4dda6, type: 2}
+  playerCamera: {fileID: 865953575552820076}
 --- !u!1 &8178658041542907151
 GameObject:
   m_ObjectHideFlags: 0

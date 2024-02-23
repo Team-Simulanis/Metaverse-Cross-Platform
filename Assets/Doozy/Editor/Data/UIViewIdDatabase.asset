@@ -42,5 +42,13 @@ MonoBehaviour:
       Name: SplashScreen
     - Category: Ingame
       Name: BottomBar
+    - Category: Ingame
+      Name: ChatPanel
+    - Category: Ingame
+      Name: ReactionPanel
+    - Category: Ingame
+      Name: session
+    - Category: Ingame
+      Name: sessionsPanel
     - Category: None
       Name: None

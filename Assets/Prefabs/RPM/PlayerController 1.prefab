@@ -1000,7 +1000,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5949926736754868729}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a541d1ff774d4c1458cd08500e831ec6, type: 3}
   m_Name: 
@@ -1055,6 +1055,7 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 340468053953193137}
   _networkObjectCache: {fileID: 340468053953193137}
   CL: {fileID: 11400000, guid: dbf2c7a931be7ae4d960bc178dc4dda6, type: 2}
+  playerCamera: {fileID: 865953575552820076}
 --- !u!1 &8178658041542907151
 GameObject:
   m_ObjectHideFlags: 0

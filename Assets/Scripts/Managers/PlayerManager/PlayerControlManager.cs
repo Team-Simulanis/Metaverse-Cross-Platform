@@ -12,9 +12,12 @@ public class PlayerControlManager : NetworkBehaviour
     public static PlayerControlManager _Instance;
    
     public vThirdPersonCameraListData CL;
+    public vThirdPersonCamera playerCamera;
+    private Renderer[] renderers;
    
    
     bool firstView;
+    bool isCursorLocked;
 
     void Awake()
     {
@@ -28,6 +31,7 @@ public class PlayerControlManager : NetworkBehaviour
     void Start()
     {
         Init();
+        ChangeToFirstView(false);
     }
 
     void Init()
@@ -41,12 +45,18 @@ public class PlayerControlManager : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!IsOwner) return;
+        //if (!IsOwner) return;
         if (Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log("F Pressed");
             firstView = !firstView;
             ChangeToFirstView(firstView);
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Debug.Log("L Pressed");
+            isCursorLocked = !isCursorLocked;
+            SetCursorLocked(isCursorLocked);
         }
     }
 
@@ -59,11 +69,36 @@ public class PlayerControlManager : NetworkBehaviour
             CL.tpCameraStates[0].height = 1.8f;
 
             // Need to disable all mesh renderer
+            
         }
         else
         {
             CL.tpCameraStates[0].defaultDistance = 2.5f;
             CL.tpCameraStates[0].height = 1.25f;
+        }
+        ChangePlayerRenderer(value);
+    }
+    void SetCursorLocked(bool value)
+    {
+        Cursor.visible = value;
+        playerCamera.isFreezed = value;
+        //GetComponent<Rigidbody>().useGravity = !value;
+        GetComponent<vThirdPersonInput>().lockMoveInput = value;
+        if(value)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+    }
+    void ChangePlayerRenderer(bool value)
+    {
+        renderers = transform.GetComponentsInChildren<Renderer>();
+        foreach(var r in renderers)
+        {
+            r.enabled = !value;
         }
     }
 }

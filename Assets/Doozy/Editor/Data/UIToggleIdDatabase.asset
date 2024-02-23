@@ -13,4 +13,12 @@ MonoBehaviour:
   m_Name: UIToggleIdDatabase
   m_EditorClassIdentifier: 
   Database:
-    Items: []
+    Items:
+    - Category: FloaterPanel
+      Name: ChatPanel
+    - Category: FloaterPanel
+      Name: EmojiPanel
+    - Category: FloaterPanel
+      Name: SessionsPanel
+    - Category: None
+      Name: None

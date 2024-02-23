@@ -162,8 +162,12 @@ namespace FishNet.Example
             {
                 Debug.Log("Server Not Started");
             }
+            
+            
             if (_autoStartType == AutoStartType.Host || _autoStartType == AutoStartType.Server)
+            {
                 OnClick_Server();
+            }
             if (!Application.isBatchMode && (_autoStartType == AutoStartType.Host || _autoStartType == AutoStartType.Client))
                 OnClick_Client();
         }
@@ -216,14 +220,15 @@ namespace FishNet.Example
             _serverState = obj.ConnectionState;
             UpdateColor(obj.ConnectionState, ref _serverIndicator);
             Debug.Log(obj.ConnectionState);
+  
             if (obj.ConnectionState == LocalConnectionState.Started)
             {
-                OnClick_Client();
+             //     OnClick_Client();
                 return;
             }
             if (obj.ConnectionState == LocalConnectionState.Stopped)
             {
-                OnClick_Client();
+              // OnClick_Client();
                 return;
             }
         }

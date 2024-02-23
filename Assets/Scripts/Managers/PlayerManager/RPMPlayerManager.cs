@@ -1,12 +1,13 @@
 using UnityEngine;
-//using ReadyPlayerMe.Core;
+#if !UNITY_Server
+using ReadyPlayerMe.Core;
+#endif
 using System;
 using FF;
 using FishNet.Connection;
 using FishNet.Object;
 using Invector.vCharacterController;
 using Sirenix.OdinInspector;
-using Unity.VisualScripting;
 
 
 public class RPMPlayerManager : NetworkBehaviour
@@ -14,14 +15,12 @@ public class RPMPlayerManager : NetworkBehaviour
     private string maleType = "Masculine";
     public Animator femaleAnimator;
     public Animator maleAnimator;
-
+    public GameObject defaultAvatar;
     public delegate void UrlChanger(string url);
 
     public static UrlChanger urlChanger;
-
     public event Action OnLoadComplete;
-
-    //  private AvatarObjectLoader avatarObjectLoader;
+    private AvatarObjectLoader avatarObjectLoader;
     private GameObject avatar;
     private Animator animator = null;
     private GameObject avatarController;
@@ -38,6 +37,10 @@ public class RPMPlayerManager : NetworkBehaviour
     [Tooltip("This will be true for Network Object")]
     public bool isNetworkObject;
 
+    private void Start()
+    {
+        SetupAvatar(defaultAvatar);
+    }
 
     // Start is called before the first frame update
     public override void OnStartClient()
@@ -54,8 +57,7 @@ public class RPMPlayerManager : NetworkBehaviour
         {
             isNetworkObject = true;
         }
-
-        if (isBufferAvailable)
+        if(isBufferAvailable)
         {
             Debug.Log("Already Buffered Avatar Available");
             return;
@@ -65,14 +67,13 @@ public class RPMPlayerManager : NetworkBehaviour
         ChangeAvatarUrl();
     }
 
+
     public void LoadAvatar()
     {
-        #if !UNITY_SERVER
         avatarObjectLoader = new AvatarObjectLoader();
-         avatarObjectLoader.OnCompleted += OnLoadCompleted;
-         avatarObjectLoader.OnProgressChanged += OnLoading;
-         avatarObjectLoader.OnFailed += OnLoadFailed;
-        #endif
+        avatarObjectLoader.OnCompleted += OnLoadCompleted;
+        avatarObjectLoader.OnProgressChanged += OnLoading;
+        avatarObjectLoader.OnFailed += OnLoadFailed;
         LoadAvatar(avatarUrl);
     }
 
@@ -107,33 +108,35 @@ public class RPMPlayerManager : NetworkBehaviour
     {
         // avatarController
     }
-    //
-    // private void OnLoading(object sender, ProgressChangeEventArgs e)
-    // {
-    //     Debug.Log("Loading Avatar..." + e.Progress + "%");
-    // }
-    //
-    // private void OnLoadFailed(object sender, FailureEventArgs args)
-    // {
-    //     Debug.Log("Failed to load avatar");
-    // }
-    //
-    // private void OnLoadCompleted(object sender, CompletionEventArgs args)
-    // {
-    //     SetupAvatar(args.Avatar);
-    //     Debug.Log("Avatar Loaded :" + args.Metadata.OutfitGender);
-    //     if (args.Metadata.OutfitGender == OutfitGender.Masculine)
-    //     {
-    //         isMale = true;
-    //     }
-    //     else
-    //     {
-    //         isMale = false;
-    //     }
-    // }
+
+    private void OnLoading(object sender, ProgressChangeEventArgs e)
+    {
+        Debug.Log("Loading Avatar..." + e.Progress + "%");
+    }
+
+    private void OnLoadFailed(object sender, FailureEventArgs args)
+    {
+        Debug.Log("Failed to load avatar");
+    }
+
+    private void OnLoadCompleted(object sender, CompletionEventArgs args)
+    {
+        SetupAvatar(args.Avatar);
+        Debug.Log("Avatar Loaded :" + args.Metadata.OutfitGender);
+        if (args.Metadata.OutfitGender == OutfitGender.Masculine)
+        {
+            isMale = true;
+        }
+        else
+        {
+            isMale = false;
+        }
+    }
+
 
     private void SetupAvatar(GameObject targetAvatar)
     {
+        Debug.Log("Setting up "+ targetAvatar.name + " as Avatar");
         if (avatar != null)
         {
             avatarController.GetComponent<vThirdPersonController>().enabled = false;
@@ -180,7 +183,7 @@ public class RPMPlayerManager : NetworkBehaviour
     public void LoadAvatar(string url)
     {
         avatarUrl = url.Trim(' ');
-        //   avatarObjectLoader.LoadAvatar(avatarUrl);
+        avatarObjectLoader.LoadAvatar(avatarUrl);
     }
 
     public void changeUrl(string url)
@@ -209,7 +212,6 @@ public class RPMPlayerManager : NetworkBehaviour
     }
 
     public bool isBufferAvailable;
-
     [ObserversRpc(BufferLast = true, ExcludeOwner = false, RunLocally = true)]
     private void ChangePlayerAvatar(GameObject manager, string url)
     {

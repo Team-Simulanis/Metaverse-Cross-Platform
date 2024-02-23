@@ -17,7 +17,7 @@ public class ChatHandler : MonoBehaviour
     public TMP_InputField playerUsername, playerMessage;
     [SerializeField] ScrollRect ChatboxContainer;
 
-
+    //
     private void OnEnable()
     {
         InstanceFinder.ClientManager.RegisterBroadcast<Message>(OnMessageRecieved);

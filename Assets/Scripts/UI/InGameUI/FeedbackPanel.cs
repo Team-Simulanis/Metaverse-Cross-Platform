@@ -21,6 +21,7 @@ public class FeedbackPanel : MonoBehaviour
         else
         {
             feedbackPanelView.Hide();
+            Application.Quit();
         }
     }
     public void BadFeedbackButton() //will be called when bad feedback button is pressed

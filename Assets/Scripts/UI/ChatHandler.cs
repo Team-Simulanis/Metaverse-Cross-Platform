@@ -7,6 +7,7 @@ using FishNet.Connection;
 using TMPro;
 using FF;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class ChatHandler : MonoBehaviour
 {
@@ -35,6 +36,8 @@ public class ChatHandler : MonoBehaviour
         {
             SendMessage();
         }
+
+
     }
 
     public void SendMessage()
@@ -57,11 +60,12 @@ public class ChatHandler : MonoBehaviour
 
     private void OnMessageRecieved(Message msg)
     {
+        if (string.IsNullOrEmpty(msg.message)) return;
+
         GameObject finalMessage = Instantiate(msgElement, chatHolder);
         //finalMessage.GetComponent<TextMeshProUGUI>().text = msg.username + ": " + msg.message;
        finalMessage.GetComponent<messageTextHolder>().msgText.text = msg.message;
-        ChatboxContainer.verticalNormalizedPosition = -0.5f;
-            
+       ChatboxContainer.verticalNormalizedPosition = -0.5f;          
 
     }
 

@@ -19,6 +19,8 @@ MonoBehaviour:
     - Category: FloaterPanel
       Name: EmojiPanel
     - Category: FloaterPanel
+      Name: exitFeedback
+    - Category: FloaterPanel
       Name: SessionsPanel
     - Category: None
       Name: None

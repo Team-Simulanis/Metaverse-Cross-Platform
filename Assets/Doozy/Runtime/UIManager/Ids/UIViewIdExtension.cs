@@ -49,6 +49,8 @@ namespace Doozy.Runtime.UIManager
         {
             BottomBar,
             ChatPanel,
+            exit,
+            feedbackPanel,
             ReactionPanel,
             session,
             sessionsPanel

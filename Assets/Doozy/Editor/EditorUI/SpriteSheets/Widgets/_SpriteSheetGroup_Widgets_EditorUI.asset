@@ -141,8 +141,8 @@ MonoBehaviour:
     - {fileID: -2423094222186258514, guid: 15b3310dcf2ae2847915cfe1224a53da, type: 3}
     Group: {fileID: 11400000}
   TextureSheets:
-  - {fileID: 6379496189900926614}
---- !u!114 &6379496189900926614
+  - {fileID: 4324780052989262296}
+--- !u!114 &4324780052989262296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -54,18 +54,18 @@ public class PlayerControlManager : NetworkBehaviour
             SetCursorLocked(isCursorLocked);
         }
         
-/*        if (Input.GetKeyDown(KeyCode.F))
+      if (Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log("F Pressed");
             firstView = !firstView;
             ChangeToFirstView(firstView);
-        }*/
-        if (Input.GetKeyDown(KeyCode.L))
+        }
+/*        if (Input.GetKeyDown(KeyCode.L))
         {
             Debug.Log("L Pressed");
             isCursorLocked = !isCursorLocked;
             SetCursorLocked(isCursorLocked);
-        }
+        }*/
     }
 
     void ChangeToFirstView(bool value)

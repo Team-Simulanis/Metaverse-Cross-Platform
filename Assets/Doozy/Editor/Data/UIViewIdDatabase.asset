@@ -45,6 +45,10 @@ MonoBehaviour:
     - Category: Ingame
       Name: ChatPanel
     - Category: Ingame
+      Name: exit
+    - Category: Ingame
+      Name: feedbackPanel
+    - Category: Ingame
       Name: ReactionPanel
     - Category: Ingame
       Name: session

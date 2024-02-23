@@ -22,6 +22,8 @@ MonoBehaviour:
       Name: EmojiPanelOff
     - Category: InGame
       Name: EmojiPanelOn
+    - Category: InGame
+      Name: exit
     - Category: Login
       Name: LoggingIn
     - Category: Login

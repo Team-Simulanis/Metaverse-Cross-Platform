@@ -14,7 +14,7 @@ public class ChatHandler : MonoBehaviour
     //public TextMeshPro messageText;
     public TMP_InputField playerUsername, playerMessage;
 
-
+    //
     private void OnEnable()
     {
         InstanceFinder.ClientManager.RegisterBroadcast<Message>(OnMessageRecieved);

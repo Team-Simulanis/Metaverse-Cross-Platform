@@ -1,5 +1,5 @@
 using UnityEngine;
-#if !UNITY_Server
+#if !UNITY_SERVER
 using ReadyPlayerMe.Core;
 #endif
 using System;
@@ -20,7 +20,9 @@ public class RPMPlayerManager : NetworkBehaviour
 
     public static UrlChanger urlChanger;
     public event Action OnLoadComplete;
+#if !UNITY_SERVER
     private AvatarObjectLoader avatarObjectLoader;
+#endif
     private GameObject avatar;
     private Animator animator = null;
     private GameObject avatarController;
@@ -70,11 +72,13 @@ public class RPMPlayerManager : NetworkBehaviour
 
     public void LoadAvatar()
     {
+#if !UNITY_SERVER
         avatarObjectLoader = new AvatarObjectLoader();
         avatarObjectLoader.OnCompleted += OnLoadCompleted;
         avatarObjectLoader.OnProgressChanged += OnLoading;
         avatarObjectLoader.OnFailed += OnLoadFailed;
         LoadAvatar(avatarUrl);
+#endif
     }
 
     public void SetAvatarUrl(string value)
@@ -108,7 +112,7 @@ public class RPMPlayerManager : NetworkBehaviour
     {
         // avatarController
     }
-
+#if !UNITY_SERVER
     private void OnLoading(object sender, ProgressChangeEventArgs e)
     {
         Debug.Log("Loading Avatar..." + e.Progress + "%");
@@ -132,7 +136,7 @@ public class RPMPlayerManager : NetworkBehaviour
             isMale = false;
         }
     }
-
+#endif
 
     private void SetupAvatar(GameObject targetAvatar)
     {
@@ -183,7 +187,9 @@ public class RPMPlayerManager : NetworkBehaviour
     public void LoadAvatar(string url)
     {
         avatarUrl = url.Trim(' ');
+#if !UNITY_SERVER       
         avatarObjectLoader.LoadAvatar(avatarUrl);
+#endif
     }
 
     public void changeUrl(string url)

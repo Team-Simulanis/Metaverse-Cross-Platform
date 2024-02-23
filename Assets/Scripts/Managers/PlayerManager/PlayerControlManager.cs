@@ -6,6 +6,7 @@ using UnityEngine;
 using Invector.vCharacterController;
 using Invector.vCamera;
 using Invector;
+using UnityEngine.InputSystem;
 
 public class PlayerControlManager : NetworkBehaviour
 {
@@ -46,12 +47,19 @@ public class PlayerControlManager : NetworkBehaviour
     void Update()
     {
         //if (!IsOwner) return;
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Mouse.current.middleButton.isPressed)
+        {
+            Debug.Log("middle button pressed");
+            isCursorLocked = !isCursorLocked;
+            SetCursorLocked(isCursorLocked);
+        }
+        
+/*        if (Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log("F Pressed");
             firstView = !firstView;
             ChangeToFirstView(firstView);
-        }
+        }*/
         if (Input.GetKeyDown(KeyCode.L))
         {
             Debug.Log("L Pressed");

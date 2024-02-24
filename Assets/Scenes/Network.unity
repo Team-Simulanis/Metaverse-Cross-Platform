@@ -2315,6 +2315,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1559436053040300336, guid: 7333451d95bea6f4c9e16e625fff01ad,
+        type: 3}
+      propertyPath: OnStartBehaviour
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4024538873343907403, guid: 7333451d95bea6f4c9e16e625fff01ad,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2646,7 +2651,7 @@ PrefabInstance:
     - target: {fileID: 341455843072517081, guid: fd636dc6b436dff458ac160511efcd8c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 1091
       objectReference: {fileID: 0}
     - target: {fileID: 755187779531210992, guid: fd636dc6b436dff458ac160511efcd8c,
         type: 3}
@@ -2667,6 +2672,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Id.Category
       value: Ingame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498172830897363475, guid: fd636dc6b436dff458ac160511efcd8c,
+        type: 3}
+      propertyPath: OnStartBehaviour
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2633741780690581303, guid: fd636dc6b436dff458ac160511efcd8c,
         type: 3}
@@ -2976,6 +2986,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4701581812835344675, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2079
+      objectReference: {fileID: 0}
     - target: {fileID: 5244890479885726748, guid: 10c6d80b4d2d2574f8911800491e3429,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -3230,6 +3245,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694423916342844321, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: OnStartBehaviour
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8885826850372853826, guid: 10c6d80b4d2d2574f8911800491e3429,
         type: 3}
@@ -3542,6 +3562,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ShowAnimation.Rotate.CurrentValue.x
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100397140522629598, guid: d89d68d92c7ee1540a5309644882409b,
+        type: 3}
+      propertyPath: OnStartBehaviour
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8260127266577194586, guid: d89d68d92c7ee1540a5309644882409b,
         type: 3}

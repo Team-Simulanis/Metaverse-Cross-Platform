@@ -8,105 +8,113 @@ using Invector.vCamera;
 using Invector;
 using UnityEngine.InputSystem;
 
-public class PlayerControlManager : NetworkBehaviour
+
+namespace Simulanis.Player
 {
-    public static PlayerControlManager _Instance;
-   
-    public vThirdPersonCameraListData CL;
-    public vThirdPersonCamera playerCamera;
-    private Renderer[] renderers;
-   
-   
-    bool firstView;
-    bool isCursorLocked;
 
-    void Awake()
-    {
-        if (_Instance == null)
-        {
-            _Instance = this;
-        }
-    }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Init();
-        ChangeToFirstView(false);
-    }
 
-    void Init()
+    public class PlayerControlManager : NetworkBehaviour
     {
-        // Multiplayer Code for isMine
-        if (IsOwner)
-        {
-        }
-    }
+        public static PlayerControlManager _Instance;
 
-    // Update is called once per frame
-    void Update()
-    {
-        //if (!IsOwner) return;
-        if (Mouse.current.middleButton.isPressed)
-        {
-            Debug.Log("middle button pressed");
-            isCursorLocked = !isCursorLocked;
-            SetCursorLocked(isCursorLocked);
-        }
-        
-      if (Input.GetKeyDown(KeyCode.F))
-        {
-            Debug.Log("F Pressed");
-            firstView = !firstView;
-            ChangeToFirstView(firstView);
-        }
-/*        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Debug.Log("L Pressed");
-            isCursorLocked = !isCursorLocked;
-            SetCursorLocked(isCursorLocked);
-        }*/
-    }
+        public vThirdPersonCameraListData CL;
+        public vThirdPersonCamera playerCamera;
+        private Renderer[] renderers;
 
-    void ChangeToFirstView(bool value)
-    {
-        if (value)
-        {
-            // Need to Rewrite this wrt all camera states
-            CL.tpCameraStates[0].defaultDistance = 0;
-            CL.tpCameraStates[0].height = 1.8f;
+        public bool StopPlayer = false;
 
-            // Need to disable all mesh renderer
-            
-        }
-        else
+        bool firstView;
+        bool isCursorLocked;
+        float speed;
+        vThirdPersonController vThirdPersonController;
+
+        void Awake()
         {
-            CL.tpCameraStates[0].defaultDistance = 2.5f;
-            CL.tpCameraStates[0].height = 1.25f;
+            if (_Instance == null)
+            {
+                _Instance = this;
+            }
+            vThirdPersonController = GetComponent<vThirdPersonController>();
+            speed = vThirdPersonController.speedMultiplier;
         }
-        ChangePlayerRenderer(value);
-    }
-    void SetCursorLocked(bool value)
-    {
-        Cursor.visible = value;
-        playerCamera.isFreezed = value;
-        //GetComponent<Rigidbody>().useGravity = !value;
-        GetComponent<vThirdPersonInput>().lockMoveInput = value;
-        if(value)
+
+        // Start is called before the first frame update
+        void Start()
         {
-            Cursor.lockState = CursorLockMode.None;
+            Init();
+            ChangeToFirstView(false);
         }
-        else
+
+        void Init()
         {
-            Cursor.lockState = CursorLockMode.Locked;
+            // Multiplayer Code for isMine
+            if (IsOwner)
+            {
+            }
         }
-    }
-    void ChangePlayerRenderer(bool value)
-    {
-        renderers = transform.GetComponentsInChildren<Renderer>();
-        foreach(var r in renderers)
+
+        // Update is called once per frame
+        void Update()
         {
-            r.enabled = !value;
+            //if (!IsOwner) return;
+            if (Mouse.current.middleButton.wasPressedThisFrame)
+            {
+                Debug.Log("middle button pressed");
+                isCursorLocked = !isCursorLocked;
+                SetCursorLocked(isCursorLocked);
+            }
+
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                Debug.Log("F Pressed");
+                firstView = !firstView;
+                ChangeToFirstView(firstView);
+            }
+        }
+
+        void ChangeToFirstView(bool value)
+        {
+            if (value)
+            {
+                CL.tpCameraStates[0].defaultDistance = 0;
+                CL.tpCameraStates[0].height = 1.8f;
+            }
+            else
+            {
+                CL.tpCameraStates[0].defaultDistance = 2.5f;
+                CL.tpCameraStates[0].height = 1.25f;
+            }
+            ChangePlayerRenderer(value);
+        }
+        void SetCursorLocked(bool value)
+        {
+            Cursor.visible = value;
+            playerCamera.isFreezed = value;
+            GetComponent<vThirdPersonInput>().lockInput = value;
+            GetComponent<vThirdPersonController>().lockAnimMovement = !value;
+            GetComponent<vThirdPersonAnimator>().disableAnimations = value;
+            StopPlayer = true;
+            if (value)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                vThirdPersonController.speedMultiplier = 0;   
+                GetComponent<Animator>().SetFloat("InputMagnitude", 0);
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                vThirdPersonController.speedMultiplier = speed;
+            }
+
+        }
+        void ChangePlayerRenderer(bool value)
+        {
+            renderers = transform.GetComponentsInChildren<Renderer>();
+            foreach (var r in renderers)
+            {
+                r.enabled = !value;
+            }
         }
     }
 }

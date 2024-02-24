@@ -139,7 +139,6 @@ namespace Invector.vCharacterController
                     animator.SetFloat(vAnimatorParameters.InputVertical, verticalSpeed, freeSpeed.animationSmooth, Time.fixedDeltaTime);
                     animator.SetFloat(vAnimatorParameters.InputHorizontal, 0, freeSpeed.animationSmooth, Time.fixedDeltaTime);
                 }
-
                 animator.SetFloat(vAnimatorParameters.InputMagnitude, Mathf.LerpUnclamped(inputMagnitude, 0f, stopMoveWeight), isStrafing ? strafeSpeed.animationSmooth : freeSpeed.animationSmooth, Time.fixedDeltaTime);
 
                 if (useLeanMovementAnim && inputMagnitude >= 0.1f)

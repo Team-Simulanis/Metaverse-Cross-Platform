@@ -56,6 +56,7 @@ public class ChatHandler : MonoBehaviour
             InstanceFinder.ServerManager.Broadcast(msg);
         else if (InstanceFinder.IsClient)
             InstanceFinder.ClientManager.Broadcast(msg);
+        ChatboxContainer.verticalNormalizedPosition = -1f;
     }
 
     private void OnMessageRecieved(Message msg)
@@ -65,7 +66,10 @@ public class ChatHandler : MonoBehaviour
         GameObject finalMessage = Instantiate(msgElement, chatHolder);
         //finalMessage.GetComponent<TextMeshProUGUI>().text = msg.username + ": " + msg.message;
        finalMessage.GetComponent<messageTextHolder>().msgText.text = msg.message;
-       ChatboxContainer.verticalNormalizedPosition = -0.5f;          
+        Debug.Log("the size is: "+ChatboxContainer.verticalNormalizedPosition);
+      
+        
+        
 
     }
 

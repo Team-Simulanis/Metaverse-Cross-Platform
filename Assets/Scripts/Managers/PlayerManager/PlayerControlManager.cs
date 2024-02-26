@@ -151,7 +151,7 @@ namespace Simulanis.Player
 
         private void OnDestroy()
         {
-            listplayerinfo.instance.removeNewPlayer();
+            listplayerinfo.instance.removeNewPlayer(this.GetInstanceID(), this.name);
         }
     }
 }

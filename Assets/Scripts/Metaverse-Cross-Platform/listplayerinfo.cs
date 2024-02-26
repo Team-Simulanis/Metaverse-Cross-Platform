@@ -24,9 +24,9 @@ public class listplayerinfo : MonoBehaviour
         playerList.Add(new playerInfo(id,name));  
     }
 
-    public void removeNewPlayer() 
+    public void removeNewPlayer(int id, string name) 
     {
-        playerList.Remove(new playerInfo());
+        playerList.Remove(new playerInfo(id, name));
     }
 
 }

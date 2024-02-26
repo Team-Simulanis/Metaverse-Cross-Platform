@@ -83,6 +83,7 @@ MonoBehaviour:
   - {fileID: 958721993826089130}
   - {fileID: 1354246279461711922}
   - {fileID: 6200349887757038206}
+  - {fileID: 2224977282736640683}
   - {fileID: -1270314854224079640}
   - {fileID: -1653391441895601436}
   - {fileID: -7869907250494966666}
@@ -244,6 +245,26 @@ MonoBehaviour:
   priority: 0
   required: 0
   ignoreValidationErrors: 0
+--- !u!114 &-3227096839889550126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2fe570546b5b2046873e03d7b882369, type: 3}
+  m_Name: MeshingTeapotFeature Android
+  m_EditorClassIdentifier: 
+  m_enabled: 0
+  nameUi: 'Sample: Meshing Teapot'
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.example.meshing
+  openxrExtensionStrings: 
+  company: Unity
+  priority: 0
+  required: 0
 --- !u!114 &-3062234670466168057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,6 +524,26 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+--- !u!114 &2224977282736640683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2fe570546b5b2046873e03d7b882369, type: 3}
+  m_Name: MeshingTeapotFeature Standalone
+  m_EditorClassIdentifier: 
+  m_enabled: 1
+  nameUi: 'Sample: Meshing Teapot'
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.example.meshing
+  openxrExtensionStrings: 
+  company: Unity
+  priority: 0
+  required: 0
 --- !u!114 &2579483000217083110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,6 +718,7 @@ MonoBehaviour:
   - {fileID: 7070117697064478856}
   - {fileID: 271538022582565841}
   - {fileID: -238881220623420999}
+  - {fileID: -3227096839889550126}
   - {fileID: -5823718988140962960}
   - {fileID: 3947151571092791754}
   - {fileID: 5255380767918027684}

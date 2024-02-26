@@ -67,9 +67,6 @@ public class ChatHandler : MonoBehaviour
         //finalMessage.GetComponent<TextMeshProUGUI>().text = msg.username + ": " + msg.message;
        finalMessage.GetComponent<messageTextHolder>().msgText.text = msg.message;
         Debug.Log("the size is: "+ChatboxContainer.verticalNormalizedPosition);
-      
-        
-        
 
     }
 

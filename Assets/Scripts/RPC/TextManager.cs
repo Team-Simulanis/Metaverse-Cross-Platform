@@ -16,6 +16,7 @@ public class SendText : NetworkBehaviour
     private void Start()
     {
         instance = this;
+        newFunction("rizwan");
     }
 
     [ObserversRpc]

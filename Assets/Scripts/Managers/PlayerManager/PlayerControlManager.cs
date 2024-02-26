@@ -7,12 +7,12 @@ using Invector.vCharacterController;
 using Invector.vCamera;
 using Invector;
 using UnityEngine.InputSystem;
-
+using TMPro;
+using FF;
+using System.ComponentModel;
 
 namespace Simulanis.Player
 {
-
-
 
     public class PlayerControlManager : NetworkBehaviour
     {
@@ -21,6 +21,10 @@ namespace Simulanis.Player
         public vThirdPersonCameraListData CL;
         public vThirdPersonCamera playerCamera;
         private Renderer[] renderers;
+        public TextMeshProUGUI ingameUsername;
+        public string name;
+        public int userId;
+        playerInfo playerInfo;
 
         public bool StopPlayer = false;
 
@@ -31,12 +35,15 @@ namespace Simulanis.Player
 
         void Awake()
         {
+            userId = this.GetInstanceID();
             if (_Instance == null)
             {
                 _Instance = this;
             }
             vThirdPersonController = GetComponent<vThirdPersonController>();
             speed = vThirdPersonController.speedMultiplier;
+
+
         }
 
         // Start is called before the first frame update
@@ -44,6 +51,9 @@ namespace Simulanis.Player
         {
             Init();
             ChangeToFirstView(false);
+            setName();
+            sendInfo();
+
         }
 
         void Init()
@@ -115,6 +125,33 @@ namespace Simulanis.Player
             {
                 r.enabled = !value;
             }
+        }
+
+        void sendInfo()
+        {
+            listplayerinfo.instance.addNewPlayer(this.GetInstanceID(),this.name);
+        }
+
+        [ObserversRpc]
+        void showUsername(string username)
+        {
+            ingameUsername.text = username;
+        }
+
+        [ServerRpc(RequireOwnership = false)]
+        void setUsername()
+        {
+            showUsername(DataManager.Instance.name);
+        }
+
+        void setName()
+        {
+            setUsername();
+        }
+
+        private void OnDestroy()
+        {
+            listplayerinfo.instance.removeNewPlayer(this.GetInstanceID(), this.name);
         }
     }
 }

@@ -4169,6 +4169,7 @@ MonoBehaviour:
   playerUsername: {fileID: 0}
   playerMessage: {fileID: 25656781068734513}
   ChatboxContainer: {fileID: 2956020539960714888}
+  onlinePlayers: {fileID: 6315809801857198318}
 --- !u!1 &4308211450780755927
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,13 +11,17 @@ using UnityEngine.InputSystem;
 
 public class ChatHandler : MonoBehaviour
 {
+    public static ChatHandler Instance;
     public Transform chatHolder;
     public GameObject msgElement;
     //public TextMeshPro messageText;
     public TMP_InputField playerUsername, playerMessage;
     [SerializeField] ScrollRect ChatboxContainer;
-
-    //
+    [SerializeField] TextMeshProUGUI onlinePlayers;
+    private void Start()
+    {
+        Instance = this;
+    }
     private void OnEnable()
     {
         InstanceFinder.ClientManager.RegisterBroadcast<Message>(OnMessageRecieved);
@@ -36,8 +40,11 @@ public class ChatHandler : MonoBehaviour
         {
             SendMessage();
         }
+    }
 
-
+    public void setOnlinePlayers()
+    {
+        onlinePlayers.text = listplayerinfo.noOfPlayer.ToString()+" players online";
     }
 
     public void SendMessage()
@@ -67,7 +74,6 @@ public class ChatHandler : MonoBehaviour
         //finalMessage.GetComponent<TextMeshProUGUI>().text = msg.username + ": " + msg.message;
        finalMessage.GetComponent<messageTextHolder>().msgText.text = msg.message;
         Debug.Log("the size is: "+ChatboxContainer.verticalNormalizedPosition);
-
     }
 
     private void OnClientMessageRecieved(NetworkConnection networkConnection, Message msg)

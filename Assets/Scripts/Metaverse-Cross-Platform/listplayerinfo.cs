@@ -6,6 +6,7 @@ using UnityEngine;
 public class listplayerinfo : MonoBehaviour
 {
     public static listplayerinfo instance;
+    public static int noOfPlayer;
     public  List<playerInfo> playerList = new List<playerInfo>();
     // Start is called before the first frame update
     void Start()
@@ -22,11 +23,15 @@ public class listplayerinfo : MonoBehaviour
     public void addNewPlayer(int id, string name)
     {
         playerList.Add(new playerInfo(id,name));  
+        noOfPlayer = playerList.Count;
+        ChatHandler.Instance.setOnlinePlayers();
     }
 
     public void removeNewPlayer(int id, string name) 
     {
         playerList.Remove(new playerInfo(id, name));
+        noOfPlayer = playerList.Count;
+        ChatHandler.Instance.setOnlinePlayers();
     }
 
 }
@@ -42,6 +47,4 @@ public struct playerInfo
         id = _id;
         name = _name;
     }
-       
-
 }

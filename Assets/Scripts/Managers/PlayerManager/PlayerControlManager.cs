@@ -6,99 +6,152 @@ using UnityEngine;
 using Invector.vCharacterController;
 using Invector.vCamera;
 using Invector;
+using UnityEngine.InputSystem;
+using TMPro;
+using FF;
+using System.ComponentModel;
 
-public class PlayerControlManager : NetworkBehaviour
+namespace Simulanis.Player
 {
-    public static PlayerControlManager _Instance;
-   
-    public vThirdPersonCameraListData CL;
-    public vThirdPersonCamera playerCamera;
-    private Renderer[] renderers;
-   
-   
-    bool firstView;
-    bool isCursorLocked;
+    //
+    public class PlayerControlManager : NetworkBehaviour
+    {
+        public static PlayerControlManager _Instance;
 
-    void Awake()
-    {
-        if (_Instance == null)
-        {
-            _Instance = this;
-        }
-    }
+        public vThirdPersonCameraListData CL;
+        public vThirdPersonCamera playerCamera;
+        private Renderer[] renderers;
+        public TextMeshProUGUI ingameUsername;
+        public string name;
+        public int userId;
+        playerInfo playerInfo;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Init();
-        ChangeToFirstView(false);
-    }
+        public bool StopPlayer = false;
 
-    void Init()
-    {
-        // Multiplayer Code for isMine
-        if (IsOwner)
-        {
-        }
-    }
+        bool firstView;
+        bool isCursorLocked;
+        float speed;
+        vThirdPersonController vThirdPersonController;
 
-    // Update is called once per frame
-    void Update()
-    {
-        //if (!IsOwner) return;
-        if (Input.GetKeyDown(KeyCode.F))
+        void Awake()
         {
-            Debug.Log("F Pressed");
-            firstView = !firstView;
-            ChangeToFirstView(firstView);
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Debug.Log("L Pressed");
-            isCursorLocked = !isCursorLocked;
-            SetCursorLocked(isCursorLocked);
-        }
-    }
+            userId = this.GetInstanceID();
+            if (_Instance == null)
+            {
+                _Instance = this;
+            }
+            vThirdPersonController = GetComponent<vThirdPersonController>();
+            speed = vThirdPersonController.speedMultiplier;
 
-    void ChangeToFirstView(bool value)
-    {
-        if (value)
-        {
-            // Need to Rewrite this wrt all camera states
-            CL.tpCameraStates[0].defaultDistance = 0;
-            CL.tpCameraStates[0].height = 1.8f;
 
-            // Need to disable all mesh renderer
-            
         }
-        else
+
+        // Start is called before the first frame update
+        void Start()
         {
-            CL.tpCameraStates[0].defaultDistance = 2.5f;
-            CL.tpCameraStates[0].height = 1.25f;
+            Init();
+            ChangeToFirstView(false);
+            setName();
+            sendInfo();
+
         }
-        ChangePlayerRenderer(value);
-    }
-    void SetCursorLocked(bool value)
-    {
-        Cursor.visible = value;
-        playerCamera.isFreezed = value;
-        //GetComponent<Rigidbody>().useGravity = !value;
-        GetComponent<vThirdPersonInput>().lockMoveInput = value;
-        if(value)
+
+        void Init()
         {
-            Cursor.lockState = CursorLockMode.None;
+            // Multiplayer Code for isMine
+            if (IsOwner)
+            {
+            }
         }
-        else
+
+        // Update is called once per frame
+        void Update()
         {
-            Cursor.lockState = CursorLockMode.Locked;
+            //if (!IsOwner) return;
+            if (Mouse.current.middleButton.wasPressedThisFrame)
+            {
+                Debug.Log("middle button pressed");
+                isCursorLocked = !isCursorLocked;
+                SetCursorLocked(isCursorLocked);
+            }
+
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                Debug.Log("F Pressed");
+                firstView = !firstView;
+                ChangeToFirstView(firstView);
+            }
         }
-    }
-    void ChangePlayerRenderer(bool value)
-    {
-        renderers = transform.GetComponentsInChildren<Renderer>();
-        foreach(var r in renderers)
+
+        void ChangeToFirstView(bool value)
         {
-            r.enabled = !value;
+            if (value)
+            {
+                CL.tpCameraStates[0].defaultDistance = 0;
+                CL.tpCameraStates[0].height = 1.8f;
+            }
+            else
+            {
+                CL.tpCameraStates[0].defaultDistance = 2.5f;
+                CL.tpCameraStates[0].height = 1.25f;
+            }
+            ChangePlayerRenderer(value);
+        }
+        void SetCursorLocked(bool value)
+        {
+            Cursor.visible = value;
+            playerCamera.isFreezed = value;
+            GetComponent<vThirdPersonInput>().lockInput = value;
+            GetComponent<vThirdPersonController>().lockAnimMovement = !value;
+            GetComponent<vThirdPersonAnimator>().disableAnimations = value;
+            StopPlayer = true;
+            if (value)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                vThirdPersonController.speedMultiplier = 0;   
+                GetComponent<Animator>().SetFloat("InputMagnitude", 0);
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                vThirdPersonController.speedMultiplier = speed;
+            }
+
+        }
+        void ChangePlayerRenderer(bool value)
+        {
+            renderers = transform.GetComponentsInChildren<Renderer>();
+            foreach (var r in renderers)
+            {
+                r.enabled = !value;
+            }
+        }
+
+        void sendInfo()
+        {
+            listplayerinfo.instance.addNewPlayer(this.GetInstanceID(),this.name);
+        }
+
+        [ObserversRpc]
+        void showUsername(string username)
+        {
+            ingameUsername.text = username;
+        }
+
+        [ServerRpc(RequireOwnership = false)]
+        void setUsername()
+        {
+            showUsername(DataManager.Instance.name);
+        }
+
+        void setName()
+        {
+            setUsername();
+        }
+
+        private void OnDestroy()
+        {
+            listplayerinfo.instance.removeNewPlayer(this.GetInstanceID(), this.name);
         }
     }
 }

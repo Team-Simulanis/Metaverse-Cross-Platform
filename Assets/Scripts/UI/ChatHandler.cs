@@ -11,6 +11,7 @@ public class ChatHandler : MonoBehaviour
 {
     public Transform chatHolder;
     public GameObject msgElement;
+    //
     //public TextMeshPro messageText;
     public TMP_InputField playerUsername, playerMessage;
 

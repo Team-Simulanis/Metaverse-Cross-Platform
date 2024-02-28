@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: de48f5ed95afcbc4f976d0b15e970911
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - desktopPlayerPrefab: {fileID: 5949926736754868729, guid: 584b8b25cc86ece46a9f96792678b9f2,
+      type: 3}
+  - vrPlayerPrefab: {fileID: 2177039108784745834, guid: 9fa7cb679a3c2c940b9501149454e89d,
+      type: 3}
+  - playerSpawner: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -37,20 +37,20 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Grabbing
+  - Grabbable
   - Player
   - Enemy
   - CompanionAI
   - Triggers
   - StopMove
-  - 
+  - Hand
   - HeadTrack
   - BodyPart
   - BlockAIRayCast
   - Pushable
   - CoverPoint
-  - 
+  - HandPlayer
   - 
   - 
   - 

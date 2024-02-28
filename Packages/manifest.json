@@ -4,6 +4,7 @@
     "com.readyplayerme.core": "https://github.com/readyplayerme/rpm-unity-sdk-core.git",
     "com.readyplayerme.webview": "https://github.com/readyplayerme/rpm-unity-sdk-webview.git",
     "com.unity.2d.sprite": "1.0.0",
+    "com.unity.animation.rigging": "1.2.1",
     "com.unity.cloud.gltfast": "https://github.com/atteneder/glTFast.git",
     "com.unity.collab-proxy": "2.2.0",
     "com.unity.ide.rider": "3.0.27",

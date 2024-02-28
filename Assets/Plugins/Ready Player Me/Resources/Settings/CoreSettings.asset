@@ -15,4 +15,4 @@ MonoBehaviour:
   Subdomain: metaverse-cross-platform
   AppId: 65a8e490ecd6bbe852079600
   EnableLogging: 0
-  EnableAnalytics: 0
+  EnableAnalytics: 1

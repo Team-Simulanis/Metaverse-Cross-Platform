@@ -20,7 +20,7 @@ public class Switchplayers : MonoBehaviour
         playerSpawner = GetComponent<PlayerSpawner>();
         if (_platform == platform.Desktop )
         {
-            
+           
         }
     }
 

@@ -228,7 +228,8 @@ MonoBehaviour:
     PortId: acb0ca43-69d0-40b5-87d0-1a127d0fa450
     Direction: 1
     Capacity: 0
-    Connections: []
+    Connections:
+    - 3e050308-fe88-46f7-9030-ea85052bf95a
     Value: '{"Trigger":2,"TimeDelay":3.0,"SignalPayload":{"StreamId":{"Category":"None","Name":"None","Custom":false},"SignalValueType":0,"IntegerValue":0,"BooleanValue":false,"FloatValue":0.0,"StringValue":"","ColorValue":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"Vector2Value":{"x":0.0,"y":0.0},"Vector3Value":{"x":0.0,"y":0.0,"z":0.0},"Vector4Value":{"x":0.0,"y":0.0,"z":0.0,"w":0.0}},"ButtonId":{"Category":"HomeScreenLogin","Name":"Login","Custom":false},"ToggleId":{"Category":"None","Name":"None","Custom":false},"CommandToggle":2,"ViewId":{"Category":"None","Name":"None","Custom":false},"CommandShowHide":0}'
     ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.UIOutputPortData,
       DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -251,7 +252,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 335.98407, y: -164.66669}
+  Position: {x: 337, y: -165}
   OnEnterShowViews:
   - Id:
       Category: HomeScreen
@@ -437,8 +438,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02761efe598a45c98fa1baf4d446c6a7, type: 3}
   m_Name: HomeScreen
   m_EditorClassIdentifier: 
-  EditorPosition: {x: -14, y: 207.33333, z: 0}
-  EditorScale: {x: 0.57175326, y: 0.57175326, z: 1}
+  EditorPosition: {x: 147, y: 405, z: 0}
+  EditorScale: {x: 1, y: 1, z: 1}
   Id: fb6492d9-97de-4a45-a16b-a8699005f38f
   GraphName: HomeScreen-FlowGraph
   GraphDescription: 
@@ -691,8 +692,7 @@ MonoBehaviour:
     PortId: 151f2a25-33be-4da2-a051-3faf2f044348
     Direction: 1
     Capacity: 0
-    Connections:
-    - 3e050308-fe88-46f7-9030-ea85052bf95a
+    Connections: []
     Value: 
     ValueTypeQualifiedName: 
     CanBeDeleted: 0
@@ -704,7 +704,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 1
   ClearGraphHistory: 0
-  Position: {x: 615.24384, y: -116.00004}
+  Position: {x: 589.7826, y: -219.99997}
   Trigger: 0
   SignalPayload:
     StreamId:
@@ -757,7 +757,7 @@ MonoBehaviour:
     Direction: 0
     Capacity: 1
     Connections:
-    - 151f2a25-33be-4da2-a051-3faf2f044348
+    - acb0ca43-69d0-40b5-87d0-1a127d0fa450
     Value: '{"CanGoBack":false}'
     ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.GoBackInputPortData,
       DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null

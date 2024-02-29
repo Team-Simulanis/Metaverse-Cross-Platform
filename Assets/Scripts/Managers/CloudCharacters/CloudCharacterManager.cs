@@ -12,7 +12,7 @@ public class CloudCharacterManager : MonoBehaviour
     void Start()
     {
         malePrefab.SetActive(false);
-        StartCoroutine(GetCloudMaleData());
+        StartCoroutine(GetCloudMaleData("female"));
     }
 
     // Update is called once per frame
@@ -20,8 +20,8 @@ public class CloudCharacterManager : MonoBehaviour
     {
         
     }
-    IEnumerator GetCloudMaleData() {
-        UnityWebRequest www = UnityWebRequest.Get("https://api.simulanis.io/api/resource/3d/character/list/universal/male");
+    IEnumerator GetCloudMaleData(string type) {
+        UnityWebRequest www = UnityWebRequest.Get("https://api.simulanis.io/api/resource/3d/character/list/universal/"+type);
         www.SetRequestHeader("Authorization", "Bearer " + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiOTJjNmM1ZGQtZGIxNy00ODMzLWFhYzEtNjNkNmE5MmJmZjg5IiwiY2hhbm5lbCI6ImVmMjFlMWUwLWI4MGUtNGQwMy04MGRiLTJjN2E0OThmNTJlYiIsImlhdCI6MTcwODYwNzc0MSwiZXhwIjoxNzExMTk5NzQxfQ.uNK1mBZT8OnY2V6fhLq2kMMnPBaLrDXx49u6ph8nDU4");
         yield return www.SendWebRequest();
  

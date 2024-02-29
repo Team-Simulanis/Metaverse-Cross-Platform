@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using FF;
+using ReadyPlayerMe.Samples.QuickStart;
 
 public class CloudCharacterPrefabHolder : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class CloudCharacterPrefabHolder : MonoBehaviour
     }
     void ButtonClick()
     {
+        ThirdPersonLoader.instance.LoadAvatar(characterData.assets[0].url);
         DataManager.Instance.UpdateAvatarInfo(new AvatarDetails()
             {
                 avatarModelDownloadLink = characterData.assets[0].url

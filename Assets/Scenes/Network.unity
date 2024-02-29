@@ -3663,7 +3663,6 @@ GameObject:
   - component: {fileID: 7443408886617491357}
   - component: {fileID: 7443408886617491356}
   - component: {fileID: 7443408886617491359}
-  - component: {fileID: 7443408886617491360}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -3796,24 +3795,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Multipass: {fileID: 0}
---- !u!114 &7443408886617491360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7443408886617491348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de48f5ed95afcbc4f976d0b15e970911, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  desktopPlayerPrefab: {fileID: 5949926736754868729, guid: 584b8b25cc86ece46a9f96792678b9f2,
-    type: 3}
-  vrPlayerPrefab: {fileID: 2177039108784745834, guid: 9fa7cb679a3c2c940b9501149454e89d,
-    type: 3}
-  playerSpawner: {fileID: 0}
-  _platform: 0
 --- !u!1001 &8826248633072943513
 PrefabInstance:
   m_ObjectHideFlags: 0

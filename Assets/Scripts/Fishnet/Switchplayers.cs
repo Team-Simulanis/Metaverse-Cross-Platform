@@ -1,27 +1,19 @@
-using FishNet.Component.Spawning;
-using System.Collections;
-using System.Collections.Generic;
+using FishNet.Managing;
+using FishNet.Object;
 using UnityEngine;
-using UnityEngine.XR;
-using UnityEngine.XR.Management;
-
-[RequireComponent(typeof(PlayerSpawner))]
+using UnityEngine.Networking;
 public class Switchplayers : MonoBehaviour
 {
-    public GameObject desktopPlayerPrefab;
-    public GameObject vrPlayerPrefab;
-    public PlayerSpawner playerSpawner;
-    //public XRGeneralSettings xrSettings = XRGeneralSettings.Instance;
+    public GameObject desktopPlayer;
+    public GameObject vrPlayer;
+    //NetworkManager networkManager;
     public enum platform {Desktop,VR,Mobile};
 
     public  platform _platform;
-    private void Awake()
+    private void OnEnable()
     {
-        playerSpawner = GetComponent<PlayerSpawner>();
-        if (_platform == platform.Desktop )
-        {
-           
-        }
+       
     }
-
+    
+   
 }

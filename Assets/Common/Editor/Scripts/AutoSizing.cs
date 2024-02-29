@@ -11,7 +11,7 @@ public class AutoSizing : Editor
         tmpText.fontSizeMin = 1;
 
     }
-    [MenuItem("FourtyFourty/Responsive Text _F2")]
+    [MenuItem("Simulanis/Responsive Text _F2")]
     private static void ResponsiveText()
     {
         for (int i = 0; i < Selection.gameObjects.Length; i++)

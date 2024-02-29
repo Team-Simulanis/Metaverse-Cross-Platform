@@ -34,7 +34,7 @@ namespace Common.Editor.Scripts
 
         private static float CurrentAlpha;
 
-        [MenuItem("FourtyFourty/ShowReference _F10")]
+        [MenuItem("Simulanis/ShowReference _F10")]
         public static void ShowHideReference()
         {
             // ReSharper disable once CompareOfFloatsByEqualityOperator
@@ -42,7 +42,7 @@ namespace Common.Editor.Scripts
             CurrentAlpha = GameObject.Find("Reference").GetComponent<CanvasGroup>().alpha;
         }
 
-        [MenuItem("FourtyFourty/ReferenceIncreaseVisibility _F11")]
+        [MenuItem("Simulanis/ReferenceIncreaseVisibility _F11")]
         public static void ReferenceIncreaseVisibility()
         {
             // ReSharper disable once CompareOfFloatsByEqualityOperator

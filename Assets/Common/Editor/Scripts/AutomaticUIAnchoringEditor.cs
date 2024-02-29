@@ -22,7 +22,7 @@ public class AutomaticUIAnchoringEditor : Editor
         rectTransform.pivot = new Vector2(0.5f, 0.5f);
     }
 
-    [MenuItem("FourtyFourty/Anchor Selected UI Objects _F1")]
+    [MenuItem("Simulanis/Anchor Selected UI Objects _F1")]
     private static void AnchorSelectedUIObjects()
     {
         for (int i = 0; i < Selection.gameObjects.Length; i++)

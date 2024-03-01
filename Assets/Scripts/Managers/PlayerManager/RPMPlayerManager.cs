@@ -4,7 +4,6 @@ using ReadyPlayerMe.Core;
 #endif
 using System;
 using FF;
-using FishNet.Connection;
 using FishNet.Object;
 using Invector.vCharacterController;
 using Sirenix.OdinInspector;
@@ -223,3 +222,5 @@ public class RPMPlayerManager : NetworkBehaviour
         LoadAvatar();
     }
 }
+
+//TODO: Refactor this complete script as currently this is mixes with networking and avatar loading

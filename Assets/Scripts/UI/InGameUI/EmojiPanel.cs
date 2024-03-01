@@ -1,3 +1,4 @@
+using Simulanis.Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +16,10 @@ public class EmojiPanel : MonoBehaviour
     {
         
     }
-
+    public void playReaction(string reactionName)
+    {
+        PlayerControlManager._Instance.playReactions(reactionName);
+    }
     public void clapEmoji() //will be called when clicked on clap Emoji
     {
 

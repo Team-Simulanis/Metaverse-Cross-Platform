@@ -13,6 +13,7 @@ public class AvatarButtonDownloader : MonoBehaviour
     
     private void Start()
     {
+        return;
         var avatarRenderLoader = new AvatarRenderLoader();
         avatarRenderLoader.OnCompleted = SetImage;
         avatarRenderLoader.LoadRender(url, renderSettings);

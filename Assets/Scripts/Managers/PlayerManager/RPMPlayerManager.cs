@@ -39,7 +39,7 @@ public class RPMPlayerManager : NetworkBehaviour
 
     private void Start()
     {
-        SetupAvatar(defaultAvatar);
+        //SetupAvatar(defaultAvatar);
     }
 
     // Start is called before the first frame update
@@ -218,6 +218,7 @@ public class RPMPlayerManager : NetworkBehaviour
         Debug.Log("Server Changed");
         isBufferAvailable = true;
         Debug.Log(url);
+        //avatarUrl = "https://cdn.simulanis.io/sso/uno/production/resources/fde87370-4243-43dc-9978-846e1511fed4/3DAssets/universal/1/M11.glb";
         avatarUrl = url;
         LoadAvatar();
     }

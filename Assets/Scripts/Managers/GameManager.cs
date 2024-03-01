@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     private async void UpdateBrandingDetails()
     {
-        loginLogo.sprite = await WebRequestManager.Instance.ImageDownloadRequest("https://drive.google.com/uc?export=download&id=1irLG5jAF6w3qJG4Lota4cnWFiTJoDbQO");
+        loginLogo.sprite = await WebRequestManager.ImageDownloadRequest("https://drive.google.com/uc?export=download&id=1irLG5jAF6w3qJG4Lota4cnWFiTJoDbQO");
     }
 }
 

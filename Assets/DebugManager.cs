@@ -14,6 +14,7 @@ namespace Simulanis
             DataGet,
             DataPost,
             ServerResponse,
+            ServerResponseError,
             DataError,
             Session,
             Analytics
@@ -45,6 +46,9 @@ namespace Simulanis
                     DataPostLog(message);
                     break;
                 case DebugType.ServerResponse:
+                    ServerResponseLog(message);
+                    break;
+                case DebugType.ServerResponseError:
                     ServerResponseLog(message);
                     break;
                 case DebugType.DataError:
@@ -109,6 +113,11 @@ namespace Simulanis
         public static void ServerResponseLog(string message)
         {
             Debug.Log("<color=green>[data] " + message + "</color>");
+        }
+        
+        public static void ServerResponseErrorLog(string message)
+        {
+            Debug.Log("<color=red>[dataError] " + message + "</color>");
         }
 
         public static void DataLogError(string message)

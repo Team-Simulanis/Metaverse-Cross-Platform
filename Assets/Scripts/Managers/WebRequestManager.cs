@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 using Simulanis;
 using UnityEngine;
@@ -6,6 +5,7 @@ using UnityEngine.Networking;
 
 public class WebRequestManager : MonoBehaviour
 {
+    
     public static WebRequestManager Instance;
 
     public string domain;
@@ -32,8 +32,28 @@ public class WebRequestManager : MonoBehaviour
 
         return null;
     }
+    
+    public static async Task<string> WebRequestWithAuthorization(string customDomain,string endPoint,string token) 
+    {
+        var request = UnityWebRequest.Get(customDomain+endPoint);
+        request.SetRequestHeader("Authorization", "Bearer " + token); 
+        
+        var result = await request.SendWebRequestAsync();
 
-    public async Task<Sprite> ImageDownloadRequest(string imageUrl)
+        if (result.IsSuccess)
+        {
+            DebugManager.Log(DebugManager.DebugType.ServerResponse ,"Received: " + result.Result);
+            return result.Result;
+        }
+        else
+        {
+            DebugManager.Log(DebugManager.DebugType.ServerResponseError,"Error: " + result.Error);
+        }
+
+        return null;
+    }
+
+    public static async Task<Sprite> ImageDownloadRequest(string imageUrl)
     {
         using var webRequest = UnityWebRequestTexture.GetTexture(imageUrl);
         // Send the request asynchronously

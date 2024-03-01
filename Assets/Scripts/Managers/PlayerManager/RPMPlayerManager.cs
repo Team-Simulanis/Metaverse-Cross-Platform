@@ -12,6 +12,7 @@ using Sirenix.OdinInspector;
 
 public class RPMPlayerManager : NetworkBehaviour
 {
+    public static RPMPlayerManager instance;
     private string maleType = "Masculine";
     public Animator femaleAnimator;
     public Animator maleAnimator;
@@ -39,6 +40,7 @@ public class RPMPlayerManager : NetworkBehaviour
 
     private void Start()
     {
+        instance = this;
         SetupAvatar(defaultAvatar);
     }
 

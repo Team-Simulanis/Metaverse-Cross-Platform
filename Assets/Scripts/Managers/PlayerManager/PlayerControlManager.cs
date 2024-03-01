@@ -127,6 +127,15 @@ namespace Simulanis.Player
             }
         }
 
+        public void playReactions(string animationName)
+        {
+            if (IsOwner)
+            {
+                Animator animator = GetComponent<Animator>();
+                animator.SetTrigger(animationName);
+            }
+        }
+
         void sendInfo()
         {
             listplayerinfo.instance.addNewPlayer(this.GetInstanceID(),this.name);

@@ -22,7 +22,7 @@ namespace Simulanis.Player
         public vThirdPersonCamera playerCamera;
         private Renderer[] renderers;
         public TextMeshProUGUI ingameUsername;
-        public string name;
+        public string _name;
         public int userId;
         playerInfo playerInfo;
 
@@ -31,6 +31,8 @@ namespace Simulanis.Player
         bool firstView;
         bool isCursorLocked;
         float speed;
+
+        [SerializeField] bool bname;
         vThirdPersonController vThirdPersonController;
 
         void Awake()
@@ -81,6 +83,12 @@ namespace Simulanis.Player
                 firstView = !firstView;
                 ChangeToFirstView(firstView);
             }
+
+            if (bname)
+            {
+                setName();
+                bname = false;
+            }
         }
 
         void ChangeToFirstView(bool value)
@@ -126,16 +134,23 @@ namespace Simulanis.Player
                 r.enabled = !value;
             }
         }
-
         public void playReactions(string animationName)
         {
-            if (IsOwner)
-            {
-                Animator animator = GetComponent<Animator>();
-                animator.SetTrigger(animationName);
-            }
+            _playreaction(animationName);
         }
 
+        //[ServerRpc(RequireOwnership = false)]
+        public void _playreaction(string animationName)
+        {
+            reaction(animationName);
+        }
+
+        //[ObserversRpc]
+        public void reaction(string animationName)
+        {
+            Animator animator = GetComponent<Animator>();
+            animator.SetTrigger(animationName);
+        }
         void sendInfo()
         {
             listplayerinfo.instance.addNewPlayer(this.GetInstanceID(),this.name);
@@ -150,7 +165,7 @@ namespace Simulanis.Player
         [ServerRpc(RequireOwnership = false)]
         void setUsername()
         {
-            showUsername(DataManager.Instance.name);
+            showUsername(_name);
         }
 
         void setName()

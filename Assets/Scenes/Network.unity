@@ -1894,7 +1894,7 @@ MonoBehaviour:
   _ipv6BindAddress: 
   _port: 7770
   _maximumClients: 4095
-  _clientAddress: 192.168.1.244
+  _clientAddress: localhost
   _timeout: 0
 --- !u!114 &1490013500
 MonoBehaviour:
@@ -3165,6 +3165,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 557225734423359608, guid: d89d68d92c7ee1540a5309644882409b,
+        type: 3}
+      propertyPath: PressedState.StateEvent.Event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 557225734423359608, guid: d89d68d92c7ee1540a5309644882409b,
+        type: 3}
+      propertyPath: PressedState.StateEvent.Event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 557225734423359608, guid: d89d68d92c7ee1540a5309644882409b,
+        type: 3}
+      propertyPath: PressedState.StateEvent.Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7375071044218528876}
+    - target: {fileID: 557225734423359608, guid: d89d68d92c7ee1540a5309644882409b,
+        type: 3}
+      propertyPath: PressedState.StateEvent.Event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 557225734423359608, guid: d89d68d92c7ee1540a5309644882409b,
+        type: 3}
+      propertyPath: PressedState.StateEvent.Event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: playReaction
+      objectReference: {fileID: 0}
+    - target: {fileID: 557225734423359608, guid: d89d68d92c7ee1540a5309644882409b,
+        type: 3}
+      propertyPath: PressedState.StateEvent.Event.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: EmojiPanel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 557225734423359608, guid: d89d68d92c7ee1540a5309644882409b,
+        type: 3}
+      propertyPath: PressedState.StateEvent.Event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: isSitting
+      objectReference: {fileID: 0}
+    - target: {fileID: 557225734423359608, guid: d89d68d92c7ee1540a5309644882409b,
+        type: 3}
+      propertyPath: PressedState.StateEvent.Event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2600567541551243222, guid: d89d68d92c7ee1540a5309644882409b,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -3525,6 +3565,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d89d68d92c7ee1540a5309644882409b, type: 3}
+--- !u!114 &7375071044218528876 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 615765950670821838, guid: d89d68d92c7ee1540a5309644882409b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7375071044218528875}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b64a9efe031fd44494a61342e6df303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7443408886617491348
 GameObject:
   m_ObjectHideFlags: 0
@@ -3599,7 +3651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211a9f6ec51ddc14f908f5acc0cd0423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerPrefab: {fileID: 340468053953193137, guid: 584b8b25cc86ece46a9f96792678b9f2,
+  _playerPrefab: {fileID: 6605979969194944695, guid: 8a8334ab0426d43478f9adede2c53283,
     type: 3}
   _addToDefaultScene: 1
   Spawns:
@@ -3647,7 +3699,7 @@ MonoBehaviour:
   _mtu: 1023
   _port: 7770
   _maximumClients: 2000
-  _clientAddress: 192.168.1.244
+  _clientAddress: localhost
 --- !u!114 &7443408886617491358
 MonoBehaviour:
   m_ObjectHideFlags: 0

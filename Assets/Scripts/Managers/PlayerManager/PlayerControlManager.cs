@@ -151,7 +151,7 @@ namespace Simulanis.Player
             Animator animator = GetComponent<Animator>();
             animator.SetTrigger(animationName);
         }
-        void sendInfo()
+        void sendInfo() // called on start , it add this player to the list whener this player is spawned
         {
             listplayerinfo.instance.addNewPlayer(this.GetInstanceID(),this.name);
         }
@@ -163,17 +163,17 @@ namespace Simulanis.Player
         }
 
         [ServerRpc(RequireOwnership = false)]
-        void setUsername()
+        void setUsername() //will call the observer RPC to sync the username to other player
         {
             showUsername(_name);
         }
 
-        void setName()
+        void setName() //will be called on start to st the username of the player
         {
             setUsername();
         }
 
-        private void OnDestroy()
+        private void OnDestroy() //whenever this player is despawnes it emoves itselfs from the player list 
         {
             listplayerinfo.instance.removeNewPlayer(this.GetInstanceID(), this.name);
         }

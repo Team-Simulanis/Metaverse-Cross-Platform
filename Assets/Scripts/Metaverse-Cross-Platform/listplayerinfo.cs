@@ -10,38 +10,29 @@ public class listplayerinfo : MonoBehaviour
     public static int noOfPlayer;
     public  List<playerInfo> playerList = new List<playerInfo>();
     [SerializeField] TextMeshProUGUI AvailablePlayer;
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void addNewPlayer(int id, string name)
+    public void addNewPlayer(int id, string name) //whenever a new player spawns , add that player to the list
     {
         playerList.Add(new playerInfo(id,name));  
-        noOfPlayer = playerList.Count;
-        AvailablePlayer.text = noOfPlayer.ToString();
-        ChatHandler.Instance.setOnlinePlayers();
+        updatePlayerList();
     }
-
-    public void removeNewPlayer(int id, string name) 
+    public void removeNewPlayer(int id, string name) //whenever a player despawns removes that player from the list
     {
         playerList.Remove(new playerInfo(id, name));
+        updatePlayerList();
+    }
+    void updatePlayerList() //shows no of player , should be called wheneverr a player is spawning or despawning
+    {
         noOfPlayer = playerList.Count;
         AvailablePlayer.text = noOfPlayer.ToString();
         ChatHandler.Instance.setOnlinePlayers();
     }
-
 }
-
 [System.Serializable]
-public struct playerInfo
+public struct playerInfo //contains the info of player thats added to the game 
 {
      public int id;
      public string name;

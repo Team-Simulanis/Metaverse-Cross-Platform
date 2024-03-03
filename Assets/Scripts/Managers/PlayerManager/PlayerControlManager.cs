@@ -1,15 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using FishNet.Example.Scened;
+
 using FishNet.Object;
 using UnityEngine;
 using Invector.vCharacterController;
 using Invector.vCamera;
 using Invector;
 using UnityEngine.InputSystem;
-using TMPro;
-using FF;
-using System.ComponentModel;
 
 namespace Simulanis.Player
 {
@@ -21,8 +16,6 @@ namespace Simulanis.Player
         public vThirdPersonCameraListData CL;
         public vThirdPersonCamera playerCamera;
         private Renderer[] renderers;
-        public TextMeshProUGUI ingameUsername;
-        public string _name;
         public int userId;
         playerInfo playerInfo;
 
@@ -32,7 +25,6 @@ namespace Simulanis.Player
         bool isCursorLocked;
         float speed;
 
-        [SerializeField] bool bname;
         vThirdPersonController vThirdPersonController;
 
         void Awake()
@@ -53,9 +45,7 @@ namespace Simulanis.Player
         {
             Init();
             ChangeToFirstView(false);
-            setName();
             sendInfo();
-
         }
 
         void Init()
@@ -82,12 +72,6 @@ namespace Simulanis.Player
                 Debug.Log("F Pressed");
                 firstView = !firstView;
                 ChangeToFirstView(firstView);
-            }
-
-            if (bname)
-            {
-                setName();
-                bname = false;
             }
         }
 
@@ -156,22 +140,6 @@ namespace Simulanis.Player
             listplayerinfo.instance.addNewPlayer(this.GetInstanceID(),this.name);
         }
 
-        [ObserversRpc]
-        void showUsername(string username)
-        {
-            ingameUsername.text = username;
-        }
-
-        [ServerRpc(RequireOwnership = false)]
-        void setUsername() //will call the observer RPC to sync the username to other player
-        {
-            showUsername(_name);
-        }
-
-        void setName() //will be called on start to st the username of the player
-        {
-            setUsername();
-        }
 
         private void OnDestroy() //whenever this player is despawnes it emoves itselfs from the player list 
         {

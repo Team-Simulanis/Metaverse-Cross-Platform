@@ -1641,7 +1641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1260739280
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2856,6 +2856,51 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chat-Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3231864775602829986, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701581812835344675, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701581812835344675, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701581812835344675, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701581812835344675, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701581812835344675, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701581812835344675, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1070
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701581812835344675, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701581812835344675, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6271466839415058899, guid: 10c6d80b4d2d2574f8911800491e3429,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2955,6 +3000,66 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654998617632412079, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: HideAnimation.Move.ToValue.x
+      value: -2079
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654998617632412079, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: HideAnimation.Move.ToValue.y
+      value: -1069.9119
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654998617632412079, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: ShowAnimation.Move.ToValue.x
+      value: -2079
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654998617632412079, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: HideAnimation.Move.FromValue.x
+      value: -2079
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654998617632412079, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: ShowAnimation.Move.FromValue.x
+      value: -2079
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654998617632412079, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: ShowAnimation.Move.FromValue.y
+      value: -1069.9119
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654998617632412079, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: ShowAnimation.Fade.CurrentValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654998617632412079, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: ShowAnimation.Move.CurrentValue.x
+      value: -2079
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654998617632412079, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: ShowAnimation.Move.CurrentValue.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654998617632412079, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: HideAnimation.Move.StartPosition.x
+      value: -2079
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654998617632412079, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: ShowAnimation.Move.StartPosition.x
+      value: -2079
+      objectReference: {fileID: 0}
+    - target: {fileID: 7344365094121875349, guid: 10c6d80b4d2d2574f8911800491e3429,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.49998856
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

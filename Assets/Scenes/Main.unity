@@ -3600,11 +3600,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
-      ToValue: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
-      CurrentValue: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
+      FromValue: {r: 1, g: 1, b: 1, a: 1}
+      ToValue: {r: 1, g: 1, b: 1, a: 1}
+      CurrentValue: {r: 0, g: 0, b: 0, a: 0}
       Enabled: 1
-      StartColor: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
+      StartColor: {r: 1, g: 1, b: 1, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -3682,11 +3682,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
-      ToValue: {r: 0.24711132, g: 0.61711013, b: 0.83132005, a: 1}
-      CurrentValue: {r: 1, g: 1, b: 1, a: 1}
+      FromValue: {r: 1, g: 1, b: 1, a: 1}
+      ToValue: {r: 1, g: 1, b: 1, a: 1}
+      CurrentValue: {r: 0, g: 0, b: 0, a: 0}
       Enabled: 1
-      StartColor: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
+      StartColor: {r: 1, g: 1, b: 1, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -3764,11 +3764,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
-      ToValue: {r: 0.12417717, g: 0.3965593, b: 0.55425423, a: 1}
-      CurrentValue: {r: 0.8610678, g: 0.8610678, b: 0.8610678, a: 1}
+      FromValue: {r: 1, g: 1, b: 1, a: 1}
+      ToValue: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+      CurrentValue: {r: 0, g: 0, b: 0, a: 0}
       Enabled: 1
-      StartColor: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
+      StartColor: {r: 1, g: 1, b: 1, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -3846,11 +3846,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
-      ToValue: {r: 0.41050422, g: 0.7764426, b: 0.8679272, a: 1}
-      CurrentValue: {r: 1, g: 1, b: 1, a: 1}
+      FromValue: {r: 1, g: 1, b: 1, a: 1}
+      ToValue: {r: 1, g: 1, b: 1, a: 1}
+      CurrentValue: {r: 0, g: 0, b: 0, a: 0}
       Enabled: 1
-      StartColor: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
+      StartColor: {r: 1, g: 1, b: 1, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -3928,11 +3928,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
-      ToValue: {r: 0.38039213, g: 0.45490193, b: 0.49803922, a: 0.5}
+      FromValue: {r: 1, g: 1, b: 1, a: 1}
+      ToValue: {r: 1, g: 1, b: 1, a: 0.5}
       CurrentValue: {r: 0, g: 0, b: 0, a: 0}
       Enabled: 1
-      StartColor: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
+      StartColor: {r: 1, g: 1, b: 1, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -5338,7 +5338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6630,8 +6630,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2517437709
-  m_fontColor: {r: 0.050314426, g: 0.050314426, b: 0.050314426, a: 0.5882353}
+    rgba: 2533359615
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8699,11 +8699,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
-      ToValue: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
+      FromValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
+      ToValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       CurrentValue: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
       Enabled: 1
-      StartColor: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
+      StartColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -8781,11 +8781,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
+      FromValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       ToValue: {r: 0, g: 0.6509804, b: 0.3372549, a: 1}
       CurrentValue: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
       Enabled: 1
-      StartColor: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
+      StartColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 2
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -8863,11 +8863,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
+      FromValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       ToValue: {r: 0, g: 0.6509804, b: 0.3372549, a: 1}
       CurrentValue: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
       Enabled: 1
-      StartColor: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
+      StartColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 2
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -8945,11 +8945,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
+      FromValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       ToValue: {r: 0.012459872, g: 0.44025147, b: 0.23408687, a: 1}
       CurrentValue: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
       Enabled: 1
-      StartColor: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
+      StartColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 2
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -9027,11 +9027,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
-      ToValue: {r: 0.11960785, g: 0.23124182, b: 0.35882354, a: 0.5}
+      FromValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
+      ToValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 0.5}
       CurrentValue: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
       Enabled: 1
-      StartColor: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
+      StartColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -9059,7 +9059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
+  m_Color: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9406,10 +9406,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1964151728}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: -0.000015227069, y: 0.000013251194}
+  m_AnchorMax: {x: 1.0000262, y: 1.0000095}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &352568297
 MonoBehaviour:
@@ -9424,7 +9424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.1764706, g: 0.1764706, b: 0.1764706, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10977,7 +10977,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.9960785, g: 0.9960785, b: 0.9960785, a: 1}
+  m_BackGroundColor: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -11678,8 +11678,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279045389
-  m_fontColor: {r: 0.050314426, g: 0.050314426, b: 0.050314426, a: 1}
+    rgba: 2533359615
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15649,8 +15649,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2517437709
-  m_fontColor: {r: 0.050314426, g: 0.050314426, b: 0.050314426, a: 0.5882353}
+    rgba: 2533359615
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -20532,11 +20532,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
-      ToValue: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
+      FromValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
+      ToValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       CurrentValue: {r: 0, g: 0, b: 0, a: 0}
       Enabled: 1
-      StartColor: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
+      StartColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -20614,11 +20614,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
-      ToValue: {r: 1, g: 1, b: 1, a: 1}
+      FromValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
+      ToValue: {r: 0.46862745, g: 0.46862745, b: 0.46862745, a: 1}
       CurrentValue: {r: 0, g: 0, b: 0, a: 0}
       Enabled: 1
-      StartColor: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
+      StartColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -20696,11 +20696,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
-      ToValue: {r: 0.8686275, g: 0.8686275, b: 0.8686275, a: 1}
+      FromValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
+      ToValue: {r: 0.26862746, g: 0.26862746, b: 0.26862746, a: 1}
       CurrentValue: {r: 0, g: 0, b: 0, a: 0}
       Enabled: 1
-      StartColor: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
+      StartColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -20778,11 +20778,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
-      ToValue: {r: 1, g: 1, b: 1, a: 1}
+      FromValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
+      ToValue: {r: 0.5686275, g: 0.5686275, b: 0.5686275, a: 1}
       CurrentValue: {r: 0, g: 0, b: 0, a: 0}
       Enabled: 1
-      StartColor: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
+      StartColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -20860,11 +20860,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
-      ToValue: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 0.5}
+      FromValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
+      ToValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 0.5}
       CurrentValue: {r: 0, g: 0, b: 0, a: 0}
       Enabled: 1
-      StartColor: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
+      StartColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -20905,7 +20905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
+  m_Color: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -21273,8 +21273,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279045389
-  m_fontColor: {r: 0.050314426, g: 0.050314426, b: 0.050314426, a: 1}
+    rgba: 2533359615
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -21377,8 +21377,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 280.84656, y: 0}
-  m_SizeDelta: {x: 541.6931, y: 0}
+  m_AnchoredPosition: {x: 277.5735, y: 0}
+  m_SizeDelta: {x: 535.147, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &616251926
 MonoBehaviour:
@@ -21488,8 +21488,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279045389
-  m_fontColor: {r: 0.050314426, g: 0.050314426, b: 0.050314426, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -24549,7 +24549,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 280.84656, y: 0}
+  m_AnchoredPosition: {x: 277.5735, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &706593139
@@ -39055,8 +39055,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279045389
-  m_fontColor: {r: 0.050314426, g: 0.050314426, b: 0.050314426, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -42172,8 +42172,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2517437709
-  m_fontColor: {r: 0.050314426, g: 0.050314426, b: 0.050314426, a: 0.5882353}
+    rgba: 2533359615
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -44179,7 +44179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -44689,8 +44689,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279045389
-  m_fontColor: {r: 0.050314426, g: 0.050314426, b: 0.050314426, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -49190,7 +49190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1974, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1179758516
@@ -49206,14 +49206,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.87058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ab3a16841f31715468546a7d9d4518c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a56b28877c926c46983f6ed2bfe51b5, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -53565,7 +53565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.21960784, b: 0.47843137, a: 1}
+  m_Color: {r: 0, g: 0.5254902, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -55171,8 +55171,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -55195,11 +55195,11 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 50
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: -7.16
+  m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -55900,8 +55900,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -56035,8 +56035,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279045389
-  m_fontColor: {r: 0.050314426, g: 0.050314426, b: 0.050314426, a: 1}
+    rgba: 2533359615
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -58473,8 +58473,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279045389
-  m_fontColor: {r: 0.050314426, g: 0.050314426, b: 0.050314426, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -59386,11 +59386,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
-      ToValue: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
+      FromValue: {r: 1, g: 1, b: 1, a: 1}
+      ToValue: {r: 1, g: 1, b: 1, a: 1}
       CurrentValue: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
       Enabled: 1
-      StartColor: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
+      StartColor: {r: 1, g: 1, b: 1, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -59468,11 +59468,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
-      ToValue: {r: 0.24711132, g: 0.61711013, b: 0.83132005, a: 1}
+      FromValue: {r: 1, g: 1, b: 1, a: 1}
+      ToValue: {r: 1, g: 1, b: 1, a: 1}
       CurrentValue: {r: 1, g: 1, b: 1, a: 1}
       Enabled: 1
-      StartColor: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
+      StartColor: {r: 1, g: 1, b: 1, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -59550,11 +59550,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
-      ToValue: {r: 0.12417717, g: 0.3965593, b: 0.55425423, a: 1}
+      FromValue: {r: 1, g: 1, b: 1, a: 1}
+      ToValue: {r: 0.9, g: 0.9, b: 0.9, a: 1}
       CurrentValue: {r: 0.8610678, g: 0.8610678, b: 0.8610678, a: 1}
       Enabled: 1
-      StartColor: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
+      StartColor: {r: 1, g: 1, b: 1, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -59632,11 +59632,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
-      ToValue: {r: 0.41050422, g: 0.7764426, b: 0.8679272, a: 1}
+      FromValue: {r: 1, g: 1, b: 1, a: 1}
+      ToValue: {r: 1, g: 1, b: 1, a: 1}
       CurrentValue: {r: 1, g: 1, b: 1, a: 1}
       Enabled: 1
-      StartColor: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
+      StartColor: {r: 1, g: 1, b: 1, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -59714,11 +59714,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
-      ToValue: {r: 0.38039213, g: 0.45490193, b: 0.49803922, a: 0.5}
+      FromValue: {r: 1, g: 1, b: 1, a: 1}
+      ToValue: {r: 1, g: 1, b: 1, a: 0.5}
       CurrentValue: {r: 0, g: 0, b: 0, a: 0}
       Enabled: 1
-      StartColor: {r: 0.16078432, g: 0.5137255, b: 0.7176471, a: 1}
+      StartColor: {r: 1, g: 1, b: 1, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -61124,7 +61124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -62893,12 +62893,12 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {x: -1920, y: 0, z: 0}
-      ToValue: {x: -3216, y: 0, z: 0}
-      CurrentValue: {x: -3216, y: 0, z: 0}
+      FromValue: {x: -1920.2344, y: 0, z: 0}
+      ToValue: {x: -1977, y: 0, z: 0}
+      CurrentValue: {x: -1977, y: 0, z: 0}
       Enabled: 0
       AnimationType: 0
-      StartPosition: {x: -3216, y: 0, z: 0}
+      StartPosition: {x: -1977, y: 0, z: 0}
       FromReferenceValue: 0
       ToReferenceValue: 0
       FromCustomValue: {x: 0, y: 0, z: 0}
@@ -63163,12 +63163,12 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {x: -3216, y: 0, z: 0}
-      ToValue: {x: 1920, y: 0, z: 0}
-      CurrentValue: {x: -3216, y: 0, z: 0}
+      FromValue: {x: -1977, y: 0, z: 0}
+      ToValue: {x: 1920.2344, y: 0, z: 0}
+      CurrentValue: {x: -1977, y: 0, z: 0}
       Enabled: 0
       AnimationType: 1
-      StartPosition: {x: -3216, y: 0, z: 0}
+      StartPosition: {x: -1977, y: 0, z: 0}
       FromReferenceValue: 0
       ToReferenceValue: 0
       FromCustomValue: {x: 0, y: 0, z: 0}
@@ -63545,7 +63545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -64416,8 +64416,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 280.84656, y: 0}
-  m_SizeDelta: {x: 541.6931, y: 0}
+  m_AnchoredPosition: {x: 277.5735, y: 0}
+  m_SizeDelta: {x: 535.147, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1462521194
 MonoBehaviour:
@@ -65592,8 +65592,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2517437709
-  m_fontColor: {r: 0.050314426, g: 0.050314426, b: 0.050314426, a: 0.5882353}
+    rgba: 2533359615
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -65727,8 +65727,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2517437709
-  m_fontColor: {r: 0.050314426, g: 0.050314426, b: 0.050314426, a: 0.5882353}
+    rgba: 2533359615
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -69012,7 +69012,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -70534,8 +70534,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -71427,8 +71427,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279045389
-  m_fontColor: {r: 0.050314426, g: 0.050314426, b: 0.050314426, a: 1}
+    rgba: 2533359615
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -71562,8 +71562,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279045389
-  m_fontColor: {r: 0.050314426, g: 0.050314426, b: 0.050314426, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -73950,8 +73950,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279045389
-  m_fontColor: {r: 0.050314426, g: 0.050314426, b: 0.050314426, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -77078,7 +77078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.32156864, g: 0.32156864, b: 0.32156864, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -78690,7 +78690,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.8
+  m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -78766,7 +78766,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819197560}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -78819,16 +78819,16 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   MultiplayerInfo: {fileID: 0}
   IsOn: 0
-  CurrentUISelectionState: 0
+  CurrentUISelectionState: 4
   DeselectAfterPress: 1
   OnSelectionStateChangedCallback:
     m_PersistentCalls:
       m_Calls: []
-  CurrentStateName: Normal
+  CurrentStateName: Disabled
   NormalState:
     StateType: 0
     StateEvent:
@@ -78970,12 +78970,12 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {x: 230, y: -23.7904, z: 0}
-      ToValue: {x: 230, y: -23.7904, z: 0}
+      FromValue: {x: -403.1023, y: 0, z: 0}
+      ToValue: {x: -403.1023, y: 0, z: 0}
       CurrentValue: {x: 230, y: -23.7904, z: 0}
       Enabled: 1
       AnimationType: 5
-      StartPosition: {x: 230, y: -23.7904, z: 0}
+      StartPosition: {x: -403.1023, y: 0, z: 0}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {x: 0, y: 0, z: 0}
@@ -79240,12 +79240,12 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {x: 230, y: -23.7904, z: 0}
-      ToValue: {x: 230, y: -21.7904, z: 0}
-      CurrentValue: {x: 230, y: -23.7904, z: 0}
+      FromValue: {x: -403.1023, y: 0, z: 0}
+      ToValue: {x: -403.1023, y: 2, z: 0}
+      CurrentValue: {x: -403.1023, y: 0, z: 0}
       Enabled: 0
       AnimationType: 6
-      StartPosition: {x: 230, y: -23.7904, z: 0}
+      StartPosition: {x: -403.1023, y: 0, z: 0}
       FromReferenceValue: 0
       ToReferenceValue: 0
       FromCustomValue: {x: 0, y: 0, z: 0}
@@ -79510,12 +79510,12 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {x: 230, y: -23.7904, z: 0}
-      ToValue: {x: 230, y: -15.7904, z: 0}
-      CurrentValue: {x: 230, y: -23.7904, z: 0}
+      FromValue: {x: -403.1023, y: 0, z: 0}
+      ToValue: {x: -403.1023, y: 8, z: 0}
+      CurrentValue: {x: -403.1023, y: 0, z: 0}
       Enabled: 0
       AnimationType: 6
-      StartPosition: {x: 230, y: -23.7904, z: 0}
+      StartPosition: {x: -403.1023, y: 0, z: 0}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {x: 0, y: 0, z: 0}
@@ -79780,12 +79780,12 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {x: 230, y: -23.7904, z: 0}
-      ToValue: {x: 230, y: -21.7904, z: 0}
-      CurrentValue: {x: 230, y: -23.7904, z: 0}
+      FromValue: {x: -403.1023, y: 0, z: 0}
+      ToValue: {x: -403.1023, y: 2, z: 0}
+      CurrentValue: {x: -403.1023, y: 0, z: 0}
       Enabled: 0
       AnimationType: 4
-      StartPosition: {x: 230, y: -23.7904, z: 0}
+      StartPosition: {x: -403.1023, y: 0, z: 0}
       FromReferenceValue: 0
       ToReferenceValue: 0
       FromCustomValue: {x: 0, y: 0, z: 0}
@@ -80050,12 +80050,12 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {x: 230, y: -23.7904, z: 0}
-      ToValue: {x: 230, y: -23.7904, z: 0}
-      CurrentValue: {x: 230, y: -23.7904, z: 0}
+      FromValue: {x: -403.1023, y: 0, z: 0}
+      ToValue: {x: -403.1023, y: 0, z: 0}
+      CurrentValue: {x: -403.1023, y: 0, z: 0}
       Enabled: 1
       AnimationType: 5
-      StartPosition: {x: 230, y: -23.7904, z: 0}
+      StartPosition: {x: -403.1023, y: 0, z: 0}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {x: 0, y: 0, z: 0}
@@ -86133,7 +86133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -86611,13 +86611,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917324343}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 141109fb25f0083469e71ce8cb3e75c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -87930,7 +87930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1964151728
 RectTransform:
   m_ObjectHideFlags: 0
@@ -87948,9 +87948,9 @@ RectTransform:
   - {fileID: 1782274339}
   m_Father: {fileID: 531122944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 54.237762, y: -56.825195}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 108.4755, y: 105.6504}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1964151729
@@ -87979,7 +87979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -88001,7 +88001,7 @@ MonoBehaviour:
   m_MaterialMode: 0
   m_StrokeWidth: 20.2
   m_OutlineWidth: 52.96
-  m_OutlineColor: {r: 0.990566, g: 0.990566, b: 0.990566, a: 1}
+  m_OutlineColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
   m_FalloffDistance: 0.5
   m_ConstrainRotation: 1
   m_ShapeRotation: 0
@@ -88156,7 +88156,7 @@ MonoBehaviour:
     Camera: 0
     Quality: 100
     Size: 800
-    Background: {r: 1, g: 1, b: 1, a: 1}
+    Background: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
     IsTransparent: 0
     BlendShapes: []
   image: {fileID: 1438207294}
@@ -88765,8 +88765,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -92146,11 +92146,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
-      ToValue: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
+      FromValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
+      ToValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       CurrentValue: {r: 0, g: 0, b: 0, a: 0}
       Enabled: 1
-      StartColor: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
+      StartColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -92228,11 +92228,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
-      ToValue: {r: 1, g: 1, b: 1, a: 1}
+      FromValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
+      ToValue: {r: 0.46862745, g: 0.46862745, b: 0.46862745, a: 1}
       CurrentValue: {r: 0, g: 0, b: 0, a: 0}
       Enabled: 1
-      StartColor: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
+      StartColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -92310,11 +92310,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
-      ToValue: {r: 0.8686275, g: 0.8686275, b: 0.8686275, a: 1}
+      FromValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
+      ToValue: {r: 0.26862746, g: 0.26862746, b: 0.26862746, a: 1}
       CurrentValue: {r: 0, g: 0, b: 0, a: 0}
       Enabled: 1
-      StartColor: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
+      StartColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -92392,11 +92392,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
-      ToValue: {r: 1, g: 1, b: 1, a: 1}
+      FromValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
+      ToValue: {r: 0.5686275, g: 0.5686275, b: 0.5686275, a: 1}
       CurrentValue: {r: 0, g: 0, b: 0, a: 0}
       Enabled: 1
-      StartColor: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
+      StartColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -92474,11 +92474,11 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
-      ToValue: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 0.5}
+      FromValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
+      ToValue: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 0.5}
       CurrentValue: {r: 0, g: 0, b: 0, a: 0}
       Enabled: 1
-      StartColor: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
+      StartColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
       FromReferenceValue: 1
       ToReferenceValue: 0
       FromCustomValue: {r: 1, g: 1, b: 1, a: 1}
@@ -92519,7 +92519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9686275, g: 0.9686275, b: 0.9686275, a: 1}
+  m_Color: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

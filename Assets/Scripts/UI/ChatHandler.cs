@@ -14,8 +14,6 @@ public class ChatHandler : MonoBehaviour
     public static ChatHandler Instance;
     public Transform chatHolder;
     public GameObject msgElement;
-    //
-    //public TextMeshPro messageText;
     public TMP_InputField playerUsername, playerMessage;
     [SerializeField] ScrollRect ChatboxContainer;
     [SerializeField] TextMeshProUGUI onlinePlayers;

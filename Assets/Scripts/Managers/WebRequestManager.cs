@@ -2,9 +2,16 @@ using System.Threading.Tasks;
 using Simulanis;
 using UnityEngine;
 using UnityEngine.Networking;
+using Sirenix.OdinInspector;
 
 public class WebRequestManager : MonoBehaviour
 {
+      [TitleGroup("Web Request Calls")]
+            [Space(10)] [ShowInInspector][HideLabel] [ReadOnly] [HorizontalGroup("Web Request Calls/Split",0.5f)][BoxGroup("Web Request Calls/Split/GET")]
+            public static int Get;
+    
+            [Space(10)] [ShowInInspector][HideLabel] [ReadOnly] [BoxGroup("Web Request Calls/Split/POST")]
+            public static int Set;
     
     public static WebRequestManager Instance;
 
@@ -19,15 +26,15 @@ public class WebRequestManager : MonoBehaviour
     {
         var request = UnityWebRequest.Get(domain+endPoint);
         var result = await request.SendWebRequestAsync();
-
+Get++;
         if (result.IsSuccess)
         {
-            DebugManager.Log(DebugManager.DebugType.ServerResponse ,"Received: " + result.Result);
+            DebugManager.Log(DebugType.ServerResponse ,"Received: " + result.Result);
             return result.Result;
         }
         else
         {
-            DebugManager.Log(DebugManager.DebugType.ServerResponse,"Error: " + result.Error);
+            DebugManager.Log(DebugType.ServerResponse,"Error: " + result.Error);
         }
 
         return null;
@@ -37,17 +44,17 @@ public class WebRequestManager : MonoBehaviour
     {
         var request = UnityWebRequest.Get(customDomain+endPoint);
         request.SetRequestHeader("Authorization", "Bearer " + token); 
-        
+        Get++;
         var result = await request.SendWebRequestAsync();
 
         if (result.IsSuccess)
         {
-            DebugManager.Log(DebugManager.DebugType.ServerResponse ,"Received: " + result.Result);
+            DebugManager.Log(DebugType.ServerResponse ,"Received: " + result.Result);
             return result.Result;
         }
         else
         {
-            DebugManager.Log(DebugManager.DebugType.ServerResponseError,"Error: " + result.Error);
+            DebugManager.Log(DebugType.ServerResponseError,"Error: " + result.Error);
         }
 
         return null;

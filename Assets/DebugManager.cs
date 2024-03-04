@@ -2,23 +2,24 @@ using UnityEngine;
 
 namespace Simulanis
 {
+    public enum DebugType
+    {
+        Msg,
+        Error,
+        Network,
+        Env,
+        Data,
+        DataGet,
+        DataPost,
+        ServerResponse,
+        ServerResponseError,
+        DataError,
+        Session,
+        Analytics
+    }
     public class DebugManager : MonoBehaviour
     {
-        public enum DebugType
-        {
-            Msg,
-            Error,
-            Network,
-            Env,
-            Data,
-            DataGet,
-            DataPost,
-            ServerResponse,
-            ServerResponseError,
-            DataError,
-            Session,
-            Analytics
-        }
+
 
         public static void Log(DebugType debugType, string message)
         {
@@ -49,7 +50,7 @@ namespace Simulanis
                     ServerResponseLog(message);
                     break;
                 case DebugType.ServerResponseError:
-                    ServerResponseLog(message);
+                    ServerResponseErrorLog(message);
                     break;
                 case DebugType.DataError:
                     DataLogError(message);

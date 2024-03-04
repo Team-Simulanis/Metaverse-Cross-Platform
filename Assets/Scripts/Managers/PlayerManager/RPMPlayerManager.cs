@@ -65,8 +65,6 @@ public class RPMPlayerManager : NetworkBehaviour
         newUrl = avatarUrl;
         ChangeAvatarUrl();
     }
-
-
     public void LoadAvatar()
     {
         avatarObjectLoader = new AvatarObjectLoader();
@@ -75,12 +73,10 @@ public class RPMPlayerManager : NetworkBehaviour
         avatarObjectLoader.OnFailed += OnLoadFailed;
         LoadAvatar(avatarUrl);
     }
-
     public void SetAvatarUrl(string value)
     {
         avatarUrl = value;
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -102,7 +98,6 @@ public class RPMPlayerManager : NetworkBehaviour
                 ChangeAvatarUrl();
         }
     }
-
     void InitController()
     {
         // avatarController

@@ -12,12 +12,10 @@ namespace Simulanis.Player
     public class PlayerControlManager : NetworkBehaviour
     {
         public static PlayerControlManager _Instance;
-
         public vThirdPersonCameraListData CL;
         public vThirdPersonCamera playerCamera;
         private Renderer[] renderers;
         public int userId;
-        playerInfo playerInfo;
 
         public bool StopPlayer = false;
 
@@ -36,8 +34,6 @@ namespace Simulanis.Player
             }
             vThirdPersonController = GetComponent<vThirdPersonController>();
             speed = vThirdPersonController.speedMultiplier;
-
-
         }
 
         // Start is called before the first frame update
@@ -89,7 +85,8 @@ namespace Simulanis.Player
             }
             ChangePlayerRenderer(value);
         }
-        void SetCursorLocked(bool value)
+        //to lock the player movement animation whenever some button is pressed 
+        void SetCursorLocked(bool value) 
         {
             Cursor.visible = value;
             playerCamera.isFreezed = value;
@@ -118,30 +115,13 @@ namespace Simulanis.Player
                 r.enabled = !value;
             }
         }
-        public void playReactions(string animationName)
-        {
-            _playreaction(animationName);
-        }
-
-        //[ServerRpc(RequireOwnership = false)]
-        public void _playreaction(string animationName)
-        {
-            reaction(animationName);
-        }
-
-        //[ObserversRpc]
-        public void reaction(string animationName)
-        {
-            Animator animator = GetComponent<Animator>();
-            animator.SetTrigger(animationName);
-        }
         void sendInfo() // called on start , it add this player to the list whener this player is spawned
         {
             listplayerinfo.instance.addNewPlayer(this.GetInstanceID(),this.name);
         }
 
 
-        private void OnDestroy() //whenever this player is despawnes it emoves itselfs from the player list 
+        private void OnDestroy() //whenever this player is despawnes it removes itselfs from the player list 
         {
             listplayerinfo.instance.removeNewPlayer(this.GetInstanceID(), this.name);
         }

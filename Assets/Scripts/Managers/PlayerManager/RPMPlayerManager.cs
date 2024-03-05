@@ -8,7 +8,7 @@ using FishNet.Connection;
 using FishNet.Object;
 using Invector.vCharacterController;
 using Sirenix.OdinInspector;
-
+using UnityEngine.Events;
 
 public class RPMPlayerManager : NetworkBehaviour
 {
@@ -39,6 +39,7 @@ public class RPMPlayerManager : NetworkBehaviour
     [Tooltip("This will be true for Network Object")]
     public bool isNetworkObject;
 
+    public UnityEvent onAvatarLoaded = new();
     private void Start()
     {
         SetupAvatar(defaultAvatar);
@@ -77,6 +78,7 @@ public class RPMPlayerManager : NetworkBehaviour
         avatarObjectLoader.OnCompleted += OnLoadCompleted;
         avatarObjectLoader.OnProgressChanged += OnLoading;
         avatarObjectLoader.OnFailed += OnLoadFailed;
+        onAvatarLoaded?.Invoke();
         LoadAvatar(avatarUrl);
 #endif
     }

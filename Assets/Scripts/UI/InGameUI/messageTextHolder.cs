@@ -5,5 +5,6 @@ using UnityEngine;
 
 public class messageTextHolder : MonoBehaviour
 {
+    public TextMeshProUGUI username;
     public TextMeshProUGUI msgText;
 }

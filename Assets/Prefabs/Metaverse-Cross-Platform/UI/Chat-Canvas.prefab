@@ -4163,9 +4163,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab3fcc775c62fc4db80a3e48b75ad7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 0
+  _addedNetworkObject: {fileID: 0}
+  _networkObjectCache: {fileID: 0}
   chatHolder: {fileID: 7760547406154758685}
   msgElement: {fileID: 2715034162720504639, guid: 66a478a5288926f4fb9c3a0c21821efe,
     type: 3}
+  ownerMessageElement: {fileID: 0}
   playerUsername: {fileID: 0}
   playerMessage: {fileID: 25656781068734513}
   ChatboxContainer: {fileID: 2956020539960714888}

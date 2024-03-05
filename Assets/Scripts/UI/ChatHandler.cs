@@ -8,15 +8,20 @@ using TMPro;
 using FF;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using FishNet.Object;
+using Sirenix.Utilities;
 
 public class ChatHandler : MonoBehaviour
 {
     public static ChatHandler Instance;
     public Transform chatHolder;
-    public GameObject msgElement;
+    public GameObject msgElement, ownerMessageElement;
     public TMP_InputField playerUsername, playerMessage;
     [SerializeField] ScrollRect ChatboxContainer;
     [SerializeField] TextMeshProUGUI onlinePlayers;
+
+    [SerializeField] bool isOwner;
+
     private void Start()
     {
         Instance = this;
@@ -43,11 +48,12 @@ public class ChatHandler : MonoBehaviour
 
     public void setOnlinePlayers()
     {
-        onlinePlayers.text = listplayerinfo.noOfPlayer.ToString()+" players online";
+        onlinePlayers.text = listplayerinfo.noOfPlayer.ToString()+"Online";
     }
 
     public void SendMessage()
     {
+        isOwner = true;
         Message msg = new Message()
         {
             //username = playerUsername.text,
@@ -68,11 +74,18 @@ public class ChatHandler : MonoBehaviour
     private void OnMessageRecieved(Message msg)
     {
         if (string.IsNullOrEmpty(msg.message)) return;
-
-        GameObject finalMessage = Instantiate(msgElement, chatHolder);
-        //finalMessage.GetComponent<TextMeshProUGUI>().text = msg.username + ": " + msg.message;
-       finalMessage.GetComponent<messageTextHolder>().msgText.text = msg.message;
-        Debug.Log("the size is: "+ChatboxContainer.verticalNormalizedPosition);
+        GameObject finalMessage;
+        if(isOwner)
+        {
+            finalMessage = Instantiate(ownerMessageElement, chatHolder);
+            finalMessage.GetComponent<messageTextHolder>().msgText.text = msg.message;
+        }
+        else
+        {
+            finalMessage = Instantiate(msgElement, chatHolder);
+            finalMessage.GetComponent<messageTextHolder>().msgText.text = msg.message;
+        }
+        isOwner = false;
     }
 
     private void OnClientMessageRecieved(NetworkConnection networkConnection, Message msg)

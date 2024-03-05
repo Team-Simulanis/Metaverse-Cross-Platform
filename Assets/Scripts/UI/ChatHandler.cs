@@ -48,7 +48,7 @@ public class ChatHandler : MonoBehaviour
 
     public void setOnlinePlayers()
     {
-        onlinePlayers.text = listplayerinfo.noOfPlayer.ToString()+"Online";
+        onlinePlayers.text = listplayerinfo.noOfPlayer.ToString()+" online";
     }
 
     public void SendMessage()
@@ -56,9 +56,9 @@ public class ChatHandler : MonoBehaviour
         isOwner = true;
         Message msg = new Message()
         {
-            //username = playerUsername.text,
+            username = DataManager.Instance.name,
             //username = DataManager.Instance.name,
-            username = "username",
+            //username = "username",
             message = playerMessage.text
         };
 

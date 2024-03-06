@@ -20,5 +20,9 @@ MonoBehaviour:
       Name: Login
     - Category: HomeScreenLogin
       Name: Proceed
+    - Category: HomeScreenLogin
+      Name: SelectFemale
+    - Category: HomeScreenLogin
+      Name: SelectMale
     - Category: None
       Name: None

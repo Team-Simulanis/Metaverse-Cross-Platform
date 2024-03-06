@@ -1,4 +1,4 @@
-using FishNet.Connection;
+/*using FishNet.Connection;
 using FishNet.Object;
 using System.Collections;
 using System.Collections.Generic;
@@ -42,13 +42,4 @@ public class SendText : NetworkBehaviour
         newFunction(Message);
     }
 
-/*    private void OnValidate()
-    {
-        if (SendMessage)
-        {
-            SendMessageServer();
-            SendMessage = false;
-        }
-
-    }*/
-}
+}*/

@@ -39,6 +39,8 @@ MonoBehaviour:
     - Category: HomeScreen
       Name: previewCharacter
     - Category: HomeScreen
+      Name: SelectGender
+    - Category: HomeScreen
       Name: SplashScreen
     - Category: Ingame
       Name: BottomBar

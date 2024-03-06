@@ -1,3 +1,4 @@
+using FishNet.Connection;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,7 +10,6 @@ public class listplayerinfo : MonoBehaviour
     public static listplayerinfo instance;
     public static int noOfPlayer;
     public  List<playerInfo> playerList = new List<playerInfo>();
-    [SerializeField] TextMeshProUGUI AvailablePlayer;
     void Start()
     {
         instance = this;
@@ -19,15 +19,15 @@ public class listplayerinfo : MonoBehaviour
         playerList.Add(new playerInfo(id,name));  
         updatePlayerList();
     }
-    public void removeNewPlayer(int id, string name) //whenever a player despawns removes that player from the list
+    public void removeNewPlayer( int id, string name) //whenever a player despawns removes that player from the list
     {
         playerList.Remove(new playerInfo(id, name));
         updatePlayerList();
+        Debug.Log("removed");
     }
     void updatePlayerList() //shows no of player , should be called wheneverr a player is spawning or despawning
     {
         noOfPlayer = playerList.Count;
-        AvailablePlayer.text = noOfPlayer.ToString();
         ChatHandler.Instance.setOnlinePlayers();
     }
 }

@@ -5,6 +5,7 @@ using Invector.vCharacterController;
 using Invector.vCamera;
 using Invector;
 using UnityEngine.InputSystem;
+using FishNet.Connection;
 
 namespace Simulanis.Player
 {
@@ -117,13 +118,14 @@ namespace Simulanis.Player
         }
         void sendInfo() // called on start , it add this player to the list whener this player is spawned
         {
-            listplayerinfo.instance.addNewPlayer(this.GetInstanceID(),this.name);
+            listplayerinfo.instance.addNewPlayer(this.OwnerId,this.name);
         }
 
 
         private void OnDestroy() //whenever this player is despawnes it removes itselfs from the player list 
         {
-            listplayerinfo.instance.removeNewPlayer(this.GetInstanceID(), this.name);
+            listplayerinfo.instance.removeNewPlayer(this.OwnerId, this.name);
+            Debug.Log("destroyed");
         }
     }
 }

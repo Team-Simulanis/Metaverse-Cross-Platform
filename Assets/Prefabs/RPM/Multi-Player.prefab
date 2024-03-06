@@ -997,7 +997,6 @@ MonoBehaviour:
   ingameUsername: {fileID: 7672711954199029575}
   _name: hello
   takeNameFromaDatamanager: 0
-  _setName: 0
 --- !u!1 &6333141075408240098
 GameObject:
   m_ObjectHideFlags: 0

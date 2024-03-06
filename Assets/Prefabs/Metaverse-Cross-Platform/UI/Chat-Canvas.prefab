@@ -2684,7 +2684,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -3480,10 +3480,10 @@ RectTransform:
   - {fileID: 1263534783576477043}
   m_Father: {fileID: 6271466839415058899}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2079, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1070}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3271970495957865503
 Canvas:
@@ -3675,12 +3675,12 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {x: 0, y: -1080, z: 0}
-      ToValue: {x: 0, y: 0, z: 0}
-      CurrentValue: {x: 0, y: 0, z: 0}
+      FromValue: {x: -2079, y: -1069.9119, z: 0}
+      ToValue: {x: -2079, y: 0, z: 0}
+      CurrentValue: {x: -2079, y: 0, z: 0}
       Enabled: 1
       AnimationType: 0
-      StartPosition: {x: 0, y: 0, z: 0}
+      StartPosition: {x: -2079, y: 0, z: 0}
       FromReferenceValue: 0
       ToReferenceValue: 0
       FromCustomValue: {x: 0, y: 0, z: 0}
@@ -3945,12 +3945,12 @@ MonoBehaviour:
         Vibration: 8
         Elasticity: 1
         FadeOutShake: 0
-      FromValue: {x: 0, y: 0, z: 0}
-      ToValue: {x: 0, y: -1080, z: 0}
+      FromValue: {x: -2079, y: 0, z: 0}
+      ToValue: {x: -2079, y: -1069.9119, z: 0}
       CurrentValue: {x: 0, y: -1080, z: 0}
       Enabled: 1
       AnimationType: 1
-      StartPosition: {x: 0, y: 0, z: 0}
+      StartPosition: {x: -2079, y: 0, z: 0}
       FromReferenceValue: 0
       ToReferenceValue: 0
       FromCustomValue: {x: 0, y: 0, z: 0}
@@ -4163,17 +4163,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab3fcc775c62fc4db80a3e48b75ad7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 0
-  _addedNetworkObject: {fileID: 0}
-  _networkObjectCache: {fileID: 0}
   chatHolder: {fileID: 7760547406154758685}
   msgElement: {fileID: 2715034162720504639, guid: 66a478a5288926f4fb9c3a0c21821efe,
     type: 3}
-  ownerMessageElement: {fileID: 0}
+  ownerMessageElement: {fileID: 2715034162720504639, guid: f1f9ccf5205f76f49a558326cecb4652,
+    type: 3}
   playerUsername: {fileID: 0}
   playerMessage: {fileID: 25656781068734513}
   ChatboxContainer: {fileID: 2956020539960714888}
   onlinePlayers: {fileID: 6315809801857198318}
+  isOwner: 0
 --- !u!1 &4308211450780755927
 GameObject:
   m_ObjectHideFlags: 0
@@ -4359,7 +4358,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.49999237}
+  m_AnchoredPosition: {x: 0, y: -0.49998856}
   m_SizeDelta: {x: -20, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &251152102459915107
@@ -6379,7 +6378,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 19.9
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1

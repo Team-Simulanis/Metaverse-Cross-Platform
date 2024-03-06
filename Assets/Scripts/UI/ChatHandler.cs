@@ -56,9 +56,9 @@ public class ChatHandler : MonoBehaviour
         isOwner = true;
         Message msg = new Message()
         {
-            username = DataManager.Instance.name,
             //username = DataManager.Instance.name,
-            //username = "username",
+            //username = DataManager.Instance.name,
+            username = "username",
             message = playerMessage.text
         };
 

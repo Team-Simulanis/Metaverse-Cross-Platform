@@ -30,7 +30,7 @@ public class NameTagHandler : NetworkBehaviour
         if (base.IsOwner)
         { 
             Debug.Log("Am Owner");
-            if(!takeNameFromaDatamanager) {SetUsernameOnServer(GameManager.Instance.name); }
+            if(takeNameFromaDatamanager) {SetUsernameOnServer(GameManager.Instance.name); }
             else { SetUsernameOnServer(_name); }
             ingameUsername.transform.parent.gameObject.SetActive(false);
         }

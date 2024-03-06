@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SelectGender : MonoBehaviour
 {
-   public void _SelectGender(string gender)
+   public void _SelectGender(string gender) //
     {
         CloudCharacterManager.instance.GetCloudAvatarData(gender);
     }

@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 // This class is responsible for managing cloud characters
 public class CloudCharacterManager : MonoBehaviour
 {
-    public GameObject malePrefab; // Prefab for the male character
+    public GameObject malePrefab; // Prefab for the male character //
     [FormerlySerializedAs("CP")] public CharacterPayload cp; // Payload for the character
 
     // URL for the avatar list

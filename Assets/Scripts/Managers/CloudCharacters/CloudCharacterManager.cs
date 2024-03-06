@@ -17,15 +17,18 @@ public class CloudCharacterManager : MonoBehaviour
 
     [DisplayAsString] public int avatarCount; // Count of avatars
 
+    public static CloudCharacterManager instance;
+
     // On start, deactivate the male prefab and get the cloud avatar data
     private void Start()
     {
+        instance = this;
         malePrefab.SetActive(false);
-        GetCloudAvatarData("female");
+        //GetCloudAvatarData("female");
     }
 
     // Asynchronously get the cloud avatar data
-    private async void GetCloudAvatarData(string type)
+    public async void GetCloudAvatarData(string type)
     {
         var result = await WebRequestManager.WebRequestWithAuthorization(AvatarListURL,type, BearerToken);
 

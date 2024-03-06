@@ -1,28 +1,38 @@
+using FishNet.Component.Animating;
 using FishNet.Object;
 using UnityEngine;
 
 public class playerReactionHandler : NetworkBehaviour
 {
     public static playerReactionHandler Instance;
+    public bool owner;
     private void Start()
     {
         Instance = this;
     }
     public void PlayReactions(string animationName)
     {
-        PlayReactionOnServer(animationName);
+        if(base.IsOwner)
+        {
+            owner = true;
+            PlayReactionOnServer(animationName);
+            Debug.Log("play Animation");
+        }
     }
-
     [ServerRpc(RequireOwnership = false)]
     public void PlayReactionOnServer(string animationName)
     {
         PlayeReactionOnObserver(animationName);
+        Debug.Log("play Animation on server");
     }
 
-    [ObserversRpc]
+    [ObserversRpc(BufferLast = true, ExcludeOwner = false, RunLocally = true)]
     public void PlayeReactionOnObserver(string animationName)
     {
-        Animator animator = GetComponent<Animator>();
-        animator.SetTrigger(animationName);
+            Animator animator = GetComponent<Animator>();
+            animator.SetTrigger(animationName);
+            Debug.Log("play Animation on observer");
+            this.GetComponent<NetworkAnimator>().Play(animationName);
+            
     }
 }

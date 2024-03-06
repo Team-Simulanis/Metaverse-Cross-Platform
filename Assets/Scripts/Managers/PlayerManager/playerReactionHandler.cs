@@ -1,5 +1,6 @@
 using FishNet.Component.Animating;
 using FishNet.Object;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class playerReactionHandler : NetworkBehaviour
@@ -9,15 +10,21 @@ public class playerReactionHandler : NetworkBehaviour
     private void Start()
     {
         Instance = this;
+        SendOwner();
     }
+    [Button]
+    private void SendOwner()
+    {
+        if (base.IsOwner)
+        {
+            EmojiPanel.instance.TakeOwner(this.gameObject);
+        }
+    }
+
     public void PlayReactions(string animationName)
     {
-        if(base.IsOwner)
-        {
-            owner = true;
-            PlayReactionOnServer(animationName);
-            Debug.Log("play Animation");
-        }
+          PlayReactionOnServer(animationName);
+          Debug.Log("play Animation");
     }
     [ServerRpc(RequireOwnership = false)]
     public void PlayReactionOnServer(string animationName)
@@ -32,7 +39,8 @@ public class playerReactionHandler : NetworkBehaviour
             Animator animator = GetComponent<Animator>();
             animator.SetTrigger(animationName);
             Debug.Log("play Animation on observer");
-            this.GetComponent<NetworkAnimator>().Play(animationName);
+            //this.GetComponent<NetworkAnimator>().Play(animationName);
             
     }
+
 }

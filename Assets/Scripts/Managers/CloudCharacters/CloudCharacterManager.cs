@@ -24,12 +24,13 @@ public class CloudCharacterManager : MonoBehaviour
     {
         instance = this;
         malePrefab.SetActive(false);
-        //GetCloudAvatarData("female");
+        GetCloudAvatarData("male");
     }
 
     // Asynchronously get the cloud avatar data
     public async void GetCloudAvatarData(string type)
     {
+        avatarCount = 0; //will reset the list whenever a new gender is selected
         var result = await WebRequestManager.WebRequestWithAuthorization(AvatarListURL,type, BearerToken);
 
         cp = JsonUtility.FromJson<CharacterPayload>(result);

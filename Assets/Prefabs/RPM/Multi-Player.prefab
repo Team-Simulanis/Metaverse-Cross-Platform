@@ -300,6 +300,8 @@ GameObject:
   - component: {fileID: 5845518234059542661}
   - component: {fileID: 8953657227765113925}
   - component: {fileID: 2750340816551812974}
+  - component: {fileID: -8503199178905166344}
+  - component: {fileID: -794222539903906750}
   m_Layer: 0
   m_Name: Multi-Player
   m_TagString: Untagged
@@ -378,6 +380,7 @@ MonoBehaviour:
   - {fileID: -2797041750357411260}
   - {fileID: 8953657227765113925}
   - {fileID: 2750340816551812974}
+  - {fileID: -8503199178905166344}
   <ParentNetworkObject>k__BackingField: {fileID: 0}
   <ChildNetworkObjects>k__BackingField: []
   SerializedTransformProperties:
@@ -909,13 +912,13 @@ MonoBehaviour:
     Position: 1
     Rotation: 1
     Scale: 0
-  _interpolation: 2
+  _interpolation: 1
   _extrapolation: 2
   _enableTeleport: 0
   _teleportThreshold: 1
   _scaleThreshold: 1
   _clientAuthoritative: 1
-  _sendToOwner: 1
+  _sendToOwner: 0
   _enableNetworkLod: 1
   _interval: 1
   _synchronizePosition: 1
@@ -997,6 +1000,38 @@ MonoBehaviour:
   ingameUsername: {fileID: 7672711954199029575}
   _name: hello
   takeNameFromaDatamanager: 0
+--- !u!114 &-8503199178905166344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018108584105516696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97522a02881bbfc45ae65520b00c1ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 5
+  _addedNetworkObject: {fileID: 6605979969194944695}
+  _networkObjectCache: {fileID: 6605979969194944695}
+  owner: 0
+--- !u!114 &-794222539903906750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018108584105516696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138914e90a51f1a4fb3cb6a934e75f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPosition:
+  - {fileID: 8133591432865543059, guid: a03c5c7ff8e31ec40a66e0ef45630c84, type: 3}
+  - {fileID: 6621467255488368724, guid: 95055511c5bbc1247ab19ff912565263, type: 3}
+  - {fileID: 743591212510494507, guid: 4bf8890fb00c269449c48d3a96f7446e, type: 3}
 --- !u!1 &6333141075408240098
 GameObject:
   m_ObjectHideFlags: 0

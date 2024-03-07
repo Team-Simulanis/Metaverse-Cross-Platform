@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LocationsPanel : MonoBehaviour
+public class LocationsPanel : MonoBehaviour //
 {
     public static LocationsPanel instance;
     public GameObject ownerObject;

@@ -998,7 +998,7 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 6605979969194944695}
   _networkObjectCache: {fileID: 6605979969194944695}
   ingameUsername: {fileID: 7672711954199029575}
-  _name: hello
+  _name: Name
   takeNameFromaDatamanager: 0
 --- !u!114 &-8503199178905166344
 MonoBehaviour:

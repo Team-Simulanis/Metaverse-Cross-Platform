@@ -24,6 +24,8 @@ MonoBehaviour:
       Name: EmojiPanelOn
     - Category: InGame
       Name: exit
+    - Category: InGame
+      Name: LocationPanel
     - Category: Login
       Name: LoggingIn
     - Category: Login

@@ -18,6 +18,7 @@ public class playerReactionHandler : NetworkBehaviour
         if (base.IsOwner)
         {
             EmojiPanel.instance.TakeOwner(this.gameObject);
+            LocationsPanel.instance.TakeOwner(this.gameObject);S
         }
     }
 

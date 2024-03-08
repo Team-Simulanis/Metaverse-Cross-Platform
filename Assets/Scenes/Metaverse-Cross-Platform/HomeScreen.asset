@@ -703,8 +703,7 @@ MonoBehaviour:
     Direction: 0
     Capacity: 1
     Connections:
-    - 6740b562-7837-46ee-9613-ca198f6c160b
-    - 4b07f928-8db7-4905-b929-66e559c104c6
+    - b9295a28-a5b6-43e0-a879-6a260776fa2f
     Value: '{"CanGoBack":false}'
     ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.GoBackInputPortData,
       DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -847,7 +846,7 @@ MonoBehaviour:
     Direction: 1
     Capacity: 0
     Connections:
-    - 082d304f-289d-4e5e-a590-59c8ca7a99c6
+    - 0531b9d5-b3ad-4fde-b1b9-4763de7063b5
     Value: '{"Trigger":2,"TimeDelay":3.0,"SignalPayload":{"StreamId":{"Category":"None","Name":"None","Custom":false},"SignalValueType":0,"IntegerValue":0,"BooleanValue":false,"FloatValue":0.0,"StringValue":"","ColorValue":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"Vector2Value":{"x":0.0,"y":0.0},"Vector3Value":{"x":0.0,"y":0.0,"z":0.0},"Vector4Value":{"x":0.0,"y":0.0,"z":0.0,"w":0.0}},"ButtonId":{"Category":"HomeScreenLogin","Name":"Proceed","Custom":false},"ToggleId":{"Category":"None","Name":"None","Custom":false},"CommandToggle":2,"ViewId":{"Category":"None","Name":"None","Custom":false},"CommandShowHide":0}'
     ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.UIOutputPortData,
       DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null

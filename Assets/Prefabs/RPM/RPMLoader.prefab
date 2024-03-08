@@ -113,6 +113,9 @@ MonoBehaviour:
   changeAvatar: 0
   InitAgain: 0
   isNetworkObject: 0
+  onAvatarLoaded:
+    m_PersistentCalls:
+      m_Calls: []
   newUrl: 
   isBufferAvailable: 0
 --- !u!114 &-4913386681645104778

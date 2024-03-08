@@ -21,6 +21,8 @@ MonoBehaviour:
     - Category: FloaterPanel
       Name: exitFeedback
     - Category: FloaterPanel
+      Name: LocationPanel
+    - Category: FloaterPanel
       Name: SessionsPanel
     - Category: None
       Name: None

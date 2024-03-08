@@ -28,6 +28,7 @@ namespace ReadyPlayerMe.Samples.QuickStart
         public static GameObject _Loadingpane;
         public static ThirdPersonLoader instance;
         public bool loadCharacter;
+        public Animation animationClip;
         
         private void Start()
         {
@@ -55,8 +56,8 @@ namespace ReadyPlayerMe.Samples.QuickStart
             {
                 _LoadAvatar();
                 loadCharacter = false;
-
             }
+            GetComponentInChildren<Animator>().runtimeAnimatorController = animatorController;
         }
 
         private void OnLoading(object sender, ProgressChangeEventArgs e)
@@ -90,6 +91,8 @@ namespace ReadyPlayerMe.Samples.QuickStart
                 LoadingPanel.SetActive(false);
             }
 
+          
+
         }
 
         private void SetupAvatar(GameObject  targetAvatar)
@@ -109,7 +112,9 @@ namespace ReadyPlayerMe.Samples.QuickStart
             if (controller != null)
             {
                 controller.Setup(avatar, animatorController);
+               
             }
+           
         }
 
         public void LoadAvatar(string url)

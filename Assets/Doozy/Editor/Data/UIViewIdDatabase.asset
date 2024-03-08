@@ -51,6 +51,8 @@ MonoBehaviour:
     - Category: Ingame
       Name: feedbackPanel
     - Category: Ingame
+      Name: LocationPanel
+    - Category: Ingame
       Name: ReactionPanel
     - Category: Ingame
       Name: session

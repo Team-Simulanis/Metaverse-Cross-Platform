@@ -18,7 +18,7 @@ public class CloudCharacterManager : MonoBehaviour
     [DisplayAsString] public int avatarCount; // Count of avatars
 
     public static CloudCharacterManager instance;
-
+    GameObject obj;
     // On start, deactivate the male prefab and get the cloud avatar data
     private void Start()
     {
@@ -39,7 +39,7 @@ public class CloudCharacterManager : MonoBehaviour
         foreach (var t in cp.data)
         {
             avatarCount++;
-            var obj = Instantiate(malePrefab, malePrefab.transform.parent.transform);
+            obj = Instantiate(malePrefab, malePrefab.transform.parent.transform);
             obj.SetActive(true);
             obj.AddComponent<CloudCharacterPrefabHolder>();
             obj.GetComponent<CloudCharacterPrefabHolder>().characterData = t;

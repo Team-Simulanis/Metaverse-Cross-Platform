@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class playerReactionHandler : NetworkBehaviour
 {
-    public static playerReactionHandler Instance;
+    public static playerReactionHandler instance;
     public bool owner;
     private void Start()
     {
-        Instance = this;
+        instance = this;
         SendOwner();
     }
     [Button]
@@ -21,7 +21,6 @@ public class playerReactionHandler : NetworkBehaviour
             LocationsPanel.instance.TakeOwner(this.gameObject); //
         }
     }
-
     public void PlayReactions(string animationName)
     {
           PlayReactionOnServer(animationName);

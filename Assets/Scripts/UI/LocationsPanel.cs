@@ -1,3 +1,4 @@
+using Simulanis.Player;
 using UnityEngine;
 
 public class LocationsPanel : MonoBehaviour //
@@ -12,7 +13,6 @@ public class LocationsPanel : MonoBehaviour //
     {
         ownerObject.transform.position = Location.position;
     }
-
     public void TakeOwner(GameObject OwnerObject)
     {
         ownerObject = OwnerObject;

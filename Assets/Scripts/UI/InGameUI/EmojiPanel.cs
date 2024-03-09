@@ -14,11 +14,10 @@ public class EmojiPanel : MonoBehaviour
     {
         instance = this;
     }
-    public void playReaction(string reactionName) //will be callled on button , the string will contain the name of the trigger which will be played.
+    public void PlayReaction(string reactionName) //will be callled on button , the string will contain the name of the trigger which will be played.
     {
         ownerObject.GetComponent<playerReactionHandler>().PlayReactions(reactionName);
     }
-
     public void TakeOwner(GameObject OwnerObject)
     {
         ownerObject = OwnerObject;

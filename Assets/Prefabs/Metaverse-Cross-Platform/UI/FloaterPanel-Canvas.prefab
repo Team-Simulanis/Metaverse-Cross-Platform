@@ -1858,8 +1858,6 @@ GameObject:
   - component: {fileID: 4888276762532099575}
   - component: {fileID: 8645768317137913530}
   - component: {fileID: 6871330182002041460}
-  - component: {fileID: 2375291713969654088}
-  - component: {fileID: 2359397994185662680}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1937,48 +1935,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 8645768317137913530}
---- !u!114 &2375291713969654088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871323937814842031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62fefd6246624808b4ecb84b0d27abd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Controller: {fileID: 3068403942976147592}
-  IsOn: 0
-  ToggleCommand: 0
-  SpriteTarget: {fileID: 6871330182002041460}
-  NormalSprite: {fileID: 21300000, guid: 36e4c3b90d9d7ae4b9ae844db37e8ce3, type: 3}
-  HighlightedSprite: {fileID: 0}
-  PressedSprite: {fileID: 0}
-  SelectedSprite: {fileID: 0}
-  DisabledSprite: {fileID: 0}
---- !u!114 &2359397994185662680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871323937814842031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62fefd6246624808b4ecb84b0d27abd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Controller: {fileID: 3068403942976147592}
-  IsOn: 0
-  ToggleCommand: 1
-  SpriteTarget: {fileID: 6871330182002041460}
-  NormalSprite: {fileID: 21300000, guid: 9ea312e5bc8ac2b42986551d067d71c9, type: 3}
-  HighlightedSprite: {fileID: 0}
-  PressedSprite: {fileID: 0}
-  SelectedSprite: {fileID: 0}
-  DisabledSprite: {fileID: 0}
 --- !u!1 &1252354354858706010
 GameObject:
   m_ObjectHideFlags: 0

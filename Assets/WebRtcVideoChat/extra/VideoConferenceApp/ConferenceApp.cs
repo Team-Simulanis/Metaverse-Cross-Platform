@@ -110,7 +110,7 @@ namespace Byn.Unity.Examples
         /// <summary>
         /// Call class handling all the functionality
         /// </summary>
-        private ICall mCall;
+        public ICall mCall;
 
         private MediaConfig mMediaConfig = new MediaConfig();
         /// <summary>
@@ -167,7 +167,7 @@ namespace Byn.Unity.Examples
         /// <summary>
         /// Unity start.
         /// </summary>
-        private void Start()
+        public void Start()
         {
             UnityCallFactory.RequestLogLevelStatic(UnityCallFactory.LogLevel.Info);
             UnityCallFactory.EnsureInit(OnCallFactoryReady, OnCallFactoryFailed);

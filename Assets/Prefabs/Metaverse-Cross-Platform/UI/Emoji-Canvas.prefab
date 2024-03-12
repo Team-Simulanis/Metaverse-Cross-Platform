@@ -125,7 +125,19 @@ MonoBehaviour:
       Runners: []
       Event:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 615765950670821838}
+            m_TargetAssemblyTypeName: EmojiPanel, Assembly-CSharp
+            m_MethodName: PlayReaction
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: Waving
+              m_BoolArgument: 0
+            m_CallState: 2
   SelectedState:
     StateType: 3
     StateEvent:
@@ -5392,7 +5404,7 @@ MonoBehaviour:
           m_Calls:
           - m_Target: {fileID: 615765950670821838}
             m_TargetAssemblyTypeName: EmojiPanel, Assembly-CSharp
-            m_MethodName: playReaction
+            m_MethodName: PlayReaction
             m_Mode: 5
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
@@ -8539,7 +8551,7 @@ MonoBehaviour:
   HighlightedState:
     StateType: 1
     StateEvent:
-      EventName: Unnamed
+      EventName: Highlighted State
       Runners: []
       Event:
         m_PersistentCalls:
@@ -8547,14 +8559,14 @@ MonoBehaviour:
   PressedState:
     StateType: 2
     StateEvent:
-      EventName: Unnamed
+      EventName: Pressed State
       Runners: []
       Event:
         m_PersistentCalls:
           m_Calls:
           - m_Target: {fileID: 615765950670821838}
             m_TargetAssemblyTypeName: EmojiPanel, Assembly-CSharp
-            m_MethodName: playReaction
+            m_MethodName: PlayReaction
             m_Mode: 5
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
@@ -8567,7 +8579,7 @@ MonoBehaviour:
   SelectedState:
     StateType: 3
     StateEvent:
-      EventName: Unnamed
+      EventName: Selected State
       Runners: []
       Event:
         m_PersistentCalls:
@@ -8575,7 +8587,7 @@ MonoBehaviour:
   DisabledState:
     StateType: 4
     StateEvent:
-      EventName: Unnamed
+      EventName: Disabled State
       Runners: []
       Event:
         m_PersistentCalls:
@@ -11733,11 +11745,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 30
-    m_Right: -28
+    m_Left: 0
+    m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 3
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -12256,7 +12268,7 @@ MonoBehaviour:
   NormalState:
     StateType: 0
     StateEvent:
-      EventName: Unnamed
+      EventName: Normal State
       Runners: []
       Event:
         m_PersistentCalls:
@@ -12264,7 +12276,7 @@ MonoBehaviour:
   HighlightedState:
     StateType: 1
     StateEvent:
-      EventName: Unnamed
+      EventName: Highlighted State
       Runners: []
       Event:
         m_PersistentCalls:
@@ -12272,14 +12284,14 @@ MonoBehaviour:
   PressedState:
     StateType: 2
     StateEvent:
-      EventName: Unnamed
+      EventName: Pressed State
       Runners: []
       Event:
         m_PersistentCalls:
           m_Calls:
           - m_Target: {fileID: 615765950670821838}
             m_TargetAssemblyTypeName: EmojiPanel, Assembly-CSharp
-            m_MethodName: playReaction
+            m_MethodName: PlayReaction
             m_Mode: 5
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
@@ -12292,7 +12304,7 @@ MonoBehaviour:
   SelectedState:
     StateType: 3
     StateEvent:
-      EventName: Unnamed
+      EventName: Selected State
       Runners: []
       Event:
         m_PersistentCalls:
@@ -12300,7 +12312,7 @@ MonoBehaviour:
   DisabledState:
     StateType: 4
     StateEvent:
-      EventName: Unnamed
+      EventName: Disabled State
       Runners: []
       Event:
         m_PersistentCalls:

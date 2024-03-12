@@ -6,6 +6,7 @@ public class MiniMap : NetworkBehaviour
 {
     [SerializeField] Camera MiniMapCamera;
     [SerializeField] Image MiniMapImage;
+    [SerializeField] Image BigMapImage;
 
     private void Start()
     {
@@ -25,10 +26,12 @@ public class MiniMap : NetworkBehaviour
         if (IsOwner)
         {
             MiniMapImage.color = Color.red;
+            BigMapImage.color = Color.red;
         }
         else
         {
-            MiniMapImage.color = Color.white;   
+            MiniMapImage.color = Color.white;
+            BigMapImage.color = Color.white;
         }
     }
 

@@ -21,6 +21,8 @@ MonoBehaviour:
     - Category: HomeScreen
       Name: Controls
     - Category: HomeScreen
+      Name: Customisation
+    - Category: HomeScreen
       Name: InfoPage
     - Category: HomeScreen
       Name: Loading

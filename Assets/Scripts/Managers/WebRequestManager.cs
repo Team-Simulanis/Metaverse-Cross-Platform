@@ -1,18 +1,25 @@
+using System.IO;
 using System.Threading.Tasks;
 using Simulanis;
 using UnityEngine;
 using UnityEngine.Networking;
 using Sirenix.OdinInspector;
+using Unity.VectorGraphics;
 
 public class WebRequestManager : MonoBehaviour
 {
-      [TitleGroup("Web Request Calls")]
-            [Space(10)] [ShowInInspector][HideLabel] [ReadOnly] [HorizontalGroup("Web Request Calls/Split",0.5f)][BoxGroup("Web Request Calls/Split/GET")]
-            public static int Get;
-    
-            [Space(10)] [ShowInInspector][HideLabel] [ReadOnly] [BoxGroup("Web Request Calls/Split/POST")]
-            public static int Set;
-    
+    [TitleGroup("Web Request Calls")]
+    [Space(10)]
+    [ShowInInspector]
+    [HideLabel]
+    [ReadOnly]
+    [HorizontalGroup("Web Request Calls/Split", 0.5f)]
+    [BoxGroup("Web Request Calls/Split/GET")]
+    public static int Get;
+
+    [Space(10)] [ShowInInspector] [HideLabel] [ReadOnly] [BoxGroup("Web Request Calls/Split/POST")]
+    public static int Set;
+
     public static WebRequestManager Instance;
 
     public string domain;
@@ -22,39 +29,39 @@ public class WebRequestManager : MonoBehaviour
         Instance = this;
     }
 
-    public async Task<string> WebRequest(string endPoint) 
+    public async Task<string> WebRequest(string endPoint)
     {
-        var request = UnityWebRequest.Get(domain+endPoint);
+        var request = UnityWebRequest.Get(domain + endPoint);
         var result = await request.SendWebRequestAsync();
-Get++;
+        Get++;
         if (result.IsSuccess)
         {
-            DebugManager.Log(DebugType.ServerResponse ,"Received: " + result.Result);
+            DebugManager.Log(DebugType.ServerResponse, "Received: " + result.Result);
             return result.Result;
         }
         else
         {
-            DebugManager.Log(DebugType.ServerResponse,"Error: " + result.Error);
+            DebugManager.Log(DebugType.ServerResponse, "Error: " + result.Error);
         }
 
         return null;
     }
-    
-    public static async Task<string> WebRequestWithAuthorization(string customDomain,string endPoint,string token) 
+
+    public static async Task<string> WebRequestWithAuthorization(string customDomain, string endPoint, string token)
     {
-        var request = UnityWebRequest.Get(customDomain+endPoint);
-        request.SetRequestHeader("Authorization", "Bearer " + token); 
+        var request = UnityWebRequest.Get(customDomain + endPoint);
+        request.SetRequestHeader("Authorization", "Bearer " + token);
         Get++;
         var result = await request.SendWebRequestAsync();
 
         if (result.IsSuccess)
         {
-            DebugManager.Log(DebugType.ServerResponse ,"Received: " + result.Result);
+            DebugManager.Log(DebugType.ServerResponse, "Received: " + result.Result);
             return result.Result;
         }
         else
         {
-            DebugManager.Log(DebugType.ServerResponseError,"Error: " + result.Error);
+            DebugManager.Log(DebugType.ServerResponseError, "Error: " + result.Error);
         }
 
         return null;
@@ -84,7 +91,46 @@ Get++;
             return sprite;
         }
     }
-    
+
+    public static async Task<Sprite> DownloadSVG(string _url)
+    {
+        string url = _url;
+
+        UnityWebRequest www = UnityWebRequest.Get(url);
+
+        var asyncOperation = www.SendWebRequest();
+        while (!asyncOperation.isDone)
+        {
+            await Task.Yield(); // Yield to the main Unity thread to avoid blocking it
+        }
+        if (www.isHttpError || www.isNetworkError)
+        {
+            Debug.Log("Error while Receiving: " + www.error);
+            return null;
+        }
+        else
+        {
+            //Convert byte[] data of svg into string
+            string bitString = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data);
+            var tessOptions = new VectorUtils.TessellationOptions()
+            {
+                StepDistance = 100.0f,
+                MaxCordDeviation = 0.5f,
+                MaxTanAngleDeviation = 0.1f,
+                SamplingStepSize = 0.01f
+            };
+
+            // Dynamically import the SVG data, and tessellate the resulting vector scene.
+            var sceneInfo = SVGParser.ImportSVG(new StringReader(bitString));
+            var geoms = VectorUtils.TessellateScene(sceneInfo.Scene, tessOptions);
+
+            // Build a sprite with the tessellated geometry
+            Sprite sprite =
+                VectorUtils.BuildSprite(geoms, 10.0f, VectorUtils.Alignment.Center, Vector2.zero, 128, true);
+            return sprite;
+        }
+    }
+
     public static async Task<Texture> TextureDownloadRequest(string imageUrl)
     {
         using var webRequest = UnityWebRequestTexture.GetTexture(imageUrl);
@@ -105,7 +151,7 @@ Get++;
         {
             // Convert downloaded texture to sprite
             Texture2D texture = DownloadHandlerTexture.GetContent(webRequest);
-            
+
             return texture;
         }
     }

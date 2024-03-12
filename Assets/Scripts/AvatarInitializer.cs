@@ -10,10 +10,8 @@ public class AvatarInitializer : MonoBehaviour
     [SerializeField] private Animator maleAnimator;
     [SerializeField] private Animator femaleAnimator;
     
-    public void SetupAvatar(GameObject targetAvatar, GameObject avatarController, GameObject avatar,bool isNetworkObject,Animator animator,bool isMale, GameObject invectorControl, Vector3 avatarPositionOffset)
+    public void SetupAvatar(GameObject targetAvatar, GameObject avatarController, GameObject avatar,bool isNetworkObject,bool isMale, GameObject invectorControl, Vector3 avatarPositionOffset)
     {
-
-        _animator = animator;
         _isMale = isMale;
         
         Debug.Log("Setting up "+ targetAvatar.name + " as Avatar");
@@ -44,21 +42,27 @@ public class AvatarInitializer : MonoBehaviour
         }
 
         avatarController.SetActive(true);
-        Invoke(nameof(ChangeAvatarRef), 0.1f);
+       
     }
 
-    private void ChangeAvatarRef()
+    public void ChangeAvatarRef()
     {
         if (_isMale)
         {
+            Debug.Log("Assigned Male Avatar");
             var avatar = maleAnimator.avatar;
             _animator.avatar = avatar;
         }
         else
         {
+            Debug.Log("Assigned Female Avatar");
+
             var avatar = femaleAnimator.avatar;
             _animator.avatar = avatar;
         }
+
+        _animator.Rebind();
+        _animator.Update(0f);
     }
 
 }

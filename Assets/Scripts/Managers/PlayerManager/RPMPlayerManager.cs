@@ -120,7 +120,8 @@ public class RPMPlayerManager : NetworkBehaviour
     {
         Debug.Log("Avatar Loaded :" + args.Metadata.OutfitGender);
         isMale = args.Metadata.OutfitGender == OutfitGender.Masculine;
-        avatarInitializer.SetupAvatar(args.Avatar, avatarController, avatar, isNetworkObject, animator, isMale, invectorControl, avatarPositionOffset);
+        avatarInitializer.SetupAvatar(args.Avatar, avatarController, avatar, isNetworkObject, isMale, invectorControl, avatarPositionOffset);
+        avatarInitializer.ChangeAvatarRef();
     }
 
     public void LoadAvatar(string url)

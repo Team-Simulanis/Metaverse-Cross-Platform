@@ -33,6 +33,7 @@ namespace Doozy.Runtime.UIManager
             Acclimation,
             ChooseAvatar,
             Controls,
+            Customisation,
             InfoPage,
             Loading,
             Loading2,

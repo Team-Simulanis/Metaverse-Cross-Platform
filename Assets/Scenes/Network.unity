@@ -36809,6 +36809,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2380111550065234952, guid: 66ae98bbf9efedf44bdb1bab4eae1772,
+        type: 3}
+      propertyPath: m_Circle.m_Radius
+      value: 24.574783
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791416235063073916, guid: 66ae98bbf9efedf44bdb1bab4eae1772,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791416235063073916, guid: 66ae98bbf9efedf44bdb1bab4eae1772,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2917570887375357196, guid: 66ae98bbf9efedf44bdb1bab4eae1772,
         type: 3}
       propertyPath: m_Pivot.x
@@ -36908,11 +36923,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3767206087690005090, guid: 66ae98bbf9efedf44bdb1bab4eae1772,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -2.6845703
       objectReference: {fileID: 0}
     - target: {fileID: 4515971693072116103, guid: 66ae98bbf9efedf44bdb1bab4eae1772,
         type: 3}

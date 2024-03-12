@@ -5,15 +5,12 @@ using ReadyPlayerMe.Core;
 using System;
 using FF;
 using FishNet.Object;
-using Invector.vCharacterController;
 using Sirenix.OdinInspector;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(AvatarInitializer))]
 public class RPMPlayerManager : NetworkBehaviour
 {
-    private string maleType = "Masculine";
-    public Animator femaleAnimator;
-    public Animator maleAnimator;
     public GameObject defaultAvatar;
     public delegate void UrlChanger(string url);
 
@@ -37,8 +34,11 @@ public class RPMPlayerManager : NetworkBehaviour
     public bool isNetworkObject;
 
     public UnityEvent onAvatarLoaded = new();
+    
+    public AvatarInitializer avatarInitializer;
     private void Start()
     {
+        avatarInitializer = GetComponent<AvatarInitializer>();
         //SetupAvatar(defaultAvatar);
     }
 
@@ -79,6 +79,7 @@ public class RPMPlayerManager : NetworkBehaviour
     {
         avatarUrl = value;
     }
+    
     // Update is called once per frame
     void Update()
     {
@@ -117,63 +118,9 @@ public class RPMPlayerManager : NetworkBehaviour
 
     private void OnLoadCompleted(object sender, CompletionEventArgs args)
     {
-        SetupAvatar(args.Avatar);
         Debug.Log("Avatar Loaded :" + args.Metadata.OutfitGender);
-        if (args.Metadata.OutfitGender == OutfitGender.Masculine)
-        {
-            isMale = true;
-        }
-        else
-        {
-            isMale = false;
-        }
-    }
-
-
-    private void SetupAvatar(GameObject targetAvatar)
-    {
-        Debug.Log("Setting up "+ targetAvatar.name + " as Avatar");
-        if (avatar != null)
-        {
-            avatarController.GetComponent<vThirdPersonController>().enabled = false;
-            avatarController.GetComponent<vThirdPersonInput>().enabled = false;
-            Destroy(avatar);
-        }
-        else
-        {
-            avatarController = invectorControl;
-            avatarController.SetActive(true);
-            animator = avatarController.GetComponent<Animator>();
-        }
-
-        avatar = targetAvatar;
-        avatar.transform.parent = avatarController.transform.GetChild(0);
-        avatar.transform.localPosition = avatarPositionOffset;
-        avatar.transform.localRotation = Quaternion.Euler(0, 0, 0);
-        DestroyImmediate(avatar.GetComponent<Animator>());
-        if (!isNetworkObject)
-        {
-            avatarController.GetComponent<vThirdPersonController>().enabled = true;
-            avatarController.GetComponent<vThirdPersonInput>().enabled = true;
-            avatarController.transform.GetChild(3).gameObject.SetActive(true);
-        }
-
-        avatarController.SetActive(true);
-        Invoke(nameof(ChangeAvatarRef), 0.1f);
-    }
-
-    private void ChangeAvatarRef()
-    {
-        if (isMale)
-        {
-            animator.avatar = femaleAnimator.avatar;
-            animator.avatar = maleAnimator.avatar;
-        }
-        else
-        {
-            animator.avatar = maleAnimator.avatar;
-            animator.avatar = femaleAnimator.avatar;
-        }
+        isMale = args.Metadata.OutfitGender == OutfitGender.Masculine;
+        avatarInitializer.SetupAvatar(args.Avatar, avatarController, avatar, isNetworkObject, animator, isMale, invectorControl, avatarPositionOffset);
     }
 
     public void LoadAvatar(string url)

@@ -10,11 +10,7 @@ public class CloudCharacterManager : MonoBehaviour
 
     // URL for the avatar list
     private const string AvatarListURL = "https://api.simulanis.io/api/resource/3d/character/list/universal/";
-
-    // Bearer token for authorization
-    private const string BearerToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiOTJjNmM1ZGQtZGIxNy00ODMzLWFhYzEtNjNkNmE5MmJmZjg5IiwiY2hhbm5lbCI6ImVmMjFlMWUwLWI4MGUtNGQwMy04MGRiLTJjN2E0OThmNTJlYiIsImlhdCI6MTcwODYwNzc0MSwiZXhwIjoxNzExMTk5NzQxfQ.uNK1mBZT8OnY2V6fhLq2kMMnPBaLrDXx49u6ph8nDU4";
-
+    
     [DisplayAsString] public int avatarCount; // Count of avatars
 
     public static CloudCharacterManager instance;
@@ -31,7 +27,7 @@ public class CloudCharacterManager : MonoBehaviour
     public async void GetCloudAvatarData(string type)
     {
         avatarCount = 0; //will reset the list whenever a new gender is selected
-        var result = await WebRequestManager.WebRequestWithAuthorization(AvatarListURL,type, BearerToken);
+        var result = await WebRequestManager.GetWebRequestWithAuthorization(AvatarListURL,type);
 
         cp = JsonUtility.FromJson<CharacterPayload>(result);
         

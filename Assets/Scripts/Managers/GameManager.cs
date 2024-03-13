@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     private async void InitApplication()
     {
-        var defaultData = await WebRequestManager.Instance.WebRequest("");
+     //   var defaultData = await WebRequestManager.Instance.WebRequest("");
         UpdateBrandingDetails();
     }
 

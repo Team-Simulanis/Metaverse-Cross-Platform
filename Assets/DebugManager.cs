@@ -118,7 +118,7 @@ namespace Simulanis
         
         public static void ServerResponseErrorLog(string message)
         {
-            Debug.Log("<color=red>[dataError] " + message + "</color>");
+            Debug.Log("<color=red>[Request Error] " + message + "</color>");
         }
 
         public static void DataLogError(string message)

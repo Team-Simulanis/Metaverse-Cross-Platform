@@ -1,14 +1,14 @@
-using System.IO;
 using System.Threading.Tasks;
 using Simulanis;
 using UnityEngine;
 using UnityEngine.Networking;
 using Sirenix.OdinInspector;
-using Unity.VectorGraphics;
 
 public class WebRequestManager : MonoBehaviour
 {
-    [TitleGroup("Web Request Calls")]
+    #region Static Variables
+
+    [TitleGroup("Web Request Calls", Alignment = TitleAlignments.Centered)]
     [Space(10)]
     [ShowInInspector]
     [HideLabel]
@@ -22,16 +22,30 @@ public class WebRequestManager : MonoBehaviour
 
     public static WebRequestManager Instance;
 
-    public string domain;
+    [ShowInInspector] public static Sprite ImageDownloadFailed;
+    [ShowInInspector] [ReadOnly] public static string Domain;
+
+    [ShowInInspector]
+    [ReadOnly]
+    [Multiline(5)]
+    [HideLabel]
+    [TitleGroup("Bearer Token", boldTitle: true, Alignment = TitleAlignments.Centered)]
+    public static string Token =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiZmM5MjgwYTUtZjcxNy00MDg0LWI2Y2UtYWVkNjQ1NmE0NWZhIiwiY2hhbm5lbCI6ImVmMjFlMWUwLWI4MGUtNGQwMy04MGRiLTJjN2E0OThmNTJlYiIsImlhdCI6MTcxMDMxNzA5MiwiZXhwIjoxNzEyOTA5MDkyfQ.ojLr0qxSaWUtmIBP2mZ86FKh0kuNs6kNE7HbExQmic0";
+
+    #endregion
 
     private void Awake()
     {
         Instance = this;
+        Get = 0;
+        Set = 0;
     }
 
     public async Task<string> WebRequest(string endPoint)
     {
-        var request = UnityWebRequest.Get(domain + endPoint);
+        var request = UnityWebRequest.Get(Domain + endPoint);
+        DebugManager.Log(DebugType.ServerResponse, "Sending request to: " + Domain + endPoint);
         var result = await request.SendWebRequestAsync();
         Get++;
         if (result.IsSuccess)
@@ -39,29 +53,56 @@ public class WebRequestManager : MonoBehaviour
             DebugManager.Log(DebugType.ServerResponse, "Received: " + result.Result);
             return result.Result;
         }
-        else
+
         {
             DebugManager.Log(DebugType.ServerResponse, "Error: " + result.Error);
+        }
+        return null;
+    }
+
+    public static async Task<string> GetWebRequestWithAuthorization(string customDomain, string endPoint)
+    {
+        var request = UnityWebRequest.Get(customDomain + endPoint);
+        var reqId = RandomIDGenerator.GenerateRandomID();
+        DebugManager.Log(DebugType.ServerResponse, reqId + " Sending request to: " + customDomain + endPoint);
+        request.SetRequestHeader("Authorization", "Bearer " + Token);
+        Get++;
+        var result = await request.SendWebRequestAsync();
+
+        if (result.IsSuccess)
+        {
+            DebugManager.Log(DebugType.ServerResponse, reqId + " Received: " + result.Result);
+            return result.Result;
+        }
+
+        if (result.Error != null)
+        {
+            DebugManager.Log(DebugType.ServerResponseError, reqId + " Error: " + result.Error);
         }
 
         return null;
     }
 
-    public static async Task<string> WebRequestWithAuthorization(string customDomain, string endPoint, string token)
+    public static async Task<string> PostWebRequestWithAuthorization(string customDomain, string endPoint)
     {
         var request = UnityWebRequest.Get(customDomain + endPoint);
-        request.SetRequestHeader("Authorization", "Bearer " + token);
+        request.SetRequestHeader("Authorization", "Bearer " + Token);
+        request.
+        var reqId = RandomIDGenerator.GenerateRandomID();
+        DebugManager.Log(DebugType.ServerResponse, reqId + " Sending request to: " + customDomain + endPoint);
+
         Get++;
         var result = await request.SendWebRequestAsync();
 
         if (result.IsSuccess)
         {
-            DebugManager.Log(DebugType.ServerResponse, "Received: " + result.Result);
+            DebugManager.Log(DebugType.ServerResponse, reqId + " Received: " + result.Result);
             return result.Result;
         }
-        else
+
+        if (result.Error != null)
         {
-            DebugManager.Log(DebugType.ServerResponseError, "Error: " + result.Error);
+            DebugManager.Log(DebugType.ServerResponseError, reqId + " Error: " + result.Error);
         }
 
         return null;
@@ -81,37 +122,29 @@ public class WebRequestManager : MonoBehaviour
         if (webRequest.result != UnityWebRequest.Result.Success)
         {
             Debug.LogError("Error downloading image: " + webRequest.error);
-            return null; // Return null if there's an error
+            return ImageDownloadFailed; // Return null if there's an error
         }
-        else
-        {
-            // Convert downloaded texture to sprite
-            var texture = DownloadHandlerTexture.GetContent(webRequest);
-            var sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.one * 0.5f);
-            return sprite;
-        }
+
+
+        // Convert downloaded texture to sprite
+        var texture = DownloadHandlerTexture.GetContent(webRequest);
+        var sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.one * 0.5f);
+        return sprite;
     }
 
-    public static async Task<Sprite> DownloadSVG(string _url)
+    public static async Task<Sprite> DownloadSvg(string downloadURL)
     {
-        string url = _url;
-
-        UnityWebRequest www = UnityWebRequest.Get(url);
+        var www = UnityWebRequest.Get(downloadURL);
 
         var asyncOperation = www.SendWebRequest();
         while (!asyncOperation.isDone)
         {
             await Task.Yield(); // Yield to the main Unity thread to avoid blocking it
         }
-        if (www.isHttpError || www.isNetworkError)
-        {
-            Debug.Log("Error while Receiving: " + www.error);
-            return null;
-        }
-        else
-        {
-            return SVGConverter.ConvertSVGToSprite(www);
-        }
+
+        if (www.error == null) return SVGConverter.ConvertSVGToSprite(www);
+        Debug.Log("Error while Receiving: " + www.error);
+        return ImageDownloadFailed;
     }
 
     public static async Task<Texture> TextureDownloadRequest(string imageUrl)
@@ -133,7 +166,7 @@ public class WebRequestManager : MonoBehaviour
         else
         {
             // Convert downloaded texture to sprite
-            Texture2D texture = DownloadHandlerTexture.GetContent(webRequest);
+            var texture = DownloadHandlerTexture.GetContent(webRequest);
 
             return texture;
         }

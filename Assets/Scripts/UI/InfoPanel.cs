@@ -24,9 +24,7 @@ public class InfoPanel : MonoBehaviour
     public UserDetailsPayload userDetailsPayload = new();
     // public userInfo userInfo;
 
-    public string bearerToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiYWYzNTY0YzItNzgzNC00MzhmLWFmOWEtMjZiZWNkMjllM2RiIiwiY2hhbm5lbCI6ImVmMjFlMWUwLWI4MGUtNGQwMy04MGRiLTJjN2E0OThmNTJlYiIsImlhdCI6MTcwOTg5MDEwMCwiZXhwIjoxNzM1ODEwMTAwfQ.fN_78fl8zUgzXzhlPzpjjPbyBc7eWIths9jJRyjwlno";
-
+ 
     public string endPoint = "https://metaverse-backend.simulanis.io/api/application/user/details";
 
     private void Start()
@@ -34,13 +32,14 @@ public class InfoPanel : MonoBehaviour
         GetUserProfileData();
     }
 
-    public async void GetUserProfileData()
+    private async void GetUserProfileData()
     {
-        var result = await WebRequestManager.WebRequestWithAuthorization(endPoint, "", bearerToken);
+        var result = await WebRequestManager.GetWebRequestWithAuthorization(endPoint, "");
         userDetailsPayload = JsonUtility.FromJson<UserDetailsPayload>(result);
-        profilePicture.sprite = await WebRequestManager.DownloadSVG(userDetailsPayload.data.group.avatar);
+        profilePicture.sprite = await WebRequestManager.DownloadSvg(userDetailsPayload.data.group.avatar);
         profilePicture.useSpriteMesh = true;
         profilePicture.color = Color.black;
+        DataManager.Instance.userData.profileImage = profilePicture.sprite;
         DataManager.Instance.userData.designation = userDetailsPayload.data.designation;
         DataManager.Instance.userData.email = userDetailsPayload.data.email;
         DataManager.Instance.userData.name = userDetailsPayload.data.name;
@@ -49,7 +48,7 @@ public class InfoPanel : MonoBehaviour
         //DataManager.Instance.userData.experience = userDetailsPayload.data.experience;
     }
 
-    public void ShowData()
+    private void ShowData()
     {
         nameInputField.text = DataManager.Instance.userData.name;
         emailInputField.text = DataManager.Instance.userData.email;
@@ -57,14 +56,8 @@ public class InfoPanel : MonoBehaviour
         bioInputField.text = DataManager.Instance.userData.bio;
     }
 
-    public void takeInfo()
+    public void TakeInfo()
     {
-        //   userInfo.name = nameInputField.text;
-        //   userInfo.email = emailInputField.text;
-        //   userInfo.designation = designationInputField.text;
-        //   userInfo.experience = experienceInputField.text;
-        //   userInfo.bio = bioInputField.text;
-
         DataManager.Instance.userData.designation = designationInputField.text;
         DataManager.Instance.userData.experience = experienceInputField.text;
         DataManager.Instance.userData.bio = bioInputField.text;

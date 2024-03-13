@@ -1,5 +1,6 @@
 using System;
 using Sirenix.OdinInspector;
+using UnityEngine;
 
 [Serializable] [LabelText("User Data", SdfIconType.Person)]
 public class UserData
@@ -9,6 +10,7 @@ public class UserData
     [ReadOnly][BoxGroup("Basic Info")]public string designation = "Default Designation";
     [ReadOnly][BoxGroup("Basic Info")]public string experience = "5";
     [ReadOnly][BoxGroup("Basic Info")]public string bio = "Default Bio";
+    [ReadOnly][BoxGroup("Basic Info")]public Sprite profileImage;
     public AvatarDetails avatarDetails;
     public UserPermission userPermission;
 }

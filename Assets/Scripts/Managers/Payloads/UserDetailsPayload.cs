@@ -15,7 +15,7 @@ using UnityEngine;
         public object uid;
         public object phone;
         public string designation;
-        public object bio;
+        public string bio;
         public MetaData metaData;
         public Group group;
         public List<string> permissions;

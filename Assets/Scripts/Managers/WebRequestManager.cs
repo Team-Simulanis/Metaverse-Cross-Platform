@@ -32,6 +32,7 @@ public class WebRequestManager : MonoBehaviour
     public async Task<string> WebRequest(string endPoint)
     {
         var request = UnityWebRequest.Get(domain + endPoint);
+        Debug.Log("Sending Request: " + domain + endPoint);
         var result = await request.SendWebRequestAsync();
         Get++;
         if (result.IsSuccess)
@@ -41,7 +42,7 @@ public class WebRequestManager : MonoBehaviour
         }
         else
         {
-            DebugManager.Log(DebugType.ServerResponse, "Error: " + result.Error);
+            DebugManager.Log(DebugType.ServerResponseError, "Error: " + result.Error);
         }
 
         return null;

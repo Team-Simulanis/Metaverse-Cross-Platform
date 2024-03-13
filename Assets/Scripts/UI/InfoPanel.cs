@@ -1,10 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using FF;
 using TMPro;
 using UnityEngine;
-using Sirenix.OdinInspector;
 using UnityEngine.UI;
 
 // [System.Serializable]
@@ -18,7 +14,6 @@ using UnityEngine.UI;
 // }
 public class InfoPanel : MonoBehaviour
 {
-
     [SerializeField] TMP_InputField nameInputField;
     [SerializeField] TMP_InputField emailInputField;
     [SerializeField] TMP_InputField designationInputField;
@@ -26,10 +21,12 @@ public class InfoPanel : MonoBehaviour
     [SerializeField] TMP_InputField bioInputField;
     [SerializeField] private Image profilePicture;
 
-    public UserDetailsPayload userDetailsPayload = new ();
+    public UserDetailsPayload userDetailsPayload = new();
     // public userInfo userInfo;
 
-    public string bearerToken= "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiYWYzNTY0YzItNzgzNC00MzhmLWFmOWEtMjZiZWNkMjllM2RiIiwiY2hhbm5lbCI6ImVmMjFlMWUwLWI4MGUtNGQwMy04MGRiLTJjN2E0OThmNTJlYiIsImlhdCI6MTcwOTg5MDEwMCwiZXhwIjoxNzM1ODEwMTAwfQ.fN_78fl8zUgzXzhlPzpjjPbyBc7eWIths9jJRyjwlno";
+    public string bearerToken =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiYWYzNTY0YzItNzgzNC00MzhmLWFmOWEtMjZiZWNkMjllM2RiIiwiY2hhbm5lbCI6ImVmMjFlMWUwLWI4MGUtNGQwMy04MGRiLTJjN2E0OThmNTJlYiIsImlhdCI6MTcwOTg5MDEwMCwiZXhwIjoxNzM1ODEwMTAwfQ.fN_78fl8zUgzXzhlPzpjjPbyBc7eWIths9jJRyjwlno";
+
     public string endPoint = "https://metaverse-backend.simulanis.io/api/application/user/details";
 
     private void Start()
@@ -44,18 +41,32 @@ public class InfoPanel : MonoBehaviour
         profilePicture.sprite = await WebRequestManager.DownloadSVG(userDetailsPayload.data.group.avatar);
         profilePicture.useSpriteMesh = true;
         profilePicture.color = Color.black;
+        DataManager.Instance.userData.designation = userDetailsPayload.data.designation;
+        DataManager.Instance.userData.email = userDetailsPayload.data.email;
+        DataManager.Instance.userData.name = userDetailsPayload.data.name;
+        DataManager.Instance.userData.bio = userDetailsPayload.data.bio;
+        ShowData();
+        //DataManager.Instance.userData.experience = userDetailsPayload.data.experience;
     }
-     public void takeInfo()
-     {
-    //   userInfo.name = nameInputField.text;
-    //   userInfo.email = emailInputField.text;
-    //   userInfo.designation = designationInputField.text;
-    //   userInfo.experience = experienceInputField.text;
-    //   userInfo.bio = bioInputField.text;
-    
+
+    public void ShowData()
+    {
+        nameInputField.text = DataManager.Instance.userData.name;
+        emailInputField.text = DataManager.Instance.userData.email;
+        designationInputField.text = DataManager.Instance.userData.designation;
+        bioInputField.text = DataManager.Instance.userData.bio;
+    }
+
+    public void takeInfo()
+    {
+        //   userInfo.name = nameInputField.text;
+        //   userInfo.email = emailInputField.text;
+        //   userInfo.designation = designationInputField.text;
+        //   userInfo.experience = experienceInputField.text;
+        //   userInfo.bio = bioInputField.text;
+
         DataManager.Instance.userData.designation = designationInputField.text;
         DataManager.Instance.userData.experience = experienceInputField.text;
         DataManager.Instance.userData.bio = bioInputField.text;
-        
     }
 }

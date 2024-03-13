@@ -8,17 +8,14 @@ public class WebRTCAudioManager : MonoBehaviour
 {
     public ConferenceApp ConferenceApp;
     // Start is called before the first frame update
-    void Start()
+    void Start()  
     {
-        //base.Start();
-
-        StartConference("abc");
+        Invoke("startFunction", 3f);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void startFunction()
     {
-        
+        StartConference("abc");
     }
    /// <summary>
    /// Call this function to start/join Conference Call

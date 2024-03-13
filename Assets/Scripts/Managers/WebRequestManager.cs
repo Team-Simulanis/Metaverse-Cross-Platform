@@ -44,8 +44,10 @@ public class WebRequestManager : MonoBehaviour
 
     public async Task<string> WebRequest(string endPoint)
     {
+
         var request = UnityWebRequest.Get(Domain + endPoint);
         DebugManager.Log(DebugType.ServerResponse, "Sending request to: " + Domain + endPoint);
+
         var result = await request.SendWebRequestAsync();
         Get++;
         if (result.IsSuccess)
@@ -55,7 +57,7 @@ public class WebRequestManager : MonoBehaviour
         }
 
         {
-            DebugManager.Log(DebugType.ServerResponse, "Error: " + result.Error);
+            DebugManager.Log(DebugType.ServerResponseError, "Error: " + result.Error);
         }
         return null;
     }
@@ -87,7 +89,7 @@ public class WebRequestManager : MonoBehaviour
     {
         var request = UnityWebRequest.Get(customDomain + endPoint);
         request.SetRequestHeader("Authorization", "Bearer " + Token);
-        request.
+
         var reqId = RandomIDGenerator.GenerateRandomID();
         DebugManager.Log(DebugType.ServerResponse, reqId + " Sending request to: " + customDomain + endPoint);
 

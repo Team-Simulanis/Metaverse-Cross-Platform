@@ -18,7 +18,7 @@ public class WebRequestManager : MonoBehaviour
     public static int Get;
 
     [Space(10)] [ShowInInspector] [HideLabel] [ReadOnly] [BoxGroup("Web Request Calls/Split/POST")]
-    public static int Set;
+    public static int Post;
 
     public static WebRequestManager Instance;
 
@@ -39,7 +39,7 @@ public class WebRequestManager : MonoBehaviour
     {
         Instance = this;
         Get = 0;
-        Set = 0;
+        Post = 0;
     }
 
     public async Task<string> WebRequest(string endPoint)
@@ -85,15 +85,15 @@ public class WebRequestManager : MonoBehaviour
         return null;
     }
 
-    public static async Task<string> PostWebRequestWithAuthorization(string customDomain, string endPoint)
+    public static async Task<string> PostWebRequestWithAuthorization(string customDomain,string json)
     {
-        var request = UnityWebRequest.Get(customDomain + endPoint);
+        var request = UnityWebRequest.Post(customDomain ,json, "application/json");
         request.SetRequestHeader("Authorization", "Bearer " + Token);
 
         var reqId = RandomIDGenerator.GenerateRandomID();
-        DebugManager.Log(DebugType.ServerResponse, reqId + " Sending request to: " + customDomain + endPoint);
+        DebugManager.Log(DebugType.ServerResponse, reqId + " Sending request to: " + customDomain );
 
-        Get++;
+        Post++;
         var result = await request.SendWebRequestAsync();
 
         if (result.IsSuccess)

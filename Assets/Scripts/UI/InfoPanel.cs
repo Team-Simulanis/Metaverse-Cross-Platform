@@ -1,3 +1,4 @@
+using System;
 using FF;
 using TMPro;
 using UnityEngine;
@@ -24,7 +25,7 @@ public class InfoPanel : MonoBehaviour
     public UserDetailsPayload userDetailsPayload = new();
     // public userInfo userInfo;
 
- 
+
     public string endPoint = "https://metaverse-backend.simulanis.io/api/application/user/details";
 
     private void Start()
@@ -56,10 +57,32 @@ public class InfoPanel : MonoBehaviour
         bioInputField.text = DataManager.Instance.userData.bio;
     }
 
-    public void TakeInfo()
+    public async void SetInfo()
     {
         DataManager.Instance.userData.designation = designationInputField.text;
-        DataManager.Instance.userData.experience = experienceInputField.text;
         DataManager.Instance.userData.bio = bioInputField.text;
+
+        var payload = new UserDetailsPostPayload
+        {
+            name = nameInputField.text,
+            designation = designationInputField.text,
+            bio = bioInputField.text
+        };
+
+
+        var json = JsonUtility.ToJson(payload,true);
+        Debug.Log(json);
+        var result =
+            await WebRequestManager.PostWebRequestWithAuthorization(
+                "https://metaverse-backend.simulanis.io/api/application/user/update/details", json);
     }
+}
+
+[Serializable]
+public class UserDetailsPostPayload
+{
+    public string name;
+    public string email;
+    public string designation;
+    public string bio;
 }

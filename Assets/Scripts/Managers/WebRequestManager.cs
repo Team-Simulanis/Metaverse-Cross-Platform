@@ -115,6 +115,7 @@ public class WebRequestManager : MonoBehaviour
         using var webRequest = UnityWebRequestTexture.GetTexture(imageUrl);
         // Send the request asynchronously
         var asyncOperation = webRequest.SendWebRequest();
+        Get++;
         while (!asyncOperation.isDone)
         {
             await Task.Yield(); // Yield to the main Unity thread to avoid blocking it

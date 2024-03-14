@@ -30,7 +30,7 @@ public class CloudCharacterPrefabHolder : MonoBehaviour
     // Asynchronously get the character's texture from the thumbnail URL
     private async void GetTexture()
     {
-        var sprite = await WebRequestManager.ImageDownloadRequest(characterData.thumbnail);
+        var sprite = await WebRequestManager.ImageDownloadRequest(characterData.thumbnail+"?camera=portrait");
         SetImage(sprite);
     }
 

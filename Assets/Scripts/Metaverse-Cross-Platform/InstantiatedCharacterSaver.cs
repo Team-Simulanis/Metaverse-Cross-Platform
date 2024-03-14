@@ -1,20 +1,21 @@
-using System;
 using FF;
 using ReadyPlayerMe.AvatarCreator;
 using ReadyPlayerMe.Samples.LegacyAvatarCreator;
 using ReadyPlayerMe.Samples.QuickStart;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class InstantiatedCharacterSaver : MonoBehaviour
 {
     [SerializeField] AvatarCreatorStateMachine avatarCreatorStateMachine;
     [SerializeField] AvatarCreatorData avatarCreatorData;
     [SerializeField] LoginInfoHolder loginInfoHolder;
-    [SerializeField] GameObject Player;
-    [SerializeField] string playerID;
-    [SerializeField] bool saveplayer;
+    [FormerlySerializedAs("Player")] [SerializeField] GameObject player;
+    [SerializeField] private string playerID;
+    [FormerlySerializedAs("saveplayer")] [SerializeField] private bool savePlayer;
 
-    [SerializeField] bool LoadPlayer;
+    [FormerlySerializedAs("LoadPlayer")] [SerializeField]
+    private bool loadPlayer;
 
     // Start is called before the first frame update
     void OnEnable()
@@ -30,32 +31,32 @@ public class InstantiatedCharacterSaver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (saveplayer)
+        if (savePlayer)
         {
             SavePlayer();
-            saveplayer = false;
+            savePlayer = false;
         }
 
-        if (LoadPlayer)
+        if (loadPlayer)
         {
-            loadPlayerInScene();
-            LoadPlayer = false;
+            LoadPlayerInScene();
+            loadPlayer = false;
         }
     }
 
     [DrawButton]
-    public void SavePlayer()
+    private void SavePlayer()
     {
         Debug.Log("Saving PlayerData");
         playerID = avatarCreatorData.AvatarProperties.Id;
-        Player = GameObject.Find(playerID);
+        player = GameObject.Find(playerID);
 
 
-        loginInfoHolder.Player = Player;
+        loginInfoHolder.Player = player;
         ThirdPersonLoader.urlChanger(playerID);
     }
 
-    public void SaveCustomPlayer(string id)
+    private static void SaveCustomPlayer(string id)
     {
         Debug.Log("Saving PlayerData");
         DataManager.Instance.UpdateAvatarInfo(new AvatarDetails()
@@ -64,15 +65,11 @@ public class InstantiatedCharacterSaver : MonoBehaviour
         });
     }
 
-    public void loadPlayerInScene()
+    private void LoadPlayerInScene()
     {
         if (loginInfoHolder.Player != null)
         {
-            Instantiate(Player);
-        }
-
-        else
-        {
+            Instantiate(player);
         }
     }
 }

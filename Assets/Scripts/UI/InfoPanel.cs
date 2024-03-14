@@ -4,22 +4,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// [System.Serializable]
-// public struct userInfo{
-//     [ReadOnly] public string name;
-//     [ReadOnly]public string email;
-//     [ReadOnly]public string designation;   
-//     [ReadOnly]public string experience;
-//     [ReadOnly]public string bio;   
-
-// }
 public class InfoPanel : MonoBehaviour
 {
-    [SerializeField] TMP_InputField nameInputField;
-    [SerializeField] TMP_InputField emailInputField;
-    [SerializeField] TMP_InputField designationInputField;
-    [SerializeField] TMP_InputField experienceInputField;
-    [SerializeField] TMP_InputField bioInputField;
+    [SerializeField] private TMP_InputField nameInputField;
+    [SerializeField] private TMP_InputField emailInputField;
+    [SerializeField] private TMP_InputField designationInputField;
+    [SerializeField] private TMP_InputField bioInputField;
     [SerializeField] private Image profilePicture;
 
     public UserDetailsPayload userDetailsPayload = new();
@@ -57,7 +47,7 @@ public class InfoPanel : MonoBehaviour
         bioInputField.text = DataManager.Instance.userData.bio;
     }
 
-    public async void SetInfo()
+    public async void UpdatePlayerInfo()
     {
         DataManager.Instance.userData.designation = designationInputField.text;
         DataManager.Instance.userData.bio = bioInputField.text;
@@ -71,10 +61,9 @@ public class InfoPanel : MonoBehaviour
 
 
         var json = JsonUtility.ToJson(payload,true);
-        Debug.Log(json);
-        var result =
-            await WebRequestManager.PostWebRequestWithAuthorization(
-                "https://metaverse-backend.simulanis.io/api/application/user/update/details", json);
+        
+        await WebRequestManager.PostWebRequestWithAuthorization(
+            "https://metaverse-backend.simulanis.io/api/application/user/update/details", json);
     }
 }
 

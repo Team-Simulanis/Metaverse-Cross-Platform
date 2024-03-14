@@ -16432,7 +16432,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4078295947080746745}
   - component: {fileID: 1712656018169717028}
-  - component: {fileID: 7006803809593959968}
   - component: {fileID: 4816858798003538736}
   m_Layer: 0
   m_Name: CustomPlayerRenderCamera
@@ -16507,14 +16506,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7006803809593959968
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6607434610238728845}
-  m_Enabled: 1
 --- !u!114 &4816858798003538736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24103,17 +24094,17 @@ PrefabInstance:
     - target: {fileID: 7462961407161971663, guid: b6ad81d40988ddd46ab2d22d1b53f098,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.18039216
+      value: 0.23921569
       objectReference: {fileID: 0}
     - target: {fileID: 7462961407161971663, guid: b6ad81d40988ddd46ab2d22d1b53f098,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.18039216
+      value: 0.23921569
       objectReference: {fileID: 0}
     - target: {fileID: 7462961407161971663, guid: b6ad81d40988ddd46ab2d22d1b53f098,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.18039216
+      value: 0.23921569
       objectReference: {fileID: 0}
     - target: {fileID: 8209621270656048137, guid: b6ad81d40988ddd46ab2d22d1b53f098,
         type: 3}
@@ -24191,7 +24182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
+  m_Color: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

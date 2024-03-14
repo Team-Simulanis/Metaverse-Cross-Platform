@@ -1,5 +1,4 @@
 using System;
-using System.Data;
 using ReadyPlayerMe.Core;
 using UnityEngine;
 
@@ -57,7 +56,12 @@ namespace ReadyPlayerMe.Samples.QuickStart
                 _LoadAvatar();
                 loadCharacter = false;
             }
-            GetComponentInChildren<Animator>().runtimeAnimatorController = animatorController;
+            
+            if(  GetComponentInChildren<Animator>())
+            {
+                if (animatorController != null)
+                    GetComponentInChildren<Animator>().runtimeAnimatorController = animatorController;
+            }
         }
 
         private void OnLoading(object sender, ProgressChangeEventArgs e)
@@ -130,7 +134,7 @@ namespace ReadyPlayerMe.Samples.QuickStart
             
         }
 
-        public void _LoadAvatar()
+        private void _LoadAvatar()
         {
             LoadAvatar(avatarUrl);
             

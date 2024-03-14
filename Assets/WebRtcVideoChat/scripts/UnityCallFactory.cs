@@ -267,11 +267,12 @@ namespace Byn.Awrtc.Unity
         }
         /// <summary>
         /// Log level for the platform specific code.
-        /// 
+        /// Initial value will be read from the plugin during init
+        /// (Usually, Info for debug builds and Error for release)
         /// </summary>
-        private static LogLevel sNativeLogLevel = LogLevel.None;
+        private static LogLevel sNativeLogLevel = LogLevel.Error;
         /// <summary>
-        /// Native log level.
+        /// Native log level. 
         /// </summary>
         public static LogLevel NativeLogLevel
         {
@@ -638,10 +639,19 @@ namespace Byn.Awrtc.Unity
             //If an exception leads you here your C# dll's are missing: 
             var versionCsPlugin = Awrtc.Native.NativeAwrtcFactory.GetVersion();
             //and an exception here means the C++ plugin is missing:
+            Awrtc.Native.NativeAwrtcFactory.TryStaticInit();
+
             var versionCppPlugin = Awrtc.Native.NativeAwrtcFactory.GetWrapperVersion();
             var versionWebRtc = Awrtc.Native.NativeAwrtcFactory.GetWebRtcVersion();
-
             Debug.Log(GLOBAL_LOG_PREFIX + "Version info: [" + versionCsPlugin + "] / [" + versionCppPlugin + "] / [" + versionWebRtc + "]");
+
+            //if the native version recommends having a lower log level we update our own
+            //This usually result in sNativeLogLevel being set to Info for debug builds
+            var defLog = (LogLevel)Awrtc.Native.NativeAwrtcFactory.LogLevel;
+            if(defLog < sNativeLogLevel)
+            {
+                sNativeLogLevel = defLog;
+            }
 
 
             InitNativeWebsockets();
@@ -1426,7 +1436,7 @@ namespace Byn.Awrtc.Unity
         }
 
         /// <summary>
-        /// Synchronizes C# side log level value & platform specific implementation. 
+        /// Synchronizes native log with with the value set to sNativeLogLevel
         /// 
         /// Note this assumes the dll's have been fully loaded and initialized before this is called!
         /// </summary>

@@ -28,6 +28,14 @@ namespace Byn.Awrtc.Browser
                 (mNetwork as BrowserMediaNetwork).RequestStats();
             }
         }
+
+        public void SetVolumePan(float volume, float pan, ConnectionId remoteUserId)
+        {
+            if (this.mNetwork != null)
+            {
+                (mNetwork as BrowserMediaNetwork).SetVolumePan(volume, pan, remoteUserId);
+            }
+        }
         public override void Update()
         {
             base.Update();

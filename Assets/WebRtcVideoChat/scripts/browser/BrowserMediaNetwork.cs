@@ -29,6 +29,19 @@ namespace Byn.Awrtc.Browser
                 value = opt.Value;
             }
         }
+
+        private string CheckString(string opt)
+        {
+            if (string.IsNullOrEmpty(opt))
+            {
+                return "";
+            }
+            else
+            {
+                return opt;
+            }
+        }
+
         public void Configure(MediaConfig config)
         {
             mFormat = config.Format;
@@ -60,19 +73,26 @@ namespace Byn.Awrtc.Browser
             int videoBitrateKbits = -1;
             SetOptional(config.VideoBitrateKbits, ref videoBitrateKbits);
 
-            string videoContentHint = "";
-            if(!string.IsNullOrEmpty(config.VideoContentHint)){
-                videoContentHint = config.VideoContentHint;
+
+            string videoContentHint = CheckString(config.VideoContentHint);
+
+            string audioInputDevice = "";
+            if (config is BrowserMediaConfig)
+            {
+                var bconfig = config as BrowserMediaConfig;
+                audioInputDevice = CheckString(bconfig.AudioInputDevice);
             }
 
+                
             CAPI.Unity_MediaNetwork_Configure(mReference,
                 config.Audio, config.Video,
                 minWidth, minHeight,
                 maxWidth, maxHeight,
                 idealWidth, idealHeight,
                 minFrameRate, maxFrameRate, idealFrameRate, config.VideoDeviceName,
-                videoCodecs, videoCodecs.Length, videoBitrateKbits, videoContentHint
-                );
+                videoCodecs, videoCodecs.Length, videoBitrateKbits, videoContentHint, 
+                audioInputDevice
+            );
         }
         public IFrame TryGetFrame(ConnectionId id)
         {
@@ -183,6 +203,32 @@ namespace Byn.Awrtc.Browser
         public void SetMute(bool val)
         {
             CAPI.Unity_MediaNetwork_SetMute(mReference, val);
+        }
+
+
+        /// <summary>
+        /// WebGL plugin specific feature! This call will allow setting the volume and panning the audio to the left or
+        /// right speaker.  
+        /// If Stereo is not supported the device  / browser might have its own way of handling this. It usually either
+        /// merges both channels (panning is ignored) or it will only play the left or right channel. 
+        /// 
+        /// </summary>
+        /// <param name="volume">
+        /// 0 - no audio playback
+        /// 1 - full volume
+        /// The volume here is the same value as set via SetVolume.
+        /// </param>
+        /// <param name="pan">
+        /// -1 playback only via the left speaker
+        /// 0 balanced playback (default)
+        /// 1 playback only via the right speaker
+        /// </param>
+        /// <param name="remoteUserId">
+        /// Connection ID of the remote user to apply these settings to.
+        /// </param>
+        public void SetVolumePan(float volume, float pan, ConnectionId remoteUserId)
+        {
+            CAPI.Unity_MediaNetwork_SetVolumePan(mReference, volume, pan, remoteUserId.id);
         }
     }
 }

@@ -1,5 +1,5 @@
 /* 
- * Copyright (C) 2015 Christoph Kutza
+ * Copyright (C) 2024 Christoph Kutza
  * 
  * Please refer to the LICENSE file for license information
  */
@@ -154,7 +154,8 @@ var Unity_MediaNetwork =
         minWidth, minHeight,
         maxWidth, maxHeight,
         idealWidth, idealHeight,
-		minFps, maxFps, idealFps, deviceName, videoCodecsPtr, videoCodecsLen, videoBitrateKbits, videoContentHint) {
+		minFps, maxFps, idealFps, deviceName, videoCodecsPtr, videoCodecsLen, videoBitrateKbits, videoContentHint,
+		audioInputDevice) {
 		
 		//the video codecs come in as a ptr to a C array
 		var videoCodecs = [];
@@ -164,7 +165,7 @@ var Unity_MediaNetwork =
 
         awrtc.CAPI_MediaNetwork_Configure(lIndex, audio, video, 
 			minWidth, minHeight, maxWidth, maxHeight, idealWidth, idealHeight, minFps, maxFps, idealFps,
-			UTF8ToString(deviceName), videoCodecs, videoBitrateKbits, UTF8ToString(videoContentHint));
+			UTF8ToString(deviceName), videoCodecs, videoBitrateKbits, UTF8ToString(videoContentHint), UTF8ToString(audioInputDevice));
     },
     //function CAPI_MediaNetwork_GetConfigurationState(lIndex: number): number
     Unity_MediaNetwork_GetConfigurationState: function (lIndex) {
@@ -229,6 +230,9 @@ var Unity_MediaNetwork =
     Unity_MediaNetwork_SetVolume: function(lIndex, volume, connectionId) {
         awrtc.CAPI_MediaNetwork_SetVolume(lIndex, volume, connectionId);
     },
+    Unity_MediaNetwork_SetVolumePan: function(lIndex, volume, pan, connectionId) {
+        awrtc.CAPI_MediaNetwork_SetVolumePan(lIndex, volume, pan, connectionId);
+    },
     Unity_MediaNetwork_HasAudioTrack: function(lIndex, connectionId) {
         return awrtc.CAPI_MediaNetwork_HasAudioTrack(lIndex, connectionId);
     },
@@ -260,21 +264,22 @@ var Unity_MediaNetwork =
 	Unity_Media_GetVideoDevices: function(lIndex, lBufferPtr, lBufferLen)
 	{
 		var jsres = awrtc.CAPI_Media_GetVideoDevices(lIndex);
-		
-		//Unity 2017 uses Module.stringToUTF8
-		//Some later Unity 2018 version updated emscripten
-		//that uses stringToUTF8 as global
-		var strToUTF8 = stringToUTF8;
-		if(typeof strToUTF8 !== "function") 
-		    strToUTF8 = window.Module.stringToUTF8;
-		var lenBytesUTF8  = lengthBytesUTF8;
-		if(typeof lenBytesUTF8 !== "function") 
-		    lenBytesUTF8 = window.Module.lengthBytesUTF8;
-
 		//will copy to HEAPU8 at lBufferPtr 
-		strToUTF8(jsres, lBufferPtr, lBufferLen);
+		stringToUTF8(jsres, lBufferPtr, lBufferLen);
 		//returns length in bytes we have written (not including the c string null terminator )
-		return lenBytesUTF8(jsres);
+		return lengthBytesUTF8(jsres);
+	},
+	Unity_Media_GetAudioInputDevices_Length: function()
+	{
+		return awrtc.CAPI_Media_GetAudioInputDevices_Length();
+	},
+	Unity_Media_GetAudioInputDevices: function(lIndex, lBufferPtr, lBufferLen)
+	{
+		var jsres = awrtc.CAPI_Media_GetAudioInputDevices(lIndex);
+		//will copy to HEAPU8 at lBufferPtr 
+		stringToUTF8(jsres, lBufferPtr, lBufferLen);
+		//returns length in bytes we have written (not including the c string null terminator )
+		return lengthBytesUTF8(jsres);
 	},
 	Unity_SLog_SetLogLevel: function(loglevel)
 	{

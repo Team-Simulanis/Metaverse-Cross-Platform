@@ -10,6 +10,21 @@ using UnityEngine;
 
 namespace Byn.Awrtc.Browser
 {
+    public class MediaDevice
+    {
+        public static readonly MediaDevice Default = new MediaDevice() { Id="", Name="Default"};
+
+        public string Name;
+        public string Id;
+
+        public override string ToString()
+        {
+            return $"Name: {Name}, ID: {Id}";
+        }
+
+
+
+    }
     public class BrowserCallFactory : IAwrtcFactory
     {
 
@@ -118,8 +133,25 @@ namespace Byn.Awrtc.Browser
             return arr;
         }
 
+        public MediaDevice[] GetAudioInputDevices()
+        {
+            int bufflen = 1024;
+            byte[] buffer = new byte[bufflen];
+            uint len = CAPI.Unity_Media_GetAudioInputDevices_Length();
+            MediaDevice[] arr = new MediaDevice[len];
+            for (int i = 0; i < len; i++)
+            {
+                int strlen = CAPI.Unity_Media_GetAudioInputDevices(i, buffer, bufflen);
+                string json = Encoding.UTF8.GetString(buffer, 0, strlen);
+                Debug.Log("Device " + i + " json: " + json);
+                arr[i] = JsonUtility.FromJson<MediaDevice>(json);
+                Debug.Log("Device parsed " + arr[i]);
+            }
+            return arr;
+        }
+
         //Not available at all in WebGL. All calls just map into a java script library
-        //thus a signaling network would need to be implemeted in java script
+        //thus a signaling network would need to be implemented in java script
         public ICall CreateCall(NetworkConfig config, IBasicNetwork signalingNetwork)
         {
             throw new NotSupportedException("Custom signaling networks are not supported in WebGL. It needs to be implemented in java script.");

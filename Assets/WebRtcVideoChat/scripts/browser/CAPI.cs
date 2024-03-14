@@ -1,5 +1,5 @@
 ﻿/* 
- * Copyright (C) 2021 because-why-not.com Limited
+ * Copyright (C) 2024 because-why-not.com Limited
  * 
  * Please refer to the license.txt for license information
  */
@@ -99,7 +99,8 @@ namespace Byn.Awrtc.Browser
         public static extern void Unity_MediaNetwork_Configure(int lIndex, bool audio, bool video,
             int minWidth, int minHeight, int maxWidth, int maxHeight, int idealWidth, int idealHeight,
             int minFps, int maxFps, int idealFps, string videoDeviceName,
-            string[] videoCodecsPtr, int videoCodecsLen, int videoBitrateKbits, string videoContentHint);
+            string[] videoCodecsPtr, int videoCodecsLen, int videoBitrateKbits, string videoContentHint, 
+            string audioInputDevice);
 
         [DllImport("__Internal")]
         public static extern int Unity_MediaNetwork_GetConfigurationState(int lIndex);
@@ -147,6 +148,10 @@ namespace Byn.Awrtc.Browser
         [DllImport("__Internal")]
         public static extern void Unity_MediaNetwork_SetVolume(int lIndex, double volume, int connectionId);
 
+
+        [DllImport("__Internal")]
+        public static extern void Unity_MediaNetwork_SetVolumePan(int lIndex, double volume, double pan, int connectionId);
+
         [DllImport("__Internal")]
         public static extern bool Unity_MediaNetwork_HasAudioTrack(int lIndex, int connectionId);
 
@@ -171,6 +176,10 @@ namespace Byn.Awrtc.Browser
         public static extern uint Unity_Media_GetVideoDevices_Length();
         [DllImport("__Internal")]
         public static extern int Unity_Media_GetVideoDevices(int index, byte[] bufferPtr, int buffLen);
+        [DllImport("__Internal")]
+        public static extern uint Unity_Media_GetAudioInputDevices_Length();
+        [DllImport("__Internal")]
+        public static extern int Unity_Media_GetAudioInputDevices(int index, byte[] bufferPtr, int buffLen);
 
         //video input api
         [DllImport("__Internal")]

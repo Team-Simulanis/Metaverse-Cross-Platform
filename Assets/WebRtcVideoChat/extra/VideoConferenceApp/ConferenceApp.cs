@@ -167,7 +167,7 @@ namespace Byn.Unity.Examples
         /// <summary>
         /// Unity start.
         /// </summary>
-        public void Start()
+        private void Start()
         {
             UnityCallFactory.RequestLogLevelStatic(UnityCallFactory.LogLevel.Info);
             UnityCallFactory.EnsureInit(OnCallFactoryReady, OnCallFactoryFailed);

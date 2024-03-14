@@ -505,7 +505,7 @@ namespace Byn.Unity.Examples
         /// <summary>
         /// Updates the dropdown menu based on the current video devices and toggle status
         /// </summary>
-        public void UpdateVideoDropdown()
+        public virtual void UpdateVideoDropdown()
         {
             uVideoDropdown.ClearOptions();
             uVideoDropdown.AddOptions(new List<string>(mApp.GetVideoDevices()));

@@ -3,21 +3,24 @@ using UnityEngine;
 using ReadyPlayerMe.Core;
 #endif
 using System;
+using System.Threading.Tasks;
 using FF;
 using FishNet.Object;
 using Sirenix.OdinInspector;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(AvatarInitializer))]
 public class RPMPlayerManager : NetworkBehaviour
 {
     public GameObject defaultAvatar;
+
     public delegate void UrlChanger(string url);
 
     public static UrlChanger urlChanger;
     public event Action OnLoadComplete;
     private AvatarObjectLoader avatarObjectLoader;
-    private GameObject avatar;
+    [FormerlySerializedAs("avatar")] public GameObject currentAvatar;
     private Animator animator = null;
     private GameObject avatarController;
     public bool isMale;
@@ -34,12 +37,21 @@ public class RPMPlayerManager : NetworkBehaviour
     public bool isNetworkObject;
 
     public UnityEvent onAvatarLoaded = new();
-    
+
     public AvatarInitializer avatarInitializer;
-    private void Start()
+
+    private async void Start()
     {
         avatarInitializer = GetComponent<AvatarInitializer>();
-        avatarInitializer.SetupAvatar(defaultAvatar, avatarController, avatar, isNetworkObject, isMale, invectorControl, avatarPositionOffset);
+        currentAvatar = await avatarInitializer.SetupAvatar(defaultAvatar, currentAvatar,
+            isNetworkObject, isMale, invectorControl, avatarPositionOffset);
+    }
+
+    [Button]
+    public void AnimatorRebind()
+    {
+        invectorControl.GetComponent<Animator>().Rebind();
+        invectorControl.GetComponent<Animator>().Update(0f);
     }
 
     // Start is called before the first frame update
@@ -57,7 +69,8 @@ public class RPMPlayerManager : NetworkBehaviour
         {
             isNetworkObject = true;
         }
-        if(isBufferAvailable)
+
+        if (isBufferAvailable)
         {
             Debug.Log("Already Buffered Avatar Available");
             return;
@@ -66,6 +79,7 @@ public class RPMPlayerManager : NetworkBehaviour
         newUrl = avatarUrl;
         ChangeAvatarUrl();
     }
+
     public void LoadAvatar()
     {
         avatarObjectLoader = new AvatarObjectLoader();
@@ -75,11 +89,12 @@ public class RPMPlayerManager : NetworkBehaviour
         onAvatarLoaded?.Invoke();
         LoadAvatar(avatarUrl);
     }
+
     public void SetAvatarUrl(string value)
     {
         avatarUrl = value;
     }
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -93,7 +108,6 @@ public class RPMPlayerManager : NetworkBehaviour
         {
             InitAgain = false;
         }
-
     }
 
     private void OnLoading(object sender, ProgressChangeEventArgs e)
@@ -106,12 +120,17 @@ public class RPMPlayerManager : NetworkBehaviour
         Debug.Log("Failed to load avatar");
     }
 
-    private void OnLoadCompleted(object sender, CompletionEventArgs args)
+    private async void OnLoadCompleted(object sender, CompletionEventArgs args)
     {
         Debug.Log("Avatar Loaded :" + args.Metadata.OutfitGender);
         isMale = args.Metadata.OutfitGender == OutfitGender.Masculine;
-        avatarInitializer.SetupAvatar(args.Avatar, avatarController, avatar, isNetworkObject, isMale, invectorControl, avatarPositionOffset);
-        avatarInitializer.ChangeAvatarRef();
+        currentAvatar = await avatarInitializer.SetupAvatar(args.Avatar, currentAvatar,
+            isNetworkObject, isMale,
+            invectorControl, avatarPositionOffset);
+
+        await Task.Delay(150);
+  
+        AnimatorRebind();
     }
 
     public void LoadAvatar(string url)
@@ -146,6 +165,7 @@ public class RPMPlayerManager : NetworkBehaviour
     }
 
     public bool isBufferAvailable;
+
     [ObserversRpc(BufferLast = true, ExcludeOwner = false, RunLocally = true)]
     private void ChangePlayerAvatar(GameObject manager, string url)
     {

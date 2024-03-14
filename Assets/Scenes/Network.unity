@@ -14982,16 +14982,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2066190180731975240, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: _networkObjectCache
-      value: 
-      objectReference: {fileID: 1122589491}
-    - target: {fileID: 2066190180731975240, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: _componentIndexCache
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 6018108584105516696, guid: 8a8334ab0426d43478f9adede2c53283,
         type: 3}
       propertyPath: m_Name
@@ -15010,18 +15000,8 @@ PrefabInstance:
     - target: {fileID: 6605979969194944695, guid: 8a8334ab0426d43478f9adede2c53283,
         type: 3}
       propertyPath: <SceneId>k__BackingField
-      value: 4418956113520464582
+      value: 4418956114638569104
       objectReference: {fileID: 0}
-    - target: {fileID: 6605979969194944695, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: _networkBehaviours.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6605979969194944695, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: _networkBehaviours.Array.data[6]
-      value: 
-      objectReference: {fileID: 1122589478}
     - target: {fileID: 7116599738874971820, guid: 8a8334ab0426d43478f9adede2c53283,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16967,30 +16947,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114129262}
   m_CullTransparentMesh: 0
---- !u!114 &1122589478 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2066190180731975240, guid: 8a8334ab0426d43478f9adede2c53283,
-    type: 3}
-  m_PrefabInstance: {fileID: 978989787}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d482b3406a1935a4080d7dc2c8ea92fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1122589491 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6605979969194944695, guid: 8a8334ab0426d43478f9adede2c53283,
-    type: 3}
-  m_PrefabInstance: {fileID: 978989787}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1130922252 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6621467255488368724, guid: 95055511c5bbc1247ab19ff912565263,
@@ -22244,7 +22200,7 @@ MonoBehaviour:
   _ipv6BindAddress: 
   _port: 7770
   _maximumClients: 4095
-  _clientAddress: 192.168.1.244
+  _clientAddress: localhost
   _timeout: 0
 --- !u!114 &1490013500
 MonoBehaviour:
@@ -35858,7 +35814,6 @@ GameObject:
   - component: {fileID: 1490013499}
   - component: {fileID: 1490013498}
   - component: {fileID: 1490013497}
-  - component: {fileID: 7443408886617491358}
   - component: {fileID: 7443408886617491356}
   m_Layer: 0
   m_Name: NetworkManager
@@ -35930,7 +35885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e4a322dca349547989b14021da4e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Transport: {fileID: 7443408886617491358}
+  Transport: {fileID: 1490013499}
   _intermediateLayer: {fileID: 0}
   _latencySimulator:
     _enabled: 0
@@ -35938,21 +35893,6 @@ MonoBehaviour:
     _latency: 0
     _outOfOrder: 0
     _packetLoss: 0
---- !u!114 &7443408886617491358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7443408886617491348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 314b449d3505bd24487ba69b61c2fda5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlobalServerActions: 1
-  _transports:
-  - {fileID: 1490013499}
 --- !u!1001 &7906072764175691222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36217,7 +36157,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniMap-Canvas
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3048953461379607954, guid: 66ae98bbf9efedf44bdb1bab4eae1772, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -39,7 +39,7 @@ public class RPMPlayerManager : NetworkBehaviour
     private void Start()
     {
         avatarInitializer = GetComponent<AvatarInitializer>();
-        //SetupAvatar(defaultAvatar);
+        avatarInitializer.SetupAvatar(defaultAvatar, avatarController, avatar, isNetworkObject, isMale, invectorControl, avatarPositionOffset);
     }
 
     // Start is called before the first frame update
@@ -91,19 +91,9 @@ public class RPMPlayerManager : NetworkBehaviour
 
         if (InitAgain)
         {
-            InitController();
             InitAgain = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            if (IsOwner)
-                ChangeAvatarUrl();
-        }
-    }
-    void InitController()
-    {
-        // avatarController
     }
 
     private void OnLoading(object sender, ProgressChangeEventArgs e)

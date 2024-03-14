@@ -16,7 +16,7 @@ public class EmojiPanel : MonoBehaviour
     }
     public void PlayReaction(string reactionName) //will be callled on button , the string will contain the name of the trigger which will be played.
     {
-        ownerObject.GetComponent<playerReactionHandler>().PlayReactions(reactionName);
+        ownerObject.GetComponent<PlayerReactionHandler>().PlayReactions(reactionName);
     }
     public void TakeOwner(GameObject OwnerObject)
     {

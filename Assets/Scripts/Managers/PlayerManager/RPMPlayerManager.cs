@@ -126,12 +126,15 @@ public class RPMPlayerManager : NetworkBehaviour
         Debug.Log("Avatar Loaded :" + args.Metadata.OutfitGender);
         isMale = args.Metadata.OutfitGender == OutfitGender.Masculine;
         currentAvatar = await avatarInitializer.SetupAvatar(args.Avatar, currentAvatar,
-            isNetworkObject, isMale,
-            invectorControl, avatarPositionOffset);
+        isNetworkObject, isMale,
+        invectorControl, avatarPositionOffset);
 
         await UniTask.DelayFrame(1);
 
         AnimatorRebind();
+
+        if(IsOwner)
+            StickyNotesManager._instance.AssignPlayerTransform(this.transform);
     }
 
     public void LoadAvatar(string url)

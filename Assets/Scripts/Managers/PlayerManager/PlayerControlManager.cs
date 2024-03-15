@@ -1,4 +1,5 @@
 
+using System.Threading.Tasks;
 using FF;
 using FishNet.Object;
 using UnityEngine;
@@ -6,7 +7,6 @@ using Invector.vCharacterController;
 using Invector.vCamera;
 using Invector;
 using UnityEngine.InputSystem;
-using FishNet.Connection;
 
 namespace Simulanis.Player
 {
@@ -117,9 +117,14 @@ namespace Simulanis.Player
                 r.enabled = !value;
             }
         }
-        void sendInfo() // called on start , it add this player to the list whener this player is spawned
+        async void sendInfo() // called on start , it add this player to the list whener this player is spawned
         {
-            listplayerinfo.instance.addNewPlayer(this.OwnerId,GetComponent<NameTagHandler>().name,NetworkObject);
+            while (!GetComponent<NameTagHandler>().isUpdated)
+            {
+                await Task.Delay(100);
+            }
+            
+            listplayerinfo.instance.addNewPlayer(this.OwnerId,GetComponent<NameTagHandler>().playerName,NetworkObject,IsOwner);
         }
 
 

@@ -11,7 +11,7 @@ public class listplayerinfo : MonoBehaviour
 {
     public static listplayerinfo instance;
     public static int noOfPlayer;
-    public List<playerInfo> playerList = new List<playerInfo>();
+    public Dictionary<int, playerInfo> playerList = new Dictionary<int, playerInfo>();
 
     void Start()
     {
@@ -22,20 +22,21 @@ public class listplayerinfo : MonoBehaviour
 
     public int selectedPlayer;
 
-    [Button]
-    public void SendMessage()
-    {
-        NetworkController.Instance.SendPrivateChatServer(new NetworkConnection()
-        {
-            ClientId = selectedPlayer
-        }, playerList[selectedPlayer].name, message);
-    }
 
     public void addNewPlayer(int id, string name,
-            NetworkObject connection) //whenever a new player spawns , add that player to the list
+            NetworkObject connection,bool isLocalPlayer) //whenever a new player spawns , add that player to the list
     {
-        playerList.Add(new playerInfo(id, name, connection));
-        ChatManager.Instance.AddPlayer(name, id);
+        playerList.Add(id,new playerInfo(id, name, connection));
+        
+        if(!isLocalPlayer)
+        {
+            ChatManager.Instance.AddPlayer(name, id);
+            
+        }
+        else
+        {
+            ChatManager.Instance.myID = id;
+        }
         updatePlayerList();
     }
 
@@ -43,8 +44,10 @@ public class listplayerinfo : MonoBehaviour
         removeNewPlayer(int id, string name,
             NetworkObject connection) //whenever a player despawns removes that player from the list
     {
-        playerList.Remove(new playerInfo(id, name, connection));
+        playerList.Remove(id);
         updatePlayerList();
+        ChatManager.Instance.RemovePlayer(id);
+        
         Debug.Log("removed");
     }
 

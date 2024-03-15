@@ -15,6 +15,7 @@ public class ChatHandler : MonoBehaviour
 {
     public static ChatHandler Instance;
     public Transform chatHolder;
+    public Transform privateChatHolder;
     public GameObject msgElement, ownerMessageElement;
     public TMP_InputField playerUsername, playerMessage;
     [SerializeField] ScrollRect ChatboxContainer;
@@ -28,14 +29,14 @@ public class ChatHandler : MonoBehaviour
     }
     private void OnEnable()
     {
-        InstanceFinder.ClientManager.RegisterBroadcast<Message>(OnMessageRecieved);
-        InstanceFinder.ServerManager.RegisterBroadcast<Message>(OnClientMessageRecieved);
+        InstanceFinder.ClientManager.RegisterBroadcast<IMessage>(OnMessageRecieved);
+        InstanceFinder.ServerManager.RegisterBroadcast<IMessage>(OnClientMessageRecieved);
 
     }
     private void OnDisable()
     {
-        InstanceFinder.ClientManager.UnregisterBroadcast<Message>(OnMessageRecieved);
-        InstanceFinder.ServerManager.UnregisterBroadcast<Message>(OnClientMessageRecieved);
+        InstanceFinder.ClientManager.UnregisterBroadcast<IMessage>(OnMessageRecieved);
+        InstanceFinder.ServerManager.UnregisterBroadcast<IMessage>(OnClientMessageRecieved);
     }
 
     private void Update()
@@ -51,10 +52,11 @@ public class ChatHandler : MonoBehaviour
         onlinePlayers.text = listplayerinfo.noOfPlayer.ToString()+" online";
     }
 
+    public bool isPrivate;
     public void SendMessage()
     {
         isOwner = true;
-        Message msg = new Message()
+        IMessage msg = new IMessage()
         {
             //username = DataManager.Instance.name,
             //username = DataManager.Instance.name,
@@ -63,7 +65,16 @@ public class ChatHandler : MonoBehaviour
         };
 
         playerMessage.text = "";
-
+        if (isPrivate)
+        {
+            ChatManager.Instance.SendPrivateMessage(msg.message);
+            OnPrivateMessageReceived(new IMessage()
+            {
+                message = msg.message,
+                username = listplayerinfo.instance.playerList[ChatManager.Instance.selectedPlayer].name
+            });
+            return;
+        }
         if (InstanceFinder.IsServer)
             InstanceFinder.ServerManager.Broadcast(msg);
         else if (InstanceFinder.IsClient)
@@ -71,7 +82,7 @@ public class ChatHandler : MonoBehaviour
         ChatboxContainer.verticalNormalizedPosition = -1f;
     }
 
-    private void OnMessageRecieved(Message msg)
+    private void OnMessageRecieved(IMessage msg)
     {
         if (string.IsNullOrEmpty(msg.message)) return;
         GameObject finalMessage;
@@ -87,15 +98,39 @@ public class ChatHandler : MonoBehaviour
         }
         isOwner = false;
     }
+    
+    public void OnPrivateMessageReceived(IMessage msg)
+    {   Debug.Log("received private message");
+        
+        if (string.IsNullOrEmpty(msg.message))
+        {
+            Debug.Log("Empty private");
+            return;
+        }
+        Debug.Log("received private message");
+        GameObject finalMessage;
+        if(isOwner)
+        {
+            finalMessage = Instantiate(ownerMessageElement, privateChatHolder);
+            finalMessage.GetComponent<messageTextHolder>().msgText.text = msg.message;
+        }
+        else
+        {
+            finalMessage = Instantiate(msgElement, privateChatHolder);
+            finalMessage.GetComponent<messageTextHolder>().msgText.text = msg.message;
+        }
+        isOwner = false;
+    }
 
-    private void OnClientMessageRecieved(NetworkConnection networkConnection, Message msg)
+    private void OnClientMessageRecieved(NetworkConnection networkConnection, IMessage msg)
     {
         InstanceFinder.ServerManager.Broadcast(msg);
     }
 
-    public struct Message : IBroadcast
-    {
-        public string username;
-        public string message;
-    }
+  
+}
+public struct IMessage : IBroadcast
+{
+    public string username;
+    public string message;
 }

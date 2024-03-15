@@ -7,7 +7,8 @@ using UnityEngine.Serialization;
 public class NameTagHandler : NetworkBehaviour
 {
     public TextMeshProUGUI inGameUsername;
-    
+    public string playerName;
+    public bool isUpdated;
     private void Start()
     {
         GetComponent<RPMPlayerManager>().onAvatarLoaded.AddListener(SetUserName);
@@ -16,7 +17,9 @@ public class NameTagHandler : NetworkBehaviour
     [ObserversRpc(BufferLast = true, ExcludeOwner = false, RunLocally = true)]
     private void SetUsernameOnHost(string username)
     {
+        isUpdated = true;
         inGameUsername.text = username;
+        playerName = username;
     }
 
     [ServerRpc(RequireOwnership = false)]

@@ -1,53 +1,39 @@
 using FishNet.Object;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class MiniMap : NetworkBehaviour
 {
-    [SerializeField] Camera MiniMapCamera;
-    [SerializeField] Image MiniMapImage;
-    [SerializeField] Image BigMapImage;
-    [SerializeField] GameObject ThisPlayer;
+    [FormerlySerializedAs("MiniMapCamera")] [SerializeField] private Camera miniMapCamera;
+    [FormerlySerializedAs("MiniMapImage")] [SerializeField] private Image miniMapImage;
+    [FormerlySerializedAs("BigMapImage")] [SerializeField] private Image bigMapImage;
+    [FormerlySerializedAs("ThisPlayer")] [SerializeField] GameObject thisPlayer;
     private void Start()
     {
         CheckOwner();
-        changePlayerArrowColor();
+        ChangePlayerArrowColor();
     }
-    void LateUpdate()
+
+    private void ChangePlayerArrowColor()
     {
         if (IsOwner)
         {
-            if (ThisPlayer != null)
-            {
-                Vector3 newPosition = ThisPlayer.transform.position;
-                newPosition.y = MiniMapCamera.transform.position.y;
-                MiniMapCamera.transform.position = newPosition;
-            }
-            else
-                Debug.Log("not a player");
-        }
-    }
-    void changePlayerArrowColor()
-    {
-        if (IsOwner)
-        {
-            MiniMapImage.color = Color.red;
-            BigMapImage.color = Color.red;
+            miniMapImage.color = Color.red;
+            bigMapImage.color = Color.red;
         }
         else
         {
-            MiniMapImage.color = Color.white;
-            BigMapImage.color = Color.white;
+            miniMapImage.color = Color.white;
+            bigMapImage.color = Color.white;
         }
     }
 
-    void CheckOwner()
+    private void CheckOwner()
     {
-        if(!IsOwner) 
-        {
-            ThisPlayer = this.gameObject;
-            MiniMapCamera.gameObject.SetActive(false);
-        }
+        if (IsOwner) return;
+        thisPlayer = gameObject;
+        miniMapCamera.gameObject.SetActive(false);
     }
 
 }

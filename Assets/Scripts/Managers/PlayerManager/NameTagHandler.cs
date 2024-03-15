@@ -6,36 +6,37 @@ using UnityEngine.Serialization;
 
 public class NameTagHandler : NetworkBehaviour
 {
-    [FormerlySerializedAs("ingameUsername")] public TextMeshProUGUI inGameUsername;
+    public TextMeshProUGUI inGameUsername;
     
-
     private void Start()
     {
         GetComponent<RPMPlayerManager>().onAvatarLoaded.AddListener(SetUserName);
     }
 
     [ObserversRpc(BufferLast = true, ExcludeOwner = false, RunLocally = true)]
-    void SetUsernameOnHost(string username)
+    private void SetUsernameOnHost(string username)
     {
         inGameUsername.text = username;
     }
 
     [ServerRpc(RequireOwnership = false)]
-    void SetUsernameOnServer(string playerName) //will call the observer RPC to sync the username to other player
+    private void SetUsernameOnServer(string playerName) //will call the observer RPC to sync the username to other player
     {
         SetUsernameOnHost(playerName);
     }
 
-    void SetUserName() //will be called on start to set the username of the player
+    private void SetUserName() //will be called on start to set the username of the player
     {
-        if (IsOwner)
+        if (!IsOwner) return;
+        Debug.Log("Am Owner");
+        if(DataManager.Instance)
         {
-            Debug.Log("Am Owner");
-            
-                SetUsernameOnServer(DataManager.Instance.userData.name);
-            
-
-            inGameUsername.transform.parent.gameObject.SetActive(false);
+            SetUsernameOnServer(DataManager.Instance.userData.name);
         }
+        else
+        {
+            SetUsernameOnServer($"Player+{RandomIDGenerator.GenerateRandomID()}");
+        }
+        inGameUsername.transform.parent.gameObject.SetActive(false);
     }
 }

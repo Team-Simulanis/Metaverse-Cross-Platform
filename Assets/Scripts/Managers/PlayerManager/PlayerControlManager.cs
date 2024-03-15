@@ -1,4 +1,5 @@
 
+using FF;
 using FishNet.Object;
 using UnityEngine;
 using Invector.vCharacterController;
@@ -118,13 +119,13 @@ namespace Simulanis.Player
         }
         void sendInfo() // called on start , it add this player to the list whener this player is spawned
         {
-            listplayerinfo.instance.addNewPlayer(this.OwnerId,this.name);
+            listplayerinfo.instance.addNewPlayer(this.OwnerId,GetComponent<NameTagHandler>().name,NetworkObject);
         }
 
 
         private void OnDestroy() //whenever this player is despawnes it removes itselfs from the player list 
         {
-            listplayerinfo.instance.removeNewPlayer(this.OwnerId, this.name);
+            listplayerinfo.instance.removeNewPlayer(this.OwnerId, this.name,NetworkObject);
             Debug.Log("destroyed");
         }
     }

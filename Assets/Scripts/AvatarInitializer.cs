@@ -1,9 +1,6 @@
 using System.Threading.Tasks;
-using Doozy.Runtime.Common;
 using Invector.vCharacterController;
 using UnityEngine;
-
-
 public class AvatarInitializer : MonoBehaviour
 {
     private bool _isMale;
@@ -18,7 +15,7 @@ public class AvatarInitializer : MonoBehaviour
         while (avatarSetupInProgress)
         {
             Debug.Log("Setup is busy");
-            await Task.Delay(2500);
+            await Task.Delay(500);
         }
 
         return SetupAvatarQ(targetAvatar, avatar, isNetworkObject, isMale, invectorControl,
@@ -71,21 +68,17 @@ public class AvatarInitializer : MonoBehaviour
         if (_isMale)
         {
             Debug.Log("Assigned Male Avatar");
-            _animator.avatar = femaleAnimator.avatar;
             _animator.avatar = maleAnimator.avatar;
-     
         }
         else
         {
             Debug.Log("Assigned Female Avatar");
-
-            _animator.avatar = maleAnimator.avatar;
-
             _animator.avatar = femaleAnimator.avatar;
-          
         }
+
         _animator.Rebind();
         _animator.Update(0f);
+        
         Debug.Log("Avatar Setup Complete");
         avatarSetupInProgress = false;
     }

@@ -4,6 +4,7 @@ using ReadyPlayerMe.Core;
 #endif
 using System;
 using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using FF;
 using FishNet.Object;
 using Sirenix.OdinInspector;
@@ -128,8 +129,8 @@ public class RPMPlayerManager : NetworkBehaviour
             isNetworkObject, isMale,
             invectorControl, avatarPositionOffset);
 
-        await Task.Delay(150);
-  
+        await UniTask.DelayFrame(1);
+
         AnimatorRebind();
     }
 

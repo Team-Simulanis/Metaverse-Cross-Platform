@@ -36,7 +36,10 @@ public class RPMPlayerManager : NetworkBehaviour
 
     [Tooltip("This will be true for Network Object")]
     public bool isNetworkObject;
-    public GameObject mobileUICanvas;
+
+    public UnityEvent onAvatarLoaded = new(); 
+
+    public AvatarInitializer avatarInitializer;
 
     private void Start()
     {

@@ -42,14 +42,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1494037886836033325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27497b81690e6f14ba847e52829e86d5, type: 3}
+  m_Script: {fileID: 11500000, guid: ba098e3662dc012478cd00724aa4a4f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _componentIndexCache: 255
   _addedNetworkObject: {fileID: 3987352821814582137}
   _networkObjectCache: {fileID: 0}
   notesTransform: {fileID: 0}
-  StickyNotesPrefab: {fileID: 0}
+  StickyNotesPrefab: {fileID: 3907396434875932198, guid: dc3eaf508c63cf14fbfb71683766746f,
+    type: 3}
   NotesText: 
   instanceNotes: 0
 --- !u!114 &3987352821814582137
@@ -72,8 +73,8 @@ MonoBehaviour:
   <ChildNetworkObjects>k__BackingField: []
   SerializedTransformProperties:
     Position: {x: 0, y: 0, z: 0}
-    Rotation: {x: 0, y: 0, z: 0, w: 0}
-    LocalScale: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0, w: 1}
+    LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
   _isGlobal: 0
   _initializeOrder: 0

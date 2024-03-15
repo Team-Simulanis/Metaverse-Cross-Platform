@@ -15,12 +15,12 @@ public class NetworkController : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
-    public void SendPrivateChatServer(NetworkConnection networkConnection, string sender, string message)
+    public void SendPrivateChatServer(NetworkConnection networkConnection, string sender, string message,int senderID)
     {
         //Send to only the owner.
-        PrivateChatClient(networkConnection, sender, message, ChatManager.Instance.myID);
-        Debug.Log(networkConnection.ClientId + "  : " + ChatManager.Instance.myID);
+        PrivateChatClient(networkConnection, sender, message, senderID);
     }
+
 
     //Chat
     [TargetRpc]
@@ -35,10 +35,9 @@ public class NetworkController : NetworkBehaviour
         });
         ChatManager.Instance.chatPanel.Show();
         ChatManager.Instance.privateChatContainer.Show();
+        
         ChatManager.Instance.selectedPlayer = senderID == ChatManager.Instance.myID ? target.ClientId : senderID;
 
         ChatHandler.Instance.isPrivate = true;
-
-        //chatManager.OnPrivateMessage(sender, message);
     }
 }

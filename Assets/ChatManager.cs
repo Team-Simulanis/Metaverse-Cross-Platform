@@ -42,7 +42,7 @@ public class ChatManager : MonoBehaviour
         NetworkController.Instance.SendPrivateChatServer(new NetworkConnection()
         {
             ClientId = selectedPlayer
-        }, listplayerinfo.instance.playerList[selectedPlayer].name, message);
+        }, listplayerinfo.instance.playerList[selectedPlayer].name, message,myID);
     }
 
     public new void SendPrivateMessage(string msg)
@@ -50,7 +50,7 @@ public class ChatManager : MonoBehaviour
         NetworkController.Instance.SendPrivateChatServer(new NetworkConnection()
         {
             ClientId = selectedPlayer
-        }, listplayerinfo.instance.playerList[selectedPlayer].name, msg);
+        }, listplayerinfo.instance.playerList[selectedPlayer].name, msg,myID);
     }
 
     public void AddPlayer(string userName, int id)

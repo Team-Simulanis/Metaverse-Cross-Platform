@@ -15874,7 +15874,7 @@ MonoBehaviour:
   bodyParts:
   - RightLowerArm
   ignoreDefense: 0
-  activeRagdoll: 0
+  activeRagdoll: 1
   senselessTime: 0
   resetAttackTrigger: 0
   debug: 0
@@ -15900,7 +15900,7 @@ MonoBehaviour:
   bodyParts:
   - LeftLowerArm
   ignoreDefense: 0
-  activeRagdoll: 0
+  activeRagdoll: 1
   senselessTime: 0
   resetAttackTrigger: 0
   debug: 0
@@ -16993,7 +16993,6 @@ MonoBehaviour:
   tags:
   - Attack
   - LockMovement
-  - LockRotation
 --- !u!114 &114819569208418972
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -36,6 +36,7 @@ public class RPMPlayerManager : NetworkBehaviour
 
     [Tooltip("This will be true for Network Object")]
     public bool isNetworkObject;
+    public GameObject mobileUICanvas;
 
     private void Start()
     {
@@ -164,6 +165,8 @@ public class RPMPlayerManager : NetworkBehaviour
 
         avatarController.SetActive(true);
         Invoke(nameof(ChangeAvatarRef), 0.1f);
+
+        CharacterSetupForPhone();
     }
 
     private void ChangeAvatarRef()
@@ -221,5 +224,16 @@ public class RPMPlayerManager : NetworkBehaviour
         //avatarUrl = "https://cdn.simulanis.io/sso/uno/production/resources/fde87370-4243-43dc-9978-846e1511fed4/3DAssets/universal/1/M11.glb";
         avatarUrl = url;
         LoadAvatar();
+    }
+    public void CharacterSetupForPhone()
+    {
+#if UNITY_ANDROID
+    if(IsOwner)
+    {
+        mobileUICanvas.SetActive(true);
+        avatarController.GetComponent<vThirdPersonInput>().unlockCursorOnStart = true;
+        avatarController.GetComponent<vThirdPersonInput>().showCursorOnStart = true;
+    }
+#endif
     }
 }

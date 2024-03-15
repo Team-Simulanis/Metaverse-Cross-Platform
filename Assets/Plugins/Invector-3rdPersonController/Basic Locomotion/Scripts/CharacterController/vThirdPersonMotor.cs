@@ -888,10 +888,10 @@ namespace Invector.vCharacterController
                 Vector3 targetPosition = (useRootMotion ? animator.rootPosition : _rigidbody.position) + _direction * (useRootMotion ? vTime.deltaTime : vTime.fixedDeltaTime);
                 Vector3 targetVelocity = (targetPosition - transform.position) / (useRootMotion ? vTime.deltaTime : vTime.fixedDeltaTime);
 
-                Vector3 targetBodyVelocity = targetVelocity * (moveSpeed * speedMultiplier);
+                float _moveSpeed = useRootMotion ? 1f + moveSpeed : moveSpeed;
+                Vector3 targetBodyVelocity = targetVelocity * (_moveSpeed * speedMultiplier);
                 targetBodyVelocity.y = 0;
                 this.targetVelocity = targetBodyVelocity;
-
             }
         }
 

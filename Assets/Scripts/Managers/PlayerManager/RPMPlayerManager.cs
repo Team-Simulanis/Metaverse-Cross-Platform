@@ -122,6 +122,8 @@ public class RPMPlayerManager : NetworkBehaviour
         isMale = args.Metadata.OutfitGender == OutfitGender.Masculine;
         avatarInitializer.SetupAvatar(args.Avatar, avatarController, avatar, isNetworkObject, isMale, invectorControl, avatarPositionOffset);
         avatarInitializer.ChangeAvatarRef();
+        if(IsOwner)
+            StickyNotesManager._instance.AssignPlayerTransform(this.transform);
     }
 
     public void LoadAvatar(string url)

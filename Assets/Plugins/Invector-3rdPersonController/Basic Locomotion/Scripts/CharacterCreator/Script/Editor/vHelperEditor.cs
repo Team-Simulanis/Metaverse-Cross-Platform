@@ -17,7 +17,7 @@ namespace Invector
         [MenuItem("Invector/Import ProjectSettings")]
         public static void ImportProjectSettings()
         {
-            AssetDatabase.ImportPackage("Assets/Invector-3rdPersonController/Basic Locomotion/Editor/Resources/vProjectSettings.unitypackage", true);
+            AssetDatabase.ImportPackage("Assets/Plugins/Invector-3rdPersonController/Basic Locomotion/Editor/Resources/vProjectSettings.unitypackage", true);
         }
 
         //[MenuItem("Invector/Help/Check for Updates")]

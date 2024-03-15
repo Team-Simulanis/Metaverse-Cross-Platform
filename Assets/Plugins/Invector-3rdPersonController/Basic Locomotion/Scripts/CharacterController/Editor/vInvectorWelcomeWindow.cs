@@ -53,12 +53,12 @@ namespace Invector.vCharacterController
         public const string _thirdPersonVersion = "2.6.4";
         public const string _fsmAIVersion = "1.2.0";
 
-        public const string _projectSettingsPath = "Assets/Invector-3rdPersonController/Basic Locomotion/Editor/Resources/vProjectSettings.unitypackage";
-        public const string _mobilePackagePath = "Assets/Invector-3rdPersonController/Basic Locomotion/Editor/Resources/vMobileAddon.unitypackage";
-        public const string _topDownPackagePath = "Assets/Invector-3rdPersonController/Basic Locomotion/Editor/Resources/vTopDownAddon.unitypackage";
-        public const string _pointAndClickPackagePath = "Assets/Invector-3rdPersonController/Basic Locomotion/Editor/Resources/vPointClickAddon.unitypackage";
-        public const string _platformPackagePath = "Assets/Invector-3rdPersonController/Basic Locomotion/Editor/Resources/v2DPlatformAddon.unitypackage";
-        public const string _vMansionPath = "Assets/Invector-3rdPersonController/Basic Locomotion/Editor/Resources/vMansionAddon.unitypackage";
+        public const string _projectSettingsPath = "Assets/Plugins/Invector-3rdPersonController/Basic Locomotion/Editor/Resources/vProjectSettings.unitypackage";
+        public const string _mobilePackagePath = "Assets/Plugins/Invector-3rdPersonController/Basic Locomotion/Editor/Resources/vMobileAddon.unitypackage";
+        public const string _topDownPackagePath = "Assets/Plugins/Invector-3rdPersonController/Basic Locomotion/Editor/Resources/vTopDownAddon.unitypackage";
+        public const string _pointAndClickPackagePath = "Assets/Plugins/Invector-3rdPersonController/Basic Locomotion/Editor/Resources/vPointClickAddon.unitypackage";
+        public const string _platformPackagePath = "Assets/Plugins/Invector-3rdPersonController/Basic Locomotion/Editor/Resources/v2DPlatformAddon.unitypackage";
+        public const string _vMansionPath = "Assets/Plugins/Invector-3rdPersonController/Basic Locomotion/Editor/Resources/vMansionAddon.unitypackage";
 
         public static Texture2D invectorBanner = null;
         public static Texture2D mobileIcon = null;

@@ -3,25 +3,25 @@ using UnityEngine;
 using ReadyPlayerMe.Core;
 #endif
 using System;
-using System.Threading.Tasks;
-using Cysharp.Threading.Tasks;
 using FF;
+using FishNet.Connection;
 using FishNet.Object;
+using Invector.vCharacterController;
 using Sirenix.OdinInspector;
-using UnityEngine.Events;
-using UnityEngine.Serialization;
 
-[RequireComponent(typeof(AvatarInitializer))]
+
 public class RPMPlayerManager : NetworkBehaviour
 {
+    private string maleType = "Masculine";
+    public Animator femaleAnimator;
+    public Animator maleAnimator;
     public GameObject defaultAvatar;
-
     public delegate void UrlChanger(string url);
 
     public static UrlChanger urlChanger;
     public event Action OnLoadComplete;
     private AvatarObjectLoader avatarObjectLoader;
-    [FormerlySerializedAs("avatar")] public GameObject currentAvatar;
+    private GameObject avatar;
     private Animator animator = null;
     private GameObject avatarController;
     public bool isMale;
@@ -36,23 +36,11 @@ public class RPMPlayerManager : NetworkBehaviour
 
     [Tooltip("This will be true for Network Object")]
     public bool isNetworkObject;
+    public GameObject mobileUICanvas;
 
-    public UnityEvent onAvatarLoaded = new();
-
-    public AvatarInitializer avatarInitializer;
-
-    private async void Start()
+    private void Start()
     {
-        avatarInitializer = GetComponent<AvatarInitializer>();
-        currentAvatar = await avatarInitializer.SetupAvatar(defaultAvatar, currentAvatar,
-            isNetworkObject, isMale, invectorControl, avatarPositionOffset);
-    }
-
-    [Button]
-    public void AnimatorRebind()
-    {
-        invectorControl.GetComponent<Animator>().Rebind();
-        invectorControl.GetComponent<Animator>().Update(0f);
+        //SetupAvatar(defaultAvatar);
     }
 
     // Start is called before the first frame update
@@ -70,8 +58,7 @@ public class RPMPlayerManager : NetworkBehaviour
         {
             isNetworkObject = true;
         }
-
-        if (isBufferAvailable)
+        if(isBufferAvailable)
         {
             Debug.Log("Already Buffered Avatar Available");
             return;
@@ -81,13 +68,13 @@ public class RPMPlayerManager : NetworkBehaviour
         ChangeAvatarUrl();
     }
 
+
     public void LoadAvatar()
     {
         avatarObjectLoader = new AvatarObjectLoader();
         avatarObjectLoader.OnCompleted += OnLoadCompleted;
         avatarObjectLoader.OnProgressChanged += OnLoading;
         avatarObjectLoader.OnFailed += OnLoadFailed;
-        onAvatarLoaded?.Invoke();
         LoadAvatar(avatarUrl);
     }
 
@@ -107,8 +94,20 @@ public class RPMPlayerManager : NetworkBehaviour
 
         if (InitAgain)
         {
+            InitController();
             InitAgain = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            if (IsOwner)
+                ChangeAvatarUrl();
+        }
+    }
+
+    void InitController()
+    {
+        // avatarController
     }
 
     private void OnLoading(object sender, ProgressChangeEventArgs e)
@@ -121,20 +120,67 @@ public class RPMPlayerManager : NetworkBehaviour
         Debug.Log("Failed to load avatar");
     }
 
-    private async void OnLoadCompleted(object sender, CompletionEventArgs args)
+    private void OnLoadCompleted(object sender, CompletionEventArgs args)
     {
+        SetupAvatar(args.Avatar);
         Debug.Log("Avatar Loaded :" + args.Metadata.OutfitGender);
-        isMale = args.Metadata.OutfitGender == OutfitGender.Masculine;
-        currentAvatar = await avatarInitializer.SetupAvatar(args.Avatar, currentAvatar,
-        isNetworkObject, isMale,
-        invectorControl, avatarPositionOffset);
+        if (args.Metadata.OutfitGender == OutfitGender.Masculine)
+        {
+            isMale = true;
+        }
+        else
+        {
+            isMale = false;
+        }
+    }
 
-        await UniTask.DelayFrame(1);
 
-        AnimatorRebind();
+    private void SetupAvatar(GameObject targetAvatar)
+    {
+        Debug.Log("Setting up "+ targetAvatar.name + " as Avatar");
+        if (avatar != null)
+        {
+            avatarController.GetComponent<vThirdPersonController>().enabled = false;
+            avatarController.GetComponent<vThirdPersonInput>().enabled = false;
+            Destroy(avatar);
+        }
+        else
+        {
+            avatarController = invectorControl;
+            avatarController.SetActive(true);
+            animator = avatarController.GetComponent<Animator>();
+        }
 
-        if(IsOwner)
-            StickyNotesManager._instance.AssignPlayerTransform(this.transform);
+        avatar = targetAvatar;
+        avatar.transform.parent = avatarController.transform.GetChild(0);
+        avatar.transform.localPosition = avatarPositionOffset;
+        avatar.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        DestroyImmediate(avatar.GetComponent<Animator>());
+        if (!isNetworkObject)
+        {
+            avatarController.GetComponent<vThirdPersonController>().enabled = true;
+            avatarController.GetComponent<vThirdPersonInput>().enabled = true;
+            avatarController.transform.GetChild(3).gameObject.SetActive(true);
+        }
+
+        avatarController.SetActive(true);
+        Invoke(nameof(ChangeAvatarRef), 0.1f);
+
+        CharacterSetupForPhone();
+    }
+
+    private void ChangeAvatarRef()
+    {
+        if (isMale)
+        {
+            animator.avatar = femaleAnimator.avatar;
+            animator.avatar = maleAnimator.avatar;
+        }
+        else
+        {
+            animator.avatar = maleAnimator.avatar;
+            animator.avatar = femaleAnimator.avatar;
+        }
     }
 
     public void LoadAvatar(string url)
@@ -169,7 +215,6 @@ public class RPMPlayerManager : NetworkBehaviour
     }
 
     public bool isBufferAvailable;
-
     [ObserversRpc(BufferLast = true, ExcludeOwner = false, RunLocally = true)]
     private void ChangePlayerAvatar(GameObject manager, string url)
     {
@@ -180,6 +225,15 @@ public class RPMPlayerManager : NetworkBehaviour
         avatarUrl = url;
         LoadAvatar();
     }
+    public void CharacterSetupForPhone()
+    {
+#if UNITY_ANDROID
+    if(IsOwner)
+    {
+        mobileUICanvas.SetActive(true);
+        avatarController.GetComponent<vThirdPersonInput>().unlockCursorOnStart = true;
+        avatarController.GetComponent<vThirdPersonInput>().showCursorOnStart = true;
+    }
+#endif
+    }
 }
-
-//TODO: Refactor this complete script as currently this is mixes with networking and avatar loading

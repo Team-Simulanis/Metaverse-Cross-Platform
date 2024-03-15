@@ -23,7 +23,15 @@ ONLINE DOCUMENTATION: https://www.invector.xyz/thirdpersondocumentation
 
 Invector Team - 2024
 
-Shooter 2.6.4 Floating Capsule 26/01/2024
+MeleeCombat 2.6.4a Hotfix 02/02/2024
+
+- [Mobile] Fix Mobile Add-on missing files
+- [Mobile] Fix Mobile Add-on errors related to Input
+- [Basic]  Fix Use RootMotion option not working
+
+-----------------------------------------------------------------------------------------------------
+
+MeleeCombat 2.6.4 Floating Capsule 26/01/2024
 
 - [Project]   Project updated to 2021.3.29f1 aiming for better compatibility
 - [vInput]    Improve GC on some methods

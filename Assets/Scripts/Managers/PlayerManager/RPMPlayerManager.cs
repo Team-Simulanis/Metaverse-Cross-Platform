@@ -40,6 +40,7 @@ public class RPMPlayerManager : NetworkBehaviour
     public UnityEvent onAvatarLoaded = new(); 
 
     public AvatarInitializer avatarInitializer;
+    public GameObject mobileController;
 
     private async void Start()
     {
@@ -134,7 +135,12 @@ public class RPMPlayerManager : NetworkBehaviour
         AnimatorRebind();
 
         if(IsOwner)
+        {
             StickyNotesManager._instance.AssignPlayerTransform(this.transform);
+#if UNITY_ANDROID
+            mobileController.SetActive(true);
+#endif
+        }
     }
 
     public void LoadAvatar(string url)

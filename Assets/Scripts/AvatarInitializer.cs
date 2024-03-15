@@ -53,6 +53,10 @@ public class AvatarInitializer : MonoBehaviour
         DestroyImmediate(avatar.GetComponent<Animator>());
         if (!isNetworkObject)
         {
+#if UNITY_ANDROID
+            invectorControl.GetComponent<vThirdPersonInput>().unlockCursorOnStart = true;
+            invectorControl.GetComponent<vThirdPersonInput>().showCursorOnStart = true;
+#endif
             invectorControl.GetComponent<vThirdPersonController>().enabled = true;
             invectorControl.GetComponent<vThirdPersonInput>().enabled = true;
             invectorControl.transform.GetChild(3).gameObject.SetActive(true);

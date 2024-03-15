@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 #if MOBILE_INPUT
 using UnityStandardAssets.CrossPlatformInput;
 #endif
@@ -128,7 +129,7 @@ namespace Invector.vCharacterController
 #elif MOBILE_INPUT
             if (EventSystem.current.IsPointerOverGameObject() || (Input.touches.Length > 0))
                 return true;
-#endif
+#endif            
             return false;
         }
 

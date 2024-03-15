@@ -37,7 +37,7 @@ public class RPMPlayerManager : NetworkBehaviour
     [Tooltip("This will be true for Network Object")]
     public bool isNetworkObject;
 
-    public UnityEvent onAvatarLoaded = new();
+    public UnityEvent onAvatarLoaded = new(); 
 
     public AvatarInitializer avatarInitializer;
 

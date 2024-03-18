@@ -15,13 +15,13 @@ public class StickyNotesManager : NetworkBehaviour
     public static StickyNotesManager _instance;
     void Awake()
     {
-        if(_instance == null)
+        if (_instance == null)
             _instance = this;
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
     public void AssignPlayerTransform(Transform T)
     {
@@ -30,26 +30,35 @@ public class StickyNotesManager : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(instanceNotes) 
+        if (instanceNotes)
         {
-            InstanceNotes();
+            //InstantiateNote();
             instanceNotes = false;
         }
     }
-    void InstanceNotes()
+
+    public void InstantiateNote(string message)
+    {
+        if(base.IsOwner) 
+        {
+            InstanceNotes(message);
+        }
+    }
+    [ServerRpc]
+    void InstanceNotes(string message)
     {
         //int noteId = GetUniqueID();
-        SyncStickyNotesText(NotesText,notesTransform.position.x,notesTransform.position.y,notesTransform.position.z);
+            SyncStickyNotesText(message);
         //SyncStickyNotesPostion(noteId, notesTransform.position.x,notesTransform.position.y,notesTransform.position.z);
     }
     [ObserversRpc(ExcludeOwner = true, BufferLast = false)]
-    void SyncStickyNotesText(string text, float positionX, float positionY, float positionZ)
+    void SyncStickyNotesText(string text)
     {
-        Debug.Log("positionX "+ positionX);
-        Debug.Log("positionY "+ positionY);
-        Debug.Log("position "+ positionZ);
+        //Debug.Log("positionX "+ positionX);
+        //Debug.Log("positionY "+ positionY);
+        //Debug.Log("position "+ positionZ);
         Debug.Log(text);
-        GameObject Obj = Instantiate(StickyNotesPrefab, new Vector3(positionX, positionY, positionZ), Quaternion.identity);
+        GameObject Obj = Instantiate(StickyNotesPrefab, notesTransform.position, Quaternion.identity);
         Obj.transform.GetChild(0).GetComponent<TextMeshPro>().text = text;
        
     }

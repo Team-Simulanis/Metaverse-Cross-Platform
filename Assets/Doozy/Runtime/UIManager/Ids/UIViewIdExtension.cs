@@ -54,6 +54,7 @@ namespace Doozy.Runtime.UIManager
             exit,
             feedbackPanel,
             LocationPanel,
+            ProfilePanel,
             ReactionPanel,
             session,
             sessionsPanel

@@ -23,6 +23,8 @@ MonoBehaviour:
     - Category: FloaterPanel
       Name: LocationPanel
     - Category: FloaterPanel
+      Name: ProfilePanel
+    - Category: FloaterPanel
       Name: SessionsPanel
     - Category: None
       Name: None

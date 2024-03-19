@@ -20,7 +20,10 @@ public class messageTextHolder : MonoBehaviour
         DateTime currentTime = System.DateTime.Now;
         int hours = currentTime.Hour;
         int minutes = currentTime.Minute;
-        TimeText.text = hours + ":" + minutes;
+        if(TimeText != null) 
+        {
+                TimeText.text = hours + ":" + minutes;
+        }
         Debug.Log($"Current time: {hours:D2}:{minutes:D2}");
     }
 }

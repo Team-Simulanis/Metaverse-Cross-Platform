@@ -18,6 +18,7 @@ public class PlayerReactionHandler : NetworkBehaviour
         if (!IsOwner) return;
         EmojiPanel.instance.TakeOwner(this.gameObject);
         LocationsPanel.instance.TakeOwner(this.gameObject);
+        StickyNotesManager._instance.TakeOwner(this.gameObject.transform);
     }
     public void PlayReactions(string animationName)
     {

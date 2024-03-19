@@ -136,7 +136,7 @@ public class RPMPlayerManager : NetworkBehaviour
 
         if(IsOwner)
         {
-            StickyNotesManager._instance.AssignPlayerTransform(this.transform);
+            //StickyNotesManager._instance.AssignPlayerTransform(this.transform);
 #if UNITY_ANDROID
             mobileController.SetActive(true);
 #endif

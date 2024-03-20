@@ -101,8 +101,18 @@ public class RPMPlayerManager : MonoBehaviour
         }
 
         _avatarInitializer.AnimatorRebind();
+        
+        if(playerType == PlayerType.Networked)
 
-        if (_avatarNetworkManager.IsOwner)
+        {
+            if (_avatarNetworkManager.IsOwner) //TODO: Refactor this to a only work for networked players
+            {
+#if UNITY_ANDROID
+            mobileController.SetActive(true);
+#endif
+            }
+        }
+        else
         {
 #if UNITY_ANDROID
             mobileController.SetActive(true);

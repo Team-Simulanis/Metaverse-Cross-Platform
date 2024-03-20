@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -17,16 +18,10 @@ public class CloudCharacterManager : MonoBehaviour
 
     GameObject obj;
 
-    // On start, deactivate the male prefab and get the cloud avatar data
-    private void Start()
-    {
-        Instance = this;
-        malePrefab.SetActive(false);
-        GetCloudAvatarData("male");
-    }
+
 
     // Asynchronously get the cloud avatar data
-    public async void GetCloudAvatarData(string type)
+    public async Task GetCloudAvatarData(string type)
     {
         avatarCount = 0; //will reset the list whenever a new gender is selected
         var result = await WebRequestManager.GetWebRequestWithAuthorization(AvatarListURL, type);

@@ -62,5 +62,7 @@ MonoBehaviour:
       Name: session
     - Category: Ingame
       Name: sessionsPanel
+    - Category: Initialization
+      Name: LoadingScreen
     - Category: None
       Name: None

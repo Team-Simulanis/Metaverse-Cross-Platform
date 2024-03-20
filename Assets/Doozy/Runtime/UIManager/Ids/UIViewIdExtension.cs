@@ -21,6 +21,10 @@ namespace Doozy.Runtime.UIManager.Containers
         public static IEnumerable<UIView> GetViews(UIViewId.Ingame id) => GetViews(nameof(UIViewId.Ingame), id.ToString());
         public static void Show(UIViewId.Ingame id, bool instant = false) => Show(nameof(UIViewId.Ingame), id.ToString(), instant);
         public static void Hide(UIViewId.Ingame id, bool instant = false) => Hide(nameof(UIViewId.Ingame), id.ToString(), instant);
+
+        public static IEnumerable<UIView> GetViews(UIViewId.Initialization id) => GetViews(nameof(UIViewId.Initialization), id.ToString());
+        public static void Show(UIViewId.Initialization id, bool instant = false) => Show(nameof(UIViewId.Initialization), id.ToString(), instant);
+        public static void Hide(UIViewId.Initialization id, bool instant = false) => Hide(nameof(UIViewId.Initialization), id.ToString(), instant);
     }
 }
 
@@ -58,6 +62,11 @@ namespace Doozy.Runtime.UIManager
             ReactionPanel,
             session,
             sessionsPanel
+        }
+
+        public enum Initialization
+        {
+            LoadingScreen
         }    
     }
 }

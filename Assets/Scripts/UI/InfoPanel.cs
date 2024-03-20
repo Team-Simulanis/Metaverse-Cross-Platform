@@ -1,10 +1,11 @@
 using System;
+using System.Threading.Tasks;
 using FF;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InfoPanel : MonoBehaviour
+public class InfoPanel : Panel
 {
     [SerializeField] private TMP_InputField nameInputField;
     [SerializeField] private TMP_InputField emailInputField;
@@ -13,17 +14,10 @@ public class InfoPanel : MonoBehaviour
     [SerializeField] private Image profilePicture;
 
     public UserDetailsPayload userDetailsPayload = new();
-    // public userInfo userInfo;
-
-
+    
     public string endPoint = "https://metaverse-backend.simulanis.io/api/application/user/details";
-
-    private void Start()
-    {
-        GetUserProfileData();
-    }
-
-    private async void GetUserProfileData()
+    
+    public async Task GetUserProfileData()
     {
         var result = await WebRequestManager.GetWebRequestWithAuthorization(endPoint, "");
         Debug.Log("Received Data: " + result);
@@ -35,7 +29,7 @@ public class InfoPanel : MonoBehaviour
         {
             profilePicture.sprite = await WebRequestManager.DownloadSvg(userDetailsPayload.data.group.avatar);
         }
-        else
+        else if(extension[^1] is "png" or "jpg" or"jpeg")
         {
             profilePicture.sprite = await WebRequestManager.ImageDownloadRequest(userDetailsPayload.data.group.avatar);
         }
@@ -48,7 +42,6 @@ public class InfoPanel : MonoBehaviour
         DataManager.Instance.userData.name = userDetailsPayload.data.name;
         DataManager.Instance.userData.bio = userDetailsPayload.data.bio;
         ShowData();
-        //DataManager.Instance.userData.experience = userDetailsPayload.data.experience;
     }
 
     private void ShowData()

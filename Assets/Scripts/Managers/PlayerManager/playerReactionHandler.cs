@@ -20,6 +20,7 @@ public class PlayerReactionHandler : NetworkBehaviour
         EmojiPanel.instance.TakeOwner(this.gameObject);
         LocationsPanel.instance.TakeOwner(this.gameObject);
         StickyNotesManager.instance.TakeOwner(StickyNoteTransform);
+        DynamicArrows.instance.TakeOwner(this.gameObject.transform);
     }
     public void PlayReactions(string animationName)
     {

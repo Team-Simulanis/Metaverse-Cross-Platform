@@ -9,47 +9,42 @@ public class StickyNotesManager : NetworkBehaviour
 {
     public Transform notesTransform;
     public GameObject StickyNotesPrefab;
-    public string NotesText;
-    public bool instanceNotes;
     [SerializeField] private TMP_InputField messageText ;
-    public static StickyNotesManager _instance;
+    public static StickyNotesManager instance;
     void Awake()
     {
-        if (_instance == null)
-            _instance = this;
-    }
-    void Update()
-    {
-        if (instanceNotes)
-        {
-            InstanceNotes("hello");
-            instanceNotes = false;
-        }
+        if (instance == null)
+            instance = this;
     }
 
     public void InstantiateNote()
     {
-        if(base.IsOwner) 
+        string message = messageText.text;
+        if (message == "")
         {
-            string message = messageText.text;
-            InstanceNotes(message);
+        }
+        else
+        {
+            InstanceNotes(message, notesTransform.position);
+            messageText.text = "";
         }
     }
 
     [ServerRpc(RequireOwnership =false)]
-    void InstanceNotes(string message)
+    void InstanceNotes(string message,Vector3 stickyNoteTransform)
     {
-            SyncStickyNotesText(message);
+        SyncStickyNotesText(message,stickyNoteTransform);
     }
 
-    [ObserversRpc(ExcludeOwner = true, BufferLast = false)]
-    void SyncStickyNotesText(string text)
+    [ObserversRpc(ExcludeOwner = false, BufferLast = false)]
+    void SyncStickyNotesText(string text,Vector3 stickyNotePosition)
     {
-        Debug.Log(text);
-        GameObject Obj = Instantiate(StickyNotesPrefab, notesTransform.position, Quaternion.identity);
-        Obj.GetComponent<messageTextHolder>().msgText.text = text;
-       
+         Debug.Log(text);
+         Debug.Log(stickyNotePosition + "position");
+         GameObject Obj = Instantiate(StickyNotesPrefab, stickyNotePosition, Quaternion.identity);
+         Obj.GetComponent<messageTextHolder>().msgText.text = text;
     }
+
     int GetUniqueID()
     {
        return System.Guid.NewGuid().GetHashCode(); 

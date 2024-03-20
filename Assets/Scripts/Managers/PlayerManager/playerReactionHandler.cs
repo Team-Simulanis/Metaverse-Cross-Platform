@@ -7,6 +7,7 @@ public class PlayerReactionHandler : NetworkBehaviour
 {
     public static PlayerReactionHandler Instance;
     public bool owner;
+    public Transform StickyNoteTransform;
     private void Start()
     {
         Instance = this;
@@ -18,7 +19,7 @@ public class PlayerReactionHandler : NetworkBehaviour
         if (!IsOwner) return;
         EmojiPanel.instance.TakeOwner(this.gameObject);
         LocationsPanel.instance.TakeOwner(this.gameObject);
-        StickyNotesManager._instance.TakeOwner(this.gameObject.transform);
+        StickyNotesManager.instance.TakeOwner(StickyNoteTransform);
     }
     public void PlayReactions(string animationName)
     {

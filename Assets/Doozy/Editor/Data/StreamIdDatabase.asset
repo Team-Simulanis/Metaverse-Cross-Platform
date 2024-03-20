@@ -35,4 +35,6 @@ MonoBehaviour:
     - Category: None
       Name: None
     - Category: Screens
+      Name: AvatarSelected
+    - Category: Screens
       Name: InforScreen

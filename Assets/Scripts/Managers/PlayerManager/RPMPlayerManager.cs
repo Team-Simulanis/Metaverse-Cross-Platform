@@ -1,123 +1,75 @@
 using UnityEngine;
-#if !UNITY_Server
 using ReadyPlayerMe.Core;
-#endif
-using System;
-using System.Threading.Tasks;
-using Cysharp.Threading.Tasks;
-using FF;
-using FishNet.Object;
 using Sirenix.OdinInspector;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
+
+public enum PlayerType
+{
+    Offline,
+    Networked
+}
+
+public enum AvatarBodyType
+{
+    Masculine,
+    Feminine
+}
 
 [RequireComponent(typeof(AvatarInitializer))]
-public class RPMPlayerManager : NetworkBehaviour
+public class RPMPlayerManager : MonoBehaviour
 {
-    public GameObject defaultAvatar;
+    public PlayerType playerType;
+    public AvatarBodyType avatarBodyType;
 
-    public delegate void UrlChanger(string url);
+    [Required] public GameObject defaultAvatar;
+    [ReadOnly] public GameObject currentAvatar;
 
-    public static UrlChanger urlChanger;
-    public event Action OnLoadComplete;
-    private AvatarObjectLoader avatarObjectLoader;
-    [FormerlySerializedAs("avatar")] public GameObject currentAvatar;
-    private Animator animator = null;
-    private GameObject avatarController;
-    public bool isMale;
+    private AvatarObjectLoader _avatarObjectLoader;
 
-    [SerializeField] [Tooltip("RPM avatar URL or shortcode to load")]
-    private string avatarUrl;
+    private GameObject _avatarController;
 
-    public GameObject invectorControl;
-    private readonly Vector3 avatarPositionOffset = new Vector3(0, 0, 0);
-    public bool changeAvatar;
-    public bool InitAgain;
+    [ShowInInspector][ReadOnly] [Tooltip("RPM avatar URL or shortcode to load")]
+    private string _avatarUrl;
 
-    [Tooltip("This will be true for Network Object")]
-    public bool isNetworkObject;
+    private readonly Vector3 _avatarPositionOffset = new Vector3(0, 0, 0);
+    
+    public string currentAvatarUrl;
 
-    public UnityEvent onAvatarLoaded = new(); 
+    private AvatarInitializer _avatarInitializer;
+    private AvatarNetworkManager _avatarNetworkManager;
 
-    public AvatarInitializer avatarInitializer;
     public GameObject mobileController;
+    [FoldoutGroup("Events")] public UnityEvent onAvatarLoaded = new();
 
     private async void Start()
     {
-        avatarInitializer = GetComponent<AvatarInitializer>();
-        currentAvatar = await avatarInitializer.SetupAvatar(defaultAvatar, currentAvatar,
-            isNetworkObject, isMale, invectorControl, avatarPositionOffset);
-    }
-
-    [Button]
-    public void AnimatorRebind()
-    {
-        invectorControl.GetComponent<Animator>().Rebind();
-        invectorControl.GetComponent<Animator>().Update(0f);
-    }
-
-    // Start is called before the first frame update
-    public override void OnStartClient()
-    {
-        base.OnStartClient();
-
-        if (IsOwner)
+        _avatarInitializer = GetComponent<AvatarInitializer>();
+       
+        if( GetComponent<AvatarNetworkManager>())
         {
-            if (DataManager.Instance != null)
-                avatarUrl = DataManager.Instance.userData.avatarDetails.avatarModelDownloadLink;
-            isNetworkObject = false;
-        }
-        else
-        {
-            isNetworkObject = true;
+            _avatarNetworkManager = GetComponent<AvatarNetworkManager>();
         }
 
-        if (isBufferAvailable)
-        {
-            Debug.Log("Already Buffered Avatar Available");
-            return;
-        }
-
-        newUrl = avatarUrl;
-        ChangeAvatarUrl();
+        //Initializing the default avatar
+        currentAvatar = await _avatarInitializer.SetupAvatar(defaultAvatar, currentAvatar, avatarBodyType, _avatarPositionOffset);
     }
-
-    public void LoadAvatar()
+    
+    public void StartLoadingAvatar(string url)
     {
-        avatarObjectLoader = new AvatarObjectLoader();
-        avatarObjectLoader.OnCompleted += OnLoadCompleted;
-        avatarObjectLoader.OnProgressChanged += OnLoading;
-        avatarObjectLoader.OnFailed += OnLoadFailed;
+        _avatarObjectLoader = new AvatarObjectLoader();
+        _avatarObjectLoader.OnCompleted += OnLoadCompleted;
+        _avatarObjectLoader.OnProgressChanged += OnLoading;
+        _avatarObjectLoader.OnFailed += OnLoadFailed;
         onAvatarLoaded?.Invoke();
-        LoadAvatar(avatarUrl);
+        LoadAvatar(url);
     }
 
-    public void SetAvatarUrl(string value)
-    {
-        avatarUrl = value;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (changeAvatar)
-        {
-            LoadAvatar();
-            changeAvatar = false;
-        }
-
-        if (InitAgain)
-        {
-            InitAgain = false;
-        }
-    }
-
-    private void OnLoading(object sender, ProgressChangeEventArgs e)
+    private static void OnLoading(object sender, ProgressChangeEventArgs e)
     {
         Debug.Log("Loading Avatar..." + e.Progress + "%");
     }
 
-    private void OnLoadFailed(object sender, FailureEventArgs args)
+    private static void OnLoadFailed(object sender, FailureEventArgs args)
     {
         Debug.Log("Failed to load avatar");
     }
@@ -125,66 +77,56 @@ public class RPMPlayerManager : NetworkBehaviour
     private async void OnLoadCompleted(object sender, CompletionEventArgs args)
     {
         Debug.Log("Avatar Loaded :" + args.Metadata.OutfitGender);
-        isMale = args.Metadata.OutfitGender == OutfitGender.Masculine;
-        currentAvatar = await avatarInitializer.SetupAvatar(args.Avatar, currentAvatar,
-        isNetworkObject, isMale,
-        invectorControl, avatarPositionOffset);
 
-        await UniTask.DelayFrame(1);
-
-        AnimatorRebind();
-
-        if(IsOwner)
+        avatarBodyType = args.Metadata.OutfitGender switch
         {
-            //StickyNotesManager._instance.AssignPlayerTransform(this.transform);
+            OutfitGender.Masculine => AvatarBodyType.Masculine,
+            OutfitGender.Feminine => AvatarBodyType.Feminine,
+            _ => avatarBodyType
+        };
+
+        if(_avatarNetworkManager==null)
+        {
+            currentAvatar = await _avatarInitializer.SetupAvatar(args.Avatar, currentAvatar, avatarBodyType, _avatarPositionOffset);
+        }
+        else if(_avatarNetworkManager.IsOwner)
+        {
+            Debug.Log("Initializing Controls for local player");
+            currentAvatar = await _avatarInitializer.SetupAvatar(args.Avatar, currentAvatar, avatarBodyType, _avatarPositionOffset);
+            Debug.Log("Initialized Controls for local player");
+        }
+        else
+        {
+            Debug.Log("Initializing Controls ignored as its a remote player");
+        }
+
+        _avatarInitializer.AnimatorRebind();
+
+        if (_avatarNetworkManager.IsOwner)
+        {
 #if UNITY_ANDROID
             mobileController.SetActive(true);
 #endif
         }
     }
 
+    public void InitializeControls()
+    {
+        
+    }
+
+  
+
     public void LoadAvatar(string url)
     {
-        avatarUrl = url.Trim(' ');
-        avatarObjectLoader.LoadAvatar(avatarUrl);
+        _avatarUrl = url.Trim(' ');
+        _avatarObjectLoader.LoadAvatar(_avatarUrl);
     }
-
-    public void changeUrl(string url)
-    {
-        avatarUrl = "https://models.readyplayer.me/" + url + ".glb";
-    }
-
-    /// <summary>
-    /// Use this function to change url
-    /// </summary>
-    /// <param name="url">Pass .GLB url here</param>
-    public string newUrl;
 
     [Button]
     public void ChangeAvatarUrl()
     {
-        avatarUrl = newUrl;
-        ChangePlayerAvatarServer(gameObject, newUrl);
-    }
-
-    [ServerRpc]
-    private void ChangePlayerAvatarServer(GameObject manager, string url)
-    {
-        Debug.Log("Server Received");
-        ChangePlayerAvatar(manager, url);
-    }
-
-    public bool isBufferAvailable;
-
-    [ObserversRpc(BufferLast = true, ExcludeOwner = false, RunLocally = true)]
-    private void ChangePlayerAvatar(GameObject manager, string url)
-    {
-        Debug.Log("Server Changed");
-        isBufferAvailable = true;
-        Debug.Log(url);
-        //avatarUrl = "https://cdn.simulanis.io/sso/uno/production/resources/fde87370-4243-43dc-9978-846e1511fed4/3DAssets/universal/1/M11.glb";
-        avatarUrl = url;
-        LoadAvatar();
+        _avatarNetworkManager.SendAvatarUpdateRequestServer(currentAvatarUrl);
     }
 }
 

@@ -41,18 +41,11 @@ namespace Simulanis.Player
         // Start is called before the first frame update
         void Start()
         {
-            Init();
             ChangeToFirstView(false);
             sendInfo();
         }
 
-        void Init()
-        {
-            // Multiplayer Code for isMine
-            if (IsOwner)
-            {
-            }
-        }
+
 
         // Update is called once per frame
         void Update()

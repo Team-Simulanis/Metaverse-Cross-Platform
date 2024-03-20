@@ -15265,89 +15265,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 516711882}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &978989787
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6018108584105516696, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: m_Name
-      value: Multi-Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6018108584105516696, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6605979969194944695, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: _scenePathHash
-      value: 1028868396
-      objectReference: {fileID: 0}
-    - target: {fileID: 6605979969194944695, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: <SceneId>k__BackingField
-      value: 4418956113711761773
-      objectReference: {fileID: 0}
-    - target: {fileID: 7116599738874971820, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7116599738874971820, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 7116599738874971820, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -27.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 7116599738874971820, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7116599738874971820, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7116599738874971820, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7116599738874971820, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7116599738874971820, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7116599738874971820, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7116599738874971820, guid: 8a8334ab0426d43478f9adede2c53283,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8a8334ab0426d43478f9adede2c53283, type: 3}
 --- !u!1 &982449038
 GameObject:
   m_ObjectHideFlags: 0
@@ -15715,6 +15632,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RPMLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740621845950481141, guid: d74f1261e62e6944dabfeda69e46d70a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37446,7 +37368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211a9f6ec51ddc14f908f5acc0cd0423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerPrefab: {fileID: 6605979969194944695, guid: 8a8334ab0426d43478f9adede2c53283,
+  _playerPrefab: {fileID: -8383096295887504412, guid: 57b01baf7323ed244bb3fbb62cbd8aae,
     type: 3}
   _addToDefaultScene: 1
   Spawns: []
@@ -37746,7 +37668,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 6831861892982023446}
   - {fileID: 876334037}
-  - {fileID: 978989787}
   - {fileID: 6216885925549336613}
   - {fileID: 7443408886617491350}
   - {fileID: 527665596445997929}

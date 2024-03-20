@@ -1,6 +1,9 @@
 using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using Invector.vCharacterController;
+using Sirenix.OdinInspector;
 using UnityEngine;
+
 public class AvatarInitializer : MonoBehaviour
 {
     private bool _isMale;
@@ -9,8 +12,20 @@ public class AvatarInitializer : MonoBehaviour
     [SerializeField] private Animator femaleAnimator;
     public bool avatarSetupInProgress;
 
-    public async Task<GameObject> SetupAvatar(GameObject targetAvatar, GameObject avatar,
-        bool isNetworkObject, bool isMale, GameObject invectorControl, Vector3 avatarPositionOffset)
+    private vThirdPersonController _invectorControlThirdPersonController;
+    private vThirdPersonInput _invectorControlThirdPersonInput;
+
+    private AvatarBodyType _avatarBodyType;
+
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+        _invectorControlThirdPersonInput = GetComponent<vThirdPersonInput>();
+        _invectorControlThirdPersonController = GetComponent<vThirdPersonController>();
+    }
+
+    public async Task<GameObject> SetupAvatar(GameObject targetAvatar, GameObject avatar, AvatarBodyType avatarBodyType,
+        Vector3 avatarPositionOffset)
     {
         while (avatarSetupInProgress)
         {
@@ -18,58 +33,57 @@ public class AvatarInitializer : MonoBehaviour
             await Task.Delay(500);
         }
 
-        return SetupAvatarQ(targetAvatar, avatar, isNetworkObject, isMale, invectorControl,
+        return await SetupAvatarQ(targetAvatar, avatar, avatarBodyType,
             avatarPositionOffset);
     }
 
-    private GameObject SetupAvatarQ(GameObject targetAvatar, GameObject avatar,
-        bool isNetworkObject, bool isMale, GameObject invectorControl, Vector3 avatarPositionOffset)
+    private async Task<GameObject> SetupAvatarQ(GameObject targetAvatar, GameObject avatar,
+        AvatarBodyType avatarBodyType, Vector3 avatarPositionOffset)
     {
+        _avatarBodyType = avatarBodyType;
         avatarSetupInProgress = true;
-        _isMale = isMale;
 
         Debug.Log("Setting up " + targetAvatar.name + " as Avatar");
 
         if (avatar != null)
         {
             Debug.Log("Old Avatar Found");
-            invectorControl.GetComponent<vThirdPersonController>().enabled = false;
-            invectorControl.GetComponent<vThirdPersonInput>().enabled = false;
-            invectorControl.SetActive(true);
-            _animator = invectorControl.GetComponent<Animator>();
+            _invectorControlThirdPersonController.enabled = false;
+            _invectorControlThirdPersonInput.enabled = false;
+
             Destroy(avatar);
         }
         else
         {
             Debug.Log("No Old Avatar Found");
-            invectorControl.SetActive(true);
-            _animator = invectorControl.GetComponent<Animator>();
         }
 
         avatar = targetAvatar;
-        avatar.transform.parent = invectorControl.transform.GetChild(0);
+        avatar.transform.parent = transform.GetChild(0);
         avatar.transform.localPosition = avatarPositionOffset;
         avatar.transform.localRotation = Quaternion.Euler(0, 0, 0);
         DestroyImmediate(avatar.GetComponent<Animator>());
-        if (!isNetworkObject)
-        {
-#if UNITY_ANDROID
-            invectorControl.GetComponent<vThirdPersonInput>().unlockCursorOnStart = true;
-            invectorControl.GetComponent<vThirdPersonInput>().showCursorOnStart = true;
-#endif
-            invectorControl.GetComponent<vThirdPersonController>().enabled = true;
-            invectorControl.GetComponent<vThirdPersonInput>().enabled = true;
-            invectorControl.transform.GetChild(3).gameObject.SetActive(true);
-        }
 
-        invectorControl.SetActive(true);
+#if UNITY_ANDROID
+            _invectorControlThirdPersonInput.unlockCursorOnStart = true;
+            _invectorControlThirdPersonInput.showCursorOnStart = true;
+#endif
+        _invectorControlThirdPersonController.enabled = true;
+        _invectorControlThirdPersonInput.enabled = true;
+        transform.GetChild(3).gameObject.SetActive(true);
+
+
         ChangeAvatarRef();
+
+        await UniTask.DelayFrame(1);
+        AnimatorRebind();
+
         return targetAvatar;
     }
 
     private void ChangeAvatarRef()
     {
-        if (_isMale)
+        if (_avatarBodyType == AvatarBodyType.Masculine)
         {
             Debug.Log("Assigned Male Avatar");
             _animator.avatar = maleAnimator.avatar;
@@ -82,8 +96,15 @@ public class AvatarInitializer : MonoBehaviour
 
         _animator.Rebind();
         _animator.Update(0f);
-        
+
         Debug.Log("Avatar Setup Complete");
         avatarSetupInProgress = false;
+    }
+
+    [Button]
+    public void AnimatorRebind()
+    {
+        _animator.Rebind();
+        _animator.Update(0f);
     }
 }

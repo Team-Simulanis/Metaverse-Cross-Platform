@@ -26,8 +26,20 @@ public class InfoPanel : MonoBehaviour
     private async void GetUserProfileData()
     {
         var result = await WebRequestManager.GetWebRequestWithAuthorization(endPoint, "");
+        Debug.Log("Received Data: " + result);
         userDetailsPayload = JsonUtility.FromJson<UserDetailsPayload>(result);
-        profilePicture.sprite = await WebRequestManager.DownloadSvg(userDetailsPayload.data.group.avatar);
+        var profilePicLink = userDetailsPayload.data.group.avatar;
+        var extension = profilePicLink.Split('.');
+        
+        if (extension[^1] == "svg")
+        {
+            profilePicture.sprite = await WebRequestManager.DownloadSvg(userDetailsPayload.data.group.avatar);
+        }
+        else
+        {
+            profilePicture.sprite = await WebRequestManager.ImageDownloadRequest(userDetailsPayload.data.group.avatar);
+        }
+
         profilePicture.useSpriteMesh = true;
         profilePicture.color = Color.black;
         DataManager.Instance.userData.profileImage = profilePicture.sprite;
@@ -60,8 +72,8 @@ public class InfoPanel : MonoBehaviour
         };
 
 
-        var json = JsonUtility.ToJson(payload,true);
-        
+        var json = JsonUtility.ToJson(payload, true);
+
         await WebRequestManager.PostWebRequestWithAuthorization(
             "https://metaverse-backend.simulanis.io/api/application/user/update/details", json);
     }

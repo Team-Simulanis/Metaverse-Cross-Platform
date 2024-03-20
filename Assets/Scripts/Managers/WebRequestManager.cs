@@ -112,7 +112,7 @@ public class WebRequestManager : MonoBehaviour
 
     public static async Task<Sprite> ImageDownloadRequest(string imageUrl)
     {
-        using var webRequest = UnityWebRequestTexture.GetTexture(imageUrl);
+         var webRequest = UnityWebRequestTexture.GetTexture(imageUrl);
         // Send the request asynchronously
         var asyncOperation = webRequest.SendWebRequest();
         Get++;

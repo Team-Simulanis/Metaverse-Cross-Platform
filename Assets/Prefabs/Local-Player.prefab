@@ -757,6 +757,7 @@ GameObject:
   - component: {fileID: 6172324818805821185}
   - component: {fileID: 5845518234059542661}
   - component: {fileID: 6710809783446384254}
+  - component: {fileID: -6611704408719955819}
   m_Layer: 0
   m_Name: Local-Player
   m_TagString: Untagged
@@ -1327,6 +1328,21 @@ MonoBehaviour:
   maleAnimator: {fileID: 2807829468635797655}
   femaleAnimator: {fileID: 2918150742972944864}
   avatarSetupInProgress: 0
+--- !u!114 &-6611704408719955819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018108584105516696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956d991d5408ec4ba34780185effc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 2805811438860258379}
+  stopPlayer: 0
+  cl: {fileID: 11400000, guid: dbf2c7a931be7ae4d960bc178dc4dda6, type: 2}
 --- !u!1 &6333141075408240098
 GameObject:
   m_ObjectHideFlags: 0

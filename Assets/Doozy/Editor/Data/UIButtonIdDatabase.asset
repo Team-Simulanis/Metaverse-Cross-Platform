@@ -21,6 +21,8 @@ MonoBehaviour:
     - Category: HomeScreenLogin
       Name: Customize
     - Category: HomeScreenLogin
+      Name: EnterMetaverse
+    - Category: HomeScreenLogin
       Name: Login
     - Category: HomeScreenLogin
       Name: Proceed

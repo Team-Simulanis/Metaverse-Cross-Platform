@@ -98,7 +98,8 @@ MonoBehaviour:
     PortId: 8bd8b551-a4da-43cb-a9cd-eeded31a7a20
     Direction: 1
     Capacity: 0
-    Connections: []
+    Connections:
+    - 798cf833-a722-496a-aff9-f1c8c241b06d
     Value: 
     ValueTypeQualifiedName: 
     CanBeDeleted: 0
@@ -172,7 +173,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 1658, y: -81.50009}
+  Position: {x: 1789.1001, y: -133.33337}
   OnEnterShowViews:
   - Id:
       Category: HomeScreen
@@ -245,7 +246,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 1383.615, y: -239}
+  Position: {x: 1458.467, y: -234.00002}
   OnEnterShowViews:
   - Id:
       Category: HomeScreen
@@ -284,7 +285,8 @@ MonoBehaviour:
     PortId: 9ca51ea9-ceb5-4941-9422-fb6d35186d7f
     Direction: 0
     Capacity: 1
-    Connections: []
+    Connections:
+    - d65536bf-d77a-457d-9cd9-8d976e531b75
     Value: '{"CanGoBack":false}'
     ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.GoBackInputPortData,
       DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -309,7 +311,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 1691, y: -495.99994}
+  Position: {x: 2118.3674, y: -292.00003}
   OnEnterShowViews:
   - Id:
       Category: HomeScreen
@@ -517,6 +519,71 @@ MonoBehaviour:
     Mode: 0
   OnEnterHideAllViews: 1
   OnExitHideAllViews: 1
+--- !u!114 &-81102730530771776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c01f9a7d07f5c04a9f277379e94a10b, type: 3}
+  m_Name: UI
+  m_EditorClassIdentifier: 
+  FlowGraphId: fb6492d9-97de-4a45-a16b-a8699005f38f
+  NodeId: 656401fa-15fb-4c10-a39a-cd6f2b66b65c
+  NodeType: 0
+  NodeName: Lobby In Game UI
+  NodeDescription: 
+  InputPorts:
+  - NodeId: 656401fa-15fb-4c10-a39a-cd6f2b66b65c
+    PortId: 798cf833-a722-496a-aff9-f1c8c241b06d
+    Direction: 0
+    Capacity: 1
+    Connections:
+    - 8bd8b551-a4da-43cb-a9cd-eeded31a7a20
+    Value: '{"CanGoBack":false}'
+    ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.GoBackInputPortData,
+      DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  OutputPorts:
+  - NodeId: 656401fa-15fb-4c10-a39a-cd6f2b66b65c
+    PortId: d65536bf-d77a-457d-9cd9-8d976e531b75
+    Direction: 1
+    Capacity: 0
+    Connections:
+    - 9ca51ea9-ceb5-4941-9422-fb6d35186d7f
+    Value: '{"Trigger":2,"TimeDelay":3.0,"SignalPayload":{"StreamId":{"Category":"None","Name":"None","Custom":false},"SignalValueType":0,"IntegerValue":0,"BooleanValue":false,"FloatValue":0.0,"StringValue":"","ColorValue":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"Vector2Value":{"x":0.0,"y":0.0},"Vector3Value":{"x":0.0,"y":0.0,"z":0.0},"Vector4Value":{"x":0.0,"y":0.0,"z":0.0,"w":0.0}},"ButtonId":{"Category":"HomeScreenLogin","Name":"EnterMetaverse","Custom":false},"ToggleId":{"Category":"None","Name":"None","Custom":false},"CommandToggle":2,"ViewId":{"Category":"None","Name":"None","Custom":false},"CommandShowHide":0}'
+    ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.UIOutputPortData,
+      DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  RunUpdate: 0
+  RunFixedUpdate: 0
+  RunLateUpdate: 0
+  NodeState: 0
+  CanBeDeleted: 1
+  Passthrough: 0
+  ClearGraphHistory: 0
+  Position: {x: 1636.067, y: -359.73337}
+  OnEnterShowViews:
+  - Id:
+      Category: Initialization
+      Name: InGameLobby
+      Custom: 0
+    Mode: 0
+  OnEnterHideViews: []
+  OnExitShowViews: []
+  OnExitHideViews:
+  - Id:
+      Category: Initialization
+      Name: InGameLobby
+      Custom: 0
+    Mode: 0
+  OnEnterHideAllViews: 0
+  OnExitHideAllViews: 0
 --- !u!114 &-62741912603413179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,7 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02761efe598a45c98fa1baf4d446c6a7, type: 3}
   m_Name: HomeScreen
   m_EditorClassIdentifier: 
-  EditorPosition: {x: -529.3333, y: 562.6667, z: 0}
+  EditorPosition: {x: -1557.3334, y: 387.33334, z: 0}
   EditorScale: {x: 0.8695652, y: 0.8695652, z: 1}
   Id: fb6492d9-97de-4a45-a16b-a8699005f38f
   GraphName: HomeScreen-FlowGraph
@@ -609,6 +676,7 @@ MonoBehaviour:
   - {fileID: 3642308772225330762}
   - {fileID: -6525158064895409108}
   - {fileID: -4152399766606669961}
+  - {fileID: -81102730530771776}
   RootNode: {fileID: -62741912603413179}
   ActiveNode: {fileID: 0}
 --- !u!114 &3294460637677825104
@@ -658,7 +726,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 1691, y: -215.00003}
+  Position: {x: 1242.6666, y: -88.33337}
   OnEnterShowViews:
   - Id:
       Category: HomeScreen
@@ -988,7 +1056,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 1
   ClearGraphHistory: 0
-  Position: {x: 589.7826, y: -219.99997}
+  Position: {x: 545.10004, y: -314.66663}
   Trigger: 0
   SignalPayload:
     StreamId:
@@ -1066,7 +1134,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 781, y: -141}
+  Position: {x: 686.4334, y: -314.66663}
   OnEnterShowViews:
   - Id:
       Category: HomeScreen

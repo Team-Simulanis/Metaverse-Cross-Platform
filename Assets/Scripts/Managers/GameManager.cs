@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
             await Task.Delay(100);
         }
         await Task.Delay(3000);
+        
         var a = AddressableManager.Instance.StartAddressable();
         
         while (AddressableManager.Instance.isAddressableInitialized == false)

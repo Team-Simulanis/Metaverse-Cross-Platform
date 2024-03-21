@@ -1,8 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -11,6 +8,7 @@ using UnityEngine.AddressableAssets.ResourceLocators;
 using UnityEngine.Networking;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 
 public class AddressableManager : MonoBehaviour
@@ -22,6 +20,7 @@ public class AddressableManager : MonoBehaviour
 
     public bool isAddressableInitialized;
     public bool isEnvironmentLoaded;
+    [FormerlySerializedAs("LoadedEnvironment")] public GameObject loadedEnvironment;
     private void Awake()
     {
         if (Instance == null)
@@ -59,7 +58,16 @@ public class AddressableManager : MonoBehaviour
         {
             GameObject obj = opHandle.Result;
             Instantiate(obj);
+            loadedEnvironment = obj;
             isEnvironmentLoaded = true;
+        }
+    }
+    public void UnloadAsset()
+    {
+        if (loadedEnvironment != null)
+        {
+            Addressables.ReleaseInstance(loadedEnvironment);
+            loadedEnvironment = null;
         }
     }
 

@@ -16,7 +16,12 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: af50672abaf122645b3d65e4c0fe996e
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 4b31e89b573eefc48aafed2a257cf5bd
+    m_Address: Assets/FBXs/Environment-New/V3/HDRI/scythian_tombs_2_4k.exr
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0d0c8cd3f902a564788d9b85a2fd73fc, type: 2}
   m_SchemaSet:

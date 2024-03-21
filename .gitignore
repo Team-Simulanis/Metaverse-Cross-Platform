@@ -72,3 +72,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 .fake
+Assets/Ready Player Me/Samples/Ready Player Me Core/5.0.0/QuickStart/PreviewAvatar/PreviewMesh.glb
+/ServerData

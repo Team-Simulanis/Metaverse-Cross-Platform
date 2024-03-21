@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Doozy.Runtime.Signals;
 using Doozy.Runtime.UIManager.Components;
@@ -9,6 +10,7 @@ using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 public class GameManager : MonoBehaviour
 {
@@ -40,6 +42,8 @@ public class GameManager : MonoBehaviour
 
     private async void InitApplication()
     {
+        Stopwatch stopwatch = new Stopwatch();
+        stopwatch.Start();
         var b = UpdateBrandingDetails();
         while (b.IsCompleted == false)
         {
@@ -83,7 +87,8 @@ public class GameManager : MonoBehaviour
             loadingTextStatus.text = "Loading Environment";
             await Task.Delay(100);
         }
-        
+        stopwatch.Stop();
+        Debug.Log("Total Time Taken: " + stopwatch.ElapsedMilliseconds/1000 + " Seconds");
         
         Signal.Send(StreamId.Screens.InforScreen);
     }

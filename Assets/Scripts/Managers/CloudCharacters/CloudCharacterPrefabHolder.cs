@@ -21,6 +21,7 @@ public class CloudCharacterPrefabHolder : MonoBehaviour
     private void ButtonClick()
     {
         ThirdPersonLoader.instance.LoadAvatar(characterData.assets[0].url);
+        CloudCharacterManager.Instance.startButton.interactable = true;
         DataManager.Instance.UpdateAvatarInfo(new AvatarDetails
         {
             avatarModelDownloadLink = characterData.assets[0].url

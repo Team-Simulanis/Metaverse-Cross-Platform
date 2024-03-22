@@ -1,12 +1,16 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Doozy.Runtime.UIManager.Components;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 // This class is responsible for managing cloud characters
 public class CloudCharacterManager : MonoBehaviour
 {
-    public GameObject malePrefab; // Prefab for the male character //
+ 
+    [FormerlySerializedAs("malePrefab")] public GameObject avatarIconPrefab; // Prefab for the male character //
+    public GameObject parent; // Prefab for the male character //
     public CharacterPayload cp; // Payload for the character
 
     // URL for the avatar list
@@ -18,10 +22,10 @@ public class CloudCharacterManager : MonoBehaviour
 
     GameObject obj;
 
+    public UIButton startButton;
     public void Start()
     {
         Instance = this;
-        Task task = GetCloudAvatarData("male");  
     }
 
     // Asynchronously get the cloud avatar data
@@ -36,7 +40,7 @@ public class CloudCharacterManager : MonoBehaviour
         foreach (var t in cp.data)
         {
             avatarCount++;
-            obj = Instantiate(malePrefab, malePrefab.transform.parent.transform);
+            obj = Instantiate(avatarIconPrefab, parent.transform);
             avatarButtonList.Add(obj);
             obj.SetActive(true);
             obj.AddComponent<CloudCharacterPrefabHolder>();

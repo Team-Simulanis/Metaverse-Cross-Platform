@@ -66,5 +66,7 @@ MonoBehaviour:
       Name: InGameLobby
     - Category: Initialization
       Name: LoadingScreen
+    - Category: Initialization
+      Name: OverlayScreen
     - Category: None
       Name: None

@@ -42,11 +42,10 @@ public class WebRequestManager : MonoBehaviour
         Post = 0;
     }
 
-    public async Task<string> WebRequest(string endPoint)
+    public static async Task<string> WebRequest(string endPoint)
     {
-
-        var request = UnityWebRequest.Get(Domain + endPoint);
-        DebugManager.Log(DebugType.ServerResponse, "Sending request to: " + Domain + endPoint);
+        var request = UnityWebRequest.Get( endPoint);
+        DebugManager.Log(DebugType.ServerResponse, "Sending request to: " + endPoint);
 
         var result = await request.SendWebRequestAsync();
         Get++;

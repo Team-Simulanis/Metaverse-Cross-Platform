@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using FF;
 using TMPro;
@@ -12,26 +14,40 @@ public class InfoPanel : Panel
     [SerializeField] private TMP_InputField designationInputField;
     [SerializeField] private TMP_InputField bioInputField;
     [SerializeField] private Image profilePicture;
+    [SerializeField] private RawImage rawImageProfilePicture;
 
     public UserDetailsPayload userDetailsPayload = new();
-    
+
     public string endPoint = "https://metaverse-backend.simulanis.io/api/application/user/details";
-    
+    public string[] exe;
+
     public async Task GetUserProfileData()
     {
         var result = await WebRequestManager.GetWebRequestWithAuthorization(endPoint, "");
         Debug.Log("Received Data: " + result);
         userDetailsPayload = JsonUtility.FromJson<UserDetailsPayload>(result);
-        var profilePicLink = userDetailsPayload.data.group.avatar;
-        var extension = profilePicLink.Split('.');
-        
-        if (extension[^1] == "svg")
+        var profilePicLink = userDetailsPayload.data.avatar;
+
+        exe = profilePicLink.Split('.');
+       
+        if (exe[^1] == "svg")
         {
-            profilePicture.sprite = await WebRequestManager.DownloadSvg(userDetailsPayload.data.group.avatar);
+            profilePicture.sprite = await WebRequestManager.DownloadSvg(profilePicLink);
         }
-        else if(extension[^1] is "png" or "jpg" or"jpeg")
+        else
         {
-            profilePicture.sprite = await WebRequestManager.ImageDownloadRequest(userDetailsPayload.data.group.avatar);
+            var format = await WebRequestManager.WebRequest(profilePicLink);
+            if (format.Contains("GIF"))
+            {
+                rawImageProfilePicture.gameObject.SetActive(true);
+                profilePicture.gameObject.SetActive(false);
+                StartCoroutine(LoadGif(profilePicLink));
+            }
+            else
+            {
+                rawImageProfilePicture.gameObject.SetActive(false);
+                profilePicture.sprite = await WebRequestManager.ImageDownloadRequest(profilePicLink);
+            }
         }
 
         profilePicture.useSpriteMesh = true;
@@ -42,6 +58,11 @@ public class InfoPanel : Panel
         DataManager.Instance.userData.name = userDetailsPayload.data.name;
         DataManager.Instance.userData.bio = userDetailsPayload.data.bio;
         ShowData();
+    }
+
+    public IEnumerator LoadGif(string url)
+    {
+        yield return StartCoroutine(rawImageProfilePicture.GetComponent<UniGifImage>().SetGifFromUrlCoroutine(url));
     }
 
     private void ShowData()

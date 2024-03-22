@@ -67,7 +67,8 @@ namespace Doozy.Runtime.UIManager
         public enum Initialization
         {
             InGameLobby,
-            LoadingScreen
+            LoadingScreen,
+            OverlayScreen
         }    
     }
 }

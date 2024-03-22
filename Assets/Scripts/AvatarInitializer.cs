@@ -19,9 +19,7 @@ public class AvatarInitializer : MonoBehaviour
 
     private void Awake()
     {
-        _animator = GetComponent<Animator>();
-        _invectorControlThirdPersonInput = GetComponent<vThirdPersonInput>();
-        _invectorControlThirdPersonController = GetComponent<vThirdPersonController>();
+   
     }
 
     public async Task<GameObject> SetupAvatar(GameObject targetAvatar, GameObject avatar, AvatarBodyType avatarBodyType,
@@ -40,6 +38,11 @@ public class AvatarInitializer : MonoBehaviour
     private async Task<GameObject> SetupAvatarQ(GameObject targetAvatar, GameObject avatar,
         AvatarBodyType avatarBodyType, Vector3 avatarPositionOffset)
     {
+        _animator = GetComponent<Animator>();
+        _invectorControlThirdPersonInput = GetComponent<vThirdPersonInput>();
+        _invectorControlThirdPersonController = GetComponent<vThirdPersonController>();
+        //TODO check for null before getting the component
+        
         _avatarBodyType = avatarBodyType;
         avatarSetupInProgress = true;
 

@@ -48,7 +48,8 @@ namespace Doozy.Runtime.UIManager
             LoginSuccessful,
             previewCharacter,
             SelectGender,
-            SplashScreen
+            SplashScreen,
+            SubcribePanel
         }
 
         public enum Ingame

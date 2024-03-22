@@ -44,6 +44,8 @@ MonoBehaviour:
       Name: SelectGender
     - Category: HomeScreen
       Name: SplashScreen
+    - Category: HomeScreen
+      Name: SubcribePanel
     - Category: Ingame
       Name: BottomBar
     - Category: Ingame

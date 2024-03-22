@@ -1,5 +1,69 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6621056879769760416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c01f9a7d07f5c04a9f277379e94a10b, type: 3}
+  m_Name: UI
+  m_EditorClassIdentifier: 
+  FlowGraphId: fb6492d9-97de-4a45-a16b-a8699005f38f
+  NodeId: 17aa04e9-af20-4e00-bb98-98aa9c3f4b52
+  NodeType: 0
+  NodeName: NewsLetter Panel
+  NodeDescription: 
+  InputPorts:
+  - NodeId: 17aa04e9-af20-4e00-bb98-98aa9c3f4b52
+    PortId: de87d0c2-22cc-4cf9-a27a-68fce72247fe
+    Direction: 0
+    Capacity: 1
+    Connections:
+    - a89bf337-329b-4e26-8144-3c682d9dd0a4
+    Value: '{"CanGoBack":false}'
+    ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.GoBackInputPortData,
+      DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  OutputPorts:
+  - NodeId: 17aa04e9-af20-4e00-bb98-98aa9c3f4b52
+    PortId: f0f438bb-8343-4ad0-afdf-5d0ec85a9005
+    Direction: 1
+    Capacity: 0
+    Connections: []
+    Value: '{"Trigger":0,"TimeDelay":3.0,"SignalPayload":{"StreamId":{"Category":"None","Name":"None","Custom":false},"SignalValueType":0,"IntegerValue":0,"BooleanValue":false,"FloatValue":0.0,"StringValue":"","ColorValue":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"Vector2Value":{"x":0.0,"y":0.0},"Vector3Value":{"x":0.0,"y":0.0,"z":0.0},"Vector4Value":{"x":0.0,"y":0.0,"z":0.0,"w":0.0}},"ButtonId":{"Category":"None","Name":"None","Custom":false},"ToggleId":{"Category":"None","Name":"None","Custom":false},"CommandToggle":2,"ViewId":{"Category":"None","Name":"None","Custom":false},"CommandShowHide":0}'
+    ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.UIOutputPortData,
+      DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  RunUpdate: 0
+  RunFixedUpdate: 0
+  RunLateUpdate: 0
+  NodeState: 0
+  CanBeDeleted: 1
+  Passthrough: 0
+  ClearGraphHistory: 0
+  Position: {x: 953, y: 5.600006}
+  OnEnterShowViews:
+  - Id:
+      Category: HomeScreen
+      Name: SubcribePanel
+      Custom: 0
+    Mode: 0
+  OnEnterHideViews: []
+  OnExitShowViews: []
+  OnExitHideViews:
+  - Id:
+      Category: HomeScreen
+      Name: SubcribePanel
+      Custom: 0
+    Mode: 0
+  OnEnterHideAllViews: 0
+  OnExitHideAllViews: 0
 --- !u!114 &-6525158064895409108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,8 +702,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02761efe598a45c98fa1baf4d446c6a7, type: 3}
   m_Name: HomeScreen
   m_EditorClassIdentifier: 
-  EditorPosition: {x: -418, y: 333, z: 0}
-  EditorScale: {x: 0.32690176, y: 0.32690176, z: 1}
+  EditorPosition: {x: -93, y: 400, z: 0}
+  EditorScale: {x: 0.49717674, y: 0.49717674, z: 1}
   Id: fb6492d9-97de-4a45-a16b-a8699005f38f
   GraphName: HomeScreen-FlowGraph
   GraphDescription: 
@@ -681,6 +745,7 @@ MonoBehaviour:
   - {fileID: -6525158064895409108}
   - {fileID: -4152399766606669961}
   - {fileID: -81102730530771776}
+  - {fileID: -6621056879769760416}
   RootNode: {fileID: -62741912603413179}
   ActiveNode: {fileID: 0}
 --- !u!114 &3294460637677825104
@@ -1018,7 +1083,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 944.0001, y: -208.5}
+  Position: {x: 982, y: -315}
   OnEnterShowViews:
   - Id:
       Category: HomeScreen
@@ -1142,6 +1207,17 @@ MonoBehaviour:
       DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     CanBeDeleted: 0
     CanBeReordered: 0
+  - NodeId: 31fdafea-34f6-42ee-8cc1-41a863fd815e
+    PortId: a89bf337-329b-4e26-8144-3c682d9dd0a4
+    Direction: 1
+    Capacity: 0
+    Connections:
+    - de87d0c2-22cc-4cf9-a27a-68fce72247fe
+    Value: '{"Trigger":2,"TimeDelay":3.0,"SignalPayload":{"StreamId":{"Category":"None","Name":"None","Custom":false},"SignalValueType":0,"IntegerValue":0,"BooleanValue":false,"FloatValue":0.0,"StringValue":"","ColorValue":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"Vector2Value":{"x":0.0,"y":0.0},"Vector3Value":{"x":0.0,"y":0.0,"z":0.0},"Vector4Value":{"x":0.0,"y":0.0,"z":0.0,"w":0.0}},"ButtonId":{"Category":"HomeScreenLogin","Name":"subcribe","Custom":false},"ToggleId":{"Category":"None","Name":"None","Custom":false},"CommandToggle":2,"ViewId":{"Category":"None","Name":"None","Custom":false},"CommandShowHide":0}'
+    ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.UIOutputPortData,
+      DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    CanBeDeleted: 1
+    CanBeReordered: 1
   RunUpdate: 0
   RunFixedUpdate: 0
   RunLateUpdate: 0

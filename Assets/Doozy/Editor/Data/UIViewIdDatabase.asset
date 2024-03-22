@@ -39,13 +39,13 @@ MonoBehaviour:
     - Category: HomeScreen
       Name: LoginSuccessful
     - Category: HomeScreen
+      Name: NotifyMe
+    - Category: HomeScreen
       Name: previewCharacter
     - Category: HomeScreen
       Name: SelectGender
     - Category: HomeScreen
       Name: SplashScreen
-    - Category: HomeScreen
-      Name: SubcribePanel
     - Category: Ingame
       Name: BottomBar
     - Category: Ingame

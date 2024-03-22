@@ -18,7 +18,11 @@ public class CloudCharacterManager : MonoBehaviour
 
     GameObject obj;
 
-
+    public void Start()
+    {
+        Instance = this;
+        Task task = GetCloudAvatarData("male");  
+    }
 
     // Asynchronously get the cloud avatar data
     public async Task GetCloudAvatarData(string type)

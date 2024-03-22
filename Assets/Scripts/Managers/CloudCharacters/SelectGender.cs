@@ -5,6 +5,6 @@ public class SelectGender : MonoBehaviour
 {
    public void _SelectGender(string gender) 
     {
-        CloudCharacterManager.Instance.GetCloudAvatarData(gender);
+        System.Threading.Tasks.Task task = CloudCharacterManager.Instance.GetCloudAvatarData(gender);
     }
 }

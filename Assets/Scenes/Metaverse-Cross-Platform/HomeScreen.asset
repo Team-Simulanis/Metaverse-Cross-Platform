@@ -159,8 +159,7 @@ MonoBehaviour:
     PortId: 7edc44f6-7bbf-4d0a-8eb3-8a5a65e8e7f1
     Direction: 1
     Capacity: 0
-    Connections:
-    - 0c95a628-156b-444d-a240-2a960296c9df
+    Connections: []
     Value: '{"Trigger":2,"TimeDelay":3.0,"SignalPayload":{"StreamId":{"Category":"None","Name":"None","Custom":false},"SignalValueType":0,"IntegerValue":0,"BooleanValue":false,"FloatValue":0.0,"StringValue":"","ColorValue":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"Vector2Value":{"x":0.0,"y":0.0},"Vector3Value":{"x":0.0,"y":0.0,"z":0.0},"Vector4Value":{"x":0.0,"y":0.0,"z":0.0,"w":0.0}},"ButtonId":{"Category":"HomeScreenLogin","Name":"Proceed","Custom":false},"ToggleId":{"Category":"None","Name":"None","Custom":false},"CommandToggle":2,"ViewId":{"Category":"None","Name":"None","Custom":false},"CommandShowHide":0}'
     ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.UIOutputPortData,
       DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -173,7 +172,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 1789.1001, y: -133.33337}
+  Position: {x: 1889, y: -133.00002}
   OnEnterShowViews:
   - Id:
       Category: HomeScreen
@@ -246,7 +245,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 1458.467, y: -234.00002}
+  Position: {x: 1895.0002, y: -17.49997}
   OnEnterShowViews:
   - Id:
       Category: HomeScreen
@@ -478,7 +477,7 @@ MonoBehaviour:
     Direction: 0
     Capacity: 1
     Connections:
-    - 7edc44f6-7bbf-4d0a-8eb3-8a5a65e8e7f1
+    - 52c4f466-3072-4828-8fb7-ac46c23d3394
     Value: '{"CanGoBack":false}'
     ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.GoBackInputPortData,
       DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -502,7 +501,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 2047.6086, y: -133.00003}
+  Position: {x: 1481.448, y: -133}
   OnEnterShowViews:
   - Id:
       Category: HomeScreen
@@ -574,6 +573,11 @@ MonoBehaviour:
       Name: InGameLobby
       Custom: 0
     Mode: 0
+  - Id:
+      Category: HomeScreen
+      Name: Controls
+      Custom: 0
+    Mode: 0
   OnEnterHideViews: []
   OnExitShowViews: []
   OnExitHideViews:
@@ -634,7 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02761efe598a45c98fa1baf4d446c6a7, type: 3}
   m_Name: HomeScreen
   m_EditorClassIdentifier: 
-  EditorPosition: {x: -1557.3334, y: 387.33334, z: 0}
+  EditorPosition: {x: -1155, y: 585, z: 0}
   EditorScale: {x: 0.8695652, y: 0.8695652, z: 1}
   Id: fb6492d9-97de-4a45-a16b-a8699005f38f
   GraphName: HomeScreen-FlowGraph
@@ -726,7 +730,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 1242.6666, y: -88.33337}
+  Position: {x: 1314.9999, y: 27.500011}
   OnEnterShowViews:
   - Id:
       Category: HomeScreen
@@ -992,6 +996,17 @@ MonoBehaviour:
     Capacity: 0
     Connections: []
     Value: '{"Trigger":2,"TimeDelay":3.0,"SignalPayload":{"StreamId":{"Category":"None","Name":"None","Custom":false},"SignalValueType":0,"IntegerValue":0,"BooleanValue":false,"FloatValue":0.0,"StringValue":"","ColorValue":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"Vector2Value":{"x":0.0,"y":0.0},"Vector3Value":{"x":0.0,"y":0.0,"z":0.0},"Vector4Value":{"x":0.0,"y":0.0,"z":0.0,"w":0.0}},"ButtonId":{"Category":"HomeScreenLogin","Name":"Back","Custom":false},"ToggleId":{"Category":"None","Name":"None","Custom":false},"CommandToggle":2,"ViewId":{"Category":"None","Name":"None","Custom":false},"CommandShowHide":0}'
+    ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.UIOutputPortData,
+      DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    CanBeDeleted: 1
+    CanBeReordered: 1
+  - NodeId: a6074757-ef7a-4b77-ab00-71d3650eb666
+    PortId: 52c4f466-3072-4828-8fb7-ac46c23d3394
+    Direction: 1
+    Capacity: 0
+    Connections:
+    - 0c95a628-156b-444d-a240-2a960296c9df
+    Value: '{"Trigger":2,"TimeDelay":3.0,"SignalPayload":{"StreamId":{"Category":"None","Name":"None","Custom":false},"SignalValueType":0,"IntegerValue":0,"BooleanValue":false,"FloatValue":0.0,"StringValue":"","ColorValue":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"Vector2Value":{"x":0.0,"y":0.0},"Vector3Value":{"x":0.0,"y":0.0,"z":0.0},"Vector4Value":{"x":0.0,"y":0.0,"z":0.0,"w":0.0}},"ButtonId":{"Category":"HomeScreenLogin","Name":"AvatarSelected","Custom":false},"ToggleId":{"Category":"None","Name":"None","Custom":false},"CommandToggle":2,"ViewId":{"Category":"None","Name":"None","Custom":false},"CommandShowHide":0}'
     ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.UIOutputPortData,
       DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     CanBeDeleted: 1

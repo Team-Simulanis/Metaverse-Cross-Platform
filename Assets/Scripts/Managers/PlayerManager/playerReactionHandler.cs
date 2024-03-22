@@ -5,22 +5,35 @@ using UnityEngine;
 
 public class PlayerReactionHandler : NetworkBehaviour
 {
-    public static PlayerReactionHandler Instance;
+    public static PlayerReactionHandler instance;
     public bool owner;
-    public Transform StickyNoteTransform;
+    public Transform stickyNoteTransform;
+    public Transform flagTransform;
     private void Start()
     {
-        Instance = this;
+        instance = this;
+        SendOwner();
+    }
+
+    private void OnConnectedToServer()
+    {
         SendOwner();
     }
     [Button]
     private void SendOwner()
     {
-        if (!IsOwner) return;
-        EmojiPanel.instance.TakeOwner(this.gameObject);
-        LocationsPanel.instance.TakeOwner(this.gameObject);
-        StickyNotesManager.instance.TakeOwner(StickyNoteTransform);
-        DynamicArrows.instance.TakeOwner(this.gameObject.transform);
+        if (IsOwner)
+        {
+            EmojiPanel.instance.TakeOwner(this.gameObject);
+            LocationsPanel.instance.TakeOwner(this.gameObject);
+            StickyNotesManager.instance.TakeOwner(stickyNoteTransform,flagTransform);
+            DynamicArrows.instance.TakeOwner(this.gameObject.transform);
+        }
+        else
+        {
+            return;
+        }
+
     }
     public void PlayReactions(string animationName)
     {

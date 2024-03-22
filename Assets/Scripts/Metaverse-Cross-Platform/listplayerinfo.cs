@@ -23,8 +23,7 @@ public class listplayerinfo : MonoBehaviour
     public int selectedPlayer;
 
 
-    public void addNewPlayer(int id, string name,
-            NetworkObject connection,bool isLocalPlayer) //whenever a new player spawns , add that player to the list
+    public void addNewPlayer(int id, string name, NetworkObject connection,bool isLocalPlayer) //whenever a new player spawns , add that player to the list
     {
         playerList.Add(id,new playerInfo(id, name, connection));
         
@@ -40,9 +39,7 @@ public class listplayerinfo : MonoBehaviour
         updatePlayerList();
     }
 
-    public void
-        removeNewPlayer(int id, string name,
-            NetworkObject connection) //whenever a player despawns removes that player from the list
+    public void removeNewPlayer(int id, string name,NetworkObject connection) //whenever a player despawns removes that player from the list
     {
         playerList.Remove(id);
         updatePlayerList();

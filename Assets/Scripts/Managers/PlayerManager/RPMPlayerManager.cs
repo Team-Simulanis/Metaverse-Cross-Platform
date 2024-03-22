@@ -49,6 +49,10 @@ public class RPMPlayerManager : MonoBehaviour
         {
             _avatarNetworkManager = GetComponent<AvatarNetworkManager>();
         }
+        else
+        {
+            Debug.LogError("Player network manager Not Available");
+        }
 
         //Initializing the default avatar
         currentAvatar = await _avatarInitializer.SetupAvatar(defaultAvatar, currentAvatar, avatarBodyType, _avatarPositionOffset);
@@ -136,6 +140,14 @@ public class RPMPlayerManager : MonoBehaviour
     [Button]
     public void ChangeAvatarUrl()
     {
+        if(_avatarNetworkManager==null)
+        {
+            _avatarNetworkManager = GetComponent<AvatarNetworkManager>();
+        }
+        else
+        {
+            Debug.Log("Available");
+        }
         _avatarNetworkManager.SendAvatarUpdateRequestServer(currentAvatarUrl);
     }
 }

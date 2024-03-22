@@ -1127,10 +1127,7 @@ MonoBehaviour:
   _componentIndexCache: 0
   _addedNetworkObject: {fileID: 8475765264703482813}
   _networkObjectCache: {fileID: 8475765264703482813}
-  CL: {fileID: 11400000, guid: dbf2c7a931be7ae4d960bc178dc4dda6, type: 2}
-  playerCamera: {fileID: 2805811438860258379}
   userId: 0
-  StopPlayer: 0
 --- !u!114 &8475765264703482813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,7 +1156,7 @@ MonoBehaviour:
   _initializeOrder: 0
   _defaultDespawnType: 0
   NetworkObserver: {fileID: 0}
-  <PrefabId>k__BackingField: 0
+  <PrefabId>k__BackingField: 19
   <SpawnableCollectionId>k__BackingField: 0
   _scenePathHash: 0
   <SceneId>k__BackingField: 0

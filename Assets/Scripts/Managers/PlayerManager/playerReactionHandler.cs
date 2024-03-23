@@ -33,7 +33,6 @@ public class PlayerReactionHandler : NetworkBehaviour
         {
             return;
         }
-
     }
     public void PlayReactions(string animationName)
     {

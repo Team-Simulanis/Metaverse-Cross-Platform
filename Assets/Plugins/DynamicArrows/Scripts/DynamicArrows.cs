@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Sirenix.OdinInspector;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -43,16 +44,19 @@ public class DynamicArrows : MonoBehaviour
         onDestinationDeactive-= DestinationDeactive;
     }
 
-    void DestinationActive(GameObject gameObj){
+    void DestinationActive(GameObject gameObj)
+    {
         path.enabled = true;
         SetDestinationPointToDrawPath(gameObj);
     }
-    void DestinationDeactive(GameObject gameObj){
+    void DestinationDeactive(GameObject gameObj)
+    {
         StopCoroutine(drawPathCoroutine);
             path.enabled = false;
     }
 
 
+    [Button]
     public void ShowPath()
     {
         drawPathCoroutine = StartCoroutine(DrawPath());

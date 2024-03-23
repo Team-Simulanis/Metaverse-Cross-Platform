@@ -5,13 +5,13 @@ using UnityEngine;
 public class ArrowEvent : MonoBehaviour
 {
 
-void OnEnable()
-{
-     DynamicArrows.onDestinationActive?.Invoke(this.gameObject);
-}
+    void OnEnable()
+    {
+         DynamicArrows.onDestinationActive?.Invoke(this.gameObject);
+    }
     void OnDisable()
     {
-        DynamicArrows.onDestinationDeactive?.Invoke(this.gameObject);
+         DynamicArrows.onDestinationDeactive?.Invoke(this.gameObject);
 
     }
 }

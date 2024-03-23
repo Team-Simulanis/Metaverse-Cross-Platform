@@ -12,6 +12,7 @@ public class LocationsPanel : MonoBehaviour //
     public void MoveToThisLocation(Transform Location)
     {
         ownerObject.transform.position = Location.position;
+        CursorManager.instance.SetCursorLocked(false);
     }
     public void TakeOwner(GameObject OwnerObject)
     {

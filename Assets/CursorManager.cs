@@ -15,13 +15,14 @@ public class CursorManager : MonoBehaviour
     bool _firstView;
     float _speed;
     private Renderer[] _renderers;
-
+    public static CursorManager instance;
     [FormerlySerializedAs("CL")] public vThirdPersonCameraListData cl;
     private static readonly int InputMagnitude = Animator.StringToHash("InputMagnitude");
 
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         _vThirdPersonController = GetComponent<vThirdPersonController>();
         _speed = _vThirdPersonController.speedMultiplier;
         ChangeToFirstView(false);
@@ -45,7 +46,7 @@ public class CursorManager : MonoBehaviour
         }
     }
 
-    void SetCursorLocked(bool value)
+    public void SetCursorLocked(bool value)
     {
         Cursor.visible = value;
         playerCamera.isFreezed = value;

@@ -39,6 +39,8 @@ MonoBehaviour:
     - Category: HomeScreen
       Name: LoginSuccessful
     - Category: HomeScreen
+      Name: NotifyMe
+    - Category: HomeScreen
       Name: previewCharacter
     - Category: HomeScreen
       Name: SelectGender

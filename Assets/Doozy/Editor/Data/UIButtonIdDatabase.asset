@@ -30,5 +30,7 @@ MonoBehaviour:
       Name: SelectFemale
     - Category: HomeScreenLogin
       Name: SelectMale
+    - Category: HomeScreenLogin
+      Name: subcribe
     - Category: None
       Name: None

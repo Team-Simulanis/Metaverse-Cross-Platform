@@ -109,32 +109,28 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6018108584105516696, guid: c8a070e5412b4194fb301a4fe8e5e290,
         type: 3}
-      insertIndex: -1
+      insertIndex: 10
       addedObject: {fileID: -1482464066241482391}
     - targetCorrespondingSourceObject: {fileID: 6018108584105516696, guid: c8a070e5412b4194fb301a4fe8e5e290,
         type: 3}
-      insertIndex: -1
+      insertIndex: 11
       addedObject: {fileID: -8383096295887504412}
     - targetCorrespondingSourceObject: {fileID: 6018108584105516696, guid: c8a070e5412b4194fb301a4fe8e5e290,
         type: 3}
-      insertIndex: -1
+      insertIndex: 12
       addedObject: {fileID: 7224704219570708163}
     - targetCorrespondingSourceObject: {fileID: 6018108584105516696, guid: c8a070e5412b4194fb301a4fe8e5e290,
         type: 3}
-      insertIndex: -1
+      insertIndex: 13
       addedObject: {fileID: -4623784039826553898}
     - targetCorrespondingSourceObject: {fileID: 6018108584105516696, guid: c8a070e5412b4194fb301a4fe8e5e290,
         type: 3}
-      insertIndex: -1
+      insertIndex: 14
       addedObject: {fileID: 9142515629388212093}
     - targetCorrespondingSourceObject: {fileID: 6018108584105516696, guid: c8a070e5412b4194fb301a4fe8e5e290,
         type: 3}
-      insertIndex: -1
+      insertIndex: 15
       addedObject: {fileID: 4396096767298026136}
-    - targetCorrespondingSourceObject: {fileID: 6018108584105516696, guid: c8a070e5412b4194fb301a4fe8e5e290,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -706928123328052818}
     - targetCorrespondingSourceObject: {fileID: 6018108584105516696, guid: c8a070e5412b4194fb301a4fe8e5e290,
         type: 3}
       insertIndex: -1
@@ -204,12 +200,11 @@ MonoBehaviour:
   - {fileID: -4623784039826553898}
   - {fileID: 9142515629388212093}
   - {fileID: 4396096767298026136}
-  - {fileID: -706928123328052818}
   - {fileID: -7417711710450083885}
   <ParentNetworkObject>k__BackingField: {fileID: 0}
   <ChildNetworkObjects>k__BackingField: []
   SerializedTransformProperties:
-    Position: {x: 0, y: 2, z: 0}
+    Position: {x: 0, y: 0, z: 0}
     Rotation: {x: 0, y: 0, z: 0, w: 1}
     LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
@@ -322,24 +317,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: -8383096295887504412}
   _networkObjectCache: {fileID: -8383096295887504412}
   userId: 0
---- !u!114 &-706928123328052818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6708093723428816699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a883d1d06bb71e04c94a72b1f812212e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _componentIndexCache: 5
-  _addedNetworkObject: {fileID: -8383096295887504412}
-  _networkObjectCache: {fileID: -8383096295887504412}
-  inGameUsername: {fileID: 7271484578508521188}
-  playerName: 
-  isUpdated: 0
 --- !u!114 &3998791840603926457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,7 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d482b3406a1935a4080d7dc2c8ea92fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 6
+  _componentIndexCache: 5
   _addedNetworkObject: {fileID: -8383096295887504412}
   _networkObjectCache: {fileID: -8383096295887504412}
   miniMapCamera: {fileID: 4881872336286897143}
@@ -385,18 +362,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7271484578508521188 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7672711954199029575, guid: c8a070e5412b4194fb301a4fe8e5e290,
-    type: 3}
-  m_PrefabInstance: {fileID: 1050308948006410659}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &7804825761668521743 stripped

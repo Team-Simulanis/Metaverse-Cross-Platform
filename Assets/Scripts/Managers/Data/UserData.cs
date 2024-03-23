@@ -11,6 +11,7 @@ public class UserData
     [ReadOnly][BoxGroup("Basic Info")]public string experience = "5";
     [ReadOnly][BoxGroup("Basic Info")]public string bio = "Default Bio";
     [ReadOnly][BoxGroup("Basic Info")]public Sprite profileImage;
+    [ReadOnly][BoxGroup("Basic Info")]public string profileImageUrl;
     public AvatarDetails avatarDetails;
     public UserPermission userPermission;
 }

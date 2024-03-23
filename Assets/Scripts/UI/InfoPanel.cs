@@ -1,6 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using System;       
 using System.Threading.Tasks;
 using FF;
 using TMPro;
@@ -26,33 +24,13 @@ public class InfoPanel : Panel
         var result = await WebRequestManager.GetWebRequestWithAuthorization(endPoint, "");
         Debug.Log("Received Data: " + result);
         userDetailsPayload = JsonUtility.FromJson<UserDetailsPayload>(result);
-        var profilePicLink = userDetailsPayload.data.avatar;
-
-        exe = profilePicLink.Split('.');
-       
-        if (exe[^1] == "svg")
-        {
-            profilePicture.sprite = await WebRequestManager.DownloadSvg(profilePicLink);
-        }
-        else
-        {
-            var format = await WebRequestManager.WebRequest(profilePicLink);
-            if (format.Contains("GIF"))
-            {
-                rawImageProfilePicture.gameObject.SetActive(true);
-                profilePicture.gameObject.SetActive(false);
-                StartCoroutine(LoadGif(profilePicLink));
-            }
-            else
-            {
-                rawImageProfilePicture.gameObject.SetActive(false);
-                profilePicture.sprite = await WebRequestManager.ImageDownloadRequest(profilePicLink);
-            }
-        }
+        
+        ProfilePictureManager.Instance.SetProfilePicture(userDetailsPayload.data.avatar,profilePicture, rawImageProfilePicture);
 
         profilePicture.useSpriteMesh = true;
         profilePicture.color = Color.black;
         DataManager.Instance.userData.profileImage = profilePicture.sprite;
+        DataManager.Instance.userData.profileImageUrl = userDetailsPayload.data.avatar;
         DataManager.Instance.userData.designation = userDetailsPayload.data.designation;
         DataManager.Instance.userData.email = userDetailsPayload.data.email;
         DataManager.Instance.userData.name = userDetailsPayload.data.name;
@@ -60,10 +38,6 @@ public class InfoPanel : Panel
         ShowData();
     }
 
-    public IEnumerator LoadGif(string url)
-    {
-        yield return StartCoroutine(rawImageProfilePicture.GetComponent<UniGifImage>().SetGifFromUrlCoroutine(url));
-    }
 
     private void ShowData()
     {

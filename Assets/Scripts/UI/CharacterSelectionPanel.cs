@@ -9,10 +9,19 @@ public class CharacterSelectionPanel : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI userName;
     [SerializeField] private Image profileImage;
+    [SerializeField] private RawImage profileImageRaw;
     
     public void ShowDetails()
     {
         userName.text = DataManager.Instance.userData.name;
-        profileImage.sprite = DataManager.Instance.userData.profileImage;
+        if(ProfilePictureManager.Instance.profilePictureFormat == ProfilePictureManager.ProfilePictureFormat.Sprite)
+        {
+            profileImage.sprite = ProfilePictureManager.Instance.GetProfilePicture();
+            profileImageRaw.gameObject.SetActive(false);
+        }
+        else
+        {
+            ProfilePictureManager.Instance.LoadSprite(profileImageRaw);
+        }
     }
 }

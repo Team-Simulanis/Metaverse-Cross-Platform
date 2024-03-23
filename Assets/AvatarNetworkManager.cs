@@ -19,7 +19,6 @@ public class AvatarNetworkManager : NetworkBehaviour
 
     private void Awake()
     {
-        
         _rpmPlayerManager = GetComponent<RPMPlayerManager>();
 
         if (_rpmPlayerManager.playerType == PlayerType.Networked)
@@ -67,5 +66,17 @@ public class AvatarNetworkManager : NetworkBehaviour
     private void UpdatePlayerAvatar(string url)
     {
         _rpmPlayerManager.StartLoadingAvatar(url);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void SetUsernameOnServer(string playerName,string profileImageURL) //will call the observer RPC to sync the username to other player
+    {
+        SetUsernameOnHost(playerName,profileImageURL);
+    }
+
+    [ObserversRpc(BufferLast = true, ExcludeOwner = false, RunLocally = true)]
+    private void SetUsernameOnHost(string username,string profileImageURL)
+    {
+        GetComponent<NameTagHandler>().SetUsernameOnHost(username,profileImageURL);
     }
 }

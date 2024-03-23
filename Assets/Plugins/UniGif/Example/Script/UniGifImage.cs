@@ -30,10 +30,10 @@ public class UniGifImage : MonoBehaviour
 
     // Target row image
     [SerializeField]
-    private RawImage m_rawImage;
+    public RawImage m_rawImage;
     // Image Aspect Controller
     [SerializeField]
-    private UniGifImageAspectController m_imgAspectCtrl;
+    public UniGifImageAspectController m_imgAspectCtrl;
     // Textures filter mode
     [SerializeField]
     private FilterMode m_filterMode = FilterMode.Point;
@@ -241,6 +241,7 @@ public class UniGifImage : MonoBehaviour
             // Get GIF textures
             yield return StartCoroutine(UniGif.GetTextureListCoroutine(www.bytes, (gifTexList, loopCount, width, height) =>
             {
+                System.IO.File.WriteAllBytes(Application.persistentDataPath + "/profilePic.gif", www.bytes);
                 if (gifTexList != null)
                 {
                     m_gifTextureList = gifTexList;

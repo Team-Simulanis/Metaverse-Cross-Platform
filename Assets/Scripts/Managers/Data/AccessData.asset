@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: AccessData
   m_EditorClassIdentifier: 
   gameMode: 0
+  testType: 1
   loginCondition: 0

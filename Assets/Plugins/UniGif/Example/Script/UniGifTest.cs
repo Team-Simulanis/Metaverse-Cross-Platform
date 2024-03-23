@@ -20,6 +20,11 @@ public class UniGifTest : MonoBehaviour
 
     public void OnButtonClicked()
     {
+        if(CheckFileExist())
+        {
+            StartCoroutine(ViewGifCoroutine());
+            return;
+        }
         if (m_mutex || m_uniGifImage == null || string.IsNullOrEmpty(m_inputField.text))
         {
             return;
@@ -33,5 +38,17 @@ public class UniGifTest : MonoBehaviour
     {
         yield return StartCoroutine(m_uniGifImage.SetGifFromUrlCoroutine(m_inputField.text));
         m_mutex = false;
+    }
+
+    private bool CheckFileExist()
+    {
+        bool result = false;
+        if(System.IO.File.Exists(Application.persistentDataPath+"/profilePic.gif"))
+        {
+            m_inputField.text = Application.persistentDataPath+"/profilePic.gif";
+            result = true;
+        }
+
+        return result;
     }
 }

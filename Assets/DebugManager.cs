@@ -15,7 +15,8 @@ namespace Simulanis
         ServerResponseError,
         DataError,
         Session,
-        Analytics
+        Analytics,
+        Avatar
     }
     public class DebugManager : MonoBehaviour
     {
@@ -61,6 +62,9 @@ namespace Simulanis
                 case DebugType.Msg:
                     MessageLog(message);
                     break;
+                case DebugType.Avatar:
+                    AvatarMessageLog(message);
+                    break;
             }
         }
 
@@ -72,6 +76,11 @@ namespace Simulanis
         public static void MessageLog(string message)
         {
             Debug.Log("<color=red>[error] " + message + "</color>");
+        }
+        
+        public static void AvatarMessageLog(string message)
+        {
+            Debug.Log("<color=pink>[Avatar] " + message + "</color>");
         }
 
         public static void NetworkLog(string message)

@@ -1,9 +1,12 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Doozy.Runtime.UIManager.Components;
+using Simulanis;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Serialization;
+using DebugManager = Simulanis.DebugManager;
 
 // This class is responsible for managing cloud characters
 public class CloudCharacterManager : MonoBehaviour
@@ -50,6 +53,7 @@ public class CloudCharacterManager : MonoBehaviour
 
     private void CleanUpAvatarList()
     {
+        DebugManager.Log(DebugType.Avatar,"Cleaning up avatar list");
         foreach (var avatar in avatarButtonList)
         {
             Destroy(avatar);

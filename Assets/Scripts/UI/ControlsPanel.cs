@@ -18,6 +18,10 @@ public class ControlsPanel : MonoBehaviour
             for (var i = 0; i < mobilePanel.Length; i++)
             {
                 mobilePanel[i].SetActive(true);
+            }
+
+            for(var i = 0;i < desktopPanel.Length; i++)
+            {
                 desktopPanel[i].SetActive(false);
             }
         }
@@ -28,6 +32,10 @@ public class ControlsPanel : MonoBehaviour
             for (var i = 0; i < desktopPanel.Length; i++)
             {
                 desktopPanel[i].SetActive(true);
+            }
+
+            for (var i = 0;i<mobilePanel.Length;i++)
+            {
                 mobilePanel[i].SetActive(false);
             }
         }

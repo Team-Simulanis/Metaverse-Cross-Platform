@@ -31,7 +31,7 @@ public class CursorManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Mouse.current.middleButton.wasPressedThisFrame)
+        if (Input.GetKeyDown(KeyCode.L))
         {
             Debug.Log("middle button pressed");
             _isCursorLocked = !_isCursorLocked;

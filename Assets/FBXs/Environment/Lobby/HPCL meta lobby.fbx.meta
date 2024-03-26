@@ -1,0 +1,734 @@
+fileFormatVersion: 2
+guid: 451fdfd32a7795b4f987646f7bdf960a
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roof_Glow_Lights
+    second: {fileID: 2100000, guid: ff43f325a8d1c9b468a2524b626d1aab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sticker3
+    second: {fileID: 2100000, guid: 74b0565f2c9367346966123f832a22fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sticker5
+    second: {fileID: 2100000, guid: 9451874726b69814f8fd2ab86256c24d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hpcl_LOGO
+    second: {fileID: 2100000, guid: 50857de8a27b95148a0880bcb5689ec6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_BIG_TV_BACKGROUND
+    second: {fileID: 2100000, guid: 3e29558ea15ce844dafc084b1b8a4ac9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_BOALTS1
+    second: {fileID: 2100000, guid: 641af1a89db1bb64e9ebc36a66d76ebc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_CENTRE_SHOW
+    second: {fileID: 2100000, guid: a5932678d91d6484e94711b177c144ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_LOWER_FLOOR
+    second: {fileID: 2100000, guid: 439bb8181fccdfb4bab3cb4cbb41dc33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_LOWER_FLOOR2Shape_bakedmtl
+    second: {fileID: 2100000, guid: 8bb3eb32e22afd144bb8281a068bd54d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_Lights1
+    second: {fileID: 2100000, guid: 46e146fa841ab1f4081d8ddbdfb1d7e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_Lobby_Area_Main1
+    second: {fileID: 2100000, guid: 63a69f079edcfab44b645f7b493d6b9d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_Lobby_Area_Main2
+    second: {fileID: 2100000, guid: 3402d884b750bf942bb3553d3dd46725, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_NEON_LIGHTS
+    second: {fileID: 2100000, guid: d4383b7d0cdf1b54db375d9433b28825, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_PILLAR_LINES_TEXTURE
+    second: {fileID: 2100000, guid: 4a9288c0c1f2d544e9b7c9fa107deb7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_Posters
+    second: {fileID: 2100000, guid: fe1571258ab06244b9d0edb0e69f71c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_ROOF_PLANE1
+    second: {fileID: 2100000, guid: 7a9f0889580f8234cade76f2a2aa6366, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_ROUND_FLOOR_BLUE
+    second: {fileID: 2100000, guid: 85d0c148a9c1576489efe4ecd2f31893, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_ROUND_FLOOR_GREY
+    second: {fileID: 2100000, guid: 6299330992bc63744bef1df95e46e7e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_SOFA_STRIPS
+    second: {fileID: 2100000, guid: bae9fd9b2c6a07b4dad26131f1d29317, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_STAIRS_FLOOR2
+    second: {fileID: 2100000, guid: 0edf71999582a974ba1fadbdf5f311b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_TABLE1
+    second: {fileID: 2100000, guid: f7928bb4f1de9814bb2ed82df22ce8d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_bottom
+    second: {fileID: 2100000, guid: ab198c0e5f5e088449398d91125bd93e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_line_texture
+    second: {fileID: 2100000, guid: 7b2facba1fd13da4da13426383015262, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_mid
+    second: {fileID: 2100000, guid: 88c2bdee0df218047b30252e4444df64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_phong3
+    second: {fileID: 2100000, guid: 502231d5e1054f048a66ea371415b023, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_phong4
+    second: {fileID: 2100000, guid: ff84dedae1c2b0f48972f275fe9e005a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_phong5
+    second: {fileID: 2100000, guid: 9c17f22f71d1a914b8ef61c0dfad1839, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_pillow
+    second: {fileID: 2100000, guid: 9269f467ee77a3849ad4af99cdf4e5a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lobby_steel_scratch_strips
+    second: {fileID: 2100000, guid: 2f000285af11fb44db7f4e110f5de498, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: logo
+    second: {fileID: 2100000, guid: cf85cc3061299fc4795ae32350a1c586, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: new_sticker_02
+    second: {fileID: 2100000, guid: 9d4368dbd6ef3a641b812cc22b8f0b76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: new_stickers
+    second: {fileID: 2100000, guid: 8857e5f67e86eec40a51e2ae1fdb0e77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tv_1
+    second: {fileID: 2100000, guid: 58f58c3804b408f48b0c60fbf42c9a92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tv_2
+    second: {fileID: 2100000, guid: c8e9501c414e47d498cfce0cb08e1c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tv_black_side
+    second: {fileID: 2100000, guid: 9e89f8602d935514c99476f975897ea5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall_logo1
+    second: {fileID: 2100000, guid: cb6abbc3b64e78f48a0f257156307de8, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: -LOBBY_AREA_MAINShape
+    second: {fileID: 2800000, guid: 953ba81c234871144b91580715b0f1f0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: -LOBBY_AREA_MAINShape copy
+    second: {fileID: 2800000, guid: 13b2e87b8b35739418c0e79e7add8fc0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: -ROOF_LIGHTSShape
+    second: {fileID: 2800000, guid: d05e45408da981043b9958a4a5c367d6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: -Rebake_ROOF_PLANE1_ROOF_PLANE1Shape
+    second: {fileID: 2800000, guid: b7147e70368df8a45adf77e0ef5706f8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: -floorShape
+    second: {fileID: 2800000, guid: 3ab2da06d3bcae84194c9430bfd2b42f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 32239-abstract
+    second: {fileID: 2800000, guid: cc7a8f8702e3b8b4d874e1aa582ea9f1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ambient Occlusion Map from Mesh btm
+    second: {fileID: 2800000, guid: 5557cbe88519df847916436430eaa3bd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ambient Occlusion Map from Mesh midd1
+    second: {fileID: 2800000, guid: 1c9242d5e98018045b2b3b7bf11e0698, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ambient Occlusion Map from Mesh pillo
+    second: {fileID: 2800000, guid: d95b649f1f0402f4a9b434624b4972a2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BIG_TV_BACKGROUND_AlbedoTransparency
+    second: {fileID: 2800000, guid: bc32d8fbf96a7974e96104c9fb2cf3c6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BIG_TV_BACKGROUND_MetallicSmoothness
+    second: {fileID: 2800000, guid: e2f399166971fbd4fb38e963a0f25653, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BIG_TV_BACKGROUND_Normal
+    second: {fileID: 2800000, guid: ee6cd311178e9d540914c9d1a8a2f226, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BOALTS1_AlbedoTransparency
+    second: {fileID: 2800000, guid: 1de50c475953f4042bf23c93f4456a7a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BOALTS1_MetallicSmoothness
+    second: {fileID: 2800000, guid: e0d6db552785fd940b323cfc2ad404c1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BOALTS1_Normal
+    second: {fileID: 2800000, guid: e7373d47a397eb649888ba5010c3dab2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CENTRE_SHOW_AlbedoTransparency
+    second: {fileID: 2800000, guid: d4b9fa2f4c367a3488d7069b6d667c14, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CENTRE_SHOW_MetallicSmoothness
+    second: {fileID: 2800000, guid: 3e5b27e70f8632f40a50bf6765c83e2e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CENTRE_SHOW_Normal
+    second: {fileID: 2800000, guid: b1b24d64f83e49a4ab8818d5473ced09, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: LOWER_FLOOR_AlbedoTransparency
+    second: {fileID: 2800000, guid: baca141155ff10a4f82a1371b3de9467, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: LOWER_FLOOR_MetallicSmoothness
+    second: {fileID: 2800000, guid: dfa3b4cd9d6d3cb4e952e5b19f710af1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: LOWER_FLOOR_Normal
+    second: {fileID: 2800000, guid: 91e54f217b587d54e81e6bed2836bd24, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Lights_AlbedoTransparency
+    second: {fileID: 2800000, guid: 2fa2aa9a1799a414faf6949193b95523, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Lights_MetallicSmoothness
+    second: {fileID: 2800000, guid: 068d74d94c5b8e544ba9fc74ed486e76, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Lights_Normal
+    second: {fileID: 2800000, guid: d27bb6ec7698c824e9df254cc0b159a4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Lobby_Area_Main_AlbedoTransparency
+    second: {fileID: 2800000, guid: 8b9e97a23ca6a3f49b5bc09bf25a61c6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Lobby_Area_Main_MetallicSmoothness
+    second: {fileID: 2800000, guid: 654979b760929da40b0ba504ac52f295, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Lobby_Area_Main_Normal
+    second: {fileID: 2800000, guid: 182a5bc664a7ba94aa0c9ee6aa830d80, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: NEON_LIGHTS_AlbedoTransparency
+    second: {fileID: 2800000, guid: 5ce837303543dcc419e4674a7baeb305, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: NEON_LIGHTS_MetallicSmoothness
+    second: {fileID: 2800000, guid: 72d2e462e2bbc1740aad62f7fbdca9a7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: NEON_LIGHTS_Normal
+    second: {fileID: 2800000, guid: ccd23c05d0fc512449420759da865e9e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PILLAR_LINES_TEXTURE_AlbedoTransparency
+    second: {fileID: 2800000, guid: f8db7a43024a8f140aff934839c15eb2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PILLAR_LINES_TEXTURE_MetallicSmoothness
+    second: {fileID: 2800000, guid: c20a5b684f1a04541916108f6b7f7ad9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PILLAR_LINES_TEXTURE_Normal
+    second: {fileID: 2800000, guid: 24f2983d70485a5449e54c8b1feaa820, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ROOF_PLANE_AlbedoTransparency
+    second: {fileID: 2800000, guid: 33d9dcc2e397e424580fb4b72aa62fe3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ROOF_PLANE_MetallicSmoothness
+    second: {fileID: 2800000, guid: 35670c39124c5694694308dcb549d78d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ROOF_PLANE_Normal
+    second: {fileID: 2800000, guid: 513bc1bc717a2844ebbe4dd4b1d4a36c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ROUND_FLOOR_GREY_AlbedoTransparency
+    second: {fileID: 2800000, guid: af24ffc4eb551f84ea728aa910d1d38a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ROUND_FLOOR_GREY_MetallicSmoothness
+    second: {fileID: 2800000, guid: a8c560dc8a3fda445a9a44e391a7357c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ROUND_FLOOR_GREY_Normal
+    second: {fileID: 2800000, guid: 21fa0f71fc82c034593e08c85e22b453, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SOFA_STRIPS_AlbedoTransparency
+    second: {fileID: 2800000, guid: 5483092c86091334cbbf4000e5f0afad, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SOFA_STRIPS_MetallicSmoothness
+    second: {fileID: 2800000, guid: 296690f1dee3f68498e26ce7eb7153b0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SOFA_STRIPS_Normal
+    second: {fileID: 2800000, guid: bb3f458a8932b2a4ba42418015c51217, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: STAIRS_FLOOR1_AlbedoTransparency
+    second: {fileID: 2800000, guid: 99955669020323241975e383a851084d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: STAIRS_FLOOR1_MetallicSmoothness
+    second: {fileID: 2800000, guid: 899da0effbdca7e48830cf60da1fa202, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: STAIRS_FLOOR1_Normal
+    second: {fileID: 2800000, guid: ea75a5586b5a4744eb29cf64ee61122f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TABLE_AlbedoTransparency
+    second: {fileID: 2800000, guid: e0e408ee188db5846bae3f174c483d8e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TABLE_MetallicSmoothness
+    second: {fileID: 2800000, guid: abb32e68098d2de4f8403d7b94fb6590, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TABLE_Normal
+    second: {fileID: 2800000, guid: cbb6eaa89651bc24ba0c852eb908d433, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: as2xWu
+    second: {fileID: 2800000, guid: 2f4438524be113b4c9bcbf7909341b3b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baked-CENTRE_SHOW1Shape
+    second: {fileID: 2800000, guid: 10732dc1aa2c0bf4cb05fe030d914993, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baked-LOWER_FLOOR1Shape
+    second: {fileID: 2800000, guid: d8bd400c64f346044b87a9e827b85415, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baked-LOWER_FLOOR2Shape
+    second: {fileID: 2800000, guid: 7cde5575829646f43a4a493eec7d83c0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baked-polySurface159Shape
+    second: {fileID: 2800000, guid: 0557c4c25074cac459e472e2c6c100da, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baked-polySurface175Shape
+    second: {fileID: 2800000, guid: 2b3328cadd66ad84eab74b1dbfde93bd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baked-polySurface201Shape
+    second: {fileID: 2800000, guid: 9aa3bb49de019674f9b73fc9d304e45c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baked-polySurface205Shape22
+    second: {fileID: 2800000, guid: d8e9dbcfbe28a784296928f665739cda, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baked-polySurface236Shape22
+    second: {fileID: 2800000, guid: 17909792d35448a4eb77732987ef0b68, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baked-polySurface281Shape
+    second: {fileID: 2800000, guid: a413ec5c1b7a66d4694ac0881a0968f6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baked-polySurface283Shape
+    second: {fileID: 2800000, guid: 2fed52dbc285c6546a42f7733b7586fa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baked-polySurface290Shape
+    second: {fileID: 2800000, guid: 91da8a5f25f0bd3439cd3053ae2bc112, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baked-polySurface295Shape
+    second: {fileID: 2800000, guid: 9b2b0ee59469ada42b984ee42dbfe7cf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baked-polySurface307Shape
+    second: {fileID: 2800000, guid: f30b4e5655521b4458e3409fa6b17016, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baked-polySurface308Shape copy
+    second: {fileID: 2800000, guid: f73586e313ee803498e726eae17c2bbe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baked-polySurface309Shape
+    second: {fileID: 2800000, guid: 869217b3537d8b3459f61c48bc47f8e1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baked-wall1Shape
+    second: {fileID: 2800000, guid: b74400c2b8cc36d48beb17c5d54f3cde, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: line_texture_AlbedoTransparency
+    second: {fileID: 2800000, guid: 23ed606c0fbddf34f9a1102eb738af23, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: line_texture_MetallicSmoothness
+    second: {fileID: 2800000, guid: 9c217225dfe9af0448f75f13b4dcfe81, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: line_texture_Normal
+    second: {fileID: 2800000, guid: 61e5a0e8ba82136439a202749f482df5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: logo
+    second: {fileID: 2800000, guid: 90b8b018e53ac9f4db93c3468614aeb4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: retro-blue-ray-background-vintage-1500609
+    second: {fileID: 2800000, guid: d1f0e366c80be8340a10e51c5dbb8cd5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sofa low poly_bootom_3_BaseColor
+    second: {fileID: 2800000, guid: ec35972d1e2cdd14388b93a5a6c1ad0d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sofa low poly_bootom_3_Metallic
+    second: {fileID: 2800000, guid: 6950a4e6fe21fdb4cb56134dd72befa4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sofa low poly_bootom_3_Normal
+    second: {fileID: 2800000, guid: fee8d9cf52776d542b6d3cfc2eea7889, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sofa low poly_bootom_3_Roughness
+    second: {fileID: 2800000, guid: b78d7e9e74c93b440b1863515c9fc424, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sofa low poly_midd1_BaseColor
+    second: {fileID: 2800000, guid: 746103df1962b6b4db940093401bb58b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sofa low poly_midd1_Metallic
+    second: {fileID: 2800000, guid: 0c0e14e8e6a4ddd47b6029ddb771e669, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sofa low poly_midd1_Normal
+    second: {fileID: 2800000, guid: 0bc81a6fe6c499f40bd18abb2436a04c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sofa low poly_midd1_Roughness
+    second: {fileID: 2800000, guid: 069c54e9a8c54d64e85ff9092f413760, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sofa low poly_pillo_BaseColor
+    second: {fileID: 2800000, guid: ca6a83e0c6fafee4badb5b72ec6fb625, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sofa low poly_pillo_Metallic
+    second: {fileID: 2800000, guid: 062f394416a407e42a16e74f4f92a5b0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sofa low poly_pillo_Normal
+    second: {fileID: 2800000, guid: 33a1452db139d00439f637f5b797e253, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sofa low poly_pillo_Roughness
+    second: {fileID: 2800000, guid: 479d3b1015d0f184b8d6436d3be8467d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: steel_scratch_strips_AlbedoTransparency
+    second: {fileID: 2800000, guid: 04bd3b9b9f4f81e41a83daabe032cbc2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: steel_scratch_strips_MetallicSmoothness
+    second: {fileID: 2800000, guid: d552000e97ef7694bb5653d7131ebfec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: steel_scratch_strips_Normal
+    second: {fileID: 2800000, guid: 565957b922264e74cbcdf4e3030b4ab7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sticker_01
+    second: {fileID: 2800000, guid: 4b62cddd6f713674b95be0d92cea9166, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sticker_02
+    second: {fileID: 2800000, guid: ba71f115e488c18498c531a96c3990da, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sticker_03
+    second: {fileID: 2800000, guid: 76d9ef1976d59274c98d2c3b8d188baa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sticker_04
+    second: {fileID: 2800000, guid: 8c9b9a54267bce147a27df12df1852fb, type: 3}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

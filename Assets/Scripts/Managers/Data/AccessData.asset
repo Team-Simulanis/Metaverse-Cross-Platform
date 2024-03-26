@@ -15,3 +15,4 @@ MonoBehaviour:
   gameMode: 0
   testType: 1
   loginCondition: 0
+  platform: 2

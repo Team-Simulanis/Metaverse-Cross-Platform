@@ -12,13 +12,9 @@ public class PlayerReactionHandler : NetworkBehaviour
     private void Start()
     {
         instance = this;
-        
-    }
-
-    private void OnConnectedToServer()
-    {
         SendOwner();
     }
+
     [Button]
     private void SendOwner()
     {

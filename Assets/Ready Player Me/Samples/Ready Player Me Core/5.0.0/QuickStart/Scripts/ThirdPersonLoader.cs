@@ -1,6 +1,7 @@
 using System;
 using ReadyPlayerMe.Core;
 using UnityEngine;
+using static System.Net.WebRequestMethods;
 
 namespace ReadyPlayerMe.Samples.QuickStart
 {
@@ -32,6 +33,7 @@ namespace ReadyPlayerMe.Samples.QuickStart
         private void Start()
         {
             instance = this;
+            avatarUrl = "https://cdn.simulanis.io/sso/uno/production/resources/9378a98f-e63d-4c20-8dce-180806c1def9/3DAssets/universal/2/M2.glb";
             //avatarObjectLoader.loadingpanel = LoadingPanel;
             avatarObjectLoader = new AvatarObjectLoader();
             avatarObjectLoader.OnCompleted += OnLoadCompleted;

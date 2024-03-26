@@ -443,7 +443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02761efe598a45c98fa1baf4d446c6a7, type: 3}
   m_Name: FloatingPanel
   m_EditorClassIdentifier: 
-  EditorPosition: {x: 260.66666, y: 177.33333, z: 0}
+  EditorPosition: {x: 125, y: 353, z: 0}
   EditorScale: {x: 0.43232757, y: 0.43232757, z: 1}
   Id: 13c7b5c6-674d-41f6-980f-2b26aff34eec
   GraphName: Flow Graph
@@ -798,7 +798,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 409, y: -160.00006}
+  Position: {x: 409, y: -160}
   OnEnterShowViews:
   - Id:
       Category: Ingame
@@ -863,7 +863,7 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 409, y: -302.00006}
+  Position: {x: 409, y: -302}
   OnEnterShowViews:
   - Id:
       Category: Ingame

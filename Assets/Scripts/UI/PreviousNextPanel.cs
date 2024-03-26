@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class PreviousNextPanel : MonoBehaviour
 {
-    int childCount;
+    private int childCount;
+    public GameObject proceedButton;
+    private int timesNextButtonPressed;
+    [SerializeField] bool clickOnlyCertainTimes = false;
     private void OnEnable() 
     {
         childCount = transform.childCount; 
@@ -35,6 +39,17 @@ public class PreviousNextPanel : MonoBehaviour
                         transform.GetChild(j).gameObject.SetActive(false);
                     }
             }
+        timesNextButtonPressed++;
+        if (clickOnlyCertainTimes)
+        {
+            if (timesNextButtonPressed == childCount-1)
+            {
+                if (proceedButton != null)
+                {
+                    proceedButton.SetActive(true);
+                }
+            }
+        }
     }
     void _previous(int i)
     {

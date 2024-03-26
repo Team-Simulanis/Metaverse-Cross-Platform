@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class AvatarButtonDownloader : MonoBehaviour
 {
-    [SerializeField] private string url = "https://models.readyplayer.me/632d65e99b4c6a4352a9b8db.glb";
+    [SerializeField] private string url = "https://cdn.simulanis.io/sso/uno/production/resources/9378a98f-e63d-4c20-8dce-180806c1def9/3DAssets/universal/2/M2.glb";
     [SerializeField] private AvatarRenderSettings renderSettings;
     [SerializeField] private Image image;
     

@@ -79,6 +79,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Networked-Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7043038645906882732, guid: c8a070e5412b4194fb301a4fe8e5e290,
+        type: 3}
+      propertyPath: unlockCursorOnStart
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7116599738874971820, guid: c8a070e5412b4194fb301a4fe8e5e290,
         type: 3}
       propertyPath: m_LocalPosition.x

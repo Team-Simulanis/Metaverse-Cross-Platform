@@ -27,19 +27,25 @@ namespace Simulanis.Player
 
         private async void SendInfo() // called on start , it add this player to the list whener this player is spawned
         {
-            while (!GetComponentInChildren<NameTagHandler>().isUpdated)
+            if (!GetComponentInChildren<NameTagHandler>())
+            {
+                return;
+            }
+            var nt = GetComponentInChildren<NameTagHandler>();
+            
+            while (!nt.isUpdated)
             {
                 await Task.Delay(100);
             }
 
-            listplayerinfo.instance.addNewPlayer(this.OwnerId, GetComponent<NameTagHandler>().playerName, NetworkObject,
+            ListPlayerInfo.Instance.AddNewPlayer(this.OwnerId, GetComponent<NameTagHandler>().playerName, NetworkObject,
                 IsOwner);
         }
 
 
         private void OnDestroy() //whenever this player is de-SPAWNS it removes itselfs from the player list 
         {
-            listplayerinfo.instance.removeNewPlayer(this.OwnerId, this.name, NetworkObject);
+            ListPlayerInfo.Instance.RemoveNewPlayer(this.OwnerId);
             Debug.Log("destroyed");
         }
     }

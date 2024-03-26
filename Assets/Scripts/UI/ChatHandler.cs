@@ -50,7 +50,7 @@ public class ChatHandler : MonoBehaviour
 
     public void setOnlinePlayers()
     {
-        onlinePlayers.text = listplayerinfo.noOfPlayer.ToString() + " online";
+        onlinePlayers.text = ListPlayerInfo.NoOfPlayer.ToString() + " online";
     }
 
     public bool isPrivate;
@@ -71,7 +71,7 @@ public class ChatHandler : MonoBehaviour
             OnPrivateMessageReceived(new IMessage()
             {
                 message = msg.message,
-                username = listplayerinfo.instance.playerList[ChatManager.Instance.selectedPlayer].name
+                username = ListPlayerInfo.Instance.playerList[ChatManager.Instance.selectedPlayer].name
             });
             return;
         }

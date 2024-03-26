@@ -3912,7 +3912,6 @@ MonoBehaviour:
   defaultAvatar: {fileID: 7559138336281968724}
   currentAvatar: {fileID: 0}
   currentAvatarUrl: 
-  mobileController: {fileID: 272869349203126284}
   onAvatarLoaded:
     m_PersistentCalls:
       m_Calls: []

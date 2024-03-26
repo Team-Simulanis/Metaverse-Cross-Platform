@@ -42,7 +42,7 @@ public class ChatManager : MonoBehaviour
         NetworkController.Instance.SendPrivateChatServer(new NetworkConnection()
         {
             ClientId = selectedPlayer
-        }, listplayerinfo.instance.playerList[selectedPlayer].name, message,myID);
+        }, ListPlayerInfo.Instance.playerList[selectedPlayer].name, message,myID);
     }
 
     public new void SendPrivateMessage(string msg)
@@ -50,7 +50,7 @@ public class ChatManager : MonoBehaviour
         NetworkController.Instance.SendPrivateChatServer(new NetworkConnection()
         {
             ClientId = selectedPlayer
-        }, listplayerinfo.instance.playerList[selectedPlayer].name, msg,myID);
+        }, ListPlayerInfo.Instance.playerList[selectedPlayer].name, msg,myID);
     }
 
     public void AddPlayer(string userName, int id)
@@ -66,7 +66,10 @@ public class ChatManager : MonoBehaviour
     public void RemovePlayer(int id)
     {
         var chatPlayerButton = chatPlayerButtons[id];
-        chatPlayerButtons.Remove(id);
-        Destroy(chatPlayerButton.gameObject);
+        if(chatPlayerButtons.ContainsKey(id))
+        {
+            chatPlayerButtons.Remove(id);
+            Destroy(chatPlayerButton.gameObject);
+        }
     }
 }

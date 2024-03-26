@@ -49,6 +49,8 @@ public class AvatarNetworkManager : NetworkBehaviour
         }
         else
         {
+            _rpmPlayerManager.currentAvatarUrl ="https://models.readyplayer.me/64bfc617fffca9bd5d533218.glb";
+            _rpmPlayerManager.ChangeAvatarUrl();
             Debug.LogError("DataManager is not initialized");
         }
     }

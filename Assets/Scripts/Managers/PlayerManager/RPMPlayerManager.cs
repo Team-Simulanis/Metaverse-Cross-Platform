@@ -19,41 +19,44 @@ public enum AvatarBodyType
 public class RPMPlayerManager : MonoBehaviour
 {
     public PlayerType playerType;
-    public AvatarBodyType avatarBodyType;
+    [EnumToggleButtons][ReadOnly]public AvatarBodyType avatarBodyType;
 
-    [Required] public GameObject defaultAvatar;
+    [Required] [SerializeField] [DisallowModificationsIn(PrefabKind.Variant)]
+    private GameObject defaultAvatar;
+
     [ReadOnly] public GameObject currentAvatar;
 
     private AvatarObjectLoader _avatarObjectLoader;
 
     private GameObject _avatarController;
 
-    [ShowInInspector][ReadOnly] [Tooltip("RPM avatar URL or shortcode to load")]
+    [ShowInInspector] [ReadOnly] [Tooltip("RPM avatar URL or shortcode to load")]
     private string _avatarUrl;
 
     private readonly Vector3 _avatarPositionOffset = new Vector3(0, 0, 0);
-    
-    public string currentAvatarUrl;
+
+    [DisplayAsString] public string currentAvatarUrl;
 
     private AvatarInitializer _avatarInitializer;
     private AvatarNetworkManager _avatarNetworkManager;
 
-    public GameObject mobileController;
+
     [FoldoutGroup("Events")] public UnityEvent onAvatarLoaded = new();
 
     private async void Start()
     {
         _avatarInitializer = GetComponent<AvatarInitializer>();
-       
-        if(GetComponent<AvatarNetworkManager>() && playerType == PlayerType.Networked)
+
+        if (GetComponent<AvatarNetworkManager>() && playerType == PlayerType.Networked)
         {
             _avatarNetworkManager = GetComponent<AvatarNetworkManager>();
         }
-      
+
         //Initializing the default avatar
-        currentAvatar = await _avatarInitializer.SetupAvatar(defaultAvatar, currentAvatar, avatarBodyType, _avatarPositionOffset);
+        currentAvatar =
+            await _avatarInitializer.SetupAvatar(defaultAvatar, currentAvatar, avatarBodyType, _avatarPositionOffset);
     }
-    
+
     public void StartLoadingAvatar(string url)
     {
         _avatarObjectLoader = new AvatarObjectLoader();
@@ -85,14 +88,16 @@ public class RPMPlayerManager : MonoBehaviour
             _ => avatarBodyType
         };
 
-        if(_avatarNetworkManager==null)
+        if (_avatarNetworkManager == null)
         {
-            currentAvatar = await _avatarInitializer.SetupAvatar(args.Avatar, currentAvatar, avatarBodyType, _avatarPositionOffset);
+            currentAvatar =
+                await _avatarInitializer.SetupAvatar(args.Avatar, currentAvatar, avatarBodyType, _avatarPositionOffset);
         }
-        else if(_avatarNetworkManager.IsOwner)
+        else if (_avatarNetworkManager.IsOwner)
         {
             Debug.Log("Initializing Controls for local player");
-            currentAvatar = await _avatarInitializer.SetupAvatar(args.Avatar, currentAvatar, avatarBodyType, _avatarPositionOffset);
+            currentAvatar =
+                await _avatarInitializer.SetupAvatar(args.Avatar, currentAvatar, avatarBodyType, _avatarPositionOffset);
             Debug.Log("Initialized Controls for local player");
         }
         else
@@ -101,8 +106,8 @@ public class RPMPlayerManager : MonoBehaviour
         }
 
         _avatarInitializer.AnimatorRebind();
-        
-        if(playerType == PlayerType.Networked)
+
+        if (playerType == PlayerType.Networked)
 
         {
             if (_avatarNetworkManager.IsOwner) //TODO: Refactor this to a only work for networked players
@@ -122,10 +127,8 @@ public class RPMPlayerManager : MonoBehaviour
 
     public void InitializeControls()
     {
-        
     }
 
-  
 
     public void LoadAvatar(string url)
     {
@@ -136,7 +139,7 @@ public class RPMPlayerManager : MonoBehaviour
     [Button]
     public void ChangeAvatarUrl()
     {
-        if(_avatarNetworkManager==null)
+        if (_avatarNetworkManager == null)
         {
             _avatarNetworkManager = GetComponent<AvatarNetworkManager>();
         }
@@ -144,6 +147,7 @@ public class RPMPlayerManager : MonoBehaviour
         {
             Debug.Log("Available");
         }
+
         _avatarNetworkManager.SendAvatarUpdateRequestServer(currentAvatarUrl);
     }
 }

@@ -1,3 +1,4 @@
+using FishNet;
 using UnityEngine;
 
 namespace FF
@@ -14,15 +15,7 @@ namespace FF
 
         private void Awake()
         {
-            if (Instance == null)
-            {
-                Instance = this;
-                DontDestroyOnLoad(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+            Instance = this;
         }
 
         public void UpdateAvatarInfo(AvatarDetails avatarDetails)

@@ -8,20 +8,15 @@ public class AvatarInitializer : MonoBehaviour
 {
     private bool _isMale;
     private Animator _animator;
-    [SerializeField] private Animator maleAnimator;
-    [SerializeField] private Animator femaleAnimator;
+    [SerializeField][Required] private Animator maleAnimator;
+    [SerializeField][Required] private Animator femaleAnimator;
     public bool avatarSetupInProgress;
 
     private vThirdPersonController _invectorControlThirdPersonController;
     private vThirdPersonInput _invectorControlThirdPersonInput;
 
     private AvatarBodyType _avatarBodyType;
-
-    private void Awake()
-    {
-   
-    }
-
+    
     public async Task<GameObject> SetupAvatar(GameObject targetAvatar, GameObject avatar, AvatarBodyType avatarBodyType,
         Vector3 avatarPositionOffset)
     {
@@ -71,9 +66,12 @@ public class AvatarInitializer : MonoBehaviour
             _invectorControlThirdPersonInput.unlockCursorOnStart = true;
             _invectorControlThirdPersonInput.showCursorOnStart = true;
 #endif
-        _invectorControlThirdPersonController.enabled = true;
-        _invectorControlThirdPersonInput.enabled = true;
-        transform.GetChild(3).gameObject.SetActive(true);
+        if(GetComponent<AvatarNetworkManager>().IsOwner)
+        {
+            _invectorControlThirdPersonController.enabled = true;
+            _invectorControlThirdPersonInput.enabled = true;
+            transform.GetChild(3).gameObject.SetActive(true);
+        }
 
 
         ChangeAvatarRef();

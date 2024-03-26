@@ -5,10 +5,15 @@ using UnityEngine.UI;
 
 public class MiniMap : NetworkBehaviour
 {
-    [FormerlySerializedAs("MiniMapCamera")] [SerializeField] private Camera miniMapCamera;
-    [FormerlySerializedAs("MiniMapImage")] [SerializeField] private Image miniMapImage;
-    [FormerlySerializedAs("BigMapImage")] [SerializeField] private Image bigMapImage;
-    [FormerlySerializedAs("ThisPlayer")] [SerializeField] GameObject thisPlayer;
+    [FormerlySerializedAs("MiniMapCamera")] [SerializeField]
+    private Camera miniMapCamera;
+
+    [FormerlySerializedAs("MiniMapImage")] [SerializeField]
+    private Image miniMapImage;
+
+    [FormerlySerializedAs("BigMapImage")] [SerializeField]
+    private Image bigMapImage;
+
     private void Start()
     {
         CheckOwner();
@@ -32,8 +37,6 @@ public class MiniMap : NetworkBehaviour
     private void CheckOwner()
     {
         if (IsOwner) return;
-        thisPlayer = gameObject;
         miniMapCamera.gameObject.SetActive(false);
     }
-
 }

@@ -20,7 +20,7 @@ public class NameTagHandler : MonoBehaviour
             return;
         }
         
-        GetComponent<RPMPlayerManager>().onAvatarLoaded.AddListener(SetUserName);
+        transform.parent.GetComponent<RPMPlayerManager>().onAvatarLoaded.AddListener(SetUserName);
 
         if (GameManager.Instance.accessData.testType != AccessData.Test.NameTag) return;
         
@@ -43,8 +43,8 @@ public class NameTagHandler : MonoBehaviour
 
     private void SetUserName() //will be called on start to set the username of the player
     {
-        if( !GetComponent<AvatarNetworkManager>()) return;
-        var am = GetComponent<AvatarNetworkManager>();
+        if( !transform.parent.GetComponent<AvatarNetworkManager>()) return;
+        var am = transform.parent.GetComponent<AvatarNetworkManager>();
 
         if (!am.IsOwner) return;
         

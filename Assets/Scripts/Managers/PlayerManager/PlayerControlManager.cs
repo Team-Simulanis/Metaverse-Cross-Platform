@@ -27,7 +27,7 @@ namespace Simulanis.Player
 
         private async void SendInfo() // called on start , it add this player to the list whener this player is spawned
         {
-            while (!GetComponent<NameTagHandler>().isUpdated)
+            while (!GetComponentInChildren<NameTagHandler>().isUpdated)
             {
                 await Task.Delay(100);
             }

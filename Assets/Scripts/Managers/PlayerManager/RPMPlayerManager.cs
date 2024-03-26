@@ -45,17 +45,11 @@ public class RPMPlayerManager : MonoBehaviour
     {
         _avatarInitializer = GetComponent<AvatarInitializer>();
        
-        if( GetComponent<AvatarNetworkManager>())
+        if(GetComponent<AvatarNetworkManager>() && playerType == PlayerType.Networked)
         {
             _avatarNetworkManager = GetComponent<AvatarNetworkManager>();
         }
-        else
-        {
-            Debug.LogError("Player network manager Not Available");
-        }
-        
-        
-
+      
         //Initializing the default avatar
         currentAvatar = await _avatarInitializer.SetupAvatar(defaultAvatar, currentAvatar, avatarBodyType, _avatarPositionOffset);
     }

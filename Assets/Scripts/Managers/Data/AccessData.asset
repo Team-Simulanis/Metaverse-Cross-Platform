@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: AccessData
   m_EditorClassIdentifier: 
   gameMode: 0
-  testType: 1
+  testType: 0
   loginCondition: 0
   platform: 2

@@ -14,16 +14,23 @@ public class NameTagHandler : MonoBehaviour
     
     private void Start()
     {
-        if (GameManager.Instance.accessData.testType != AccessData.Test.NameTag)
+        if( transform.parent.GetComponent<RPMPlayerManager>().playerType == PlayerType.Networked)
         {
-            gameObject.SetActive(false);
-            return;
+            if (!transform.parent.GetComponent<AvatarNetworkManager>().IsOwner) return;
         }
-        
         transform.parent.GetComponent<RPMPlayerManager>().onAvatarLoaded.AddListener(SetUserName);
-
-        if (GameManager.Instance.accessData.testType != AccessData.Test.NameTag) return;
-        
+        if(GameManager.Instance!=null)
+        {
+            if (GameManager.Instance.accessData.testType != AccessData.Test.NameTag)
+            {
+                gameObject.SetActive(false);
+                return;
+            }
+        }
+        if( transform.parent.GetComponent<RPMPlayerManager>().playerType == PlayerType.Offline)
+        {
+            if (GameManager.Instance.accessData.testType != AccessData.Test.NameTag) return;
+        }
         inGameUsername.text =  $"Test+{RandomIDGenerator.GenerateRandomID()}";
         StartCoroutine(ProfilePictureManager.Instance.LoadGif(Application.persistentDataPath + "/profilePic.gif", profileImageRaw));
     }

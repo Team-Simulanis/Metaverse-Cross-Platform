@@ -15,28 +15,28 @@ public class ControlsPanel : MonoBehaviour
     {
         if (GameManager.Instance.accessData.platform == AccessData.Platform.Android)
         {
-            for (var i = 0; i < mobilePanel.Length; i++)
+            foreach (var t in mobilePanel)
             {
-                mobilePanel[i].SetActive(true);
+                t.SetActive(true);
             }
 
-            for(var i = 0;i < desktopPanel.Length; i++)
+            foreach (var t in desktopPanel)
             {
-                desktopPanel[i].SetActive(false);
+                t.SetActive(false);
             }
         }
 
         if (GameManager.Instance.accessData.platform != AccessData.Platform.Windows &&
             GameManager.Instance.accessData.platform != AccessData.Platform.Mac) return;
         {
-            for (var i = 0; i < desktopPanel.Length; i++)
+            foreach (var t in desktopPanel)
             {
-                desktopPanel[i].SetActive(true);
+                t.SetActive(true);
             }
 
-            for (var i = 0;i<mobilePanel.Length;i++)
+            foreach (var t in mobilePanel)
             {
-                mobilePanel[i].SetActive(false);
+                t.SetActive(false);
             }
         }
     }

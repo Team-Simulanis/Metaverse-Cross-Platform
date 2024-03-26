@@ -14,13 +14,18 @@ public class NameTagHandler : MonoBehaviour
     
     private void Start()
     {
-        GetComponent<RPMPlayerManager>().onAvatarLoaded.AddListener(SetUserName);
-        
-        if (GameManager.Instance.accessData.testType == AccessData.Test.NameTag)
+        if (GameManager.Instance.accessData.testType != AccessData.Test.NameTag)
         {
-            inGameUsername.text =  $"Test+{RandomIDGenerator.GenerateRandomID()}";
-            StartCoroutine(ProfilePictureManager.Instance.LoadGif(Application.persistentDataPath + "/profilePic.gif", profileImageRaw));
+            gameObject.SetActive(false);
+            return;
         }
+        
+        GetComponent<RPMPlayerManager>().onAvatarLoaded.AddListener(SetUserName);
+
+        if (GameManager.Instance.accessData.testType != AccessData.Test.NameTag) return;
+        
+        inGameUsername.text =  $"Test+{RandomIDGenerator.GenerateRandomID()}";
+        StartCoroutine(ProfilePictureManager.Instance.LoadGif(Application.persistentDataPath + "/profilePic.gif", profileImageRaw));
     }
 
     public void SetUsernameOnHost(string username,string profileImageURL)

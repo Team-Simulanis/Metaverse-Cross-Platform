@@ -3861,7 +3861,6 @@ GameObject:
   - component: {fileID: 5845518234059542661}
   - component: {fileID: 6710809783446384254}
   - component: {fileID: -6611704408719955819}
-  - component: {fileID: 8692808139929180173}
   m_Layer: 0
   m_Name: Local-Player
   m_TagString: Untagged
@@ -4447,23 +4446,6 @@ MonoBehaviour:
   playerCamera: {fileID: 2805811438860258379}
   stopPlayer: 0
   cl: {fileID: 11400000, guid: dbf2c7a931be7ae4d960bc178dc4dda6, type: 2}
---- !u!114 &8692808139929180173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6018108584105516696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a883d1d06bb71e04c94a72b1f812212e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inGameUsername: {fileID: 7672711954199029575}
-  playerName: 
-  isUpdated: 0
-  profileImage: {fileID: 5407494392194259198}
-  profileImageRaw: {fileID: 2846744227637267697}
 --- !u!1 &6050450510684967221
 GameObject:
   m_ObjectHideFlags: 0
@@ -5274,6 +5256,7 @@ GameObject:
   - component: {fileID: 8655015072755331600}
   - component: {fileID: 9103942032634844675}
   - component: {fileID: 8012623587330766877}
+  - component: {fileID: 1983144134662806196}
   m_Layer: 5
   m_Name: Name Canvas
   m_TagString: Untagged
@@ -5378,6 +5361,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95320a4f2f495f74b8be5577b1ba989b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1983144134662806196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6882857331397935356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a883d1d06bb71e04c94a72b1f812212e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inGameUsername: {fileID: 7672711954199029575}
+  playerName: 
+  isUpdated: 0
+  profileImage: {fileID: 5407494392194259198}
+  profileImageRaw: {fileID: 2846744227637267697}
 --- !u!1 &6917389823933594313
 GameObject:
   m_ObjectHideFlags: 0

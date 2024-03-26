@@ -16,12 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: af50672abaf122645b3d65e4c0fe996e
-  m_SerializeEntries:
-  - m_GUID: 61ad46da09d4b1540b9ddf242302b5b3
-    m_Address: Assets/FBXs/TestEnvironment
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0d0c8cd3f902a564788d9b85a2fd73fc, type: 2}
   m_SchemaSet:

@@ -53,6 +53,8 @@ public class RPMPlayerManager : MonoBehaviour
         {
             Debug.LogError("Player network manager Not Available");
         }
+        
+        
 
         //Initializing the default avatar
         currentAvatar = await _avatarInitializer.SetupAvatar(defaultAvatar, currentAvatar, avatarBodyType, _avatarPositionOffset);

@@ -17,6 +17,8 @@ public class AccessData : ScriptableObject
         Development,
         Production,
     }
+    
+    public Platform platform;
 
     public enum LoginStatus
     {
@@ -28,5 +30,13 @@ public class AccessData : ScriptableObject
     {
         Login,
         NameTag
+    }
+    
+    public enum Platform
+    {
+        Android,
+        IOS,
+        Windows,
+        Mac    
     }
 }

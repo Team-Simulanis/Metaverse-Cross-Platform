@@ -53,7 +53,7 @@ public class CursorManager : MonoBehaviour
         GetComponent<vThirdPersonInput>().lockInput = value;
         GetComponent<vThirdPersonController>().lockAnimMovement = !value;
         GetComponent<vThirdPersonAnimator>().disableAnimations = value;
-        stopPlayer = true;
+        stopPlayer = value;
         if (value)
         {
             Cursor.lockState = CursorLockMode.None;

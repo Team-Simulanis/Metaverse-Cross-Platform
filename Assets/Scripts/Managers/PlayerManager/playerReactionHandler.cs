@@ -7,6 +7,7 @@ public class PlayerReactionHandler : MonoBehaviour
     public bool owner;
     public Transform stickyNoteTransform;
     public Transform flagTransform;
+    public Transform rayOriginPoint;
 
     private void Start()
     {
@@ -24,6 +25,7 @@ public class PlayerReactionHandler : MonoBehaviour
                 LocationsPanel.instance.TakeOwner(this.gameObject);
                 StickyNotesManager.instance.TakeOwner(stickyNoteTransform, flagTransform);
                 DynamicArrows.instance.TakeOwner(this.gameObject.transform);
+                LaserPointer.instance.TakeOwner(rayOriginPoint);
             }
         }
         else

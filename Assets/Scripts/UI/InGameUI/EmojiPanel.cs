@@ -10,7 +10,7 @@ public class EmojiPanel : MonoBehaviour
     //playerReactionHandler playerReactionHandler = new playerReactionHandler();
     public static EmojiPanel instance;
 
-    private void Start()
+    private void Awake()
     {
         instance = this;
     }

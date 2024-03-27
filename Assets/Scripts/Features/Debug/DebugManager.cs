@@ -111,7 +111,7 @@ namespace Simulanis
             }
             else
             {
-                Debug.Log("<color=green>[data-get] </color><color=#008080ff>" + message + "</color>");
+                Debug.Log("<color=green> [data-get] </color><color=#008080ff>" + message + "</color>");
             }
         }
 
@@ -122,7 +122,7 @@ namespace Simulanis
 
         public static void ServerResponseLog(string message)
         {
-            Debug.Log("<color=green>[data] " + message + "</color>");
+            Debug.Log("<color=green> [data] " + message + "</color>");
         }
         
         public static void ServerResponseErrorLog(string message)

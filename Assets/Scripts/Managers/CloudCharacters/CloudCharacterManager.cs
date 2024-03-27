@@ -4,7 +4,6 @@ using Doozy.Runtime.UIManager.Components;
 using Simulanis;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.Serialization;
 using DebugManager = Simulanis.DebugManager;
 
@@ -14,7 +13,7 @@ public class CloudCharacterManager : MonoBehaviour
  
     [FormerlySerializedAs("malePrefab")] public GameObject avatarIconPrefab; // Prefab for the male character //
     public GameObject parent; // Prefab for the male character //
-    public CharacterPayload cp; // Payload for the character
+    [FormerlySerializedAs("cp")] public CharacterPayload characterPayload; // Payload for the character
 
     // URL for the avatar list
     private const string AvatarListURL = "https://api.simulanis.io/api/resource/3d/character/list/universal/";
@@ -23,7 +22,7 @@ public class CloudCharacterManager : MonoBehaviour
 
     public static CloudCharacterManager Instance;
 
-    GameObject obj;
+    private GameObject _obj;
 
     public UIButton startButton;
     public void Start()
@@ -37,17 +36,17 @@ public class CloudCharacterManager : MonoBehaviour
         avatarCount = 0; //will reset the list whenever a new gender is selected
         var result = await WebRequestManager.GetWebRequestWithAuthorization(AvatarListURL, type);
 
-        cp = JsonUtility.FromJson<CharacterPayload>(result);
+        characterPayload = JsonUtility.FromJson<CharacterPayload>(result);
         CleanUpAvatarList();
         // Instantiate necessary prefabs for character selection
-        foreach (var t in cp.data)
+        foreach (var t in characterPayload.data)
         {
             avatarCount++;
-            obj = Instantiate(avatarIconPrefab, parent.transform);
-            avatarButtonList.Add(obj);
-            obj.SetActive(true);
-            obj.AddComponent<CloudCharacterPrefabHolder>();
-            obj.GetComponent<CloudCharacterPrefabHolder>().characterData = t;
+            _obj = Instantiate(avatarIconPrefab, parent.transform);
+            avatarButtonList.Add(_obj);
+            _obj.SetActive(true);
+            _obj.AddComponent<CloudCharacterPrefabHolder>();
+            _obj.GetComponent<CloudCharacterPrefabHolder>().characterData = t;
         }
     }
 

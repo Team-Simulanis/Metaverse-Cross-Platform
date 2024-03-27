@@ -443,7 +443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02761efe598a45c98fa1baf4d446c6a7, type: 3}
   m_Name: FloatingPanel
   m_EditorClassIdentifier: 
-  EditorPosition: {x: 125, y: 353, z: 0}
+  EditorPosition: {x: 114, y: 210.66667, z: 0}
   EditorScale: {x: 0.43232757, y: 0.43232757, z: 1}
   Id: 13c7b5c6-674d-41f6-980f-2b26aff34eec
   GraphName: Flow Graph

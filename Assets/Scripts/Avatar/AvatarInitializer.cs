@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Invector.vCharacterController;
 using Sirenix.OdinInspector;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AvatarInitializer : MonoBehaviour
@@ -66,14 +67,23 @@ public class AvatarInitializer : MonoBehaviour
             _invectorControlThirdPersonInput.unlockCursorOnStart = true;
             _invectorControlThirdPersonInput.showCursorOnStart = true;
 #endif
-        if(GetComponent<AvatarNetworkManager>().IsOwner)
+        if(GetComponent<AvatarNetworkManager>())
+        {
+            if (GetComponent<AvatarNetworkManager>().IsOwner)
+            {
+                _invectorControlThirdPersonController.enabled = true;
+                _invectorControlThirdPersonInput.enabled = true;
+                transform.GetChild(3).gameObject.SetActive(true);
+            }
+        }
+
+        if (GetComponent<RPMPlayerManager>().playerType == PlayerType.Offline)
         {
             _invectorControlThirdPersonController.enabled = true;
             _invectorControlThirdPersonInput.enabled = true;
-            transform.GetChild(3).gameObject.SetActive(true);
+            transform.GetChild(3).gameObject.SetActive(true); 
         }
-
-
+         
         ChangeAvatarRef();
 
         await UniTask.DelayFrame(1);

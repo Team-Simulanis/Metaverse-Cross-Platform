@@ -81,4 +81,23 @@ public class AvatarNetworkManager : NetworkBehaviour
     {
         GetComponent<NameTagHandler>().SetUsernameOnHost(username,profileImageURL);
     }
+
+    #region Emotes RPC's
+
+    [ServerRpc(RequireOwnership = false)]
+    public void PlayReactionOnServer(string animationName)
+    {
+        PlayerReactionOnObserver(animationName);
+        Debug.Log("play Animation on server");
+    }
+
+    [ObserversRpc(BufferLast = true, ExcludeOwner = false, RunLocally = true)]
+    private void PlayerReactionOnObserver(string animationName)
+    {
+        GetComponent<PlayerReactionHandler>().React(animationName);
+        Debug.Log("play Animation on observer");
+    }
+
+    #endregion
+   
 }

@@ -24,16 +24,15 @@ public class LaserPointer : NetworkBehaviour
     private void OnEnable()
     {
         lineRender.enabled = true;
-        syncedEndObject.SetActive(true);
     }
     // Update is called once per frame
     void Update()
     {
-        //PointRay();
+        DrawRay(true);
     }
     public void DrawRay(bool toggleOnOff)
     {
-        PointRay(toggleOnOff);
+        DrawRayOnServer(toggleOnOff);
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -48,7 +47,6 @@ public class LaserPointer : NetworkBehaviour
         if(toggleOnOff)
         {
             lineRender.enabled = true;
-            syncedEndObject.SetActive(false);
             Vector3 hitpoint = this.transform.position;
             Vector3 originPoint;
             lineRender.gameObject.SetActive(true);
@@ -72,19 +70,16 @@ public class LaserPointer : NetworkBehaviour
         else if (!toggleOnOff)
         {
             lineRender.enabled = false;
-            syncedEndObject.SetActive(false);
         }
     }
 
-    public void TakeOwner(LineRenderer _lineRenderer,GameObject _pointer)
+    public void TakeOwner(LineRenderer _lineRenderer)
     {
         lineRender = _lineRenderer;
-        syncedEndObject = _pointer;
     }
     private void OnDisable()
     {
         lineRender.enabled = false;
-        syncedEndObject.SetActive(false);
     }
 
 

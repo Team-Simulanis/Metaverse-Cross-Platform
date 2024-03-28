@@ -26,7 +26,7 @@ public class PlayerReactionHandler : MonoBehaviour
                 LocationsPanel.instance.TakeOwner(this.gameObject);
                 StickyNotesManager.instance.TakeOwner(stickyNoteTransform, flagTransform);
                 DynamicArrows.instance.TakeOwner(this.gameObject.transform);
-                LaserPointer.instance.TakeOwner(ownerLineRenderer,ownerPointer);
+                LaserPointer.instance.TakeOwner(ownerLineRenderer);
                 //LaserPointer.instance.TakeOwner(rayOriginPoint,mainCamera);
             }
         }

@@ -1,3 +1,4 @@
+using Invector;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -7,8 +8,8 @@ public class PlayerReactionHandler : MonoBehaviour
     public bool owner;
     public Transform stickyNoteTransform;
     public Transform flagTransform;
-    public Transform rayOriginPoint;
-
+    public LineRenderer ownerLineRenderer;
+    public GameObject ownerPointer;
     private void Start()
     {
         SendOwner();
@@ -25,7 +26,8 @@ public class PlayerReactionHandler : MonoBehaviour
                 LocationsPanel.instance.TakeOwner(this.gameObject);
                 StickyNotesManager.instance.TakeOwner(stickyNoteTransform, flagTransform);
                 DynamicArrows.instance.TakeOwner(this.gameObject.transform);
-                LaserPointer.instance.TakeOwner(rayOriginPoint);
+                LaserPointer.instance.TakeOwner(ownerLineRenderer,ownerPointer);
+                //LaserPointer.instance.TakeOwner(rayOriginPoint,mainCamera);
             }
         }
         else
@@ -49,7 +51,10 @@ public class PlayerReactionHandler : MonoBehaviour
         Debug.Log("play Animation");
     }
 
-
+    private void Update()
+    {
+ 
+    }
     public void React(string key)
     {
         var animator = GetComponent<Animator>();

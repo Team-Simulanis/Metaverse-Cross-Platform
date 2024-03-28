@@ -1,4 +1,5 @@
 using FishNet.Object;
+using LeTai.TrueShadow;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,84 +9,99 @@ using UnityEngine.InputSystem;
 
 public class LaserPointer : NetworkBehaviour
 {
-    private RaycastHit hit;
+    //private RaycastHit hit;
     public Transform hitOutPosition;
     public Camera cam;
     public LineRenderer lineRender;
     public static LaserPointer instance;
+    public GameObject syncedEndObject;
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
-        cam = Camera.main;
+    }
+
+    private void OnEnable()
+    {
+        lineRender.enabled = true;
+        syncedEndObject.SetActive(true);
     }
     // Update is called once per frame
     void Update()
     {
-        if (hitOutPosition == null)
-        {
-            return;
-        }
-        else
-        {
-
-
-            if (CursorManager.instance.stopPlayer == true)
-            {
-                if (Mouse.current.rightButton.wasPressedThisFrame)
-                {
-                    PointRay(true, hitOutPosition.position);
-                }
-                if (Mouse.current.rightButton.wasReleasedThisFrame)
-                {
-                    PointRay(false, hitOutPosition.position);
-                }
-            }
-            else
-            {
-                PointRay(false, hitOutPosition.position);
-            }
-        }
+        //PointRay();
     }
-
-    void PointRay(bool showRay, Vector3 originPoint)
+    public void DrawRay(bool toggleOnOff)
     {
-        DrawRayOnServer(showRay, originPoint);
+        PointRay(toggleOnOff);
     }
 
     [ServerRpc(RequireOwnership = false)]
-    void DrawRayOnServer(bool showRay, Vector3 originPoint)
+    void DrawRayOnServer(bool toggleOnOf)
     {
-        DrawRayOnObserver(showRay,originPoint);
+        PointRay(toggleOnOf);
     }
 
     [ObserversRpc(ExcludeOwner = false, BufferLast = false)]
-    void DrawRayOnObserver(bool showRay,Vector3 originPoint)
+    void PointRay(bool toggleOnOff)
     {
-
-        if (showRay)
+        if(toggleOnOff)
         {
-            lineRender.gameObject.SetActive(showRay);
+            lineRender.enabled = true;
+            syncedEndObject.SetActive(false);
+            Vector3 hitpoint = this.transform.position;
+            Vector3 originPoint;
+            lineRender.gameObject.SetActive(true);
             Vector3 mouse = Input.mousePosition;
             Ray castPoint = cam.ScreenPointToRay(mouse);
             RaycastHit hit;
             if (Physics.Raycast(castPoint, out hit, Mathf.Infinity))
             {
-                lineRender.SetPosition(0, originPoint);
-                lineRender.SetPosition(1, hit.point);
+                originPoint = hitOutPosition.transform.position;
+                hitpoint = hit.point;
             }
+            syncedEndObject.transform.position = new Vector3(hitpoint.x, hitpoint.y, hitpoint.z);
+
+            //DrawRayOnServer(true,originPoint,hitpoint);
+
+            lineRender.positionCount = 2;
+            lineRender.SetPosition(0, hitOutPosition.transform.position);
+            lineRender.SetPosition(1, hitpoint);
         }
 
-        else 
+        else if (!toggleOnOff)
         {
-           lineRender.gameObject.SetActive (false);
+            lineRender.enabled = false;
+            syncedEndObject.SetActive(false);
         }
     }
 
-    public void TakeOwner(Transform originPoint)
+    public void TakeOwner(LineRenderer _lineRenderer,GameObject _pointer)
     {
-        hitOutPosition = originPoint;
+        lineRender = _lineRenderer;
+        syncedEndObject = _pointer;
     }
+    private void OnDisable()
+    {
+        lineRender.enabled = false;
+        syncedEndObject.SetActive(false);
+    }
+
+
+
+
+
+    //public Transform objectToMove;
+    /*    void Update()
+        {
+            Vector3 mouse = Input.mousePosition;
+            Ray castPoint = Camera.main.ScreenPointToRay(mouse);
+            RaycastHit hit;
+            if (Physics.Raycast(castPoint, out hit, Mathf.Infinity))
+            {
+                objectToMove.transform.position = hit.point;
+            }
+        }*/
 }
 
 

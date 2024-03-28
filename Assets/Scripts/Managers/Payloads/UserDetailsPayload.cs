@@ -35,6 +35,8 @@ public class Group
 [Serializable]
 public class MetaData
 {
+    public string playerAvatar;
+    public string zoomLink;
 }
 
 [Serializable]

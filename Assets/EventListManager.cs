@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -14,7 +15,7 @@ public class EventListManager : MonoBehaviour
      }
 
      [Button]
-    public async void FetchEvent()
+    public async Task FetchEvent()
     {
         var t = await WebRequestManager.GetWebRequestWithAuthorization("https://metaverse-backend.simulanis.io/api/application/event/list/ongoing","");
         eventsListPayload = JsonUtility.FromJson<EventsListPayload>(t); 

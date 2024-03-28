@@ -1,6 +1,4 @@
 using Sirenix.OdinInspector;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SessionPanel : MonoBehaviour
@@ -12,12 +10,20 @@ public class SessionPanel : MonoBehaviour
     [Button]
     public void PopulateEvents()
     {
-        for(int i = 0; i < noOfCards; i++) 
+        ClearCards();
+        foreach (var data in EventListManager.Instance.eventsListPayload.data)
         {
-            var sessionCards = Instantiate(sessionPrefab,sessionParent);
+            noOfCards++;
+            var sessionCard = Instantiate(sessionPrefab, sessionParent);
+            sessionCard.GetComponent<SessionCard>().FillData(data);
         }
-        sessionPrefab.gameObject.SetActive(false); //remove this line later
     }
-    
-    
+
+    private void ClearCards()
+    {
+        foreach (Transform child in sessionParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
 }

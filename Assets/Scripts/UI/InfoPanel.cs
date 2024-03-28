@@ -11,6 +11,7 @@ public class InfoPanel : Panel
     [SerializeField] private TMP_InputField emailInputField;
     [SerializeField] private TMP_InputField designationInputField;
     [SerializeField] private TMP_InputField bioInputField;
+    [SerializeField] private TMP_InputField zoomLinkInputField;
     [SerializeField] private Image profilePicture;
     [SerializeField] private RawImage rawImageProfilePicture;
 
@@ -35,6 +36,7 @@ public class InfoPanel : Panel
         DataManager.Instance.userData.email = userDetailsPayload.data.email;
         DataManager.Instance.userData.name = userDetailsPayload.data.name;
         DataManager.Instance.userData.bio = userDetailsPayload.data.bio;
+        DataManager.Instance.userData.zoomLink = userDetailsPayload.data.metaData.zoomLink;
         ShowData();
     }
 
@@ -45,6 +47,7 @@ public class InfoPanel : Panel
         emailInputField.text = DataManager.Instance.userData.email;
         designationInputField.text = DataManager.Instance.userData.designation;
         bioInputField.text = DataManager.Instance.userData.bio;
+        zoomLinkInputField.text = DataManager.Instance.userData.zoomLink;
     }
 
     public async void UpdatePlayerInfo()
@@ -56,7 +59,8 @@ public class InfoPanel : Panel
         {
             name = nameInputField.text,
             designation = designationInputField.text,
-            bio = bioInputField.text
+            bio = bioInputField.text,
+            zoomLink = zoomLinkInputField.text
         };
 
 
@@ -74,4 +78,5 @@ public class UserDetailsPostPayload
     public string email;
     public string designation;
     public string bio;
+    public string zoomLink;
 }

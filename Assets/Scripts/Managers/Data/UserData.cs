@@ -12,6 +12,7 @@ public class UserData
     [ReadOnly][BoxGroup("Basic Info")]public string bio = "Default Bio";
     [ReadOnly][BoxGroup("Basic Info")]public Sprite profileImage;
     [ReadOnly][BoxGroup("Basic Info")]public string profileImageUrl;
+    [ReadOnly][BoxGroup("Basic Info")]public string zoomLink;
     public AvatarDetails avatarDetails;
     public UserPermission userPermission;
 }

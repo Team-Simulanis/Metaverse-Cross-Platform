@@ -1,11 +1,8 @@
-using System;
+
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Doozy.Runtime.Signals;
-using Doozy.Runtime.UIManager.Components;
-using FF;
-using MPUIKIT;
-using ReadyPlayerMe.Core;
+
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
@@ -22,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     public TMP_Text loadingTextStatus;
 
+    public int delayBetweenCalls = 1000;
     private void Awake()
     {
         if (Instance == null)
@@ -61,7 +59,19 @@ public class GameManager : MonoBehaviour
             await Task.Delay(100);
         }
 
-        await Task.Delay(3000);
+        await Task.Delay(delayBetweenCalls);
+
+
+        var e = EventListManager.Instance.FetchEvent();
+
+        while (e.IsCompleted == false)
+        {
+            Debug.Log("Fetching Available Events");
+            loadingTextStatus.text = "Fetching Available Events";
+            await Task.Delay(100);
+        }
+
+        await Task.Delay(delayBetweenCalls);
 
         var t = UIManager.Instance.infoPanel.GetComponent<InfoPanel>().GetUserProfileData();
         while (t.IsCompleted == false)
@@ -70,9 +80,9 @@ public class GameManager : MonoBehaviour
             loadingTextStatus.text = "Fetching User Data";
             await Task.Delay(100);
         }
-        await Task.Delay(3000);
+        await Task.Delay(delayBetweenCalls);
         
-        var a = AddressableManager.Instance.StartAddressable();
+        await AddressableManager.Instance.StartAddressable();
         
         while (AddressableManager.Instance.isAddressableInitialized == false)
         {
@@ -87,6 +97,8 @@ public class GameManager : MonoBehaviour
             loadingTextStatus.text = "Loading Environment";
             await Task.Delay(100);
         }
+        
+        
         stopwatch.Stop();
         Debug.Log("Total Time Taken: " + stopwatch.ElapsedMilliseconds/1000 + " Seconds");
         

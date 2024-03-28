@@ -22,20 +22,29 @@ public class LaserPointer : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(CursorManager.instance.stopPlayer == true)
+        if (hitOutPosition == null)
         {
-            if(Mouse.current.rightButton.wasPressedThisFrame)
-            {
-               PointRay(true,hitOutPosition.position);
-            }
-            if(Mouse.current.rightButton.wasReleasedThisFrame) 
-            {
-               PointRay(false, hitOutPosition.position);
-            }
+            return;
         }
         else
         {
-           PointRay(false, hitOutPosition.position);
+
+
+            if (CursorManager.instance.stopPlayer == true)
+            {
+                if (Mouse.current.rightButton.wasPressedThisFrame)
+                {
+                    PointRay(true, hitOutPosition.position);
+                }
+                if (Mouse.current.rightButton.wasReleasedThisFrame)
+                {
+                    PointRay(false, hitOutPosition.position);
+                }
+            }
+            else
+            {
+                PointRay(false, hitOutPosition.position);
+            }
         }
     }
 

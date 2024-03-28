@@ -44,6 +44,24 @@ public class CursorManager : MonoBehaviour
             _firstView = !_firstView;
             ChangeToFirstView(_firstView);
         }
+
+        if(_isCursorLocked) 
+        {
+            if(Mouse.current.rightButton.wasPressedThisFrame)
+            {
+                this.gameObject.GetComponent<LaserPointer>().DrawRay(true);
+            }
+
+            else if(Mouse.current.rightButton.wasReleasedThisFrame) 
+            {
+                this.gameObject.GetComponent<LaserPointer>().DrawRay(false);
+            }
+        }
+
+        else if(!_isCursorLocked)
+        {
+            this.gameObject.GetComponent<LaserPointer>().DrawRay(false);
+        }
     }
 
     public void SetCursorLocked(bool value)
@@ -53,7 +71,7 @@ public class CursorManager : MonoBehaviour
         GetComponent<vThirdPersonInput>().lockInput = value;
         GetComponent<vThirdPersonController>().lockAnimMovement = !value;
         GetComponent<vThirdPersonAnimator>().disableAnimations = value;
-        stopPlayer = true;
+        stopPlayer = value;
         if (value)
         {
             Cursor.lockState = CursorLockMode.None;
